@@ -1,0 +1,291 @@
+{
+  "results": [
+    {
+      "queryName": "Serendipia by La Calèche",
+      "officialName": "Restaurant Serendipia by La Calèche",
+      "town": "Llívia",
+      "address": "Av. Catalunya, 68, 17527 Llívia, Girona",
+      "phone": "+34 972 60 41 82",
+      "email": "reserves@restaurantserendipia.cat",
+      "website": "https://restaurantserendipia.cat/",
+      "instagram": "https://www.instagram.com/serendipia_bylacaleche",
+      "cuisineKeywords": ["Mediterranean"],
+      "priceInfo": "€50–60 per person (Restaurant Guru price band)",
+      "rating": { "value": 4.8, "count": 672, "source": "Google" },
+      "signatureDishes": [],
+      "services": { "accessible": true },
+      "hours": "Thu–Sat 13:00–15:00 and 20:00–22:00; Sun 13:00–15:00 and 20:00–21:30",
+      "closedDays": "Monday, Tuesday, Wednesday",
+      "facts": [
+        "El lema del seu propi web: «Serendipia és el plaer de trobar una cosa bona sense buscar-la»."
+      ],
+      "awards": [],
+      "imageCandidates": [],
+      "sources": [
+        { "label": "Web oficial", "url": "https://restaurantserendipia.cat/" },
+        { "label": "Restaurant Guru", "url": "https://restaurantguru.com/Restaurant-Serendipia-by-La-Caleche-Llivia" }
+      ],
+      "confidence": "medium",
+      "notes": "Web oficial molt prim: contacte i lema, sense carta, història ni fotos aprofitables (només logos i QR). Les atribucions habituals (parella al capdavant, «Pep», canelons d'ànec) venen d'agregadors de ressenyes, no de font pròpia — excloses."
+    },
+    {
+      "queryName": "Can Ventura",
+      "officialName": "Can Ventura",
+      "town": "Llívia",
+      "address": "Plaça Major, 1, 17527 Llívia, Girona",
+      "phone": "+34 972 89 61 78",
+      "website": "https://canventura.com/",
+      "instagram": "https://www.instagram.com/canventurarestaurant",
+      "cuisineKeywords": ["cuina de muntanya", "producte local i de mercat", "tradició i innovació"],
+      "priceInfo": "€40–70 per persona (banda de Restaurant Guru). Terceres fonts citen menú 32 € i menú Cerdanya 50 €, sense confirmar.",
+      "rating": { "value": 4.6, "count": 1479, "source": "Google" },
+      "signatureDishes": [],
+      "services": { "vegetarian": true, "accessible": false, "terrace": true, "parking": "lliure al carrer" },
+      "hours": "Dt, dc, dv, ds 13:00–15:30 i 20:00–22:30; dg 13:00–15:30",
+      "closedDays": "Dilluns i dijous",
+      "facts": [
+        "El web obre amb «Des de 1791, aquesta casa antiga ha estat testimoni de moments inoblidables»: la casa és del 1791.",
+        "Can Ventura el van fundar el 1977 en Josep i la Mercé.",
+        "Actualment el porten l'Esther i en Jordi, amb més de 30 anys d'ofici entre tots dos.",
+        "Es defineixen com una barreja d'història i gastronomia, en un edifici del segle XVIII.",
+        "El web és en català, castellà, anglès i francès."
+      ],
+      "awards": [],
+      "imageCandidates": [
+        { "url": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_20.webp", "context": "hero", "isOfficialSite": true },
+        { "url": "https://canventura.com/wp-content/uploads/2024/06/Plato_52.webp", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://canventura.com/wp-content/uploads/2024/06/Plato_55.webp", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://canventura.com/wp-content/uploads/2024/06/Plato_57.webp", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_44.webp", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_30.webp", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_16.webp", "context": "gallery", "isOfficialSite": true }
+      ],
+      "sources": [
+        { "label": "Web oficial", "url": "https://canventura.com/" },
+        { "label": "Web oficial — Qui som", "url": "https://canventura.com/qui-som/" },
+        { "label": "Restaurant Guru", "url": "https://restaurantguru.com/Can-Ventura-Llivia" }
+      ],
+      "confidence": "high",
+      "notes": "Les cartes del web són imatges .webp sense text llegible, per això no hi ha preus confirmats. Michelin diu edifici del segle XVII i el restaurant diu 1791 (segle XVIII): es fa servir la xifra del propi restaurant."
+    },
+    {
+      "queryName": "La Formatgeria de Llívia",
+      "officialName": "La Formatgeria de Llívia",
+      "town": "Llívia",
+      "hamlet": "Gorguja",
+      "address": "Pla de Ro, s/n, Gorguja, 17527 Llívia, Girona",
+      "phone": "+34 972 14 62 79",
+      "website": "https://www.laformatgeria.com/",
+      "instagram": "https://www.instagram.com/laformatgeriadellivia",
+      "cuisineKeywords": ["gastronomia de muntanya", "fondues", "raclettes", "formatges artesans", "carn a la pedra"],
+      "priceInfo": "De la carta oficial: fondue suïssa 24,00 €; fondue de ceps 24,50 €; fondue de camembert 25,00 €; fondue de formatge d'ovella artesà de Meranges amb olives negres 25,50 €; raclette Morbier AOP 24,50 € (fondues mínim 2 persones, preu per persona). Entrecot madurat 45-50 dies (400 g) 32,00 €; xuletó madurat (1 kg) 80,00 €; solomillo (250 g) 33,00 €. Selecció de formatges artesans 17,50 €.",
+      "rating": { "value": 4.5, "count": 2983, "source": "Google" },
+      "signatureDishes": [
+        "Fondue de formatge d'ovella artesà de Meranges amb olives negres",
+        "Fondue de ceps",
+        "Raclette Morbier AOP",
+        "Xuletó madurat 45-50 dies",
+        "Carn a la pedra"
+      ],
+      "services": { "vegetarian": true, "accessible": true, "terrace": true, "parking": true, "groups": true },
+      "hours": "Segons el web propi, obre cada dia a migdia i vespre en temporada, i tots els dies l'agost.",
+      "closedDays": "Dimecres és el dia de descans segons el web oficial",
+      "facts": [
+        "Ocupa una antiga fàbrica de formatges a Gorguja, un veïnat de Llívia.",
+        "El van obrir fa uns 25 anys la Marta i en Juanjo, que encara en són els propietaris.",
+        "Defineixen la seva cuina com a gastronomia de muntanya de la Cerdanya amb tocs actuals.",
+        "El làctic és l'eix de la carta: fondues, raclettes i taules de formatges artesans.",
+        "Una de les fondues es fa amb formatge d'ovella artesà de Meranges, un poble de la Cerdanya.",
+        "La vedella es madura de 45 a 50 dies i es ven al pes."
+      ],
+      "awards": [],
+      "imageCandidates": [
+        { "url": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-01.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-02.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-03.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-04.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-1.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-3.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-H-.jpg", "context": "hero", "isOfficialSite": true }
+      ],
+      "sources": [
+        { "label": "Web oficial", "url": "https://www.laformatgeria.com/es/" },
+        { "label": "Web oficial — Nosaltres", "url": "https://www.laformatgeria.com/es/nosotros/" },
+        { "label": "Web oficial — La carta", "url": "https://www.laformatgeria.com/es/nuestra-carta/" }
+      ],
+      "confidence": "high",
+      "notes": "Preus verbatim de la seva carta. Les valoracions divergeixen molt per plataforma (Google 4,5/2983 · Tripadvisor 4,1/751): es fa servir Google. Alguns noms de fitxer porten accents, cal codificar la URL en descarregar."
+    },
+    {
+      "queryName": "Raval 13",
+      "officialName": "Raval 13",
+      "town": "Llívia",
+      "address": "Carrer del Raval, 13, 17527 Llívia, Girona",
+      "phone": "+34 972 97 04 13",
+      "email": "raval13llivia@gmail.com",
+      "website": "https://raval13.com/",
+      "instagram": "https://www.instagram.com/raval_13/",
+      "cuisineKeywords": ["cuina creativa i d'autor", "tradició amb tocs moderns", "producte fresc local"],
+      "priceInfo": "€30–40 per persona (banda de Restaurant Guru)",
+      "rating": { "value": 4.7, "count": 419, "source": "Google" },
+      "signatureDishes": [
+        "Gofre de pop amb sobrassada",
+        "Llom de bacallà ibèric",
+        "Guisat de calamars",
+        "Coulant de moniato",
+        "Pastís de formatge de carbassa"
+      ],
+      "services": { "vegetarian": true, "accessible": false, "terrace": true },
+      "hours": "Dl 13:00–15:30; dv–ds 13:00–15:30 i 20:00–22:30; dg 13:00–15:30",
+      "closedDays": "Dimarts, dimecres i dijous",
+      "facts": [
+        "Es defineixen com «una cuina creativa i d'autor» que fusiona la tradició amb tocs moderns i d'avantguarda.",
+        "El web diu que el cap de cuina té trajectòria en restaurants reconeguts nacionals i internacionals.",
+        "Segons el text del web, el restaurant porta uns tres anys obert.",
+        "La cuina és oberta i la sala és petita."
+      ],
+      "awards": [],
+      "imageCandidates": [
+        { "url": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Gofre-de-pulpo-con-sobrasada.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-lomo-de-balacao-iberico.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Guiso-de-Calamares.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Coulant-de-boniato.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Cocinas.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Nuestra-bodega.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://raval13.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-23-at-13.27.28-23.jpeg", "context": "hero", "isOfficialSite": true }
+      ],
+      "sources": [
+        { "label": "Web oficial", "url": "https://raval13.com/" },
+        { "label": "Web oficial — Coneix-nos", "url": "https://raval13.com/coneix-nos/" },
+        { "label": "Web oficial — Galeria", "url": "https://raval13.com/galeria/" }
+      ],
+      "confidence": "medium",
+      "notes": "ATENCIÓ: el web conserva text de plantilla sense substituir (un testimoni «Lorem ipsum» atribuït a un «Norman Frank» inexistent). No se'n pot citar res. Els horaris del web són incoherents entre ells; el dijous queda sense resoldre. Els plats surten dels noms de fitxer de la galeria, que són descriptius però no són una llista declarada de plats estrella."
+    },
+    {
+      "queryName": "La Borda del Ceretà",
+      "officialName": "La Borda del Ceretà",
+      "town": "Puigcerdà",
+      "address": "Camí de l'Antiga Farinera, 3, 17520 Puigcerdà, Girona",
+      "phone": "+34 699 520 092",
+      "email": "info@labordadelcereta.com",
+      "website": "https://labordadelcereta.com/",
+      "instagram": "https://www.instagram.com/labordadelcereta",
+      "cuisineKeywords": ["cuina ceretana", "restaurant de mercat", "producte de proximitat", "arrossos"],
+      "priceInfo": "Per la carta oficial: entrants 10–28 €, primers 16–25 €, principals 16–80 € (el màxim és per quilo, per compartir), postres 6–15 €. Sense menú del dia.",
+      "rating": { "value": 4.7, "count": 1886, "source": "Google" },
+      "signatureDishes": [
+        "Arròs a la llauna",
+        "Tiró amb naps",
+        "Bomba de trinxat",
+        "Escudella barrejada",
+        "Raclette del Molí de Ger al forn",
+        "Caneló de pollastre de pagès",
+        "Xai de Ger",
+        "El flam cremós d'en Pitu"
+      ],
+      "services": { "vegetarian": true, "accessible": false, "terrace": true, "parking": "molt d'aparcament lliure" },
+      "hours": "Dc–dg 13:00–16:00 i 20:00–23:00",
+      "closedDays": "Dilluns i dimarts",
+      "facts": [
+        "El porten la Gigi Baró i en Chus Iniesta, un matrimoni, amb en José María Canalda a la cuina.",
+        "Tenen un Solete de la Guia Repsol, de l'edició del 2022, i n'exhibeixen el logotip al peu del seu web.",
+        "El local és una borda de pedra dins un antic molí; encara s'hi veu passar un riu subterrani.",
+        "La sala és una cabana de fusta, al primer pis de l'edifici antic.",
+        "L'equip es va formar a l'escola d'hostaleria de Barcelona i va treballar a fora abans d'instal·lar-se al Pirineu.",
+        "La carta canvia cada mes per seguir el producte de temporada.",
+        "Els proveïdors surten citats a la carta: raclette del Molí de Ger, xai de Ger, botifarra de Vic.",
+        "La mateixa parella porta «Sal i Oli», un local germà més informal de tapes i brasa.",
+        "La sala és petita i cal reservar."
+      ],
+      "awards": ["Solete Guia Repsol (edició 2022)"],
+      "imageCandidates": [
+        { "url": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Exterior.webp", "context": "hero", "isOfficialSite": true },
+        { "url": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Grid_1.webp", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_1.webp", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_2.webp", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_4.webp", "context": "gallery", "isOfficialSite": true }
+      ],
+      "sources": [
+        { "label": "Web oficial", "url": "https://labordadelcereta.com/es" },
+        { "label": "Web oficial — Nosaltres", "url": "https://labordadelcereta.com/es/nosotros" },
+        { "label": "Web oficial — Carta", "url": "https://labordadelcereta.com/es/carta" },
+        { "label": "Excelencias Gourmet", "url": "https://excelenciasgourmet.com/en/node/14345" }
+      ],
+      "confidence": "high",
+      "notes": "CONFLICTE DE TELÈFON: el web dona el mòbil +34 699 520 092; Restaurant Guru dona +34 972 28 30 65. Es publica el del web. Número 1 de 84 a Puigcerdà a Tripadvisor."
+    },
+    {
+      "queryName": "Schierbeck",
+      "officialName": "Schierbeck Restaurant",
+      "town": "Puigcerdà",
+      "address": "Av. Pons i Gasch, 15, 17520 Puigcerdà, Girona",
+      "phone": "+34 972 88 46 30",
+      "email": "info@schierbeckrestaurant.com",
+      "website": "https://www.schierbeckrestaurant.com/",
+      "instagram": "https://www.instagram.com/schierbeck_restaurant/",
+      "cuisineKeywords": ["cuina catalana i de muntanya", "producte fresc, local i de temporada", "receptes de la Cerdanya"],
+      "priceInfo": "€30–60 per persona (banda de Restaurant Guru)",
+      "rating": { "value": 4.4, "count": 182, "source": "Google" },
+      "signatureDishes": [],
+      "services": { "vegetarian": true, "accessible": true, "terrace": true, "groups": true },
+      "hours": "Migdia de dimecres a diumenge 13:00–15:30; nit de dimecres a dissabte 20:00–22:30",
+      "closedDays": "Dilluns i dimarts, i diumenge al vespre",
+      "facts": [
+        "És el restaurant de l'hotel Villa Paulita de Puigcerdà.",
+        "És a tocar de l'estany de Puigcerdà, al centre del poble.",
+        "Descriuen la sala com una barreja d'estil històric i modern, amb menjador interior i jardí.",
+        "Tenen oferta de grups i esdeveniments i una carta específica de cap de setmana."
+      ],
+      "awards": [],
+      "imageCandidates": [
+        { "url": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierbeck-comida6-copia-1.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierbeck-vino.jpg", "context": "gallery", "isOfficialSite": true },
+        { "url": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierberck21.jpg", "context": "gallery", "isOfficialSite": true }
+      ],
+      "sources": [
+        { "label": "Web oficial", "url": "https://www.schierbeckrestaurant.com/en/" },
+        { "label": "Web oficial — Contacte", "url": "https://www.schierbeckrestaurant.com/en/contact/" },
+        { "label": "Hotel Villa Paulita", "url": "https://www.villapaulitahotel.com/en/dining/schierbeck-puigcerda-restaurant/" }
+      ],
+      "confidence": "medium",
+      "notes": "ATENCIÓ: el web arrossega un og:site_name d'una altra plantilla que parla d'un restaurant de la zona alta de Barcelona amb més de 40 anys. NO és aquest restaurant i no s'ha de fer servir. Conflicte d'adreça entre el web (Pons i Gasch 15, que és l'hotel) i Restaurant Guru (Dr. Piguillem 16)."
+    },
+    {
+      "queryName": "Arrosseria Braseria Cal Malhivern",
+      "officialName": "Arrosseria-Braseria Cal Malhivern",
+      "town": "Puigcerdà",
+      "address": "Carrer Dr. Piguillem, 8, 17520 Puigcerdà, Girona",
+      "phone": "+34 972 88 23 25",
+      "email": "calmalhivern@gmail.com",
+      "website": null,
+      "instagram": "https://www.instagram.com/cal_malhivern/",
+      "cuisineKeywords": ["arrossos", "brasa", "plats de temporada", "arrossos per emportar"],
+      "priceInfo": "Uns 35 € de mitjana per persona (TheFork). Xuletó per a dos, 90 €.",
+      "rating": { "value": 9.2, "count": 313, "source": "TheFork (escala sobre 10)" },
+      "signatureDishes": [
+        "Arròs del senyoret",
+        "Arròs amb tataki de vedella i ceps",
+        "Paella de gamba roja",
+        "Xuletó per a dos"
+      ],
+      "services": { "celiac": true },
+      "hours": null,
+      "closedDays": null,
+      "facts": [
+        "Es defineixen com «arrossos, brasa i plats de temporada», i fan arrossos per emportar.",
+        "L'arròs és l'especialitat, de la paella clàssica a les versions de marisc i de bolets.",
+        "La brasa cobreix carn, peix i verdures.",
+        "Tenen cuina oberta."
+      ],
+      "awards": [],
+      "imageCandidates": [],
+      "sources": [
+        { "label": "TheFork", "url": "https://www.thefork.es/restaurante/cal-malhivern-r719415" },
+        { "label": "Instagram oficial", "url": "https://www.instagram.com/cal_malhivern/" }
+      ],
+      "confidence": "low",
+      "notes": "No té web. Tot ve de tercers i no hi ha imatges pròpies disponibles. La valoració de TheFork és sobre 10, no sobre 5: no s'ha de pintar com a estrelles sense convertir-la. Horaris no verificats."
+    }
+  ]
+}

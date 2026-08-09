@@ -1,0 +1,304 @@
+---
+import { getImage, Image } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhotoCredit from '../../components/PhotoCredit.astro';
+import RestaurantCard from '../../components/RestaurantCard.astro';
+import ValleySection from '../../components/ValleySection.astro';
+import {
+  allRestaurants,
+  elevationOf,
+  formatElevation,
+  nearby,
+  valleyVillages,
+} from '../../lib/restaurants';
+import { PRICE_LABELS, SERVICE_LABELS, toSlug } from '../../data/taxonomy';
+import '../../styles/restaurant.css';
+
+export async function getStaticPaths() {
+  const restaurants = await allRestaurants();
+  return restaurants.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry, restaurants },
+  }));
+}
+
+const { entry, restaurants } = Astro.props;
+const { data } = entry;
+const { Content } = await render(entry);
+
+const elevation = elevationOf(data.town);
+const [hero, ...gallery] = data.images;
+const neighbours = nearby(entry, restaurants);
+const villages = valleyVillages(restaurants);
+
+const description = `${data.tagline} ${data.name}, a ${data.town} (${formatElevation(elevation)} m), a la ${data.subregion}.`;
+
+/** Retall social de la primera foto de la fitxa, si en té. */
+const social = hero
+  ? await getImage({ src: hero.src, width: 1200, height: 630, fit: 'cover', format: 'jpeg' })
+  : undefined;
+---
+
+<BaseLayout title={data.name} description={description} ogImage={social?.src}>
+  <article class="fitxa">
+    <header class="fitxa__hero">
+      {
+        hero && (
+          <div class="fitxa__hero-media">
+            <Image
+              class="fitxa__hero-image"
+              src={hero.src}
+              alt={hero.alt}
+              widths={[640, 1024, 1600, 2000]}
+              sizes="100vw"
+              loading="eager"
+              fetchpriority="high"
+            />
+            <PhotoCredit
+              author={hero.author}
+              license={hero.license}
+              licenseUrl={hero.licenseUrl}
+              sourceUrl={hero.sourceUrl}
+              isOfficial={hero.isOfficial}
+              tone="over"
+            />
+          </div>
+        )
+      }
+
+      <div class="fitxa__hero-text page">
+        <p class="fitxa__breadcrumb">
+          <a href="/restaurants/">Restaurants</a>
+          <span aria-hidden="true">/</span>
+          <a href={`/pobles/${toSlug(data.town)}/`}>{data.town}</a>
+        </p>
+        <h1 class="fitxa__name">{data.name}</h1>
+        <p class="fitxa__tagline">{data.tagline}</p>
+        <p class="fitxa__coords mono">
+          <span>{formatElevation(elevation)} m</span>
+          <span aria-hidden="true">·</span>
+          <span>{data.subregion}</span>
+          <span aria-hidden="true">·</span>
+          <span>{data.country === 'FR' ? 'França' : 'Espanya'}</span>
+        </p>
+      </div>
+    </header>
+
+    <div class="fitxa__body page">
+      <div class="fitxa__main">
+        {
+          data.dataThin && (
+            <p class="fitxa__warning">
+              D’aquest restaurant en circula poca informació verificable. Hem publicat només el que
+              hem pogut comprovar en una font fiable i hem deixat fora la resta.
+            </p>
+          )
+        }
+
+        <div class="fitxa__prose prose">
+          <Content />
+        </div>
+
+        {
+          data.signatureDishes.length > 0 && (
+            <section class="fitxa__dishes">
+              <h2 class="section-title">A la carta</h2>
+              <ul class="dishes">
+                {data.signatureDishes.map((dish) => (
+                  <li class="dishes__item">{dish}</li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+
+        {
+          gallery.length > 0 && (
+            <section class="fitxa__gallery">
+              <h2 class="section-title">Imatges</h2>
+              <div class="gallery">
+                {gallery.map((image) => (
+                  <figure class="gallery__item">
+                    <Image
+                      class="gallery__image"
+                      src={image.src}
+                      alt={image.alt}
+                      widths={[400, 700, 1000]}
+                      sizes="(max-width: 46rem) 92vw, 30rem"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption class="gallery__caption">
+                      <PhotoCredit
+                        author={image.author}
+                        license={image.license}
+                        licenseUrl={image.licenseUrl}
+                        sourceUrl={image.sourceUrl}
+                        isOfficial={image.isOfficial}
+                      />
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          )
+        }
+
+        <section class="fitxa__valley">
+          <h2 class="section-title" id="tall-fitxa">On seu, a la vall</h2>
+          <p class="fitxa__valley-lead">
+            {data.town} és a {formatElevation(elevation)} m. Aquest és el perfil del fons de vall
+            amb tots els pobles de la guia; el punt taronja és aquest.
+          </p>
+          <ValleySection villages={villages} highlight={data.town} compact headingId="tall-fitxa" />
+        </section>
+
+        {
+          data.sources.length > 0 && (
+            <section class="fitxa__sources">
+              <h2 class="section-title">D’on surt aquesta fitxa</h2>
+              <p class="fitxa__sources-note">
+                El text és original i està escrit a partir d’aquestes fonts. Cap frase n’és una
+                còpia.
+              </p>
+              <ul class="sources">
+                {data.sources.map((source) => (
+                  <li class="sources__item">
+                    <a href={source.url} rel="noopener nofollow">
+                      {source.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+      </div>
+
+      <aside class="fitxa__rail">
+        <div class="rail">
+          <h2 class="rail__title">Dades</h2>
+          <dl class="rail__list">
+            <dt>Adreça</dt>
+            <dd>{data.address}</dd>
+
+            {data.phone && (
+              <>
+                <dt>Telèfon</dt>
+                <dd>
+                  <a class="mono" href={`tel:${data.phone.replace(/\s/g, '')}`}>{data.phone}</a>
+                </dd>
+              </>
+            )}
+
+            {data.website && (
+              <>
+                <dt>Web</dt>
+                <dd>
+                  <a href={data.website} rel="noopener">
+                    {new URL(data.website).hostname.replace(/^www\./, '')}
+                  </a>
+                </dd>
+              </>
+            )}
+
+            {data.instagram && (
+              <>
+                <dt>Instagram</dt>
+                <dd>
+                  <a href={data.instagram} rel="noopener">
+                    @{data.instagram.replace(/\/$/, '').split('/').pop()}
+                  </a>
+                </dd>
+              </>
+            )}
+
+            {data.email && (
+              <>
+                <dt>Correu</dt>
+                <dd><a href={`mailto:${data.email}`}>{data.email}</a></dd>
+              </>
+            )}
+
+            <dt>Preu</dt>
+            <dd>
+              <span class="mono">{data.priceRange}</span> · {PRICE_LABELS[data.priceRange]}
+              {data.priceFrom && (
+                <span class="rail__hint">
+                  {data.priceTo
+                    ? ` (${data.priceFrom}–${data.priceTo} €)`
+                    : ` (des de ${data.priceFrom} €)`}
+                </span>
+              )}
+            </dd>
+
+            {data.hours && (
+              <>
+                <dt>Horaris</dt>
+                <dd>{data.hours}</dd>
+              </>
+            )}
+
+            {data.closedDays && (
+              <>
+                <dt>Tanca</dt>
+                <dd>{data.closedDays}</dd>
+              </>
+            )}
+
+            {data.rating && (
+              <>
+                <dt>Valoració</dt>
+                <dd>
+                  <span class="mono">
+                    {data.rating.toLocaleString('ca-ES', { minimumFractionDigits: 1 })}
+                  </span>
+                  {data.reviewCount && (
+                    <span class="rail__hint"> · {data.reviewCount.toLocaleString('ca-ES')} ressenyes</span>
+                  )}
+                  {data.ratingSource && <span class="rail__hint"> · {data.ratingSource}</span>}
+                </dd>
+              </>
+            )}
+          </dl>
+
+          {
+            data.services.length > 0 && (
+              <ul class="rail__services">
+                {data.services.map((service) => (
+                  <li class="rail__service">{SERVICE_LABELS[service]}</li>
+                ))}
+              </ul>
+            )
+          }
+
+          <ul class="rail__cuisines">
+            {
+              data.cuisine.map((cuisine) => (
+                <li>
+                  <a class="rail__cuisine" href={`/cuina/${toSlug(cuisine)}/`}>
+                    {cuisine}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    {
+      neighbours.length > 0 && (
+        <section class="fitxa__nearby page">
+          <h2 class="section-title">A cota semblant</h2>
+          <div class="fitxa__nearby-grid">
+            {neighbours.map((other) => (
+              <RestaurantCard entry={other} />
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </article>
+</BaseLayout>

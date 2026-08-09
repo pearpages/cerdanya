@@ -1,0 +1,40 @@
+---
+import './SiteFooter.css';
+
+interface Props {
+  flush?: boolean;
+}
+
+const { flush = false } = Astro.props;
+const year = 2026;
+---
+
+<footer class:list={['site-footer', flush && 'site-footer--flush']}>
+  <div class="site-footer__inner page">
+    <div class="site-footer__lead">
+      <p class="eyebrow">Cota de tast</p>
+      <p class="site-footer__claim">
+        Una guia de la Cerdanya ordenada per altitud, dels 1.048 m de Bellver als 1.760 m de
+        Font-Romeu.
+      </p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Peu de pàgina">
+      <ul class="site-footer__list">
+        <li><a href="/restaurants/">Tots els restaurants</a></li>
+        <li><a href="/cuina/">Per cuina</a></li>
+        <li><a href="/pobles/">Per poble</a></li>
+        <li><a href="/credits/">Crèdits fotogràfics</a></li>
+      </ul>
+    </nav>
+
+    <p class="site-footer__note">
+      Les fotografies són dels seus autors i s'acrediten una per una a <a href="/credits/"
+        >crèdits</a
+      >. Els textos estan escrits de nou a partir de fonts públiques, que es citen a cada fitxa. Si
+      ets d'un dels restaurants i vols que canviem o retirem alguna cosa, es fa i prou.
+    </p>
+
+    <p class="site-footer__meta mono">© {year} · Cerdanya</p>
+  </div>
+</footer>

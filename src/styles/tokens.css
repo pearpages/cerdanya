@@ -1,0 +1,200 @@
+/*
+ * Cerdanya — sistema de tokens
+ *
+ * Direcció: la Cerdanya és la vall més assolellada del Pirineu, un altiplà a 1.200 m
+ * amb el cel més saturat que es pot veure a Catalunya i, a l'Alta Cerdanya, el forn
+ * solar d'Odeillo. D'aquí surt la paleta: blau d'alçada com a color dominant (no un
+ * neutre) i un únic accent d'or de sol concentrat. La neu fa de paper.
+ *
+ * L'eix estructural del lloc és l'altitud. No és decoració: Das 1219 es diu així per
+ * la seva cota, i la diferència entre Bellver (1.061 m) i Font-Romeu (1.750 m) explica
+ * què es menja a cada lloc.
+ */
+
+@layer tokens {
+  :root {
+    /* ---- Paleta crua ------------------------------------------------ */
+    --c-nit: #061420; /* nit sobre l'altiplà */
+    --c-vessant: #0c2437; /* vessant obaga */
+    --c-ombra: #14364f; /* superfície elevada, fosc */
+    --c-carena: #1f4f70; /* carena a contrallum */
+    --c-gel: #7fb2d4; /* blau glacial */
+    --c-congesta: #c9deec; /* ombra sobre la neu */
+    --c-neu: #f4f8fb; /* neu al sol */
+    --c-blanc: #ffffff;
+
+    --c-forn: #f2a20c; /* forn solar d'Odeillo — l'únic accent */
+    --c-forn-viu: #ffb92e;
+    --c-forn-fosc: #8a5300; /* la mateixa llum, però llegible sobre neu */
+
+    --c-pastura: #6f8b4e; /* prat de la vall — només per a km 0 */
+
+    /* ---- Tipografia -------------------------------------------------- */
+    /*
+     * Inversió deliberada del parell habitual: la grotesca porta els noms i les
+     * etiquetes (vernacle cartogràfic, retolació de refugi), i la serif porta la
+     * prosa, que és la part que realment es llegeix en una guia.
+     */
+    --font-display: 'Archivo Variable', 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Newsreader Variable', Georgia, 'Times New Roman', serif;
+    --font-mono: 'Azeret Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    --fs-caption: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
+    --fs-small: clamp(0.84rem, 0.81rem + 0.14vw, 0.92rem);
+    --fs-body: clamp(1rem, 0.96rem + 0.18vw, 1.115rem);
+    --fs-lead: clamp(1.16rem, 1.05rem + 0.5vw, 1.45rem);
+    --fs-h4: clamp(1.15rem, 1.05rem + 0.45vw, 1.4rem);
+    --fs-h3: clamp(1.4rem, 1.2rem + 0.85vw, 1.95rem);
+    --fs-h2: clamp(1.85rem, 1.45rem + 1.7vw, 3rem);
+    --fs-h1: clamp(2.6rem, 1.7rem + 3.9vw, 5.25rem);
+    --fs-hero: clamp(3rem, 1.4rem + 6.6vw, 7.5rem);
+
+    --lh-tight: 0.96;
+    --lh-snug: 1.14;
+    --lh-body: 1.62;
+
+    --tr-tight: -0.03em;
+    --tr-label: 0.14em;
+
+    /* Eixos variables d'Archivo: l'amplada expandida és el segell dels titulars. */
+    --wdth-expanded: 118;
+    --wdth-normal: 100;
+    --wdth-narrow: 88;
+
+    /* ---- Espai i ritme ------------------------------------------------ */
+    --sp-1: 0.25rem;
+    --sp-2: 0.5rem;
+    --sp-3: 0.75rem;
+    --sp-4: 1rem;
+    --sp-5: 1.5rem;
+    --sp-6: 2rem;
+    --sp-7: 3rem;
+    --sp-8: 4rem;
+    --sp-9: 6rem;
+    --sp-section: clamp(3.5rem, 2rem + 6vw, 8rem);
+
+    --measure: 62ch;
+    --page-max: 84rem;
+    --page-gutter: clamp(1.15rem, 0.6rem + 2.6vw, 3.5rem);
+
+    /* ---- Formes -------------------------------------------------------- */
+    /* Radis curts: el llenguatge és de mapa i de senyal, no de targeta d'app. */
+    --r-sm: 2px;
+    --r-md: 5px;
+    --r-lg: 9px;
+    --r-pill: 999px;
+    --hairline: 1px;
+
+    /* ---- Moviment ------------------------------------------------------ */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --dur-fast: 140ms;
+    --dur-med: 320ms;
+    --dur-slow: 620ms;
+  }
+
+  /* ---- Tema clar (per defecte) ----------------------------------------- */
+  :root {
+    color-scheme: light;
+
+    --paper: var(--c-neu);
+    --paper-2: var(--c-blanc);
+    --paper-3: #e8f0f6;
+    --paper-inset: #dde9f2;
+
+    --ink: var(--c-nit);
+    --ink-2: #3c5872;
+    --ink-3: #6a839b;
+
+    --line: #cfdde8;
+    --line-strong: #a9c2d4;
+
+    --sky: var(--c-carena);
+    --sky-soft: #d9e8f2;
+
+    --accent: var(--c-forn);
+    --accent-ink: var(--c-forn-fosc);
+    --accent-on: var(--c-nit);
+    --accent-soft: #fdf0d6;
+
+    --shadow-1: 0 1px 2px rgb(6 20 32 / 0.07), 0 2px 8px rgb(6 20 32 / 0.05);
+    --shadow-2: 0 4px 10px rgb(6 20 32 / 0.09), 0 18px 40px rgb(6 20 32 / 0.1);
+
+    --scrim: linear-gradient(
+      to top,
+      rgb(6 20 32 / 0.88) 0%,
+      rgb(6 20 32 / 0.55) 38%,
+      rgb(6 20 32 / 0) 78%
+    );
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      color-scheme: dark;
+
+      --paper: var(--c-nit);
+      --paper-2: var(--c-vessant);
+      --paper-3: var(--c-ombra);
+      --paper-inset: #0a1c2b;
+
+      --ink: var(--c-neu);
+      --ink-2: #a8c4d8;
+      --ink-3: #7794ab;
+
+      --line: #1c3d57;
+      --line-strong: #2d5876;
+
+      --sky: var(--c-gel);
+      --sky-soft: #102b40;
+
+      --accent: var(--c-forn-viu);
+      --accent-ink: var(--c-forn-viu);
+      --accent-on: var(--c-nit);
+      --accent-soft: #33240a;
+
+      --shadow-1: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);
+      --shadow-2: 0 4px 10px rgb(0 0 0 / 0.45), 0 18px 40px rgb(0 0 0 / 0.5);
+
+      --scrim: linear-gradient(
+        to top,
+        rgb(3 10 17 / 0.92) 0%,
+        rgb(3 10 17 / 0.6) 38%,
+        rgb(3 10 17 / 0) 78%
+      );
+    }
+  }
+
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+
+    --paper: var(--c-nit);
+    --paper-2: var(--c-vessant);
+    --paper-3: var(--c-ombra);
+    --paper-inset: #0a1c2b;
+
+    --ink: var(--c-neu);
+    --ink-2: #a8c4d8;
+    --ink-3: #7794ab;
+
+    --line: #1c3d57;
+    --line-strong: #2d5876;
+
+    --sky: var(--c-gel);
+    --sky-soft: #102b40;
+
+    --accent: var(--c-forn-viu);
+    --accent-ink: var(--c-forn-viu);
+    --accent-on: var(--c-nit);
+    --accent-soft: #33240a;
+
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);
+    --shadow-2: 0 4px 10px rgb(0 0 0 / 0.45), 0 18px 40px rgb(0 0 0 / 0.5);
+
+    --scrim: linear-gradient(
+      to top,
+      rgb(3 10 17 / 0.92) 0%,
+      rgb(3 10 17 / 0.6) 38%,
+      rgb(3 10 17 / 0) 78%
+    );
+  }
+}

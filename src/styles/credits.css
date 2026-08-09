@@ -1,0 +1,103 @@
+@layer components {
+  .credits__note {
+    max-inline-size: var(--measure);
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--ink-3);
+  }
+
+  .credits__summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin: 0;
+    padding-block-end: var(--sp-6);
+  }
+
+  .credits__summary-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+    padding: 0.45em 0.9em;
+    background: var(--paper-2);
+    border: var(--hairline) solid var(--line);
+    border-radius: var(--r-md);
+  }
+
+  .credits__summary-count {
+    font-size: var(--fs-h4);
+    font-weight: 600;
+    color: var(--accent-ink);
+  }
+
+  .credits__summary-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 560;
+    color: var(--ink-2);
+  }
+
+  .credits__list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    border-block-start: var(--hairline) solid var(--line);
+  }
+
+  .credits__row {
+    display: grid;
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: var(--sp-4);
+    align-items: center;
+    padding-block: var(--sp-3);
+    border-block-end: var(--hairline) solid var(--line);
+  }
+
+  .credits__thumb {
+    inline-size: 5rem;
+    block-size: 3.6rem;
+    object-fit: cover;
+    border-radius: var(--r-sm);
+    background: var(--paper-inset);
+  }
+
+  .credits__meta {
+    display: grid;
+    gap: 0.15em;
+    min-inline-size: 0;
+  }
+
+  .credits__where {
+    font-family: var(--font-display);
+    font-size: var(--fs-small);
+    font-weight: 620;
+  }
+
+  .credits__where a {
+    text-decoration: none;
+  }
+
+  .credits__where a:hover {
+    text-decoration: underline;
+  }
+
+  .credits__town {
+    font-weight: 480;
+    color: var(--ink-3);
+  }
+
+  .credits__alt {
+    font-size: var(--fs-caption);
+    color: var(--ink-2);
+  }
+
+  .credits__attrib {
+    font-size: var(--fs-caption);
+    color: var(--ink-3);
+    overflow-wrap: anywhere;
+  }
+
+  .credits__data {
+    padding-block: var(--sp-7) var(--sp-8);
+  }
+}

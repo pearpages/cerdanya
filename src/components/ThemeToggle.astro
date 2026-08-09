@@ -1,0 +1,59 @@
+---
+import './ThemeToggle.css';
+---
+
+<button
+  class="theme-toggle"
+  type="button"
+  data-theme-toggle
+  aria-label="Canvia entre tema clar i fosc"
+>
+  <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+    <svg viewBox="0 0 20 20" fill="none">
+      <circle cx="10" cy="10" r="3.6" stroke="currentColor" stroke-width="1.5"></circle>
+      <path
+        d="M10 1.6v2.2M10 16.2v2.2M1.6 10h2.2M16.2 10h2.2M4.1 4.1l1.6 1.6M14.3 14.3l1.6 1.6M15.9 4.1l-1.6 1.6M5.7 14.3l-1.6 1.6"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"></path>
+    </svg>
+  </span>
+  <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+    <svg viewBox="0 0 20 20" fill="none">
+      <path
+        d="M16.2 12.4A7 7 0 0 1 7.6 3.8a7 7 0 1 0 8.6 8.6Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linejoin="round"></path>
+    </svg>
+  </span>
+</button>
+
+<script>
+  const STORAGE_KEY = 'cerdanya-theme';
+
+  function currentTheme(): 'light' | 'dark' {
+    const explicit = document.documentElement.dataset.theme;
+    if (explicit === 'light' || explicit === 'dark') return explicit;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function bind() {
+    document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((button) => {
+      if (button.dataset.bound === 'true') return;
+      button.dataset.bound = 'true';
+      button.addEventListener('click', () => {
+        const next = currentTheme() === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        try {
+          localStorage.setItem(STORAGE_KEY, next);
+        } catch {
+          /* sense emmagatzematge: el canvi val només per a aquesta pàgina */
+        }
+      });
+    });
+  }
+
+  bind();
+  document.addEventListener('astro:after-swap', bind);
+</script>

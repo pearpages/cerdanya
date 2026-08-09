@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RestaurantCard from '../../components/RestaurantCard.astro';
+import ValleySection from '../../components/ValleySection.astro';
+import { allRestaurants, formatElevation, groupByVillage, valleyVillages } from '../../lib/restaurants';
+import '../../styles/directory.css';
+
+export async function getStaticPaths() {
+  const restaurants = await allRestaurants();
+  const valley = valleyVillages(restaurants);
+  return groupByVillage(restaurants).map((group) => ({
+    params: { poble: group.slug },
+    props: { group, valley },
+  }));
+}
+
+const { group, valley } = Astro.props;
+const count = group.restaurants.length;
+const side =
+  group.subregion === 'Llívia'
+    ? 'l’enclavament de Llívia, espanyol i envoltat de França per tots costats'
+    : group.country === 'FR'
+      ? 'l’Alta Cerdanya, al costat francès'
+      : 'la Baixa Cerdanya, al costat espanyol';
+---
+
+<BaseLayout
+  title={group.name}
+  description={`${count} ${count === 1 ? 'restaurant' : 'restaurants'} a ${group.name}, a ${formatElevation(group.elevation)} m d’altitud, a la ${group.subregion}.`}
+>
+  <div class="page">
+    <header class="index-hero">
+      <p class="eyebrow"><a href="/pobles/">Per poble</a></p>
+      <h1 class="index-hero__title">{group.name}</h1>
+      <p class="poble__cota mono">{formatElevation(group.elevation)} m</p>
+      <p class="index-hero__lead">
+        {count === 1 ? 'Un restaurant' : `${count} restaurants`} a {group.name}, que és a {
+          formatElevation(group.elevation)
+        } m i és de {side}.
+      </p>
+    </header>
+
+    <div class="directory__grid">
+      {
+        group.restaurants.map((entry, index) => (
+          <RestaurantCard entry={entry} loading={index < 4 ? 'eager' : 'lazy'} />
+        ))
+      }
+    </div>
+
+    <section class="poble__valley" aria-labelledby="tall-poble">
+      <h2 class="section-title" id="tall-poble">On seu, a la vall</h2>
+      <ValleySection villages={valley} highlight={group.name} compact headingId="tall-poble" />
+    </section>
+
+    <p class="index-back">
+      <a href="/restaurants/">Torna a tots els restaurants</a>
+    </p>
+  </div>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { allRestaurants, groupByCuisine } from '../../lib/restaurants';
+import '../../styles/directory.css';
+
+const restaurants = await allRestaurants();
+const cuisines = groupByCuisine(restaurants);
+---
+
+<BaseLayout
+  title="Per cuina"
+  description="Les categories de cuina de la guia: alta cuina, cuina de mercat, catalana tradicional, muntanya i brasa, japonesa, arrosseria i la resta."
+>
+  <div class="page">
+    <header class="index-hero">
+      <p class="eyebrow">Categories</p>
+      <h1 class="index-hero__title">Per cuina</h1>
+      <p class="index-hero__lead">
+        Un restaurant pot ser de més d’una categoria, i a la Cerdanya sovint ho és: una casa de
+        brasa que fa arrossos, o una cuina de mercat que treu trinxat quan toca.
+      </p>
+    </header>
+
+    <ul class="index-list">
+      {
+        cuisines.map((cuisine) => (
+          <li>
+            <a class="index-list__link" href={`/cuina/${cuisine.slug}/`}>
+              <span class="index-list__name">{cuisine.name}</span>
+              <span class="index-list__meta">
+                {cuisine.restaurants.length}{' '}
+                {cuisine.restaurants.length === 1 ? 'restaurant' : 'restaurants'}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

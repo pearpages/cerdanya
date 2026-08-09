@@ -1,0 +1,352 @@
+@layer components {
+  /* --- capçalera --- */
+  /*
+   * Foto a tota amplada i títol a sobre. Van apilats a la mateixa cel·la i no encaixats
+   * amb un marge negatiu: el nom i el lema poden ocupar tres línies en un mòbil i el
+   * bloc sencer ha de quedar sempre dins de la imatge, que és qui el fa llegible.
+   */
+  .fitxa__hero {
+    position: relative;
+    display: grid;
+    align-content: end;
+    min-block-size: clamp(22rem, 15rem + 26vw, 38rem);
+    isolation: isolate;
+  }
+
+  .fitxa__hero-media {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: var(--paper-inset);
+  }
+
+  .fitxa__hero-image {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .fitxa__hero-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--scrim);
+    pointer-events: none;
+  }
+
+  /* El títol seu damunt de la foto, sobre el degradat. */
+  .fitxa__hero-text {
+    position: relative;
+    z-index: 3;
+    padding-block: var(--sp-8) var(--sp-6);
+    display: grid;
+    gap: var(--sp-2);
+    color: var(--c-neu);
+  }
+
+  .fitxa__breadcrumb {
+    display: flex;
+    gap: 0.5em;
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    letter-spacing: var(--tr-label);
+    text-transform: uppercase;
+    color: color-mix(in oklab, var(--c-congesta) 90%, transparent);
+  }
+
+  .fitxa__breadcrumb a {
+    text-decoration: none;
+  }
+
+  .fitxa__breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .fitxa__name {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-tight);
+    color: var(--c-blanc);
+    text-shadow: 0 2px 24px rgb(6 20 32 / 0.5);
+  }
+
+  .fitxa__tagline {
+    max-inline-size: 44ch;
+    font-size: var(--fs-lead);
+    line-height: 1.42;
+    color: var(--c-congesta);
+  }
+
+  .fitxa__coords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    font-size: var(--fs-caption);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-gel);
+  }
+
+  /* Sense foto, la capçalera no pot ser text clar sobre res. */
+  .fitxa__hero:not(:has(.fitxa__hero-media)) {
+    min-block-size: 0;
+  }
+
+  .fitxa__hero:not(:has(.fitxa__hero-media)) .fitxa__hero-text {
+    color: var(--ink);
+  }
+
+  .fitxa__hero:not(:has(.fitxa__hero-media)) .fitxa__name {
+    color: var(--ink);
+    text-shadow: none;
+  }
+
+  .fitxa__hero:not(:has(.fitxa__hero-media)) .fitxa__tagline {
+    color: var(--ink-2);
+  }
+
+  .fitxa__hero:not(:has(.fitxa__hero-media)) .fitxa__coords,
+  .fitxa__hero:not(:has(.fitxa__hero-media)) .fitxa__breadcrumb {
+    color: var(--ink-3);
+  }
+
+  /* --- cos --- */
+  .fitxa__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 20rem);
+    gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+    align-items: start;
+    padding-block: var(--sp-7);
+  }
+
+  .fitxa__main {
+    display: grid;
+    /* Columna que no creix amb el min-content dels fills: el tall de la vall en té molt. */
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-7);
+    min-inline-size: 0;
+  }
+
+  .fitxa__prose {
+    font-size: var(--fs-lead);
+    line-height: 1.62;
+  }
+
+  .fitxa__prose h2 {
+    margin-block-start: 1.4em;
+    margin-block-end: 0.4em;
+    font-size: var(--fs-h4);
+  }
+
+  .fitxa__warning {
+    padding: var(--sp-4) var(--sp-5);
+    font-size: var(--fs-small);
+    line-height: 1.5;
+    color: var(--ink-2);
+    background: var(--accent-soft);
+    border-inline-start: 3px solid var(--accent);
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+  }
+
+  /* --- plats --- */
+  .dishes {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    border-block-start: var(--hairline) solid var(--line);
+  }
+
+  .dishes__item {
+    padding-block: var(--sp-3);
+    padding-inline-start: 1.6em;
+    position: relative;
+    font-size: var(--fs-body);
+    border-block-end: var(--hairline) solid var(--line);
+  }
+
+  /* Un guionet de carta, no una bala. */
+  .dishes__item::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 1.5em;
+    inset-inline-start: 0;
+    inline-size: 0.85em;
+    block-size: 1px;
+    background: var(--accent);
+  }
+
+  /* --- galeria --- */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    gap: var(--sp-4);
+  }
+
+  .gallery__item {
+    margin: 0;
+    display: grid;
+    gap: var(--sp-2);
+  }
+
+  .gallery__image {
+    inline-size: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--r-md);
+    background: var(--paper-inset);
+  }
+
+  .gallery__caption {
+    font-size: var(--fs-caption);
+  }
+
+  /* --- tall --- */
+  .fitxa__valley-lead {
+    margin-block-end: var(--sp-4);
+    max-inline-size: var(--measure);
+    font-size: var(--fs-small);
+    color: var(--ink-2);
+  }
+
+  /* --- fonts --- */
+  .fitxa__sources-note {
+    margin-block-end: var(--sp-3);
+    max-inline-size: var(--measure);
+    font-size: var(--fs-small);
+    color: var(--ink-3);
+  }
+
+  .sources {
+    display: grid;
+    gap: var(--sp-2);
+    margin: 0;
+  }
+
+  .sources__item {
+    font-size: var(--fs-small);
+  }
+
+  .sources__item a {
+    color: var(--ink-2);
+  }
+
+  /* --- rail --- */
+  .fitxa__rail {
+    position: sticky;
+    inset-block-start: 5.5rem;
+  }
+
+  .rail {
+    padding: var(--sp-5);
+    background: var(--paper-2);
+    border: var(--hairline) solid var(--line);
+    border-radius: var(--r-lg);
+  }
+
+  .rail__title {
+    font-size: var(--fs-caption);
+    font-weight: 620;
+    letter-spacing: var(--tr-label);
+    text-transform: uppercase;
+    font-variation-settings: 'wdth' var(--wdth-narrow);
+    color: var(--ink-3);
+    margin-block-end: var(--sp-4);
+  }
+
+  .rail__list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+  }
+
+  .rail__list dt {
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-block-start: var(--sp-3);
+  }
+
+  .rail__list dd {
+    margin: 0;
+    padding-block: 0.2em var(--sp-3);
+    font-size: var(--fs-small);
+    line-height: 1.45;
+    border-block-end: var(--hairline) solid var(--line);
+  }
+
+  .rail__list dd:last-of-type {
+    border-block-end: none;
+  }
+
+  .rail__hint {
+    color: var(--ink-3);
+  }
+
+  .rail__services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin: 0;
+    padding-block-start: var(--sp-4);
+  }
+
+  .rail__service {
+    padding: 0.18em 0.6em;
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 540;
+    color: var(--ink-2);
+    background: var(--paper-3);
+    border-radius: var(--r-pill);
+  }
+
+  .rail__cuisines {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin: 0;
+    padding-block-start: var(--sp-4);
+    margin-block-start: var(--sp-4);
+    border-block-start: var(--hairline) solid var(--line);
+  }
+
+  .rail__cuisine {
+    display: inline-block;
+    padding: 0.2em 0.65em;
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 580;
+    text-decoration: none;
+    color: var(--accent-ink);
+    border: var(--hairline) solid color-mix(in oklab, var(--accent) 45%, transparent);
+    border-radius: var(--r-pill);
+  }
+
+  .rail__cuisine:hover {
+    background: var(--accent-soft);
+  }
+
+  /* --- a prop --- */
+  .fitxa__nearby {
+    padding-block-end: var(--sp-8);
+  }
+
+  .fitxa__nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: var(--sp-5);
+  }
+
+  @media (max-width: 60rem) {
+    .fitxa__body {
+      grid-template-columns: 1fr;
+    }
+
+    .fitxa__rail {
+      position: static;
+    }
+  }
+}

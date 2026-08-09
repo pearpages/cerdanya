@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RestaurantCard from '../../components/RestaurantCard.astro';
+import { allRestaurants, groupByCuisine } from '../../lib/restaurants';
+import '../../styles/directory.css';
+
+export async function getStaticPaths() {
+  const restaurants = await allRestaurants();
+  return groupByCuisine(restaurants).map((group) => ({
+    params: { categoria: group.slug },
+    props: { group },
+  }));
+}
+
+const { group } = Astro.props;
+const count = group.restaurants.length;
+---
+
+<BaseLayout
+  title={group.name}
+  description={`${count} ${count === 1 ? 'restaurant' : 'restaurants'} de ${group.name.toLowerCase()} a la Cerdanya, ordenats per altitud.`}
+>
+  <div class="page">
+    <header class="index-hero">
+      <p class="eyebrow"><a href="/cuina/">Per cuina</a></p>
+      <h1 class="index-hero__title">{group.name}</h1>
+      <p class="index-hero__lead">
+        {count === 1 ? 'Un restaurant' : `${count} restaurants`} a la guia, del més baix al més alt.
+      </p>
+    </header>
+
+    <div class="directory__grid">
+      {
+        group.restaurants.map((entry, index) => (
+          <RestaurantCard entry={entry} loading={index < 4 ? 'eager' : 'lazy'} />
+        ))
+      }
+    </div>
+
+    <p class="index-back">
+      <a href="/restaurants/">Torna a tots els restaurants</a>
+    </p>
+  </div>
+</BaseLayout>

@@ -1,0 +1,27 @@
+{
+  "_note": "Fotografies que no pengen de cap fitxa de restaurant (portada i seccions generals). Mateix contracte que la resta: autor, llicència i URL d'origen obligatoris. Els fitxers viuen a src/assets/restaurants/_site/ i els posa allà scripts/fetch-images.mjs; scripts/lint-credits.mjs comprova aquest fitxer abans del build i surten a /credits com totes les altres.",
+  "images": [
+    {
+      "id": "portada",
+      "file": "_site/01.jpg",
+      "usedOn": "Portada",
+      "alt": "El pla de la Cerdanya vist des d'Urtx a l'estiu: un mosaic de prats verds i camps segats amb masos escampats, i els vessants boscosos que tanquen la vall al fons.",
+      "author": "Angela Llop",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paisatge_des_de_Urtx,_la_Cerdanya.jpg",
+      "isOfficial": false
+    },
+    {
+      "id": "trinxat",
+      "file": "_site/03.jpg",
+      "usedOn": "Portada · com està feta la guia",
+      "alt": "Un plat de trinxat de la Cerdanya vist des de dalt: la col i la patata aixafades, amb talls de botifarra negra i tires de cansalada torrada.",
+      "author": "Kronologiko",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trinxat_de_La_Cerdanya.jpg",
+      "isOfficial": false
+    }
+  ]
+}

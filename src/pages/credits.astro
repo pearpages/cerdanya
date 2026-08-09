@@ -1,0 +1,123 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { allRestaurants } from '../lib/restaurants';
+import { siteImages } from '../lib/site-images';
+import '../styles/directory.css';
+import '../styles/credits.css';
+
+const restaurants = await allRestaurants();
+
+/** Primer les del lloc (portada i seccions), després les de cada fitxa per cota. */
+const rows = [
+  ...siteImages.map((image) => ({
+    image,
+    restaurant: image.usedOn,
+    href: '/',
+    town: 'Imatge general del lloc',
+  })),
+  ...restaurants.flatMap((entry) =>
+    entry.data.images.map((image) => ({
+      image,
+      restaurant: entry.data.name,
+      href: `/restaurants/${entry.id}/`,
+      town: entry.data.town,
+    })),
+  ),
+];
+
+const official = rows.filter((row) => row.image.isOfficial).length;
+const licensed = rows.length - official;
+
+/** Recompte per llicència, per veure d'un cop sota què està publicat el lloc. */
+const byLicense = [...rows.reduce((map, row) => {
+  map.set(row.image.license, (map.get(row.image.license) ?? 0) + 1);
+  return map;
+}, new Map<string, number>())].sort((a, b) => b[1] - a[1]);
+---
+
+<BaseLayout
+  title="Crèdits fotogràfics"
+  description="Totes les fotografies del lloc, una per una, amb l’autor, la llicència i l’enllaç a l’original."
+>
+  <div class="page credits">
+    <header class="index-hero">
+      <p class="eyebrow">Atribució</p>
+      <h1 class="index-hero__title">Crèdits fotogràfics</h1>
+      <p class="index-hero__lead">
+        Aquí hi ha les {rows.length} fotografies del lloc, una per una, amb qui les ha fetes, sota
+        quina llicència i on és l’original. {official} venen del web del propi restaurant o de
+        l’oficina de turisme que el llista; {licensed} són de Wikimedia Commons amb llicència
+        lliure.
+      </p>
+      <p class="credits__note">
+        Si ets d’un dels restaurants i vols que canviem el crèdit o que retirem una imatge,
+        escriu-nos i es fa. Cap foto entra al lloc sense autor, llicència i enllaç a l’origen: el
+        build falla si en falta algun.
+      </p>
+    </header>
+
+    <ul class="credits__summary">
+      {
+        byLicense.map(([license, count]) => (
+          <li class="credits__summary-item">
+            <span class="credits__summary-count mono">{count}</span>
+            <span class="credits__summary-label">{license}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <ul class="credits__list">
+      {
+        rows.map((row) => (
+          <li class="credits__row">
+            <Image
+              class="credits__thumb"
+              src={row.image.src}
+              alt=""
+              widths={[120, 240]}
+              sizes="120px"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="credits__meta">
+              <p class="credits__where">
+                <a href={row.href}>{row.restaurant}</a>
+                <span class="credits__town"> · {row.town}</span>
+              </p>
+              <p class="credits__alt">{row.image.alt}</p>
+              <p class="credits__attrib mono">
+                <a href={row.image.sourceUrl} rel="noopener nofollow">
+                  {row.image.author}
+                </a>
+                <span aria-hidden="true"> · </span>
+                {row.image.licenseUrl ? (
+                  <a href={row.image.licenseUrl} rel="license noopener nofollow">
+                    {row.image.license}
+                  </a>
+                ) : (
+                  <span>{row.image.license}</span>
+                )}
+              </p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+
+    <section class="credits__data">
+      <h2 class="section-title">Dades</h2>
+      <p class="credits__note">
+        Les coordenades dels pobles surten d’<a
+          href="https://www.openstreetmap.org/copyright"
+          rel="noopener">OpenStreetMap</a
+        > (ODbL, © contribuïdors d’OpenStreetMap). Les altituds i el perfil del fons de vall surten
+        del model digital del terreny EU-DEM 25 m, consultat a través d’<a
+          href="https://www.opentopodata.org/"
+          rel="noopener">OpenTopoData</a
+        >. Els textos de cada fitxa estan escrits de nou a partir de les fonts que s’hi citen.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

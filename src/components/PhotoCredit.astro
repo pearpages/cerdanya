@@ -1,0 +1,29 @@
+---
+import './PhotoCredit.css';
+
+interface Props {
+  author: string;
+  license: string;
+  licenseUrl?: string;
+  sourceUrl: string;
+  isOfficial: boolean;
+  tone?: 'over' | 'inline';
+}
+
+const { author, license, licenseUrl, sourceUrl, isOfficial, tone = 'inline' } = Astro.props;
+---
+
+<p class:list={['credit', `credit--${tone}`]}>
+  <span class="credit__label">Foto</span>
+  <a class="credit__author" href={sourceUrl} rel="noopener nofollow">{author}</a>
+  <span class="credit__sep" aria-hidden="true">·</span>
+  {
+    licenseUrl ? (
+      <a class="credit__license" href={licenseUrl} rel="license noopener nofollow">
+        {license}
+      </a>
+    ) : (
+      <span class="credit__license">{isOfficial ? license : license}</span>
+    )
+  }
+</p>

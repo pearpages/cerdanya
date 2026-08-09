@@ -1,0 +1,33 @@
+{
+  "name": "cerdanya",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Guia gastronòmica de la Cerdanya",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "prebuild": "node scripts/lint-credits.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "data:villages": "node scripts/build-villages.mjs",
+    "data:valley": "node scripts/build-valley-profile.mjs",
+    "data:images": "node scripts/fetch-images.mjs",
+    "data:images:apply": "node scripts/apply-image-credits.mjs",
+    "data:credits": "node scripts/lint-credits.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/azeret-mono": "^5.3.0",
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "astro": "^7.2.0",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "yaml": "^2.9.0"
+  }
+}

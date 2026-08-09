@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ValleySection from '../../components/ValleySection.astro';
+import { allRestaurants, formatElevation, groupByVillage, valleyVillages } from '../../lib/restaurants';
+import '../../styles/directory.css';
+
+const restaurants = await allRestaurants();
+const villages = groupByVillage(restaurants);
+const valley = valleyVillages(restaurants);
+
+const lowest = villages[0];
+const highest = villages.at(-1)!;
+---
+
+<BaseLayout
+  title="Per poble"
+  description="Els pobles de la Cerdanya amb restaurants a la guia, ordenats per altitud, dels dos costats de la frontera."
+>
+  <div class="page">
+    <header class="index-hero">
+      <p class="eyebrow">Els pobles</p>
+      <h1 class="index-hero__title">Per poble</h1>
+      <p class="index-hero__lead">
+        {villages.length} pobles, de {lowest.name} a {formatElevation(lowest.elevation)} m fins a {
+          highest.name
+        } a {formatElevation(highest.elevation)} m. Els de vessant surten al tall amb el punt buit.
+      </p>
+    </header>
+
+    <section class="pobles__valley" aria-labelledby="tall-pobles">
+      <h2 class="visually-hidden" id="tall-pobles">El tall de la vall</h2>
+      <ValleySection villages={valley} headingId="tall-pobles" />
+    </section>
+
+    <ul class="index-list">
+      {
+        villages.map((village) => (
+          <li>
+            <a class="index-list__link" href={`/pobles/${village.slug}/`}>
+              <span class="index-list__name">{village.name}</span>
+              <span class="index-list__meta">
+                {formatElevation(village.elevation)} m ·{' '}
+                {village.restaurants.length === 1
+                  ? '1 restaurant'
+                  : `${village.restaurants.length} restaurants`}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

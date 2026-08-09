@@ -1,0 +1,178 @@
+@layer components {
+  .valley {
+    margin: 0;
+    /*
+     * El dibuix té una amplada mínima i es desplaça per dins. Sense això, dins d'un
+     * grid o d'un flex el min-content del SVG estira la columna i qui es desplaça és
+     * la pàgina sencera, arrossegant-hi la resta de la secció.
+     */
+    min-inline-size: 0;
+  }
+
+  /* Amplada gran: es desplaça dins del seu contenidor, mai fa desbordar la pàgina. */
+  .valley__scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .valley__svg {
+    inline-size: 100%;
+    min-inline-size: 34rem;
+    block-size: auto;
+    overflow: visible;
+  }
+
+  /* --- relleu --- */
+  .valley__grad-top {
+    stop-color: var(--sky);
+    stop-opacity: 0.26;
+  }
+
+  .valley__grad-bottom {
+    stop-color: var(--sky);
+    stop-opacity: 0.04;
+  }
+
+  .valley__terrain {
+    fill: url(#valley-terrain);
+  }
+
+  .valley__ridge {
+    fill: none;
+    stroke: var(--sky);
+    stroke-width: 1.6;
+    stroke-linejoin: round;
+    opacity: 0.85;
+  }
+
+  /* --- corbes de nivell --- */
+  .valley__contours line {
+    stroke: var(--line);
+    stroke-width: 1;
+    stroke-dasharray: 2 5;
+  }
+
+  .valley__contour-label,
+  .valley__axis-unit,
+  .valley__axis-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-variant-numeric: tabular-nums;
+    fill: var(--ink-3);
+  }
+
+  .valley__contour-label {
+    text-anchor: end;
+  }
+
+  .valley__axis-label {
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+  }
+
+  /* --- la frontera --- */
+  .valley__border line {
+    stroke: var(--accent);
+    stroke-width: 1.2;
+    stroke-dasharray: 5 4;
+    opacity: 0.75;
+  }
+
+  .valley__border-label {
+    font-family: var(--font-display);
+    font-size: 9.5px;
+    font-weight: 640;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    fill: var(--accent-ink);
+  }
+
+  /* --- pobles --- */
+  .valley__pin {
+    cursor: pointer;
+  }
+
+  .valley__stem {
+    stroke: var(--sky);
+    stroke-width: 1;
+    opacity: 0.45;
+  }
+
+  .valley__dot {
+    fill: var(--sky);
+    stroke: var(--paper);
+    stroke-width: 1.5;
+    transition:
+      fill var(--dur-fast) var(--ease-out),
+      r var(--dur-fast) var(--ease-out);
+  }
+
+  /* Poble de vessant: cercle buit, perquè no seu al fons de vall. */
+  .valley__pin--slope .valley__dot {
+    fill: var(--paper);
+    stroke: var(--sky);
+    stroke-width: 1.8;
+  }
+
+  .valley__hit {
+    fill: transparent;
+  }
+
+  .valley__pin:hover .valley__dot,
+  .valley__pin:focus-visible .valley__dot {
+    fill: var(--accent);
+    stroke: var(--paper);
+  }
+
+  .valley__pin:focus-visible {
+    outline: none;
+  }
+
+  .valley__pin:focus-visible .valley__hit {
+    stroke: var(--accent-ink);
+    stroke-width: 2;
+  }
+
+  .valley__pin--current .valley__dot {
+    fill: var(--accent);
+    stroke: var(--paper);
+    stroke-width: 2;
+  }
+
+  .valley__pin--current .valley__stem {
+    stroke: var(--accent);
+    opacity: 0.9;
+  }
+
+  /* --- noms --- */
+  .valley__label {
+    font-family: var(--font-display);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    fill: var(--ink-2);
+    paint-order: stroke;
+    stroke: var(--paper);
+    stroke-width: 3.5;
+    stroke-linejoin: round;
+  }
+
+  .valley__label--current {
+    fill: var(--ink);
+    font-weight: 720;
+  }
+
+  .valley__caption {
+    margin-block-start: var(--sp-4);
+    max-inline-size: 64ch;
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--ink-3);
+  }
+
+  .valley--compact .valley__svg {
+    min-inline-size: 26rem;
+  }
+}

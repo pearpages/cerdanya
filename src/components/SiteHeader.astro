@@ -1,0 +1,55 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import './SiteHeader.css';
+
+const nav = [
+  { href: '/restaurants/', label: 'Tots els restaurants' },
+  { href: '/cuina/', label: 'Per cuina' },
+  { href: '/pobles/', label: 'Per poble' },
+  { href: '/credits/', label: 'Crèdits' },
+];
+
+const path = Astro.url.pathname;
+---
+
+<header class="site-header" transition:persist>
+  <div class="site-header__inner page">
+    <a class="site-header__brand" href="/">
+      <span class="site-header__mark" aria-hidden="true">
+        <svg viewBox="0 0 34 20" fill="none" role="presentation">
+          <path
+            d="M1 19 L9.5 6 L14.5 12.5 L22 1 L33 19"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          ></path>
+          <path d="M1 19 H33" stroke="currentColor" stroke-width="1.6" opacity="0.35"></path>
+        </svg>
+      </span>
+      <span class="site-header__name">
+        Cota de tast
+        <span class="site-header__sub">Guia de restaurants de la Cerdanya</span>
+      </span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="Principal">
+      <ul class="site-header__list">
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                class="site-header__link"
+                href={item.href}
+                aria-current={path.startsWith(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <ThemeToggle />
+  </div>
+</header>

@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+import type { Restaurant } from '../lib/restaurants';
+import { elevationOf, formatElevation } from '../lib/restaurants';
+import { PRICE_LABELS } from '../data/taxonomy';
+import './RestaurantCard.css';
+
+interface Props {
+  entry: Restaurant;
+  /** La primera targeta de cada llista carrega amb prioritat i ocupa dues columnes. */
+  featured?: boolean;
+  loading?: 'eager' | 'lazy';
+}
+
+const { entry, featured = false, loading = 'lazy' } = Astro.props;
+const { data } = entry;
+
+const hero = data.images[0];
+const elevation = elevationOf(data.town);
+const href = `/restaurants/${entry.id}/`;
+---
+
+<article
+  class:list={['card', featured && 'card--featured', data.dataThin && 'card--thin']}
+  data-name={[data.name, ...data.altNames].join(' ').toLowerCase()}
+  data-town={data.town}
+  data-subregion={data.subregion}
+  data-cuisine={data.cuisine.join('|')}
+  data-price={data.priceRange}
+  data-services={data.services.join('|')}
+  data-elevation={elevation}
+>
+  <a class="card__link" href={href}>
+    <div class="card__media">
+      {
+        hero ? (
+          <Image
+            class="card__image"
+            src={hero.src}
+            alt={hero.alt}
+            widths={featured ? [480, 800, 1200] : [320, 480, 800]}
+            sizes={
+              featured
+                ? '(max-width: 52rem) 92vw, 46rem'
+                : '(max-width: 52rem) 92vw, (max-width: 76rem) 44vw, 24rem'
+            }
+            loading={loading}
+            decoding="async"
+          />
+        ) : (
+          <div class="card__image card__image--empty" aria-hidden="true" />
+        )
+      }
+      <p class="card__elevation mono" aria-hidden="true">{formatElevation(elevation)} m</p>
+    </div>
+
+    <div class="card__body">
+      <p class="card__place">
+        <span class="card__town">{data.town}</span>
+        <span class="card__sep" aria-hidden="true">·</span>
+        <span class="card__region">{data.subregion}</span>
+        {data.country === 'FR' && <span class="card__flag" title="Alta Cerdanya, França">FR</span>}
+      </p>
+
+      <h3 class="card__name">{data.name}</h3>
+      <p class="card__tagline">{data.tagline}</p>
+
+      <ul class="card__tags">
+        {data.cuisine.slice(0, 2).map((cuisine) => <li class="card__tag">{cuisine}</li>)}
+      </ul>
+
+      <p class="card__meta mono">
+        <span class="card__price" title={PRICE_LABELS[data.priceRange]}>{data.priceRange}</span>
+        {
+          data.rating && (
+            <>
+              <span class="card__sep" aria-hidden="true">·</span>
+              <span>
+                {data.rating.toLocaleString('ca-ES', { minimumFractionDigits: 1 })}
+                {data.reviewCount ? ` (${data.reviewCount.toLocaleString('ca-ES')})` : ''}
+              </span>
+            </>
+          )
+        }
+      </p>
+    </div>
+  </a>
+</article>

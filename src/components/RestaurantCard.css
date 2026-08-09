@@ -1,0 +1,195 @@
+@layer components {
+  .card {
+    position: relative;
+    display: flex;
+    background: var(--paper-2);
+    border: var(--hairline) solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    transition:
+      border-color var(--dur-med) var(--ease-out),
+      transform var(--dur-med) var(--ease-out),
+      box-shadow var(--dur-med) var(--ease-out);
+  }
+
+  .card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-2);
+  }
+
+  .card:has(.card__link:focus-visible) {
+    outline: 2px solid var(--accent-ink);
+    outline-offset: 3px;
+  }
+
+  .card__link {
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card__link:focus-visible {
+    outline: none;
+  }
+
+  .card__media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--paper-inset);
+  }
+
+  .card__image {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    transition: scale var(--dur-slow) var(--ease-out);
+  }
+
+  .card__image--empty {
+    background: linear-gradient(150deg, var(--sky-soft), var(--paper-inset));
+  }
+
+  .card:hover .card__image {
+    scale: 1.035;
+  }
+
+  /* La cota, sempre a la imatge: és l'eix del lloc i ha de viatjar amb el restaurant. */
+  .card__elevation {
+    position: absolute;
+    inset-block-start: var(--sp-3);
+    inset-inline-start: var(--sp-3);
+    padding: 0.18em 0.55em;
+    font-size: var(--fs-caption);
+    letter-spacing: 0.02em;
+    color: var(--c-neu);
+    background: rgb(6 20 32 / 0.62);
+    backdrop-filter: blur(6px);
+    border-radius: var(--r-sm);
+  }
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    padding: var(--sp-4) var(--sp-4) var(--sp-5);
+    flex: 1;
+  }
+
+  .card__place {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .card__town {
+    color: var(--ink-2);
+  }
+
+  .card__flag {
+    padding: 0.05em 0.35em;
+    font-size: 0.86em;
+    letter-spacing: 0.06em;
+    color: var(--accent-ink);
+    border: var(--hairline) solid currentColor;
+    border-radius: var(--r-sm);
+  }
+
+  .card__name {
+    font-size: var(--fs-h4);
+    line-height: 1.1;
+  }
+
+  .card__tagline {
+    font-size: var(--fs-small);
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+
+  .card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin: 0;
+    margin-block-start: auto;
+    padding-block-start: var(--sp-3);
+  }
+
+  .card__tag {
+    padding: 0.16em 0.6em;
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 560;
+    color: var(--ink-2);
+    background: var(--paper-3);
+    border-radius: var(--r-pill);
+  }
+
+  .card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.45em;
+    font-size: var(--fs-caption);
+    color: var(--ink-3);
+  }
+
+  .card__price {
+    color: var(--accent-ink);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* Fitxa amb poca informació verificable: es marca, no s'amaga. */
+  .card--thin .card__name::after {
+    content: '';
+    display: inline-block;
+    inline-size: 0.42em;
+    block-size: 0.42em;
+    margin-inline-start: 0.4em;
+    vertical-align: 0.28em;
+    border-radius: 50%;
+    background: var(--ink-3);
+    opacity: 0.55;
+  }
+
+  /* --- variant destacada: horitzontal en pantalles amples --- */
+  @media (min-width: 52rem) {
+    .card--featured {
+      grid-column: span 2;
+    }
+
+    .card--featured .card__link {
+      flex-direction: row;
+    }
+
+    .card--featured .card__media {
+      flex: 1 1 52%;
+      aspect-ratio: auto;
+      min-block-size: 19rem;
+    }
+
+    .card--featured .card__body {
+      flex: 1 1 48%;
+      justify-content: center;
+      padding: var(--sp-6);
+      gap: var(--sp-3);
+    }
+
+    .card--featured .card__name {
+      font-size: var(--fs-h3);
+    }
+
+    .card--featured .card__tagline {
+      font-size: var(--fs-body);
+    }
+  }
+}

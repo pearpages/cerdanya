@@ -1,0 +1,50 @@
+@layer components {
+  .credit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.38em;
+    font-family: var(--font-mono);
+    font-size: var(--fs-caption);
+    line-height: 1.4;
+  }
+
+  .credit__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+  }
+
+  .credit a {
+    text-decoration-color: color-mix(in oklab, currentColor 40%, transparent);
+  }
+
+  .credit--inline {
+    color: var(--ink-3);
+  }
+
+  /* Sobre la fotografia: prou contrast per llegir-se sense tapar la imatge. */
+  .credit--over {
+    position: absolute;
+    inset-block-end: var(--sp-3);
+    inset-inline-end: var(--sp-4);
+    z-index: 2;
+    padding: 0.3em 0.7em;
+    color: var(--c-congesta);
+    background: rgb(6 20 32 / 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: var(--r-sm);
+    max-inline-size: min(100% - var(--sp-6), 26rem);
+  }
+
+  .credit--over a {
+    color: var(--c-neu);
+  }
+
+  @media (max-width: 40rem) {
+    .credit--over {
+      inset-inline: var(--sp-3);
+      inset-block-end: var(--sp-2);
+    }
+  }
+}

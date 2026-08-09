@@ -1,0 +1,607 @@
+{
+  "_note": "Pla de descàrrega d'imatges. `official.urls` són fotos publicades pel propi restaurant (o, quan s'indica, per l'oficina de turisme que el llista); el crèdit va a qui les ha fetes o publicades. `commons` són consultes a Wikimedia Commons per omplir el que falti, amb autoria i llicència llegides de les metadades. Cap imatge s'accepta sense autor, llicència i URL d'origen. Vegeu scripts/fetch-images.mjs.",
+  "restaurants": [
+    {
+      "slug": "_site",
+      "name": "Cota de tast",
+      "want": 6,
+      "commons": [
+        "Paisatge des de Urtx la Cerdanya",
+        "Trinxat de La Cerdanya",
+        "Vista de Llívia 2022",
+        "Puigcerdà Pere López Brosa",
+        "Font-romeu Pere López Brosa",
+        "Paysage Eyne Lucas Destrem"
+      ]
+    },
+    {
+      "slug": "can-ventura",
+      "name": "Can Ventura",
+      "want": 4,
+      "official": {
+        "site": "https://canventura.com/",
+        "credit": "Can Ventura",
+        "urls": [
+          "https://canventura.com/wp-content/uploads/2024/06/Restaurante_20.webp",
+          "https://canventura.com/wp-content/uploads/2024/06/Plato_52.webp",
+          "https://canventura.com/wp-content/uploads/2024/06/Restaurante_44.webp",
+          "https://canventura.com/wp-content/uploads/2024/06/Plato_57.webp",
+          "https://canventura.com/wp-content/uploads/2024/06/Restaurante_30.webp",
+          "https://canventura.com/wp-content/uploads/2024/06/Restaurante_16.webp"
+        ]
+      },
+      "commons": [
+        "Llívia Cerdanya"
+      ]
+    },
+    {
+      "slug": "la-formatgeria-de-llivia",
+      "name": "La Formatgeria de Llívia",
+      "want": 4,
+      "official": {
+        "site": "https://www.laformatgeria.com/",
+        "credit": "La Formatgeria de Llívia",
+        "urls": [
+          "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-H-.jpg",
+          "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-01.jpg",
+          "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-03.jpg",
+          "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-1.jpg",
+          "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-3.jpg"
+        ]
+      },
+      "commons": [
+        "fondue cheese",
+        "Raclette cheese"
+      ]
+    },
+    {
+      "slug": "raval-13",
+      "name": "Raval 13",
+      "want": 4,
+      "official": {
+        "site": "https://raval13.com/",
+        "credit": "Raval 13",
+        "urls": [
+          "https://raval13.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-23-at-13.27.28-23.jpeg",
+          "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Gofre-de-pulpo-con-sobrasada.jpg",
+          "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Guiso-de-Calamares.jpg",
+          "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Cocinas.jpg",
+          "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Nuestra-bodega.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "la-borda-del-cereta",
+      "name": "La Borda del Ceretà",
+      "want": 4,
+      "official": {
+        "site": "https://labordadelcereta.com/",
+        "credit": "La Borda del Ceretà",
+        "urls": [
+          "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Exterior.webp",
+          "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Grid_1.webp",
+          "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_1.webp",
+          "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_2.webp",
+          "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_4.webp"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "schierbeck",
+      "name": "Schierbeck",
+      "want": 3,
+      "official": {
+        "site": "https://www.schierbeckrestaurant.com/",
+        "credit": "Schierbeck Restaurant",
+        "urls": [
+          "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierbeck-comida6-copia-1.jpg",
+          "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierberck21.jpg",
+          "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierbeck-vino.jpg"
+        ]
+      },
+      "commons": [
+        "Puigcerdà estany"
+      ]
+    },
+    {
+      "slug": "ca-la-nuria",
+      "name": "Ca la Núria",
+      "want": 4,
+      "official": {
+        "site": "https://www.restaurantcalanuria.cat/",
+        "credit": "Mariana Castel, per a Ca la Núria",
+        "urls": [
+          "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_sala_restaurant_1.jpg",
+          "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_NIU01_%C2%A9MarianaCastel_11_WEB.jpg",
+          "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_NIU01_%C2%A9MarianaCastel_8_WEB.jpg",
+          "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_NIU01_%C2%A9MarianaCastel_32_WEB.jpg",
+          "https://www.restaurantcalanuria.cat/wp-content/uploads/2025/03/Ca-la-Nuria_cigrons_2.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "cal-xena",
+      "name": "Cal Xena",
+      "want": 4,
+      "official": {
+        "site": "https://calxena.es/",
+        "credit": "Cal Xena",
+        "urls": [
+          "https://calxena.es/cal-xena/enmig-de-la-cerdanya.jpg",
+          "https://calxena.es/cal-xena/menjar-tradicional.jpg",
+          "https://calxena.es/cal-xena/sabors-tradicionals.jpg",
+          "https://calxena.es/cal-xena/restaurante/comedor-cal-xena.jpg",
+          "https://calxena.es/cal-xena/restaurante/bar-calxena.jpg"
+        ]
+      },
+      "commons": [
+        "Trinxat de La Cerdanya"
+      ]
+    },
+    {
+      "slug": "arc",
+      "name": "Arç",
+      "want": 3,
+      "official": {
+        "site": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+        "credit": "Cerdanya EcoResort",
+        "urls": [
+          "https://cerdanyaviva.com/wp-content/uploads/2019/06/food-restaurant-arc-plat-trinxat-cadi-cerdanya-ecoresort-1024x682.jpg",
+          "https://cerdanyaviva.com/wp-content/uploads/20190628-8674.jpg"
+        ]
+      },
+      "commons": [
+        "Serra del Cadí",
+        "Trinxat de La Cerdanya"
+      ]
+    },
+    {
+      "slug": "fonda-cobadana",
+      "name": "Fonda Cobadana",
+      "want": 4,
+      "official": {
+        "site": "https://www.fondacobadana.es/",
+        "credit": "Fonda Cobadana",
+        "urls": [
+          "https://www.fondacobadana.es/images/home/principal.jpg",
+          "https://www.fondacobadana.es/images/conocenos.jpg",
+          "https://www.fondacobadana.es/images/galeria/1.jpg",
+          "https://www.fondacobadana.es/images/galeria/2.jpg",
+          "https://www.fondacobadana.es/images/galeria/3.jpg",
+          "https://www.fondacobadana.es/images/galeria/4.jpg"
+        ]
+      },
+      "commons": [
+        "Urús Cerdanya",
+        "Cerdanya paisatge",
+        "Trinxat de La Cerdanya"
+      ],
+      "minWidth": 560
+    },
+    {
+      "slug": "das-1219",
+      "name": "DAS 1219",
+      "want": 4,
+      "official": {
+        "site": "https://das1219.com/",
+        "credit": "DAS 1219",
+        "urls": [
+          "https://das1219.com/wp-content/uploads/2026/08/DAS_Arros_V1.webp",
+          "https://das1219.com/wp-content/uploads/2026/08/DAS_Chuleton_V1.webp",
+          "https://das1219.com/wp-content/uploads/2026/08/DAS_Degustacio_V1.webp",
+          "https://das1219.com/wp-content/uploads/2026/08/DAS_Trufa_V1.webp",
+          "https://das1219.com/wp-content/uploads/2026/08/Carta_Plato_v2-1.webp"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "mooma-cerdanya",
+      "name": "Mooma Cerdanya",
+      "want": 3,
+      "official": {
+        "site": "https://mooma.cat/mooma-cerdanya/",
+        "credit": "Mooma",
+        "urls": [
+          "https://mooma.cat/wp-content/uploads/2026/04/CERDANYA3.webp",
+          "https://mooma.cat/wp-content/uploads/2026/05/7T4A5010-scaled.webp",
+          "https://mooma.cat/wp-content/uploads/2026/05/DSC09794-scaled.webp"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "el-paller-de-queixans",
+      "name": "El Paller de Queixans",
+      "want": 4,
+      "official": {
+        "site": "https://elpallerdequeixans.com/",
+        "credit": "El Paller de Queixans",
+        "urls": [
+          "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans.jpg",
+          "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-8.jpg",
+          "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-10.jpg",
+          "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-12.jpg",
+          "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-14.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "el-club",
+      "name": "El Club",
+      "want": 3,
+      "official": {
+        "site": "https://elclubrestaurant.com/",
+        "credit": "El Club Restaurant",
+        "urls": [
+          "https://elclubrestaurant.com/wp-content/uploads/2026/05/21-05-1.jpg",
+          "https://elclubrestaurant.com/wp-content/uploads/2026/05/21-05-2.jpg",
+          "https://elclubrestaurant.com/wp-content/uploads/2026/05/Alp-municipi-2.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "somnia",
+      "name": "Somnia",
+      "want": 4,
+      "official": {
+        "site": "https://www.somniarestaurant.com/",
+        "credit": "Somnia",
+        "urls": [
+          "https://www.somniarestaurant.com/wp-content/uploads/2025/12/1-copia.webp",
+          "https://www.somniarestaurant.com/wp-content/uploads/2025/12/3-copia.webp",
+          "https://www.somniarestaurant.com/wp-content/uploads/2025/12/5-copia.webp",
+          "https://www.somniarestaurant.com/wp-content/uploads/2025/06/11-bikini-11-Pica_1-webp-scaled.webp",
+          "https://www.somniarestaurant.com/wp-content/uploads/2025/07/Germans-Eloy-Dani.webp"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "tierra-del-fuego",
+      "name": "Tierra del Fuego",
+      "want": 4,
+      "official": {
+        "site": "https://tierradelfuego.es/",
+        "credit": "Tierra del Fuego",
+        "urls": [
+          "https://tierradelfuego.es/wp-content/uploads/2023/10/fuego.jpg",
+          "https://tierradelfuego.es/wp-content/uploads/2023/08/parrilla.jpg",
+          "https://tierradelfuego.es/wp-content/uploads/2023/08/carne.jpg",
+          "https://tierradelfuego.es/wp-content/uploads/2023/08/provoleta.jpg",
+          "https://tierradelfuego.es/wp-content/uploads/2023/10/mollejas.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "cal-jet",
+      "name": "Cal Jet",
+      "want": 4,
+      "official": {
+        "site": "https://www.caljet.cat/",
+        "credit": "Cal Jet Bistrot de Muntanya",
+        "urls": [
+          "https://caljet.cat/wp-content/uploads/2026/04/CalJet-Inici-1.webp",
+          "https://caljet.cat/wp-content/uploads/2026/04/CalJet-Inici-4.webp",
+          "https://caljet.cat/wp-content/uploads/2026/06/CalJet-Inici-5.webp",
+          "https://caljet.cat/wp-content/uploads/2026/06/CalJet-Terrassa-2.webp",
+          "https://caljet.cat/wp-content/uploads/2026/04/CalJet-Km0-2.webp"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "raco-de-riu",
+      "name": "Racó de Riu",
+      "want": 4,
+      "official": {
+        "site": "https://www.racoderiu.cat/",
+        "credit": "Racó de Riu",
+        "urls": [
+          "https://www.racoderiu.cat/wp-content/uploads/2026/06/61eab99b-2705-418b-8c0f-7dfa9827af1f.jpg",
+          "https://www.racoderiu.cat/wp-content/uploads/2026/06/14ce96be-d74e-47c5-a18d-5a0544dc1358-scaled.jpg",
+          "https://www.racoderiu.cat/wp-content/uploads/2026/06/386a84cd-b0f1-48a8-9dac-a26ff464537d-scaled.jpg",
+          "https://www.racoderiu.cat/wp-content/uploads/2026/06/664d6d8a-a77a-4ab9-972d-2f9accb70287.jpg",
+          "https://www.racoderiu.cat/wp-content/uploads/2026/06/9033b201-5498-4339-bcc2-30937d8c3137.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "terra-de-pics",
+      "name": "Terra de Pics",
+      "want": 3,
+      "official": {
+        "site": "https://terradepics.com/",
+        "credit": "Terra de Pics",
+        "urls": [
+          "https://terradepics.com/wp-content/uploads/2023/04/tartar.png",
+          "https://terradepics.com/wp-content/uploads/2023/04/xai-menu3.png",
+          "https://terradepics.com/wp-content/uploads/2023/07/IMG-20230721-WA0008-azul.png"
+        ]
+      },
+      "commons": [
+        "Bolvir"
+      ]
+    },
+    {
+      "slug": "chez-planes",
+      "name": "Chez Planes",
+      "want": 4,
+      "official": {
+        "site": "https://www.chezplanes.com/",
+        "credit": "Chez Planes",
+        "urls": [
+          "https://www.monsamm.com/gallery/62e3e93c927b17.35829200-xl.webp",
+          "https://www.monsamm.com/gallery/60659cfe662052.36503673.webp",
+          "https://www.monsamm.com/gallery/60659cf090fd19.40480540.webp",
+          "https://www.monsamm.com/gallery/60659ced108ac4.28398536.webp",
+          "https://www.monsamm.com/gallery/62e55b81bc7429.22507483-xl.webp"
+        ]
+      },
+      "commons": [
+        "Saillagouse"
+      ]
+    },
+    {
+      "slug": "le-saint-anne",
+      "name": "Le Saint-Anne",
+      "want": 4,
+      "official": {
+        "site": "https://grandhotelermitage.fr/restaurants/",
+        "credit": "Grand Hôtel L’Ermitage",
+        "urls": [
+          "https://grandhotelermitage.fr/wp-content/uploads/2025/10/Ermitage_0CT25_084-scaled.jpg",
+          "https://grandhotelermitage.fr/wp-content/uploads/2025/10/Ermitage_0CT25_094-2-scaled.jpg",
+          "https://grandhotelermitage.fr/wp-content/uploads/2025/01/465A0131.jpg",
+          "https://grandhotelermitage.fr/wp-content/uploads/2025/01/465A0140.jpg",
+          "https://grandhotelermitage.fr/wp-content/uploads/2025/01/465A9758.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "cal-xandera",
+      "name": "Cal Xandera",
+      "want": 3,
+      "official": {
+        "site": "https://www.calxandera.com/",
+        "credit": "Cal Xandera",
+        "urls": [
+          "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/i683bf081ee4c6542/version/1498475974/image.jpg",
+          "https://image.jimcdn.com/app/cms/image/transf/dimension=1280x10000:format=jpg/path/s183dac7cff6870bf/image/i3cd4b4a0643ad454/version/1576502716/image.jpg"
+        ]
+      },
+      "commons": [
+        "Angoustrine"
+      ]
+    },
+    {
+      "slug": "la-chaumiere",
+      "name": "La Chaumière",
+      "want": 4,
+      "official": {
+        "site": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+        "credit": "Oficina de Turisme de Font-Romeu",
+        "urls": [
+          "https://font-romeu.fr/wp-content/uploads/2021/10/61790560aa0000c1db8a4155.jpg",
+          "https://font-romeu.fr/wp-content/uploads/2021/10/7Xase4yp2AXqBkCckXPEbWWjCmSMsg5F87hqyKtwdNnMBA19MLhhzrQ5aZBYayFNA.jpg",
+          "https://font-romeu.fr/wp-content/uploads/2021/10/C3jQnPLcQmMnr2wEg2LAeD6EqcxjWjDnGtLNERCS43OYcLZMmn36kckXZerb2ea5M.jpg",
+          "https://font-romeu.fr/wp-content/uploads/2021/10/esNkFmWjRz4SgsfDWRzqXMMZZB8BXGnsWxf8GCx3gc9HtR8Dfp8HPFeNMtk5F7M8Z.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "la-table-des-saveurs",
+      "name": "La Table des Saveurs",
+      "want": 4,
+      "official": {
+        "site": "https://tabledessaveurs.fr/",
+        "credit": "La Table des Saveurs",
+        "urls": [
+          "https://tabledessaveurs.fr/wp-content/uploads/2022/10/cadre-1.jpg",
+          "https://tabledessaveurs.fr/wp-content/uploads/2022/10/cadre-2.jpg",
+          "https://tabledessaveurs.fr/wp-content/uploads/2022/10/cadre-4.jpg",
+          "https://tabledessaveurs.fr/wp-content/uploads/2022/10/pierre-yves-et-karine.jpg",
+          "https://font-romeu.fr/wp-content/uploads/2021/10/la-Table-des-Saveurs-2.jpg"
+        ]
+      },
+      "commons": []
+    },
+    {
+      "slug": "539-plats-forts",
+      "name": "539, Plats Forts",
+      "want": 2,
+      "commons": [
+        "Puigcerdà Pere López Brosa",
+        "Puigcerdà"
+      ]
+    },
+    {
+      "slug": "trumfes",
+      "name": "Trumfes",
+      "want": 2,
+      "commons": [
+        "Trinxat de La Cerdanya",
+        "Vista de Llívia 2022"
+      ]
+    },
+    {
+      "slug": "cal-cofa",
+      "name": "Cal Cofa",
+      "want": 2,
+      "commons": [
+        "Llívia @ Camí d'Ur",
+        "Llívia Cerdanya"
+      ]
+    },
+    {
+      "slug": "ca-l-eudald",
+      "name": "Ca l’Eudald",
+      "want": 2,
+      "commons": [
+        "Trinxat de La Cerdanya",
+        "Alp Cerdanya"
+      ]
+    },
+    {
+      "slug": "el-bistrot-de-llivia",
+      "name": "El Bistrot de Llívia",
+      "want": 2,
+      "commons": [
+        "Llívia - P1100377",
+        "Llívia Cerdanya"
+      ]
+    },
+    {
+      "slug": "serendipia",
+      "name": "Serendipia",
+      "want": 2,
+      "commons": [
+        "Llívia - P1100391",
+        "Llívia Cerdanya"
+      ]
+    },
+    {
+      "slug": "mes-que-beure",
+      "name": "Més Que Beure",
+      "want": 2,
+      "commons": [
+        "Llívia - P1100378",
+        "Llívia Cerdanya"
+      ]
+    },
+    {
+      "slug": "can-ryu",
+      "name": "Can Ryu",
+      "want": 2,
+      "commons": [
+        "Vista de Llívia 2022",
+        "Llívia Cerdanya"
+      ]
+    },
+    {
+      "slug": "miyagi",
+      "name": "Miyagi",
+      "want": 2,
+      "commons": [
+        "Puigcerdà estany",
+        "Puigcerdà - P1090081"
+      ]
+    },
+    {
+      "slug": "tapanyam",
+      "name": "TapaNyam",
+      "want": 2,
+      "commons": [
+        "Puigcerdà - P1100350",
+        "Puigcerdà"
+      ]
+    },
+    {
+      "slug": "cal-malhivern",
+      "name": "Cal Malhivern",
+      "want": 2,
+      "commons": [
+        "Puigcerdà - P1100352",
+        "Puigcerdà"
+      ]
+    },
+    {
+      "slug": "les-heures-den-didac",
+      "name": "Les Heures d’en Dídac",
+      "want": 2,
+      "commons": [
+        "Bolvir",
+        "Cerdanya paisatge"
+      ]
+    },
+    {
+      "slug": "381-bolvir",
+      "name": "381",
+      "want": 1,
+      "commons": [
+        "Bolvir"
+      ]
+    },
+    {
+      "slug": "la-noga",
+      "name": "La Noga",
+      "want": 2,
+      "commons": [
+        "Bellver de Cerdaña Lérida",
+        "Trinxat de La Cerdanya"
+      ]
+    },
+    {
+      "slug": "el-punt",
+      "name": "El Punt",
+      "want": 2,
+      "commons": [
+        "Bellver de Cerdanya",
+        "Casa de la Vila Bellver de Cerdanya"
+      ]
+    },
+    {
+      "slug": "lingla",
+      "name": "L’Ingla",
+      "want": 2,
+      "commons": [
+        "Bellver de Cerdaña Lérida",
+        "Bellver de Cerdanya"
+      ]
+    },
+    {
+      "slug": "grau-de-los",
+      "name": "Grau de l’Os",
+      "want": 2,
+      "commons": [
+        "Bellver de Cerdanya",
+        "Serra del Cadí"
+      ]
+    },
+    {
+      "slug": "suca-mulla",
+      "name": "Suca-mulla",
+      "want": 2,
+      "commons": [
+        "Alp Cerdanya",
+        "La Molina"
+      ]
+    },
+    {
+      "slug": "cal-lliuret",
+      "name": "Cal Lliuret",
+      "want": 2,
+      "commons": [
+        "Lles de Cerdanya",
+        "Serra del Cadí"
+      ]
+    },
+    {
+      "slug": "coc-de-lorri",
+      "name": "Coc de l’Orri",
+      "want": 2,
+      "commons": [
+        "Lles de Cerdanya",
+        "orri pastor Pirineu"
+      ]
+    },
+    {
+      "slug": "tr-1910",
+      "name": "TR 1910",
+      "want": 2,
+      "commons": [
+        "Torre del Remei Bolvir",
+        "Bolvir"
+      ]
+    }
+  ]
+}

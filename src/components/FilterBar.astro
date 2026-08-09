@@ -1,0 +1,92 @@
+---
+import { PRICE_LABELS, PRICE_RANGES, SERVICE_LABELS, SERVICES } from '../data/taxonomy';
+import './FilterBar.css';
+
+interface Props {
+  cuisines: string[];
+  villages: Array<{ name: string; elevation: number }>;
+  total: number;
+}
+
+const { cuisines, villages, total } = Astro.props;
+---
+
+<form class="filters" data-filters aria-label="Filtra els restaurants">
+  <div class="filters__row">
+    <div class="filters__search">
+      <label class="visually-hidden" for="filter-q">Cerca per nom</label>
+      <svg class="filters__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.7"></circle>
+        <path d="m13.5 13.5 3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+        ></path>
+      </svg>
+      <input
+        class="filters__input"
+        id="filter-q"
+        name="q"
+        type="search"
+        autocomplete="off"
+        placeholder="Cerca un restaurant"
+        data-filter-q
+      />
+    </div>
+
+    <div class="filters__select">
+      <label class="visually-hidden" for="filter-poble">Poble</label>
+      <select class="filters__control" id="filter-poble" name="poble" data-filter-town>
+        <option value="">Tots els pobles</option>
+        {
+          villages.map((village) => (
+            <option value={village.name}>
+              {village.name} · {village.elevation.toLocaleString('ca-ES')} m
+            </option>
+          ))
+        }
+      </select>
+    </div>
+
+    <div class="filters__select">
+      <label class="visually-hidden" for="filter-preu">Preu</label>
+      <select class="filters__control" id="filter-preu" name="preu" data-filter-price>
+        <option value="">Qualsevol preu</option>
+        {
+          PRICE_RANGES.map((price) => (
+            <option value={price}>
+              {price} · {PRICE_LABELS[price]}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+
+    <button class="filters__reset" type="button" data-filter-reset hidden>Neteja</button>
+  </div>
+
+  <fieldset class="filters__chips">
+    <legend class="visually-hidden">Tipus de cuina</legend>
+    {
+      cuisines.map((cuisine) => (
+        <label class="chip">
+          <input class="chip__input" type="checkbox" name="cuina" value={cuisine} />
+          <span class="chip__label">{cuisine}</span>
+        </label>
+      ))
+    }
+  </fieldset>
+
+  <fieldset class="filters__chips filters__chips--services">
+    <legend class="visually-hidden">Serveis</legend>
+    {
+      SERVICES.map((service) => (
+        <label class="chip chip--service">
+          <input class="chip__input" type="checkbox" name="servei" value={service} />
+          <span class="chip__label">{SERVICE_LABELS[service]}</span>
+        </label>
+      ))
+    }
+  </fieldset>
+
+  <p class="filters__count" role="status" aria-live="polite" data-filter-count>
+    {total} restaurants
+  </p>
+</form>

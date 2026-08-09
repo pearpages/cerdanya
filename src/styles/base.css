@@ -1,0 +1,208 @@
+@layer reset, tokens, base, components, utilities;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  img,
+  picture,
+  svg,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  /*
+   * Els <img> porten width i height del fitxer original. Sense això, l'atribut d'alçada
+   * guanya i qualsevol aspect-ratio que hi posi un component queda per decoració: la
+   * imatge es dibuixa a l'alçada del fitxer. Els components que volen omplir un caixa
+   * ja tornen a fixar block-size, que és a la capa de components i mana per sobre.
+   */
+  img {
+    height: auto;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  ul[class],
+  ol[class] {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* La capçalera enganxada no ha de tapar l'ancoratge de destí. */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    /* Res no pot fer desbordar la pàgina de costat a cap amplada. */
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 640;
+    line-height: var(--lh-snug);
+    letter-spacing: var(--tr-tight);
+    font-variation-settings: 'wdth' var(--wdth-expanded);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-color: color-mix(in oklab, currentColor 35%, transparent);
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: from-font;
+  }
+
+  a:hover {
+    text-decoration-color: var(--accent-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-ink);
+    outline-offset: 3px;
+    border-radius: var(--r-sm);
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-on);
+  }
+
+  /* Xifres: sempre tabulars, perquè altituds i preus s'alineïn en columna. */
+  .mono,
+  time,
+  [data-numeric] {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+}
+
+@layer utilities {
+  .page {
+    width: min(100% - var(--page-gutter) * 2, var(--page-max));
+    margin-inline: auto;
+  }
+
+  .page--narrow {
+    width: min(100% - var(--page-gutter) * 2, 58rem);
+    margin-inline: auto;
+  }
+
+  .prose {
+    max-width: var(--measure);
+  }
+
+  .prose p + p {
+    margin-top: 1em;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /*
+   * Títol de secció dins d'una pàgina. Viu aquí i no en un full de pàgina perquè el
+   * fan servir la fitxa, el poble i els crèdits, i cadascun carrega un full diferent.
+   */
+  .section-title {
+    font-size: var(--fs-h4);
+    margin-block-end: var(--sp-4);
+  }
+
+  /* Etiqueta de secció: versaletes amples, vernacle de retolació de muntanya. */
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 620;
+    letter-spacing: var(--tr-label);
+    text-transform: uppercase;
+    font-variation-settings: 'wdth' var(--wdth-narrow);
+    color: var(--ink-3);
+  }
+
+  .skip-link {
+    position: absolute;
+    inset-block-start: var(--sp-2);
+    inset-inline-start: var(--sp-2);
+    z-index: 100;
+    padding: var(--sp-2) var(--sp-4);
+    background: var(--accent);
+    color: var(--accent-on);
+    font-family: var(--font-display);
+    font-weight: 640;
+    border-radius: var(--r-md);
+    transform: translateY(-160%);
+    transition: transform var(--dur-fast) var(--ease-out);
+  }
+
+  .skip-link:focus-visible {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

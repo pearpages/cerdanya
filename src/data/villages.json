@@ -1,0 +1,329 @@
+{
+  "_source": {
+    "coordinates": "OpenStreetMap (ODbL) — © contribuïdors d’OpenStreetMap",
+    "elevation": "EU-DEM 25 m via api.opentopodata.org (SRTM 30 m de reserva)",
+    "generatedBy": "scripts/build-villages.mjs"
+  },
+  "villages": [
+    {
+      "name": "Martinet",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3605,
+      "lng": 1.6944,
+      "elevation": 980
+    },
+    {
+      "name": "Bellver de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3702,
+      "lng": 1.7745,
+      "elevation": 1048
+    },
+    {
+      "name": "Isòvol",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3781,
+      "lng": 1.8176,
+      "elevation": 1052
+    },
+    {
+      "name": "Sanavastre",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3855,
+      "lng": 1.8505,
+      "elevation": 1061
+    },
+    {
+      "name": "All",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3976,
+      "lng": 1.8384,
+      "elevation": 1092
+    },
+    {
+      "name": "Bor",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3467,
+      "lng": 1.8022,
+      "elevation": 1100
+    },
+    {
+      "name": "Estoll",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.386,
+      "lng": 1.8861,
+      "elevation": 1108
+    },
+    {
+      "name": "Bolvir",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.4179,
+      "lng": 1.8798,
+      "elevation": 1122
+    },
+    {
+      "name": "Prullans",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3803,
+      "lng": 1.7365,
+      "elevation": 1127
+    },
+    {
+      "name": "Queixans",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3975,
+      "lng": 1.9202,
+      "elevation": 1127
+    },
+    {
+      "name": "Ger",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.4116,
+      "lng": 1.8472,
+      "elevation": 1142
+    },
+    {
+      "name": "Bourg-Madame",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4349,
+      "lng": 1.9438,
+      "elevation": 1142
+    },
+    {
+      "name": "Montellà",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3545,
+      "lng": 1.7049,
+      "elevation": 1145
+    },
+    {
+      "name": "Alp",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3736,
+      "lng": 1.8872,
+      "elevation": 1158
+    },
+    {
+      "name": "Olopte",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3935,
+      "lng": 1.816,
+      "elevation": 1166
+    },
+    {
+      "name": "Vilallobent",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.4079,
+      "lng": 1.9521,
+      "elevation": 1171
+    },
+    {
+      "name": "Riu de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3452,
+      "lng": 1.8261,
+      "elevation": 1172
+    },
+    {
+      "name": "Travesseres",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3752,
+      "lng": 1.688,
+      "elevation": 1186
+    },
+    {
+      "name": "Urtx",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3874,
+      "lng": 1.9102,
+      "elevation": 1187
+    },
+    {
+      "name": "Llívia",
+      "subregion": "Llívia",
+      "country": "ES",
+      "lat": 42.4641,
+      "lng": 1.9804,
+      "elevation": 1207
+    },
+    {
+      "name": "Das",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3636,
+      "lng": 1.8713,
+      "elevation": 1209
+    },
+    {
+      "name": "Puigcerdà",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.4318,
+      "lng": 1.9279,
+      "elevation": 1211
+    },
+    {
+      "name": "Ur",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4633,
+      "lng": 1.9382,
+      "elevation": 1218
+    },
+    {
+      "name": "Estavar",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4687,
+      "lng": 1.9961,
+      "elevation": 1229
+    },
+    {
+      "name": "Oceja",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4151,
+      "lng": 1.9811,
+      "elevation": 1252
+    },
+    {
+      "name": "Enveig",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4597,
+      "lng": 1.9154,
+      "elevation": 1255
+    },
+    {
+      "name": "Fontanals de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3845,
+      "lng": 1.9113,
+      "elevation": 1261
+    },
+    {
+      "name": "Urús",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.352,
+      "lng": 1.8534,
+      "elevation": 1276
+    },
+    {
+      "name": "Sallagosa",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4589,
+      "lng": 2.0396,
+      "elevation": 1310
+    },
+    {
+      "name": "Angostrina",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.485,
+      "lng": 1.9611,
+      "elevation": 1350
+    },
+    {
+      "name": "Er",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4407,
+      "lng": 2.0329,
+      "elevation": 1361
+    },
+    {
+      "name": "Guils de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.4479,
+      "lng": 1.8797,
+      "elevation": 1372
+    },
+    {
+      "name": "Llo",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4553,
+      "lng": 2.0618,
+      "elevation": 1422
+    },
+    {
+      "name": "Lles de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.3904,
+      "lng": 1.6876,
+      "elevation": 1470
+    },
+    {
+      "name": "Meranges",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.4461,
+      "lng": 1.787,
+      "elevation": 1539
+    },
+    {
+      "name": "Eina",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4736,
+      "lng": 2.0816,
+      "elevation": 1576
+    },
+    {
+      "name": "Talltendre",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "lat": 42.4035,
+      "lng": 1.7655,
+      "elevation": 1584
+    },
+    {
+      "name": "Targasona",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.4994,
+      "lng": 1.9965,
+      "elevation": 1602
+    },
+    {
+      "name": "Èguet",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.5005,
+      "lng": 2.0169,
+      "elevation": 1680
+    },
+    {
+      "name": "Font-Romeu",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "lat": 42.505,
+      "lng": 2.042,
+      "elevation": 1760
+    }
+  ]
+}

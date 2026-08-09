@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import RestaurantCard from '../../components/RestaurantCard.astro';
+import { allRestaurants, groupByCuisine, groupByVillage } from '../../lib/restaurants';
+import '../../styles/directory.css';
+
+const restaurants = await allRestaurants();
+const cuisines = groupByCuisine(restaurants).map((group) => group.name);
+const villages = groupByVillage(restaurants).map((group) => ({
+  name: group.name,
+  elevation: group.elevation,
+}));
+---
+
+<BaseLayout
+  title="Tots els restaurants"
+  description={`Els ${restaurants.length} restaurants de la guia, de Bellver de Cerdanya a Font-Romeu, ordenats per altitud i filtrables per cuina, poble, preu i serveis.`}
+>
+  <section class="directory page">
+    <header class="directory__head">
+      <p class="eyebrow">El directori</p>
+      <h1 class="directory__title">Tots els restaurants</h1>
+      <p class="directory__lead prose">
+        Ordenats de la cota més baixa a la més alta, que és com es recorre la vall: de Bellver de
+        Cerdanya, a 1.048 m, fins al replà de Font-Romeu, a 1.760. Els noms amb un punt al costat
+        són fitxes amb poca informació verificable, i ho diem a dins.
+      </p>
+    </header>
+
+    <FilterBar cuisines={cuisines} villages={villages} total={restaurants.length} />
+
+    <div class="directory__grid" data-results>
+      {
+        restaurants.map((entry, index) => (
+          <RestaurantCard entry={entry} loading={index < 6 ? 'eager' : 'lazy'} />
+        ))
+      }
+    </div>
+
+    <p class="directory__empty" data-empty hidden>
+      Cap restaurant coincideix amb aquests filtres. Prova de treure’n algun.
+    </p>
+  </section>
+</BaseLayout>
+
+<script>
+  interface Filters {
+    q: string;
+    town: string;
+    price: string;
+    cuisines: string[];
+    services: string[];
+  }
+
+  function setup() {
+    const form = document.querySelector<HTMLFormElement>('[data-filters]');
+    const grid = document.querySelector<HTMLElement>('[data-results]');
+    if (!form || !grid) return;
+
+    const cards = [...grid.querySelectorAll<HTMLElement>('.card')];
+    const counter = document.querySelector<HTMLElement>('[data-filter-count]');
+    const empty = document.querySelector<HTMLElement>('[data-empty]');
+    const reset = form.querySelector<HTMLButtonElement>('[data-filter-reset]');
+    const search = form.querySelector<HTMLInputElement>('[data-filter-q]');
+    const townSelect = form.querySelector<HTMLSelectElement>('[data-filter-town]');
+    const priceSelect = form.querySelector<HTMLSelectElement>('[data-filter-price]');
+
+    const checked = (name: string) =>
+      [...form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]:checked`)].map(
+        (input) => input.value,
+      );
+
+    /** Sense accents ni majúscules: «Llívia» i «llivia» han de trobar el mateix. */
+    const fold = (value: string) =>
+      value
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .toLowerCase();
+
+    function read(): Filters {
+      return {
+        q: fold(search?.value.trim() ?? ''),
+        town: townSelect?.value ?? '',
+        price: priceSelect?.value ?? '',
+        cuisines: checked('cuina'),
+        services: checked('servei'),
+      };
+    }
+
+    function apply() {
+      const filters = read();
+      let visible = 0;
+
+      for (const card of cards) {
+        const name = fold(card.dataset.name ?? '');
+        const town = card.dataset.town ?? '';
+        const cuisines = (card.dataset.cuisine ?? '').split('|');
+        const services = (card.dataset.services ?? '').split('|');
+
+        const matches =
+          (filters.q === '' || name.includes(filters.q) || fold(town).includes(filters.q)) &&
+          (filters.town === '' || town === filters.town) &&
+          (filters.price === '' || card.dataset.price === filters.price) &&
+          filters.cuisines.every((cuisine) => cuisines.includes(cuisine)) &&
+          filters.services.every((service) => services.includes(service));
+
+        card.hidden = !matches;
+        if (matches) visible += 1;
+      }
+
+      if (counter) {
+        counter.textContent =
+          visible === 1 ? '1 restaurant' : `${visible} restaurants`;
+      }
+      if (empty) empty.hidden = visible > 0;
+
+      const active =
+        filters.q !== '' ||
+        filters.town !== '' ||
+        filters.price !== '' ||
+        filters.cuisines.length > 0 ||
+        filters.services.length > 0;
+      if (reset) reset.hidden = !active;
+
+      syncUrl(filters, active);
+    }
+
+    /** L'estat viu a la URL perquè un filtre es pugui compartir o desar. */
+    function syncUrl(filters: Filters, active: boolean) {
+      const params = new URLSearchParams();
+      if (filters.q) params.set('q', filters.q);
+      if (filters.town) params.set('poble', filters.town);
+      if (filters.price) params.set('preu', filters.price);
+      for (const cuisine of filters.cuisines) params.append('cuina', cuisine);
+      for (const service of filters.services) params.append('servei', service);
+
+      const query = params.toString();
+      history.replaceState(null, '', active && query ? `?${query}` : location.pathname);
+    }
+
+    function restore() {
+      const params = new URLSearchParams(location.search);
+      if (search) search.value = params.get('q') ?? '';
+      if (townSelect) townSelect.value = params.get('poble') ?? '';
+      if (priceSelect) priceSelect.value = params.get('preu') ?? '';
+
+      const cuisines = params.getAll('cuina');
+      const services = params.getAll('servei');
+      for (const input of form.querySelectorAll<HTMLInputElement>('input[type="checkbox"]')) {
+        const pool = input.name === 'cuina' ? cuisines : services;
+        input.checked = pool.includes(input.value);
+      }
+    }
+
+    form.addEventListener('input', apply);
+    form.addEventListener('submit', (event) => event.preventDefault());
+    reset?.addEventListener('click', () => {
+      form.reset();
+      apply();
+      search?.focus();
+    });
+
+    restore();
+    apply();
+  }
+
+  setup();
+  document.addEventListener('astro:page-load', setup);
+</script>

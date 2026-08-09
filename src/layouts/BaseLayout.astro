@@ -1,0 +1,84 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+import '@fontsource-variable/archivo';
+import '@fontsource-variable/newsreader';
+import '@fontsource-variable/azeret-mono';
+import '../styles/tokens.css';
+import '../styles/base.css';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Imatge social absoluta o relativa a l'arrel del lloc. */
+  ogImage?: string;
+  /** Amaga el separador superior del peu quan la pàgina ja acaba amb una banda fosca. */
+  flushFooter?: boolean;
+}
+
+const { title, description, ogImage, flushFooter = false } = Astro.props;
+
+const SITE_NAME = 'Cota de tast';
+const fullTitle = title === SITE_NAME ? title : `${title} · ${SITE_NAME}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialImage = ogImage ? new URL(ogImage, Astro.site) : undefined;
+---
+
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {/*
+      L'ordre de les capes s'ha de fixar abans que cap altre CSS. Astro pot inlinear el
+      full d'un component —que obre @layer components— per damunt del bundle que porta
+      base.css, i llavors «components» queda registrat primer i el reset, declarat després,
+      el trepitja: els marges dels components desapareixen. Amb l'ordre declarat aquí, la
+      resta de fulls només hi afegeixen regles.
+    */}
+    <style is:inline>@layer reset, tokens, base, components, utilities;</style>
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content="ca_ES" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {socialImage && <meta property="og:image" content={socialImage} />}
+    <meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
+
+    <meta name="theme-color" content="#f4f8fb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#061420" media="(prefers-color-scheme: dark)" />
+
+    {/* Aplica el tema desat abans del primer pintat per evitar el flaix. */}
+    <script is:inline>
+      (() => {
+        try {
+          const saved = localStorage.getItem('cerdanya-theme');
+          if (saved === 'light' || saved === 'dark') {
+            document.documentElement.dataset.theme = saved;
+          }
+        } catch {
+          /* localStorage bloquejat: es manté la preferència del sistema */
+        }
+      })();
+    </script>
+
+    <ClientRouter />
+  </head>
+  <body>
+    <a class="skip-link" href="#contingut">Vés al contingut</a>
+    <SiteHeader />
+    <main id="contingut">
+      <slot />
+    </main>
+    <SiteFooter flush={flushFooter} />
+  </body>
+</html>

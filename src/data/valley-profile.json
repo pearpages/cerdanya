@@ -1,0 +1,1297 @@
+{
+  "_source": {
+    "axis": "Polilínia pel fons de vall — coordenades d’OpenStreetMap (ODbL)",
+    "elevation": "EU-DEM 25 m via api.opentopodata.org",
+    "generatedBy": "scripts/build-valley-profile.mjs"
+  },
+  "meta": {
+    "stepMetres": 250,
+    "lengthKm": 39.75,
+    "minEle": 980,
+    "maxEle": 1760
+  },
+  "profile": [
+    {
+      "km": 0,
+      "ele": 980,
+      "lat": 42.3605,
+      "lng": 1.6944
+    },
+    {
+      "km": 0.25,
+      "ele": 990,
+      "lat": 42.36086,
+      "lng": 1.6974
+    },
+    {
+      "km": 0.5,
+      "ele": 1051,
+      "lat": 42.36123,
+      "lng": 1.70041
+    },
+    {
+      "km": 0.75,
+      "ele": 1018,
+      "lat": 42.36159,
+      "lng": 1.70341
+    },
+    {
+      "km": 1,
+      "ele": 1001,
+      "lat": 42.36195,
+      "lng": 1.70641
+    },
+    {
+      "km": 1.25,
+      "ele": 1028,
+      "lat": 42.36232,
+      "lng": 1.70941
+    },
+    {
+      "km": 1.5,
+      "ele": 1014,
+      "lat": 42.36268,
+      "lng": 1.71242
+    },
+    {
+      "km": 1.75,
+      "ele": 1014,
+      "lat": 42.36305,
+      "lng": 1.71542
+    },
+    {
+      "km": 2,
+      "ele": 1048,
+      "lat": 42.36341,
+      "lng": 1.71842
+    },
+    {
+      "km": 2.25,
+      "ele": 1029,
+      "lat": 42.36377,
+      "lng": 1.72143
+    },
+    {
+      "km": 2.5,
+      "ele": 1008,
+      "lat": 42.36414,
+      "lng": 1.72443
+    },
+    {
+      "km": 2.75,
+      "ele": 1031,
+      "lat": 42.3645,
+      "lng": 1.72743
+    },
+    {
+      "km": 3,
+      "ele": 1044,
+      "lat": 42.36486,
+      "lng": 1.73043
+    },
+    {
+      "km": 3.25,
+      "ele": 1003,
+      "lat": 42.36523,
+      "lng": 1.73344
+    },
+    {
+      "km": 3.5,
+      "ele": 988,
+      "lat": 42.36559,
+      "lng": 1.73644
+    },
+    {
+      "km": 3.75,
+      "ele": 993,
+      "lat": 42.36595,
+      "lng": 1.73944
+    },
+    {
+      "km": 4,
+      "ele": 993,
+      "lat": 42.36632,
+      "lng": 1.74245
+    },
+    {
+      "km": 4.25,
+      "ele": 993,
+      "lat": 42.36668,
+      "lng": 1.74545
+    },
+    {
+      "km": 4.5,
+      "ele": 994,
+      "lat": 42.36705,
+      "lng": 1.74845
+    },
+    {
+      "km": 4.75,
+      "ele": 998,
+      "lat": 42.36741,
+      "lng": 1.75145
+    },
+    {
+      "km": 5,
+      "ele": 1020,
+      "lat": 42.36777,
+      "lng": 1.75446
+    },
+    {
+      "km": 5.25,
+      "ele": 1019,
+      "lat": 42.36814,
+      "lng": 1.75746
+    },
+    {
+      "km": 5.5,
+      "ele": 1003,
+      "lat": 42.3685,
+      "lng": 1.76046
+    },
+    {
+      "km": 5.75,
+      "ele": 1003,
+      "lat": 42.36886,
+      "lng": 1.76347
+    },
+    {
+      "km": 6,
+      "ele": 1004,
+      "lat": 42.36923,
+      "lng": 1.76647
+    },
+    {
+      "km": 6.25,
+      "ele": 1011,
+      "lat": 42.36959,
+      "lng": 1.76947
+    },
+    {
+      "km": 6.5,
+      "ele": 1036,
+      "lat": 42.36995,
+      "lng": 1.77247
+    },
+    {
+      "km": 6.75,
+      "ele": 1043,
+      "lat": 42.37038,
+      "lng": 1.77546
+    },
+    {
+      "km": 7,
+      "ele": 1029,
+      "lat": 42.37092,
+      "lng": 1.77841
+    },
+    {
+      "km": 7.25,
+      "ele": 1026,
+      "lat": 42.37146,
+      "lng": 1.78137
+    },
+    {
+      "km": 7.5,
+      "ele": 1018,
+      "lat": 42.372,
+      "lng": 1.78432
+    },
+    {
+      "km": 7.75,
+      "ele": 1018,
+      "lat": 42.37254,
+      "lng": 1.78728
+    },
+    {
+      "km": 8,
+      "ele": 1025,
+      "lat": 42.37308,
+      "lng": 1.79023
+    },
+    {
+      "km": 8.25,
+      "ele": 1046,
+      "lat": 42.37362,
+      "lng": 1.79318
+    },
+    {
+      "km": 8.5,
+      "ele": 1075,
+      "lat": 42.37417,
+      "lng": 1.79614
+    },
+    {
+      "km": 8.75,
+      "ele": 1127,
+      "lat": 42.37471,
+      "lng": 1.79909
+    },
+    {
+      "km": 9,
+      "ele": 1134,
+      "lat": 42.37525,
+      "lng": 1.80205
+    },
+    {
+      "km": 9.25,
+      "ele": 1059,
+      "lat": 42.37579,
+      "lng": 1.805
+    },
+    {
+      "km": 9.5,
+      "ele": 1171,
+      "lat": 42.37633,
+      "lng": 1.80795
+    },
+    {
+      "km": 9.75,
+      "ele": 1138,
+      "lat": 42.37687,
+      "lng": 1.81091
+    },
+    {
+      "km": 10,
+      "ele": 1108,
+      "lat": 42.37741,
+      "lng": 1.81386
+    },
+    {
+      "km": 10.25,
+      "ele": 1062,
+      "lat": 42.37796,
+      "lng": 1.81681
+    },
+    {
+      "km": 10.5,
+      "ele": 1057,
+      "lat": 42.37948,
+      "lng": 1.81882
+    },
+    {
+      "km": 10.75,
+      "ele": 1120,
+      "lat": 42.38136,
+      "lng": 1.82048
+    },
+    {
+      "km": 11,
+      "ele": 1144,
+      "lat": 42.38325,
+      "lng": 1.82215
+    },
+    {
+      "km": 11.25,
+      "ele": 1119,
+      "lat": 42.38513,
+      "lng": 1.82381
+    },
+    {
+      "km": 11.5,
+      "ele": 1081,
+      "lat": 42.38701,
+      "lng": 1.82548
+    },
+    {
+      "km": 11.75,
+      "ele": 1067,
+      "lat": 42.3889,
+      "lng": 1.82714
+    },
+    {
+      "km": 12,
+      "ele": 1072,
+      "lat": 42.39078,
+      "lng": 1.8288
+    },
+    {
+      "km": 12.25,
+      "ele": 1077,
+      "lat": 42.39266,
+      "lng": 1.83047
+    },
+    {
+      "km": 12.5,
+      "ele": 1093,
+      "lat": 42.39455,
+      "lng": 1.83213
+    },
+    {
+      "km": 12.75,
+      "ele": 1101,
+      "lat": 42.39643,
+      "lng": 1.83379
+    },
+    {
+      "km": 13,
+      "ele": 1097,
+      "lat": 42.39831,
+      "lng": 1.83546
+    },
+    {
+      "km": 13.25,
+      "ele": 1123,
+      "lat": 42.40019,
+      "lng": 1.83712
+    },
+    {
+      "km": 13.5,
+      "ele": 1152,
+      "lat": 42.40208,
+      "lng": 1.83879
+    },
+    {
+      "km": 13.75,
+      "ele": 1154,
+      "lat": 42.40396,
+      "lng": 1.84045
+    },
+    {
+      "km": 14,
+      "ele": 1126,
+      "lat": 42.40584,
+      "lng": 1.84211
+    },
+    {
+      "km": 14.25,
+      "ele": 1119,
+      "lat": 42.40773,
+      "lng": 1.84378
+    },
+    {
+      "km": 14.5,
+      "ele": 1114,
+      "lat": 42.40961,
+      "lng": 1.84544
+    },
+    {
+      "km": 14.75,
+      "ele": 1140,
+      "lat": 42.41149,
+      "lng": 1.8471
+    },
+    {
+      "km": 15,
+      "ele": 1152,
+      "lat": 42.41214,
+      "lng": 1.84998
+    },
+    {
+      "km": 15.25,
+      "ele": 1152,
+      "lat": 42.41271,
+      "lng": 1.85292
+    },
+    {
+      "km": 15.5,
+      "ele": 1127,
+      "lat": 42.41328,
+      "lng": 1.85587
+    },
+    {
+      "km": 15.75,
+      "ele": 1099,
+      "lat": 42.41384,
+      "lng": 1.85881
+    },
+    {
+      "km": 16,
+      "ele": 1095,
+      "lat": 42.41441,
+      "lng": 1.86176
+    },
+    {
+      "km": 16.25,
+      "ele": 1097,
+      "lat": 42.41498,
+      "lng": 1.86471
+    },
+    {
+      "km": 16.5,
+      "ele": 1109,
+      "lat": 42.41555,
+      "lng": 1.86765
+    },
+    {
+      "km": 16.75,
+      "ele": 1112,
+      "lat": 42.41612,
+      "lng": 1.8706
+    },
+    {
+      "km": 17,
+      "ele": 1134,
+      "lat": 42.41669,
+      "lng": 1.87354
+    },
+    {
+      "km": 17.25,
+      "ele": 1138,
+      "lat": 42.41726,
+      "lng": 1.87649
+    },
+    {
+      "km": 17.5,
+      "ele": 1124,
+      "lat": 42.41783,
+      "lng": 1.87944
+    },
+    {
+      "km": 17.75,
+      "ele": 1118,
+      "lat": 42.41862,
+      "lng": 1.88229
+    },
+    {
+      "km": 18,
+      "ele": 1121,
+      "lat": 42.41944,
+      "lng": 1.88512
+    },
+    {
+      "km": 18.25,
+      "ele": 1135,
+      "lat": 42.42026,
+      "lng": 1.88796
+    },
+    {
+      "km": 18.5,
+      "ele": 1160,
+      "lat": 42.42108,
+      "lng": 1.89079
+    },
+    {
+      "km": 18.75,
+      "ele": 1151,
+      "lat": 42.4219,
+      "lng": 1.89363
+    },
+    {
+      "km": 19,
+      "ele": 1156,
+      "lat": 42.42272,
+      "lng": 1.89647
+    },
+    {
+      "km": 19.25,
+      "ele": 1162,
+      "lat": 42.42354,
+      "lng": 1.8993
+    },
+    {
+      "km": 19.5,
+      "ele": 1160,
+      "lat": 42.42436,
+      "lng": 1.90214
+    },
+    {
+      "km": 19.75,
+      "ele": 1153,
+      "lat": 42.42518,
+      "lng": 1.90498
+    },
+    {
+      "km": 20,
+      "ele": 1151,
+      "lat": 42.42599,
+      "lng": 1.90781
+    },
+    {
+      "km": 20.25,
+      "ele": 1150,
+      "lat": 42.42681,
+      "lng": 1.91065
+    },
+    {
+      "km": 20.5,
+      "ele": 1149,
+      "lat": 42.42763,
+      "lng": 1.91348
+    },
+    {
+      "km": 20.75,
+      "ele": 1144,
+      "lat": 42.42845,
+      "lng": 1.91632
+    },
+    {
+      "km": 21,
+      "ele": 1150,
+      "lat": 42.42927,
+      "lng": 1.91916
+    },
+    {
+      "km": 21.25,
+      "ele": 1150,
+      "lat": 42.43009,
+      "lng": 1.92199
+    },
+    {
+      "km": 21.5,
+      "ele": 1161,
+      "lat": 42.43091,
+      "lng": 1.92483
+    },
+    {
+      "km": 21.75,
+      "ele": 1209,
+      "lat": 42.43173,
+      "lng": 1.92767
+    },
+    {
+      "km": 22,
+      "ele": 1187,
+      "lat": 42.43233,
+      "lng": 1.9306
+    },
+    {
+      "km": 22.25,
+      "ele": 1157,
+      "lat": 42.4329,
+      "lng": 1.93355
+    },
+    {
+      "km": 22.5,
+      "ele": 1148,
+      "lat": 42.43348,
+      "lng": 1.93649
+    },
+    {
+      "km": 22.75,
+      "ele": 1143,
+      "lat": 42.43405,
+      "lng": 1.93944
+    },
+    {
+      "km": 23,
+      "ele": 1143,
+      "lat": 42.43462,
+      "lng": 1.94238
+    },
+    {
+      "km": 23.25,
+      "ele": 1143,
+      "lat": 42.43605,
+      "lng": 1.94357
+    },
+    {
+      "km": 23.5,
+      "ele": 1146,
+      "lat": 42.43828,
+      "lng": 1.94313
+    },
+    {
+      "km": 23.75,
+      "ele": 1151,
+      "lat": 42.4405,
+      "lng": 1.9427
+    },
+    {
+      "km": 24,
+      "ele": 1157,
+      "lat": 42.44273,
+      "lng": 1.94226
+    },
+    {
+      "km": 24.25,
+      "ele": 1162,
+      "lat": 42.44495,
+      "lng": 1.94182
+    },
+    {
+      "km": 24.5,
+      "ele": 1170,
+      "lat": 42.44718,
+      "lng": 1.94138
+    },
+    {
+      "km": 24.75,
+      "ele": 1173,
+      "lat": 42.4494,
+      "lng": 1.94094
+    },
+    {
+      "km": 25,
+      "ele": 1179,
+      "lat": 42.45163,
+      "lng": 1.9405
+    },
+    {
+      "km": 25.25,
+      "ele": 1184,
+      "lat": 42.45385,
+      "lng": 1.94006
+    },
+    {
+      "km": 25.5,
+      "ele": 1186,
+      "lat": 42.45608,
+      "lng": 1.93962
+    },
+    {
+      "km": 25.75,
+      "ele": 1191,
+      "lat": 42.4583,
+      "lng": 1.93919
+    },
+    {
+      "km": 26,
+      "ele": 1199,
+      "lat": 42.46053,
+      "lng": 1.93875
+    },
+    {
+      "km": 26.25,
+      "ele": 1212,
+      "lat": 42.46275,
+      "lng": 1.93831
+    },
+    {
+      "km": 26.5,
+      "ele": 1211,
+      "lat": 42.46351,
+      "lng": 1.94048
+    },
+    {
+      "km": 26.75,
+      "ele": 1274,
+      "lat": 42.46379,
+      "lng": 1.9435
+    },
+    {
+      "km": 27,
+      "ele": 1267,
+      "lat": 42.46408,
+      "lng": 1.94653
+    },
+    {
+      "km": 27.25,
+      "ele": 1248,
+      "lat": 42.46436,
+      "lng": 1.94955
+    },
+    {
+      "km": 27.5,
+      "ele": 1234,
+      "lat": 42.46464,
+      "lng": 1.95257
+    },
+    {
+      "km": 27.75,
+      "ele": 1223,
+      "lat": 42.46492,
+      "lng": 1.9556
+    },
+    {
+      "km": 28,
+      "ele": 1220,
+      "lat": 42.4652,
+      "lng": 1.95862
+    },
+    {
+      "km": 28.25,
+      "ele": 1222,
+      "lat": 42.46549,
+      "lng": 1.96165
+    },
+    {
+      "km": 28.5,
+      "ele": 1213,
+      "lat": 42.46577,
+      "lng": 1.96467
+    },
+    {
+      "km": 28.75,
+      "ele": 1209,
+      "lat": 42.46605,
+      "lng": 1.96769
+    },
+    {
+      "km": 29,
+      "ele": 1205,
+      "lat": 42.46633,
+      "lng": 1.97072
+    },
+    {
+      "km": 29.25,
+      "ele": 1207,
+      "lat": 42.46661,
+      "lng": 1.97374
+    },
+    {
+      "km": 29.5,
+      "ele": 1211,
+      "lat": 42.4669,
+      "lng": 1.97676
+    },
+    {
+      "km": 29.75,
+      "ele": 1219,
+      "lat": 42.46718,
+      "lng": 1.97979
+    },
+    {
+      "km": 30,
+      "ele": 1262,
+      "lat": 42.46746,
+      "lng": 1.98281
+    },
+    {
+      "km": 30.25,
+      "ele": 1343,
+      "lat": 42.46774,
+      "lng": 1.98584
+    },
+    {
+      "km": 30.5,
+      "ele": 1264,
+      "lat": 42.46802,
+      "lng": 1.98886
+    },
+    {
+      "km": 30.75,
+      "ele": 1226,
+      "lat": 42.46831,
+      "lng": 1.99188
+    },
+    {
+      "km": 31,
+      "ele": 1229,
+      "lat": 42.46859,
+      "lng": 1.99491
+    },
+    {
+      "km": 31.25,
+      "ele": 1222,
+      "lat": 42.4683,
+      "lng": 1.99786
+    },
+    {
+      "km": 31.5,
+      "ele": 1230,
+      "lat": 42.46765,
+      "lng": 2.00078
+    },
+    {
+      "km": 31.75,
+      "ele": 1248,
+      "lat": 42.46699,
+      "lng": 2.00369
+    },
+    {
+      "km": 32,
+      "ele": 1253,
+      "lat": 42.46633,
+      "lng": 2.00661
+    },
+    {
+      "km": 32.25,
+      "ele": 1260,
+      "lat": 42.46568,
+      "lng": 2.00952
+    },
+    {
+      "km": 32.5,
+      "ele": 1288,
+      "lat": 42.46502,
+      "lng": 2.01244
+    },
+    {
+      "km": 32.75,
+      "ele": 1320,
+      "lat": 42.46436,
+      "lng": 2.01535
+    },
+    {
+      "km": 33,
+      "ele": 1333,
+      "lat": 42.46371,
+      "lng": 2.01827
+    },
+    {
+      "km": 33.25,
+      "ele": 1336,
+      "lat": 42.46305,
+      "lng": 2.02118
+    },
+    {
+      "km": 33.5,
+      "ele": 1333,
+      "lat": 42.46239,
+      "lng": 2.0241
+    },
+    {
+      "km": 33.75,
+      "ele": 1322,
+      "lat": 42.46174,
+      "lng": 2.02701
+    },
+    {
+      "km": 34,
+      "ele": 1294,
+      "lat": 42.46108,
+      "lng": 2.02993
+    },
+    {
+      "km": 34.25,
+      "ele": 1296,
+      "lat": 42.46042,
+      "lng": 2.03284
+    },
+    {
+      "km": 34.5,
+      "ele": 1298,
+      "lat": 42.45977,
+      "lng": 2.03576
+    },
+    {
+      "km": 34.75,
+      "ele": 1306,
+      "lat": 42.45911,
+      "lng": 2.03867
+    },
+    {
+      "km": 35,
+      "ele": 1318,
+      "lat": 42.46043,
+      "lng": 2.03968
+    },
+    {
+      "km": 35.25,
+      "ele": 1345,
+      "lat": 42.46268,
+      "lng": 2.0398
+    },
+    {
+      "km": 35.5,
+      "ele": 1378,
+      "lat": 42.46492,
+      "lng": 2.03991
+    },
+    {
+      "km": 35.75,
+      "ele": 1413,
+      "lat": 42.46717,
+      "lng": 2.04003
+    },
+    {
+      "km": 36,
+      "ele": 1448,
+      "lat": 42.46942,
+      "lng": 2.04015
+    },
+    {
+      "km": 36.25,
+      "ele": 1482,
+      "lat": 42.47166,
+      "lng": 2.04026
+    },
+    {
+      "km": 36.5,
+      "ele": 1494,
+      "lat": 42.47391,
+      "lng": 2.04038
+    },
+    {
+      "km": 36.75,
+      "ele": 1501,
+      "lat": 42.47616,
+      "lng": 2.0405
+    },
+    {
+      "km": 37,
+      "ele": 1507,
+      "lat": 42.4784,
+      "lng": 2.04062
+    },
+    {
+      "km": 37.25,
+      "ele": 1497,
+      "lat": 42.48065,
+      "lng": 2.04073
+    },
+    {
+      "km": 37.5,
+      "ele": 1390,
+      "lat": 42.4829,
+      "lng": 2.04085
+    },
+    {
+      "km": 37.75,
+      "ele": 1480,
+      "lat": 42.48514,
+      "lng": 2.04097
+    },
+    {
+      "km": 38,
+      "ele": 1493,
+      "lat": 42.48739,
+      "lng": 2.04108
+    },
+    {
+      "km": 38.25,
+      "ele": 1524,
+      "lat": 42.48964,
+      "lng": 2.0412
+    },
+    {
+      "km": 38.5,
+      "ele": 1546,
+      "lat": 42.49188,
+      "lng": 2.04132
+    },
+    {
+      "km": 38.75,
+      "ele": 1576,
+      "lat": 42.49413,
+      "lng": 2.04143
+    },
+    {
+      "km": 39,
+      "ele": 1597,
+      "lat": 42.49638,
+      "lng": 2.04155
+    },
+    {
+      "km": 39.25,
+      "ele": 1640,
+      "lat": 42.49862,
+      "lng": 2.04167
+    },
+    {
+      "km": 39.5,
+      "ele": 1669,
+      "lat": 42.50087,
+      "lng": 2.04179
+    },
+    {
+      "km": 39.75,
+      "ele": 1719,
+      "lat": 42.50312,
+      "lng": 2.0419
+    }
+  ],
+  "villages": [
+    {
+      "name": "Martinet",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 980,
+      "km": 0,
+      "offsetKm": 0
+    },
+    {
+      "name": "Travesseres",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1186,
+      "km": 0,
+      "offsetKm": 1.72
+    },
+    {
+      "name": "Lles de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1470,
+      "km": 0,
+      "offsetKm": 3.37
+    },
+    {
+      "name": "Montellà",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1145,
+      "km": 0.75,
+      "offsetKm": 0.8
+    },
+    {
+      "name": "Prullans",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1127,
+      "km": 3.75,
+      "offsetKm": 1.61
+    },
+    {
+      "name": "Bellver de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1048,
+      "km": 6.75,
+      "offsetKm": 0.08
+    },
+    {
+      "name": "Talltendre",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1584,
+      "km": 6.75,
+      "offsetKm": 3.77
+    },
+    {
+      "name": "Bor",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1100,
+      "km": 8.25,
+      "offsetKm": 3.08
+    },
+    {
+      "name": "Riu de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1172,
+      "km": 10,
+      "offsetKm": 3.72
+    },
+    {
+      "name": "Isòvol",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1052,
+      "km": 10.25,
+      "offsetKm": 0.07
+    },
+    {
+      "name": "Urús",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1276,
+      "km": 10.25,
+      "offsetKm": 4.17
+    },
+    {
+      "name": "Das",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1209,
+      "km": 11.5,
+      "offsetKm": 4.58
+    },
+    {
+      "name": "Olopte",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1166,
+      "km": 11.75,
+      "offsetKm": 1.05
+    },
+    {
+      "name": "Sanavastre",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1061,
+      "km": 12.5,
+      "offsetKm": 1.81
+    },
+    {
+      "name": "All",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1092,
+      "km": 13,
+      "offsetKm": 0.25
+    },
+    {
+      "name": "Ger",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1142,
+      "km": 14.75,
+      "offsetKm": 0.01
+    },
+    {
+      "name": "Meranges",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1539,
+      "km": 14.75,
+      "offsetKm": 6.26
+    },
+    {
+      "name": "Alp",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1158,
+      "km": 16.75,
+      "offsetKm": 4.92
+    },
+    {
+      "name": "Estoll",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1108,
+      "km": 17.25,
+      "offsetKm": 3.56
+    },
+    {
+      "name": "Bolvir",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1122,
+      "km": 17.5,
+      "offsetKm": 0.03
+    },
+    {
+      "name": "Urtx",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1187,
+      "km": 18.5,
+      "offsetKm": 4.07
+    },
+    {
+      "name": "Fontanals de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1261,
+      "km": 18.5,
+      "offsetKm": 4.4
+    },
+    {
+      "name": "Guils de Cerdanya",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1372,
+      "km": 18.75,
+      "offsetKm": 3.11
+    },
+    {
+      "name": "Queixans",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1127,
+      "km": 19.75,
+      "offsetKm": 3.32
+    },
+    {
+      "name": "Puigcerdà",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1211,
+      "km": 21.75,
+      "offsetKm": 0.02
+    },
+    {
+      "name": "Bourg-Madame",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1142,
+      "km": 23,
+      "offsetKm": 0.12
+    },
+    {
+      "name": "Vilallobent",
+      "subregion": "Baixa Cerdanya",
+      "country": "ES",
+      "elevation": 1171,
+      "km": 23,
+      "offsetKm": 3.08
+    },
+    {
+      "name": "Oceja",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1252,
+      "km": 23,
+      "offsetKm": 3.85
+    },
+    {
+      "name": "Ur",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1218,
+      "km": 26.25,
+      "offsetKm": 0.06
+    },
+    {
+      "name": "Enveig",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1255,
+      "km": 26.25,
+      "offsetKm": 1.91
+    },
+    {
+      "name": "Angostrina",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1350,
+      "km": 28.5,
+      "offsetKm": 2.16
+    },
+    {
+      "name": "Llívia",
+      "subregion": "Llívia",
+      "country": "ES",
+      "elevation": 1207,
+      "km": 29.75,
+      "offsetKm": 0.35
+    },
+    {
+      "name": "Estavar",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1229,
+      "km": 31,
+      "offsetKm": 0.1
+    },
+    {
+      "name": "Targasona",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1602,
+      "km": 31,
+      "offsetKm": 3.43
+    },
+    {
+      "name": "Sallagosa",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1310,
+      "km": 34.75,
+      "offsetKm": 0.08
+    },
+    {
+      "name": "Er",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1361,
+      "km": 34.75,
+      "offsetKm": 2.1
+    },
+    {
+      "name": "Llo",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1422,
+      "km": 35,
+      "offsetKm": 1.9
+    },
+    {
+      "name": "Eina",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1576,
+      "km": 36.5,
+      "offsetKm": 3.38
+    },
+    {
+      "name": "Èguet",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1680,
+      "km": 39.5,
+      "offsetKm": 2.04
+    },
+    {
+      "name": "Font-Romeu",
+      "subregion": "Alta Cerdanya",
+      "country": "FR",
+      "elevation": 1760,
+      "km": 39.75,
+      "offsetKm": 0.21
+    }
+  ]
+}

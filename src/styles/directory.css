@@ -1,0 +1,127 @@
+@layer components {
+  .directory {
+    padding-block: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+    display: grid;
+    gap: var(--sp-6);
+  }
+
+  .directory__head {
+    display: grid;
+    gap: var(--sp-3);
+  }
+
+  .directory__title {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-tight);
+  }
+
+  .directory__lead {
+    font-size: var(--fs-lead);
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+
+  .directory__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+    gap: var(--sp-5);
+    align-items: stretch;
+  }
+
+  .directory__grid .card[hidden] {
+    display: none;
+  }
+
+  .directory__empty {
+    padding: var(--sp-7) var(--sp-5);
+    text-align: center;
+    font-size: var(--fs-lead);
+    color: var(--ink-3);
+    border: var(--hairline) dashed var(--line-strong);
+    border-radius: var(--r-lg);
+  }
+
+  /* --- índexs de categoria i de poble --- */
+  .index-hero {
+    padding-block: clamp(2.5rem, 1.5rem + 3vw, 4.5rem) var(--sp-6);
+    display: grid;
+    gap: var(--sp-3);
+  }
+
+  .index-hero__title {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-tight);
+  }
+
+  .index-hero__lead {
+    font-size: var(--fs-lead);
+    line-height: 1.5;
+    color: var(--ink-2);
+    max-inline-size: var(--measure);
+  }
+
+  .index-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+    gap: var(--sp-4);
+    margin: 0;
+    padding-block-end: var(--sp-8);
+  }
+
+  .index-list__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-1);
+    padding: var(--sp-4) var(--sp-5);
+    text-decoration: none;
+    background: var(--paper-2);
+    border: var(--hairline) solid var(--line);
+    border-radius: var(--r-md);
+    transition:
+      border-color var(--dur-fast) var(--ease-out),
+      transform var(--dur-fast) var(--ease-out);
+  }
+
+  .index-list__link:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .index-list__name {
+    font-family: var(--font-display);
+    font-size: var(--fs-h4);
+    font-weight: 640;
+    letter-spacing: var(--tr-tight);
+    font-variation-settings: 'wdth' var(--wdth-expanded);
+  }
+
+  .pobles__valley {
+    padding-block-end: var(--sp-7);
+  }
+
+  .poble__valley {
+    padding-block: var(--sp-8) var(--sp-4);
+  }
+
+  /* La cota del poble, gran i en xifres tabulars: és el que el situa. */
+  .poble__cota {
+    font-size: var(--fs-h3);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--accent-ink);
+  }
+
+  .index-back {
+    padding-block: var(--sp-7) var(--sp-8);
+    font-family: var(--font-display);
+    font-size: var(--fs-small);
+    font-weight: 560;
+  }
+
+  .index-list__meta {
+    font-family: var(--font-mono);
+    font-size: var(--fs-caption);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-3);
+  }
+}
