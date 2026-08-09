@@ -2,16 +2,16 @@
 import { getImage, Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PhotoCredit from '../components/PhotoCredit.astro';
-import RestaurantCard from '../components/RestaurantCard.astro';
 import ValleySection from '../components/ValleySection.astro';
 import {
   allRestaurants,
-  featured,
   formatElevation,
   groupByCuisine,
   groupByVillage,
   valleyVillages,
 } from '../lib/restaurants';
+import { dishGroups } from '../lib/dishes';
+import { DISH_KIND_LABELS } from '../data/dishes';
 import { siteImage } from '../lib/site-images';
 import valleyData from '../data/valley-profile.json';
 import '../styles/home.css';
@@ -20,9 +20,7 @@ const restaurants = await allRestaurants();
 const villages = groupByVillage(restaurants);
 const valley = valleyVillages(restaurants);
 const cuisines = groupByCuisine(restaurants);
-
-/** Una destacada gran i set més: omple dues files senceres a l'amplada màxima. */
-const picks = featured(restaurants).slice(0, 7);
+const dishes = dishGroups(restaurants);
 
 const lowest = villages[0];
 const highest = villages.at(-1)!;
@@ -31,6 +29,15 @@ const drop = highest.elevation - lowest.elevation;
 const photoCount = restaurants.reduce((sum, entry) => sum + entry.data.images.length, 0);
 const thinCount = restaurants.filter((entry) => entry.data.dataThin).length;
 const frenchCount = restaurants.filter((entry) => entry.data.country === 'FR').length;
+
+/**
+ * Cada plat també té una franja d'altitud: entre quines cotes es pot menjar. Es dibuixa
+ * amb una barra contra tota la vall, i és per això que la geometria es calcula aquí i no
+ * amb estils en línia — igual que al tall, les coordenades són atributs SVG.
+ */
+const BAR_W = 100;
+const barX = (metres: number) =>
+  ((metres - lowest.elevation) / (highest.elevation - lowest.elevation)) * BAR_W;
 
 const hero = siteImage('portada');
 const trinxat = siteImage('trinxat');
@@ -124,24 +131,80 @@ const stats = [
     <ValleySection villages={valley} headingId="home-tall" />
   </section>
 
-  <section class="home-section page" aria-labelledby="home-picks">
+  <section class="home-section page" aria-labelledby="home-plats">
     <header class="home-section__head">
-      <p class="eyebrow">Per on començar</p>
-      <h2 class="home-section__title" id="home-picks">Una tria per situar-se</h2>
+      <p class="eyebrow">Què s’hi menja</p>
+      <h2 class="home-section__title" id="home-plats">Vuit plats per entendre la vall</h2>
       <p class="home-section__lead">
-        {picks.length} cases que expliquen bé com es menja a cada cota: cuina de mercat i producte de la
-        vall a baix, taula francesa al replà de Font-Romeu, i pel mig Llívia, que és Espanya voltada
-        de França.
+        Sis del receptari de casa i dos de les cartes que juguen a una altra cosa. Aquí no hi ha cap
+        restaurant destacat: cada plat obre el directori amb les cases que el fan, i la barra diu
+        entre quines cotes es pot menjar.
       </p>
     </header>
 
-    <div class="home-picks">
+    <ul class="dishes-grid">
       {
-        picks.map((entry, index) => (
-          <RestaurantCard entry={entry} featured={index === 0} loading={index < 3 ? 'eager' : 'lazy'} />
+        dishes.map((dish, index) => (
+          <li class="dish">
+            <a class="dish__link" href={`/restaurants/?plat=${dish.slug}`}>
+              <div class="dish__media">
+                <Image
+                  class="dish__image"
+                  src={dish.image.src}
+                  alt={dish.image.alt}
+                  widths={[320, 480, 800]}
+                  sizes="(max-width: 52rem) 92vw, (max-width: 76rem) 44vw, 20rem"
+                  loading={index < 4 ? 'eager' : 'lazy'}
+                  decoding="async"
+                />
+                <p class="dish__kind">{DISH_KIND_LABELS[dish.kind]}</p>
+              </div>
+
+              <div class="dish__body">
+                <h3 class="dish__name">{dish.name}</h3>
+                <p class="dish__blurb">{dish.blurb}</p>
+
+                <p class="dish__meta mono">
+                  <span class="dish__count">{dish.restaurants.length}</span>
+                  <span>{dish.restaurants.length === 1 ? 'casa' : 'cases'}</span>
+                  <span aria-hidden="true">·</span>
+                  <span>
+                    {formatElevation(dish.lowest)}–{formatElevation(dish.highest)} m
+                  </span>
+                </p>
+
+                <svg
+                  class="dish__range"
+                  viewBox={`0 0 ${BAR_W} 4`}
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <line class="dish__range-track" x1="0" y1="2" x2={BAR_W} y2="2" />
+                  <line
+                    class="dish__range-span"
+                    x1={barX(dish.lowest).toFixed(1)}
+                    y1="2"
+                    x2={barX(dish.highest).toFixed(1)}
+                    y2="2"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            {/* Un div i no un p: PhotoCredit ja és un <p> i el navegador tancaria el de fora. */}
+            <div class="dish__credit">
+              <PhotoCredit
+                author={dish.image.author}
+                license={dish.image.license}
+                licenseUrl={dish.image.licenseUrl}
+                sourceUrl={dish.image.sourceUrl}
+                isOfficial={dish.image.isOfficial}
+              />
+            </div>
+          </li>
         ))
       }
-    </div>
+    </ul>
 
     <p class="home-more">
       <a href="/restaurants/">Veure els {restaurants.length} restaurants, amb filtres</a>

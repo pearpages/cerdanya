@@ -24,19 +24,29 @@ sources:
     url: 'https://pirineusdigital.cat/lles-perd-la-historica-fonda-domingo-pero-conserva-la-familia-que-la-gestionava/'
 images:
   - src: '../../assets/restaurants/coc-de-lorri/01.jpg'
-    alt: 'Serra del Cadí'
-    author: 'Catalaalatac'
-    license: 'CC BY-SA 3.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Serra_del_Cad%C3%AD_(des_de_Lles_de_Cerdanya).JPG'
-    isOfficial: false
+    alt: 'Coc de l’Orri, a Lles de Cerdanya'
+    author: 'Coc de l’Orri'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.cocdelorri.cat/'
+    isOfficial: true
   - src: '../../assets/restaurants/coc-de-lorri/02.jpg'
-    alt: 'Lles de Cerdanya 1991 02'
-    author: 'LBM1948'
-    license: 'CC BY-SA 4.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lles_de_Cerdanya_1991_02.jpg'
-    isOfficial: false
+    alt: 'Coc de l’Orri, a Lles de Cerdanya, 2'
+    author: 'Coc de l’Orri'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.cocdelorri.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/coc-de-lorri/03.jpg'
+    alt: 'Coc de l’Orri, a Lles de Cerdanya, 3'
+    author: 'Coc de l’Orri'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.cocdelorri.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/coc-de-lorri/04.jpg'
+    alt: 'Coc de l’Orri, a Lles de Cerdanya, 4'
+    author: 'Coc de l’Orri'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.cocdelorri.cat/'
+    isOfficial: true
 ---
 
 Un orri és una cabana de pedra de pastor, d'aquelles on es feia nit quan el bestiar pujava d'un

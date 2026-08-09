@@ -33,18 +33,32 @@ sources:
     url: 'https://www.instagram.com/cal_malhivern/'
 images:
   - src: '../../assets/restaurants/cal-malhivern/01.jpg'
-    alt: 'Puigcerdà — Puigcerdà'
+    alt: 'Puigcerdà, a la Cerdanya'
     author: 'Pere López Brosa'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100352.jpg'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100351.jpg'
     isOfficial: false
   - src: '../../assets/restaurants/cal-malhivern/02.jpg'
-    alt: 'Puigcerdà des de guils'
-    author: 'Pere prlpz'
-    license: 'CC BY-SA 2.5'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.5'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_des_de_guils.jpg'
+    alt: 'GEL PUIGCERDÀ 2'
+    author: 'Serrablo Publicidad'
+    license: 'CC BY 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:GEL_PUIGCERD%C3%80_2.png'
+    isOfficial: false
+  - src: '../../assets/restaurants/cal-malhivern/03.jpg'
+    alt: 'Puigcerdà, a la Cerdanya, 2'
+    author: 'Pere López'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_P1030199.JPG'
+    isOfficial: false
+  - src: '../../assets/restaurants/cal-malhivern/04.jpg'
+    alt: 'Puigcerdà Carrer Doctor Piguillem'
+    author: 'Olybrius'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_Carrer_Doctor_Piguillem_-_20130129_(1).jpg'
     isOfficial: false
 ---
 

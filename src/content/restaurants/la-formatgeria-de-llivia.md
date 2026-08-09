@@ -44,19 +44,19 @@ sources:
     url: 'https://www.laformatgeria.com/es/nuestra-carta/'
 images:
   - src: '../../assets/restaurants/la-formatgeria-de-llivia/01.jpg'
-    alt: 'Equip de La Formatgeria de Llívia'
-    author: 'La Formatgeria de Llívia'
-    license: 'Cortesia del restaurant'
-    sourceUrl: 'https://www.laformatgeria.com/'
-    isOfficial: true
-  - src: '../../assets/restaurants/la-formatgeria-de-llivia/02.jpg'
     alt: 'Un plat de La Formatgeria de Llívia'
     author: 'La Formatgeria de Llívia'
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.laformatgeria.com/'
     isOfficial: true
-  - src: '../../assets/restaurants/la-formatgeria-de-llivia/03.jpg'
+  - src: '../../assets/restaurants/la-formatgeria-de-llivia/02.jpg'
     alt: 'Un plat de La Formatgeria de Llívia, 2'
+    author: 'La Formatgeria de Llívia'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.laformatgeria.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/la-formatgeria-de-llivia/03.jpg'
+    alt: 'Equip de La Formatgeria de Llívia'
     author: 'La Formatgeria de Llívia'
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.laformatgeria.com/'

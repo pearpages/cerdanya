@@ -52,7 +52,9 @@ function altFromCommons(title) {
     .replace(/\.(jpe?g|png|webp|tiff?)$/i, '')
     .replace(/[_-]+/g, ' ')
     .replace(/\s*\([^)]*\)\s*/g, ' ')
-    .replace(/\bP\d{6,}\b/g, '')
+    // Els noms de Commons sovint acaben amb la data i l'hora de la càmera
+    // («… 20220724 095246»), que no descriu res a qui escolta la pàgina.
+    .replace(/\b[A-Z]?\d{6,}\b/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -93,7 +95,9 @@ for (const file of files) {
       ? (altFromFilename(image.originUrl ?? '', name) ?? `${name}, a ${town}`)
       : altFromCommons(image.commonsTitle ?? '') || `Paisatge de ${town}`;
 
-    const base = alt.length >= 12 ? alt : `${alt} — ${town}`;
+    // Un títol de Commons curt («Alp») repetit amb el poble donava «Alp — Alp». Val més
+    // situar-lo a la vall, que és informació i es llegeix com una frase.
+    const base = alt.length >= 12 ? alt : `${alt}, a la Cerdanya`;
     const repeat = (seen.get(base) ?? 0) + 1;
     seen.set(base, repeat);
 

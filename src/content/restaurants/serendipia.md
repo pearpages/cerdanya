@@ -32,7 +32,7 @@ sources:
     url: 'https://restaurantserendipia.cat/'
 images:
   - src: '../../assets/restaurants/serendipia/01.jpg'
-    alt: 'Llívia — Llívia'
+    alt: 'Llívia, a la Cerdanya'
     author: 'Pere López Brosa'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
@@ -43,6 +43,20 @@ images:
     author: 'Josep Salvany i Blanch'
     license: 'Public domain'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg'
+    isOfficial: false
+  - src: '../../assets/restaurants/serendipia/03.jpg'
+    alt: 'Escola Jaume I Llívia'
+    author: 'Pere López'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Escola_Jaume_I_-_Ll%C3%ADvia_-_20220723_134152.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/serendipia/04.jpg'
+    alt: 'Castell de Llívia vista'
+    author: 'Carlos Pino Andújar'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Castell_de_Ll%C3%ADvia_-_vista.jpg'
     isOfficial: false
 ---
 

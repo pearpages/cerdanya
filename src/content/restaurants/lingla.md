@@ -40,18 +40,32 @@ sources:
     url: 'https://restaurantguru.com/LIngla-Restaurant-Bellver-de-Cerdanya'
 images:
   - src: '../../assets/restaurants/lingla/01.jpg'
-    alt: 'Bellver de Cerdaña Lérida 06'
+    alt: 'Bellver de Cerdaña Lérida 20'
     author: 'María Sacristán'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_06.jpg'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_20.jpg'
     isOfficial: false
   - src: '../../assets/restaurants/lingla/02.jpg'
-    alt: 'Bellver de Cerdaña Lérida 09'
+    alt: 'Bellver de Cerdaña Lérida 33'
     author: 'María Sacristán'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_09.jpg'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_33.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/lingla/03.jpg'
+    alt: '10 Vista des de Bellver de Cerdanya, amb el Cadí al fons'
+    author: 'Enfo'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:10_Vista_des_de_Bellver_de_Cerdanya,_amb_el_Cad%C3%AD_al_fons.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/lingla/04.jpg'
+    alt: '34 Bellver i el Cadí des del Segre'
+    author: 'Enfo'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:34_Bellver_i_el_Cad%C3%AD_des_del_Segre.jpg'
     isOfficial: false
 ---
 

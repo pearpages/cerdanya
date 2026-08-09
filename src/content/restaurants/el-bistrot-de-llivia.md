@@ -24,17 +24,32 @@ sources:
     url: 'https://www.amigastronomicas.com/2024/02/28/el-bistrot-de-llivia-comida-cerdanya/'
 images:
   - src: '../../assets/restaurants/el-bistrot-de-llivia/01.jpg'
-    alt: 'Llívia — Llívia'
+    alt: 'Llívia, a la Cerdanya'
     author: 'Pere López Brosa'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100377.jpg'
     isOfficial: false
   - src: '../../assets/restaurants/el-bistrot-de-llivia/02.jpg'
-    alt: 'Carrer amb església de Llívia al fons'
-    author: 'Josep Salvany i Blanch'
-    license: 'Public domain'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg'
+    alt: 'Llívia, a la Cerdanya, 2'
+    author: 'Pere López Brosa'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100378.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/el-bistrot-de-llivia/03.jpg'
+    alt: 'Farmacia Esteva'
+    author: 'Alberto-g-rovi'
+    license: 'CC BY 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Farmacia_Esteva_(1).jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/el-bistrot-de-llivia/04.jpg'
+    alt: 'Farmacia Esteva, 2'
+    author: 'Alberto-g-rovi'
+    license: 'CC BY 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Farmacia_Esteva_(3).jpg'
     isOfficial: false
 ---
 

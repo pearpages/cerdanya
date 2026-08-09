@@ -28,19 +28,29 @@ sources:
     url: 'https://guiacat.cat/es/restaurante/grau-os-bellver-cerdanya'
 images:
   - src: '../../assets/restaurants/grau-de-los/01.jpg'
-    alt: 'Bellver de cerdanya'
-    author: 'Augustl'
-    license: 'CC BY-SA 4.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_cerdanya.jpg'
-    isOfficial: false
+    alt: 'Grau de l’Os, a Bellver de Cerdanya'
+    author: 'Grau de l’Os'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://graudelos.com/'
+    isOfficial: true
   - src: '../../assets/restaurants/grau-de-los/02.jpg'
-    alt: 'Casa de la Vila 2'
-    author: 'MARIA ROSA FERRE ✿'
-    license: 'CC BY-SA 2.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Casa_de_la_Vila_(Bellver_de_Cerdanya)_-_2.jpg'
-    isOfficial: false
+    alt: 'Grau de l’Os, a Bellver de Cerdanya, 2'
+    author: 'Grau de l’Os'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://graudelos.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/grau-de-los/03.jpg'
+    alt: 'Grau de l’Os, a Bellver de Cerdanya, 3'
+    author: 'Grau de l’Os'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://graudelos.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/grau-de-los/04.jpg'
+    alt: 'Grau de l’Os, a Bellver de Cerdanya, 4'
+    author: 'Grau de l’Os'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://graudelos.com/'
+    isOfficial: true
 ---
 
 Cuina de mercat contemporània en una sala d'estètica nòrdica, i una de les relacions entre qualitat

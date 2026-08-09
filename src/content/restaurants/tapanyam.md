@@ -37,18 +37,32 @@ sources:
     url: 'https://www.instagram.com/elmiradortapanyam/'
 images:
   - src: '../../assets/restaurants/tapanyam/01.jpg'
-    alt: 'Puigcerdà — Puigcerdà'
+    alt: 'Estació de Puigcerdà 1'
+    author: 'marlène delhaye'
+    license: 'CC BY 2.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by/2.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Estaci%C3%B3_de_Puigcerd%C3%A0_1.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/tapanyam/02.jpg'
+    alt: 'Plaça dels Herois, Puigcerdà'
+    author: 'Mariarosafg'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Pla%C3%A7a_dels_Herois,_Puigcerd%C3%A0.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/tapanyam/03.jpg'
+    alt: 'Puigcerdà, a la Cerdanya'
     author: 'Pere López Brosa'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100350.jpg'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100352.jpg'
     isOfficial: false
-  - src: '../../assets/restaurants/tapanyam/02.jpg'
-    alt: 'Puigcerdà des de guils'
-    author: 'Pere prlpz'
-    license: 'CC BY-SA 2.5'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.5'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_des_de_guils.jpg'
+  - src: '../../assets/restaurants/tapanyam/04.jpg'
+    alt: 'Plaça Cabrinetty'
+    author: 'Pere López'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Pla%C3%A7a_Cabrinetty_P1030206.JPG'
     isOfficial: false
 ---
 

@@ -47,6 +47,20 @@ images:
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lles_de_Cerdanya_1991_02.jpg'
     isOfficial: false
+  - src: '../../assets/restaurants/cal-lliuret/03.jpg'
+    alt: 'Lles de Cerdanya 1991 01'
+    author: 'LBM1948'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lles_de_Cerdanya_1991_01.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/cal-lliuret/04.jpg'
+    alt: 'Lles de Cerdanya 1991 03'
+    author: 'LBM1948'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lles_de_Cerdanya_1991_03.jpg'
+    isOfficial: false
 ---
 
 Travesseres és un veïnat de Lles amb un balcó natural sobre la serra del Cadí, i aquest n'és

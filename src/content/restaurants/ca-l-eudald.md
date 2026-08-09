@@ -36,19 +36,29 @@ sources:
     url: 'https://www.viurealspirineus.cat/articulo/els-fogons-del-pirineu/ca-leudald-dalp-cuina-tradicional-cerdanya-amb-producte-local-i-carta-temporada/20221102212609035885.html'
 images:
   - src: '../../assets/restaurants/ca-l-eudald/01.jpg'
-    alt: 'Trinxat 1 — Alp'
-    author: 'daniel.julia'
-    license: 'CC BY-SA 2.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Trinxat_1.jpg'
-    isOfficial: false
+    alt: 'Exterior de Ca l’Eudald'
+    author: 'Ca l’Eudald'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.caleudald.com/'
+    isOfficial: true
   - src: '../../assets/restaurants/ca-l-eudald/02.jpg'
-    alt: 'Trinxat de La Cerdanya'
-    author: 'Kronologiko'
-    license: 'CC BY-SA 4.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Trinxat_de_La_Cerdanya.jpg'
-    isOfficial: false
+    alt: 'Exterior de Ca l’Eudald, 2'
+    author: 'Ca l’Eudald'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.caleudald.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/ca-l-eudald/03.jpg'
+    alt: 'Exterior de Ca l’Eudald, 3'
+    author: 'Ca l’Eudald'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.caleudald.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/ca-l-eudald/04.jpg'
+    alt: 'Exterior de Ca l’Eudald, 4'
+    author: 'Ca l’Eudald'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.caleudald.com/'
+    isOfficial: true
 ---
 
 El 1972 l'Eudald Vila i la Paquita Pons van obrir a Alp l'Aerohotel Cerdanya. Mig segle després la

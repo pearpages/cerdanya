@@ -55,6 +55,12 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.schierbeckrestaurant.com/'
     isOfficial: true
+  - src: '../../assets/restaurants/schierbeck/04.jpg'
+    alt: 'Sala de Schierbeck, 2'
+    author: 'Schierbeck Restaurant'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.schierbeckrestaurant.com/'
+    isOfficial: true
 ---
 
 És el restaurant de l'hotel Villa Paulita, en una de les cantonades més ben situades de Puigcerdà:

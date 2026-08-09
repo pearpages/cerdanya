@@ -31,8 +31,14 @@ Els scripts `data:*` no s'executen durant el build; la seva sortida es commiteja
 - **Cap imatge sense crèdit.** `author`, `license` i `sourceUrl` són obligatoris a
   l'esquema de la col·lecció i `scripts/lint-credits.mjs` els torna a comprovar al
   `prebuild`: si en falta un, el build s'atura. Les fotos que no pengen de cap fitxa
-  (portada, seccions) viuen a `src/data/site-images.json` i passen el mateix filtre.
-  Totes surten, una per una, a `/credits`.
+  (portada, seccions, plats) viuen a `src/data/site-images.json` i passen el mateix
+  filtre. Totes surten, una per una, a `/credits`.
+- **Cap imatge generada amb IA.** La fitxa acredita cada foto com a «Cortesia del
+  restaurant», o sigui que afirma que és una fotografia d'aquella casa; un plat que no ha
+  existit mai trenca la promesa que sosté tot el lloc. `SYNTHETIC` a
+  `scripts/fetch-images.mjs` les rebutja pel nom del fitxer i `PROMO` fa el mateix amb els
+  cartells de reserva. El filtre no atrapa una imatge rebatejada: **mireu-vos les fotos
+  noves**, que les marques d'aigua dels generadors solen ser a baix a la dreta.
 - **Els textos són originals** i citen les fonts al peu de cada fitxa. Quan d'una casa
   no en circula res de comprovable es marca `dataThin: true` i es diu a la UI (12 de 44).
 - **Res d'estils en línia.** Cada component o pàgina té el seu `.css` al costat, amb
@@ -47,8 +53,10 @@ src/
   data/taxonomy.ts           Vocabularis tancats (cuines, ocasions, serveis, preus)
   data/villages.json         Coordenades i altitud de cada poble  ← build-villages.mjs
   data/valley-profile.json   Perfil real del fons de vall         ← build-valley-profile.mjs
+  data/dishes.ts             Els vuit plats de la portada: termes de cerca i foto
   data/site-images.json      Crèdits de les fotos que no són de cap fitxa
   lib/restaurants.ts         Ordenació per cota, agrupacions, veïns
+  lib/dishes.ts              Resol plat → cases que el fan, franja de cota i foto
   lib/site-images.ts         Resol site-images.json → ImageMetadata (peta si falta el fitxer)
   components/                ValleySection (el tall), RestaurantCard, FilterBar, PhotoCredit…
   styles/                    tokens.css i base.css són globals; la resta, per pàgina
@@ -65,6 +73,30 @@ els marges. És un error silenciós i costa de veure.
 `.section-title`, `.eyebrow`, `.page` i `.prose` són compartides i viuen a `base.css`
 perquè les fan servir pàgines que carreguen fulls diferents. Si una pàgina fa servir una
 classe de `directory.css`, ha d'importar `directory.css`.
+
+## Els vuit plats de la portada
+
+La portada **no destaca cap restaurant**. La secció central són vuit plats — sis del
+receptari de casa i dos de les cartes d'alta cuina — i cada targeta obre
+`/restaurants/?plat=<slug>` amb totes les cases que el fan.
+
+El recompte de la targeta i el del directori no poden divergir perquè surten del mateix
+lloc: `dishKeysOf()` resol els plats al build i els deixa a `data-dishes` de cada targeta;
+el filtre del client compara identificadors, no text. Si un dia no quadren, el bug és allà
+i no a la portada.
+
+Els `terms` de cada plat es comproven **un per un contra les dades** abans d'afegir-los:
+cada coincidència ha de ser un plat real d'alguna carta. Compte amb els fragments curts —
+«orada» viu dins de «temporada» i va colar dues fitxes sense peix a la targeta de peix.
+
+Les fotos són a `src/assets/restaurants/_dishes/`, **copiades** i no enllaçades a la
+galeria d'origen: si es tornen a baixar les imatges d'un restaurant la numeració balla i
+la portada ensenyaria una altra cosa sense avisar. Sis surten d'una casa de la guia i dues
+de Commons, perquè a la vall no n'hi ha cap de publicada.
+
+Falten dos plats que hi haurien de ser: el **tiró amb naps**, que és el plat de festa
+d'aquesta vall i del qual no hi ha cap fotografia enlloc, i el **menú de degustació**, que
+només fan dues cases i no es pot retratar. Si algun dia apareix una foto del tiró, entra.
 
 ## Sessió del 9 d'agost de 2026
 
@@ -92,6 +124,15 @@ Fet:
   de Martinet (que no té cap fitxa). Ara surten de `villages.json`.
 - `package.json`: `data:directory` apuntava a un script que no existeix; substituït pels
   quatre scripts reals.
+
+Segona tanda, el mateix dia:
+
+- **Vuit targetes de plat** substitueixen els restaurants destacats de la portada, amb el
+  filtre `?plat=` al directori i una píndola que diu per què surten 11 cases i no 44.
+- **Dinou imatges generades amb IA** al web de Somnia (nou de Gemini, deu de ChatGPT), dues
+  de les quals ja estaven publicades a la seva fitxa acreditades com a fotografies seves.
+  Fora, i filtre nou al pipeline. Racó de Riu en tenia tres més al pla, sense publicar.
+- Un cartell de «Reserveu directe» d'Arç que passava per fotografia: filtre `PROMO`.
 
 Pendent:
 

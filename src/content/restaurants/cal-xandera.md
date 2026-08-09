@@ -32,26 +32,29 @@ sources:
     url: 'https://www.pyrenees-cerdagne.com/planifier/se-restaurer/les-restaurants/cal-xandera-2792196'
 images:
   - src: '../../assets/restaurants/cal-xandera/01.jpg'
-    alt: 'Cal Xandera, Angoustrine Villeneuve des Escaldes, Pyrénées Orientales,Languedoc Roussillon'
-    author: 'Toprural'
-    license: 'CC BY-SA 2.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Cal_Xandera,_Angoustrine-Villeneuve-des-Escaldes,_Pyr%C3%A9n%C3%A9es-Orientales,Languedoc-Roussillon_(France).jpg'
-    isOfficial: false
+    alt: 'Cal Xandera, a Angostrina'
+    author: 'Cal Xandera'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.calxandera.com/'
+    isOfficial: true
   - src: '../../assets/restaurants/cal-xandera/02.jpg'
-    alt: '66005 Angoustrine Villeneuve des Escaldes Routes Hydro'
-    author: 'Roland45'
-    license: 'CC BY-SA 4.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:66005-Angoustrine-Villeneuve-des-Escaldes-Routes-Hydro.png'
-    isOfficial: false
+    alt: 'Cal Xandera, a Angostrina, 2'
+    author: 'Cal Xandera'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.calxandera.com/'
+    isOfficial: true
   - src: '../../assets/restaurants/cal-xandera/03.jpg'
-    alt: '66005 Angoustrine Villeneuve des Escaldes ZNIEFF1'
-    author: 'Roland45'
-    license: 'CC BY-SA 4.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:66005-Angoustrine-Villeneuve-des-Escaldes-ZNIEFF1.png'
-    isOfficial: false
+    alt: 'Cal Xandera, a Angostrina, 3'
+    author: 'Cal Xandera'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.calxandera.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/cal-xandera/04.jpg'
+    alt: 'Cal Xandera, a Angostrina, 4'
+    author: 'Cal Xandera'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.calxandera.com/'
+    isOfficial: true
 ---
 
 És una masia cerdana del segle XVIII, protegida, a la sortida d'Angostrina en direcció a

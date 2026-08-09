@@ -35,17 +35,31 @@ sources:
     url: 'https://restaurantguru.com/Mes-Que-Beure-Llivia'
 images:
   - src: '../../assets/restaurants/mes-que-beure/01.jpg'
-    alt: 'Llívia — Llívia'
-    author: 'Pere López Brosa'
-    license: 'CC BY-SA 4.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100378.jpg'
+    alt: 'Llívia plaça'
+    author: 'No machine-readable author provided. MarkCat~commonswiki assumed (based on copyright claims).'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'http://creativecommons.org/licenses/by-sa/3.0/'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_pla%C3%A7a.jpg'
     isOfficial: false
   - src: '../../assets/restaurants/mes-que-beure/02.jpg'
-    alt: 'Carrer amb església de Llívia al fons'
+    alt: 'Llívia Plaça Major en 1994'
+    author: 'Jean-Pierre Bazard'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_Pla%C3%A7a_Major_en_1994.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/mes-que-beure/03.jpg'
+    alt: 'Llivia, place'
+    author: 'Jiròni B.'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Llivia,_place.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/mes-que-beure/04.jpg'
+    alt: 'Vista interior de l''església de Llívia'
     author: 'Josep Salvany i Blanch'
     license: 'Public domain'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Vista_interior_de_l%27esgl%C3%A9sia_de_Ll%C3%ADvia.jpeg'
     isOfficial: false
 ---
 

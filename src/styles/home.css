@@ -157,11 +157,139 @@
     color: var(--ink-2);
   }
 
-  .home-picks {
+  /*
+   * Els vuit plats. La foto de sis surt d'una casa de la guia i les altres dues de
+   * Commons; el crèdit va sota la targeta i no a sobre de la imatge, perquè aquí la
+   * fotografia és petita i un rètol al damunt se la menjaria.
+   */
+  /* Quatre columnes a l'amplada màxima: vuit plats són dues files senceres, sense forats. */
+  .dishes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
-    gap: var(--sp-5);
-    align-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18.5rem), 1fr));
+    gap: var(--sp-5) var(--sp-4);
+    margin: 0;
+  }
+
+  .dish {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: var(--sp-2);
+  }
+
+  .dish__link {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    text-decoration: none;
+    background: var(--paper-2);
+    border: var(--hairline) solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    transition:
+      border-color var(--dur-med) var(--ease-out),
+      transform var(--dur-med) var(--ease-out),
+      box-shadow var(--dur-med) var(--ease-out);
+  }
+
+  .dish__link:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-2);
+  }
+
+  .dish__media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--paper-inset);
+  }
+
+  .dish__image {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    transition: scale var(--dur-slow) var(--ease-out);
+  }
+
+  .dish__link:hover .dish__image {
+    scale: 1.04;
+  }
+
+  .dish__kind {
+    position: absolute;
+    inset-block-start: var(--sp-3);
+    inset-inline-start: var(--sp-3);
+    padding: 0.2em 0.6em;
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 620;
+    letter-spacing: var(--tr-label);
+    text-transform: uppercase;
+    color: var(--c-neu);
+    background: rgb(6 20 32 / 0.62);
+    backdrop-filter: blur(6px);
+    border-radius: var(--r-sm);
+  }
+
+  .dish__body {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    gap: var(--sp-2);
+    padding: var(--sp-4) var(--sp-4) var(--sp-5);
+  }
+
+  .dish__name {
+    font-size: var(--fs-h4);
+    line-height: 1.12;
+  }
+
+  .dish__blurb {
+    font-size: var(--fs-small);
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+
+  .dish__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4em;
+    padding-block-start: var(--sp-2);
+    font-size: var(--fs-caption);
+    color: var(--ink-3);
+  }
+
+  .dish__count {
+    font-size: var(--fs-h4);
+    line-height: 1;
+    color: var(--accent-ink);
+  }
+
+  /* La franja de cota, contra tota la vall: com més amunt arriba, més a la dreta acaba. */
+  .dish__range {
+    inline-size: 100%;
+    block-size: 4px;
+    overflow: visible;
+  }
+
+  .dish__range-track {
+    stroke: var(--line-strong);
+    stroke-width: 1;
+    opacity: 0.55;
+  }
+
+  .dish__range-span {
+    stroke: var(--accent);
+    stroke-width: 4;
+    stroke-linecap: round;
+  }
+
+  /*
+   * Dues línies reservades encara que el crèdit n'ocupi una: si no, la targeta del costat
+   * estira la seva caixa per compensar i la filera queda desigual.
+   */
+  .dish__credit {
+    padding-inline: var(--sp-1);
+    min-block-size: calc(var(--fs-caption) * 1.4 * 2);
   }
 
   .home-more {

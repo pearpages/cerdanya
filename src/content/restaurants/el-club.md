@@ -53,6 +53,12 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://elclubrestaurant.com/'
     isOfficial: true
+  - src: '../../assets/restaurants/el-club/04.jpg'
+    alt: 'La Cerdanya amb el poble d''Alp amb una via de tren en primer terme'
+    author: 'Carles Fargas'
+    license: 'Public domain'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:La_Cerdanya_amb_el_poble_d%27Alp_amb_una_via_de_tren_en_primer_terme.jpeg'
+    isOfficial: false
 ---
 
 És dels últims a obrir i es nota en el plantejament: sala pensada, plats per compartir i una carta

@@ -38,17 +38,32 @@ sources:
     url: 'https://es.restaurantguru.com/Restaurant-Can-Ryu-Llivia'
 images:
   - src: '../../assets/restaurants/can-ryu/01.jpg'
-    alt: 'Vista de Llívia 2022'
-    author: 'Medol'
-    license: 'CC BY-SA 4.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Vista_de_Ll%C3%ADvia_2022.jpg'
+    alt: 'Panoramica de Llívia'
+    author: 'Alberto-g-rovi'
+    license: 'CC BY 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Panoramica_de_Ll%C3%ADvia_(2).jpg'
     isOfficial: false
   - src: '../../assets/restaurants/can-ryu/02.jpg'
-    alt: 'Carrer amb església de Llívia al fons'
-    author: 'Josep Salvany i Blanch'
-    license: 'Public domain'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg'
+    alt: 'Panoramica de Llívia, 2'
+    author: 'Alberto-g-rovi'
+    license: 'CC BY 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Panoramica_de_Ll%C3%ADvia_(1).jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/can-ryu/03.jpg'
+    alt: 'Paisaje volcánica con el volcán de la Corona desde la Cueva de los Verdes Lanzarote CV05'
+    author: 'Luis Miguel Bugallo Sánchez (Lmbuga)'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Paisaje_volc%C3%A1nica_con_el_volc%C3%A1n_de_la_Corona_desde_la_Cueva_de_los_Verdes_-_Lanzarote_-_CV05.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/can-ryu/04.jpg'
+    alt: 'Santa Corona Lunetta'
+    author: 'Didier Descouens'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Santa_Corona_(Vicenza)_-_Lunetta.jpg'
     isOfficial: false
 ---
 

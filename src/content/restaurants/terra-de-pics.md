@@ -53,6 +53,12 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://terradepics.com/'
     isOfficial: true
+  - src: '../../assets/restaurants/terra-de-pics/04.jpg'
+    alt: 'Terra de Pics, a Bolvir, 2'
+    author: 'Terra de Pics'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://terradepics.com/'
+    isOfficial: true
 ---
 
 Seu a la plaça nova de Bolvir amb un argument que fan servir ells mateixos: la Tosa a un costat i

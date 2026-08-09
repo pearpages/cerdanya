@@ -156,4 +156,50 @@
       flex: 1 1 100%;
     }
   }
+
+  /* Filtre de plat: sense control propi, s'hi arriba des de les targetes de la portada. */
+  .filters__dish {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    justify-self: start;
+    padding: 0.3em 0.4em 0.3em 0.9em;
+    background: var(--accent-soft);
+    border: var(--hairline) solid var(--accent);
+    border-radius: var(--r-pill);
+  }
+
+  .filters__dish[hidden] {
+    display: none;
+  }
+
+  .filters__dish-label {
+    font-family: var(--font-display);
+    font-size: var(--fs-caption);
+    font-weight: 620;
+    letter-spacing: var(--tr-label);
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .filters__dish-name {
+    font-family: var(--font-display);
+    font-size: var(--fs-small);
+    font-weight: 620;
+  }
+
+  .filters__dish-clear {
+    display: grid;
+    place-items: center;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1;
+    color: var(--accent-ink);
+    border-radius: 50%;
+  }
+
+  .filters__dish-clear:hover {
+    background: color-mix(in oklab, var(--accent) 30%, transparent);
+  }
 }

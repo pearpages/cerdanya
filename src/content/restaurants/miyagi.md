@@ -34,17 +34,30 @@ sources:
     url: 'https://diaricatalunya.cat/es/cerdanya/general/miyagi-la-esencia-de-tokio-se-instala-junto-al-lago-de-puigcerda'
 images:
   - src: '../../assets/restaurants/miyagi/01.jpg'
-    alt: 'Estany Puigcerdà Catalunya'
-    author: 'estribiyo'
-    license: 'CC BY 2.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by/2.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Estany_Puigcerd%C3%A0_Catalunya.jpg'
-    isOfficial: false
-  - src: '../../assets/restaurants/miyagi/02.jpg'
     alt: 'Estany de puigcerdà'
     author: 'Espencat'
     license: 'Public domain'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Estany_de_puigcerd%C3%A0.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/miyagi/02.jpg'
+    alt: 'Llac de Puigcerdà panoramio'
+    author: 'Jorge Franganillo'
+    license: 'CC BY 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Llac_de_Puigcerd%C3%A0_-_panoramio.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/miyagi/03.jpg'
+    alt: 'Lago de Puigcerdà'
+    author: 'Alberto-g-rovi'
+    license: 'CC BY 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lago_de_Puigcerd%C3%A0_(5).jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/miyagi/04.jpg'
+    alt: 'Barquejant per l''estany de Puigcerdà 1908'
+    author: 'Desconegut'
+    license: 'Public domain'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Barquejant_per_l%27estany_de_Puigcerd%C3%A0_-_1908.jpg'
     isOfficial: false
 ---
 

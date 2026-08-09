@@ -43,6 +43,20 @@ images:
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_09.jpg'
     isOfficial: false
+  - src: '../../assets/restaurants/la-noga/03.jpg'
+    alt: 'Bellver de Cerdaña Lérida 12'
+    author: 'María Sacristán'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_12.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/la-noga/04.jpg'
+    alt: 'Bellver de Cerdaña Lérida 14'
+    author: 'María Sacristán'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_14.jpg'
+    isOfficial: false
 ---
 
 Cuina catalana de temporada amb una particularitat que aquí compta molt: la verdura ve de l'hort

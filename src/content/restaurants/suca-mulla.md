@@ -40,6 +40,20 @@ images:
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Estaci%C3%B3_vella_de_La_Molina_(Alp).JPG'
     isOfficial: false
+  - src: '../../assets/restaurants/suca-mulla/03.jpg'
+    alt: 'La Torrassa d''Alp 4'
+    author: 'Konkordia'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:La_Torrassa_d%27Alp_4.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/suca-mulla/04.jpg'
+    alt: 'Alp, a la Cerdanya'
+    author: 'Pere López Brosa'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Alp_-_P1090156.jpg'
+    isOfficial: false
 ---
 
 Al passeig d'Alp, a la mateixa vorera que Ca l'Eudald, amb una proposta molt més senzilla: cuina

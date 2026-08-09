@@ -34,16 +34,32 @@ sources:
     url: 'https://www.nevasport.com/east/art/55219/mis-restaurantes-de-la-cerdanya/'
 images:
   - src: '../../assets/restaurants/les-heures-den-didac/01.jpg'
-    alt: 'Bolvir — Bolvir'
-    author: 'Tretx'
-    license: 'Public domain'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bolvir.jpg'
+    alt: 'BOLVIR, a la Cerdanya'
+    author: 'Ajuntament de Bolvir'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:BOLVIR.jpg'
     isOfficial: false
   - src: '../../assets/restaurants/les-heures-den-didac/02.jpg'
-    alt: 'Creus processionals de Bolvir'
-    author: 'Rafael Degollada i Castanys'
-    license: 'Public domain'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Creus_processionals_de_Bolvir.jpeg'
+    alt: 'Prats Cerdanya'
+    author: 'Araceli Merino'
+    license: 'CC BY-SA 3.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Prats-Cerdanya.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/les-heures-den-didac/03.jpg'
+    alt: 'Església de Sant Serni de Prats 3'
+    author: 'MARIA ROSA FERRE ✿'
+    license: 'CC BY-SA 2.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Esgl%C3%A9sia_de_Sant_Serni_de_Prats_(Prats_i_Sansor)_-_3.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/les-heures-den-didac/04.jpg'
+    alt: 'Església de Sant Serni de Prats 5'
+    author: 'MARIA ROSA FERRE ✿'
+    license: 'CC BY-SA 2.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Esgl%C3%A9sia_de_Sant_Serni_de_Prats_(Prats_i_Sansor)_-_5.jpg'
     isOfficial: false
 ---
 

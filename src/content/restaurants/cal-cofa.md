@@ -41,6 +41,20 @@ images:
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Cereja_@_Cam%C3%AD_d%27Ur.jpg'
     isOfficial: false
+  - src: '../../assets/restaurants/cal-cofa/03.jpg'
+    alt: 'Llívia @ Camí d''Ur 01'
+    author: 'Rémih'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_@_Cam%C3%AD_d%27Ur_01.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/cal-cofa/04.jpg'
+    alt: 'Ur @ Camí de Llívia 01'
+    author: 'Rémih'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ur_@_Cam%C3%AD_de_Ll%C3%ADvia_01.jpg'
+    isOfficial: false
 ---
 
 Al centre de Llívia, i amb un argument difícil de discutir: la granja i l'hort que els proveeixen

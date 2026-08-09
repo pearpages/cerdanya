@@ -27,9 +27,39 @@ const PLAN = resolve(ROOT, 'data/image-plan.json');
 const ASSETS = resolve(ROOT, 'src/assets/restaurants');
 const MANIFEST = resolve(ROOT, 'data/image-manifest.json');
 
-const UA = 'cota-de-tast/0.1 (guia gastronòmica de la Cerdanya; contacte: pere@soms.cat)';
+/**
+ * Nomes ASCII: les capceleres HTTP no son text lliure i hi ha CDN (jimcdn, per exemple)
+ * que responen 403 a un User-Agent amb accents. Sense aixo, Cal Xandera es quedava sense
+ * cap fotografia i no hi havia manera de veure per que.
+ */
+const UA = 'cota-de-tast/0.1 (guia gastronomica de la Cerdanya; contacte: pere@soms.cat)';
 const MAX_WIDTH = 2000;
 const MIN_WIDTH = 640;
+
+/**
+ * Imatges generades amb IA, rebutjades pel nom del fitxer.
+ *
+ * No és una qüestió de gust: la fitxa acredita cada imatge com a «Foto — Casa X · Cortesia
+ * del restaurant», és a dir, afirma que és una fotografia d'aquella casa. Un plat que no ha
+ * existit mai trenca exactament la promesa que sosté tot el lloc. Somnia en tenia dues de
+ * Gemini publicades al seu propi web i el crawler se les va empassar.
+ *
+ * El filtre és pel nom perquè és el que es pot automatitzar; no atrapa una imatge sintètica
+ * rebatejada. L'única defensa contra aquestes és mirar-se-les: les marques d'aigua dels
+ * generadors solen ser a la cantonada inferior dreta.
+ *
+ * La llista creix amb el que va apareixent. Somnia en tenia nou de Gemini i, en tornar-hi,
+ * dues més de ChatGPT: val més afegir-hi un generador de sobres que deixar-ne passar un.
+ */
+const SYNTHETIC =
+  /gemini[_-]?generated|chatgpt[_-]?image|openai|sora[_-]?image|midjourney|dall.?e|stable.?diffusion|adobe.?firefly|nightcafe|leonardo\.ai|grok[_-]?image|ai.?generated|_ai_gen/i;
+
+/**
+ * Cartells i reclams. Passen tots els filtres de mida i de contrast perquè són imatges
+ * de debò, però el que retraten és una promoció, no un restaurant: Arç tenia un
+ * «pop-up-web-2.jpg» amb un «Reserveu directe, guanyeu més» a la galeria.
+ */
+const PROMO = /pop-?up|banner|promo(?:cio|tion)|newsletter|cartell|reserva.?directa|black.?friday/i;
 const JPEG_QUALITY = 82;
 
 const args = process.argv.slice(2);
@@ -105,6 +135,40 @@ async function commonsSearch(query, limit = 8) {
   return found;
 }
 
+/**
+ * Empremta perceptual de 64 bits (dHash): es redueix a 9x8 en gris i es compara cada
+ * píxel amb el del costat. Dues versions de la mateixa foto —un retall, una mida
+ * diferent— donen empremtes gairebé iguals encara que els fitxers no s'assemblin gens.
+ */
+async function fingerprint(image) {
+  const raw = await image
+    .clone()
+    .greyscale()
+    .resize(9, 8, { fit: 'fill' })
+    .raw()
+    .toBuffer();
+
+  let bits = 0n;
+  for (let row = 0; row < 8; row += 1) {
+    for (let col = 0; col < 8; col += 1) {
+      const left = raw[row * 9 + col];
+      const right = raw[row * 9 + col + 1];
+      bits = (bits << 1n) | (left > right ? 1n : 0n);
+    }
+  }
+  return bits;
+}
+
+function hamming(a, b) {
+  let diff = a ^ b;
+  let count = 0;
+  while (diff > 0n) {
+    count += Number(diff & 1n);
+    diff >>= 1n;
+  }
+  return count;
+}
+
 async function saveImage(buffer, slug, index, minWidth = MIN_WIDTH) {
   const dir = resolve(ASSETS, slug);
   await mkdir(dir, { recursive: true });
@@ -116,14 +180,39 @@ async function saveImage(buffer, slug, index, minWidth = MIN_WIDTH) {
     throw new Error(`massa petita (${meta.width}px)`);
   }
 
+  /**
+   * Les targetes retallen a 4:3 i la capçalera de fitxa encara més ampla. Una tira de
+   * 5:1 (capçalera de web) o una columna de 1:2,5 (cartell de carta, panorama de
+   * Commons) no en surt una fotografia, en surt una franja. Val mes descartar-la.
+   */
+  const ratio = (meta.width ?? 1) / (meta.height ?? 1);
+  if (ratio > 2.4 || ratio < 0.5) {
+    throw new Error(`proporcio de tira (${meta.width}x${meta.height})`);
+  }
+
+  /**
+   * Un web publica moltes imatges que no son fotografies: logotips, cartes en text sobre
+   * un fons pla, degradats de farciment. Totes tenen molt poca variacio de to. Una
+   * fotografia de sala o de plat no baixa d'aquest llindar.
+   */
+  const stats = await image.stats();
+  const spread = Math.max(...stats.channels.map((c) => c.stdev));
+  if (spread < 26) {
+    throw new Error(`sense contingut fotografic (variacio ${spread.toFixed(1)})`);
+  }
+
+  const hash = await fingerprint(image);
+
   const file = `${String(index).padStart(2, '0')}.jpg`;
-  await image
+  // Les mides que es desen son les del fitxer resultant, no una barreja de l'amplada
+  // retallada amb l'alçada original: amb la barreja, una foto normal semblava una tira.
+  const out = await image
     .rotate()
     .resize({ width: MAX_WIDTH, withoutEnlargement: true })
     .jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
     .toFile(resolve(dir, file));
 
-  return { file, width: Math.min(meta.width ?? 0, MAX_WIDTH), height: meta.height ?? 0 };
+  return { file, width: out.width, height: out.height, hash };
 }
 
 const plan = JSON.parse(await readFile(PLAN, 'utf8'));
@@ -138,6 +227,20 @@ try {
 }
 
 const report = { saved: 0, skipped: [], thin: [] };
+
+/**
+ * Una foto de Commons no es pot repetir en dues fitxes. Als pobles amb quatre restaurants
+ * i poc material lliure, sense aixo totes quatre acabaven amb la mateixa vista del
+ * campanar i el lloc semblava trencat. Es sembra amb el que ja hi ha al manifest perque
+ * una execucio amb `--only` no repeteixi el que ja fa servir una altra fitxa.
+ */
+const usedCommons = new Set();
+for (const [slug, images] of Object.entries(manifest)) {
+  if (only?.has(slug)) continue;
+  for (const image of images) {
+    if (!image.isOfficial && image.sourceUrl) usedCommons.add(image.sourceUrl);
+  }
+}
 
 for (const entry of plan.restaurants) {
   if (only && !only.has(entry.slug)) continue;
@@ -159,7 +262,10 @@ for (const entry of plan.restaurants) {
   /** Reserva: Commons, amb autoria i llicència llegides de les metadades. */
   const commonsCandidates = [];
   for (const query of entry.commons ?? []) {
-    if (officialCandidates.length + commonsCandidates.length >= want * 3) break;
+    // Es compten només les que encara no té una altra fitxa: si no, dues consultes que
+    // tornen fotos ja gastades esgoten el pressupost i la casa es queda sense res.
+    const usable = commonsCandidates.filter((c) => !usedCommons.has(c.sourceUrl)).length;
+    if (officialCandidates.length + usable >= want * 3) break;
     commonsCandidates.push(...(await commonsSearch(query)));
     await sleep(350);
   }
@@ -167,11 +273,14 @@ for (const entry of plan.restaurants) {
   const seen = new Set();
   const candidates = [...officialCandidates, ...commonsCandidates].filter((c) => {
     if (!c.downloadUrl || seen.has(c.downloadUrl)) return false;
+    if (!c.isOfficial && usedCommons.has(c.sourceUrl)) return false;
     seen.add(c.downloadUrl);
     return true;
   });
 
   const kept = [];
+  /** Empremtes del que ja ha entrat en aquesta fitxa, per no repetir-hi la mateixa foto. */
+  const hashes = [];
   let index = 1;
 
   for (const candidate of candidates) {
@@ -182,11 +291,31 @@ for (const entry of plan.restaurants) {
       continue;
     }
 
+    if (SYNTHETIC.test(candidate.downloadUrl)) {
+      report.skipped.push(`${entry.slug}: imatge sintètica → ${candidate.downloadUrl}`);
+      continue;
+    }
+
+    if (candidate.isOfficial && PROMO.test(candidate.downloadUrl)) {
+      report.skipped.push(`${entry.slug}: reclam, no fotografia → ${candidate.downloadUrl}`);
+      continue;
+    }
+
     try {
       const buffer = await get(candidate.downloadUrl, true);
       // Algunes cases només publiquen fotos petites; s'accepten amb un llindar propi
       // abans que quedar-se sense cap imatge seva.
       const saved = await saveImage(buffer, entry.slug, index, entry.minWidth ?? MIN_WIDTH);
+
+      // Un retall i l'original de la mateixa foto passen tots dos els filtres de mida:
+      // només l'empremta els distingeix, i una galeria de quatre no pot repetir-ne cap.
+      const twin = hashes.find((h) => hamming(h, saved.hash) <= 8);
+      if (twin !== undefined) {
+        report.skipped.push(`${entry.slug}: repetida → ${candidate.downloadUrl}`);
+        continue;
+      }
+      hashes.push(saved.hash);
+
       kept.push({
         src: `../../assets/restaurants/${entry.slug}/${saved.file}`,
         /** URL d'on ha sortit el fitxer: el nom original diu què s'hi veu. */
@@ -200,6 +329,7 @@ for (const entry of plan.restaurants) {
         isOfficial: candidate.isOfficial,
         commonsTitle: candidate.title,
       });
+      if (!candidate.isOfficial) usedCommons.add(candidate.sourceUrl);
       index += 1;
       report.saved += 1;
     } catch (error) {

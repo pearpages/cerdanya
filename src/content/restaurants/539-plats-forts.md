@@ -34,18 +34,32 @@ sources:
     url: 'https://www.elnacional.cat/es/gourmeteria/opinion-criticas/pequeno-restaurante-puigcerda-cerdanya-fonda_1140445_102.html'
 images:
   - src: '../../assets/restaurants/539-plats-forts/01.jpg'
-    alt: 'Xemeneia a Puigcerdà 20220724 095246'
+    alt: 'Xemeneia a Puigcerdà'
     author: 'Pere López Brosa'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Xemeneia_a_Puigcerd%C3%A0_-_20220724_095246.jpg'
     isOfficial: false
   - src: '../../assets/restaurants/539-plats-forts/02.jpg'
-    alt: 'Puigcerdà — Puigcerdà'
+    alt: 'Puigcerdà, a la Cerdanya'
     author: 'Pere López Brosa'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1090081.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/539-plats-forts/03.jpg'
+    alt: 'Puigcerdà, a la Cerdanya, 2'
+    author: 'Pere López Brosa'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1090099.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/539-plats-forts/04.jpg'
+    alt: 'Puigcerdà, a la Cerdanya, 3'
+    author: 'Pere López Brosa'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100350.jpg'
     isOfficial: false
 ---
 

@@ -86,6 +86,20 @@ const { cuisines, villages, total } = Astro.props;
     }
   </fieldset>
 
+  {/*
+    Filtre per plat. No té control propi perquè només s'hi arriba des de les targetes de
+    la portada, però ha de ser visible: qui hi cau veient 11 cases i no 44 té dret a saber
+    per què. El nom el posa el script des de DISHES.
+  */}
+  <p class="filters__dish" data-filter-dish hidden>
+    <span class="filters__dish-label">Plat</span>
+    <span class="filters__dish-name" data-filter-dish-name></span>
+    <button class="filters__dish-clear" type="button" data-filter-dish-clear>
+      <span class="visually-hidden">Treu el filtre de plat</span>
+      <span aria-hidden="true">×</span>
+    </button>
+  </p>
+
   <p class="filters__count" role="status" aria-live="polite" data-filter-count>
     {total} restaurants
   </p>

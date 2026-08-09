@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import type { Restaurant } from '../lib/restaurants';
 import { elevationOf, formatElevation } from '../lib/restaurants';
+import { dishKeysOf } from '../lib/dishes';
 import { PRICE_LABELS } from '../data/taxonomy';
 import './RestaurantCard.css';
 
@@ -28,6 +29,7 @@ const href = `/restaurants/${entry.id}/`;
   data-cuisine={data.cuisine.join('|')}
   data-price={data.priceRange}
   data-services={data.services.join('|')}
+  data-dishes={dishKeysOf(entry).join('|')}
   data-elevation={elevation}
 >
   <a class="card__link" href={href}>

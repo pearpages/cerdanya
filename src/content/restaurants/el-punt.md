@@ -38,6 +38,20 @@ images:
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0'
     sourceUrl: 'https://commons.wikimedia.org/wiki/File:Casa_de_la_Vila_(Bellver_de_Cerdanya)_-_2.jpg'
     isOfficial: false
+  - src: '../../assets/restaurants/el-punt/03.jpg'
+    alt: 'Bellver de Cerdaña Lérida 24'
+    author: 'María Sacristán'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_24.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/el-punt/04.jpg'
+    alt: 'Bellver de Cerdaña Lérida 25'
+    author: 'María Sacristán'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_25.jpg'
+    isOfficial: false
 ---
 
 Al passatge Carlit de Bellver, dues portes més avall de Ca la Núria, amb un plantejament diferent:

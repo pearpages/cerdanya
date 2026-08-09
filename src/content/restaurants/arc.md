@@ -47,11 +47,17 @@ images:
     sourceUrl: 'https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/'
     isOfficial: true
   - src: '../../assets/restaurants/arc/03.jpg'
-    alt: 'Serra del Cadí des de Castelltallat'
-    author: 'Victor M. Vicente Selvas'
-    license: 'Public domain'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Serra_del_Cad%C3%AD_des_de_Castelltallat.jpg'
-    isOfficial: false
+    alt: 'Exterior de Arç'
+    author: 'Cerdanya EcoResort'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/'
+    isOfficial: true
+  - src: '../../assets/restaurants/arc/04.jpg'
+    alt: 'Un plat de Arç, 2'
+    author: 'Cerdanya EcoResort'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/'
+    isOfficial: true
 ---
 
 És el restaurant del Cerdanya EcoResort, a Prullans, i és el cas de la comarca on la paraula

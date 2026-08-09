@@ -20,10 +20,32 @@ sources:
     url: 'https://www.instagram.com/381bolvir/'
 images:
   - src: '../../assets/restaurants/381-bolvir/01.jpg'
-    alt: 'Bolvir — Bolvir'
-    author: 'Tretx'
-    license: 'Public domain'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bolvir.jpg'
+    alt: 'Santa Cecília de Bolvir 02'
+    author: 'Judesba'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Santa_Cec%C3%ADlia_de_Bolvir_02.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/381-bolvir/02.jpg'
+    alt: 'Santa Cecília de Bolvir 03'
+    author: 'Judesba'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Santa_Cec%C3%ADlia_de_Bolvir_03.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/381-bolvir/03.jpg'
+    alt: 'Santa Cecília de Bolvir 10'
+    author: 'Judesba'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Santa_Cec%C3%ADlia_de_Bolvir_10.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/381-bolvir/04.jpg'
+    alt: 'Santa Cecília de Bolvir 12'
+    author: 'Judesba'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Santa_Cec%C3%ADlia_de_Bolvir_12.jpg'
     isOfficial: false
 ---
 

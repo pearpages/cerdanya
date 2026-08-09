@@ -7,8 +7,13 @@ import siteImagesData from '../data/site-images.json';
  * que el contracte es manté aquí: si el fitxer no hi és o l'id no existeix, peta el build
  * en comptes de publicar una imatge sense crèdit.
  */
+/*
+ * Només les carpetes que comencen per guió baix: `_site` (portada i seccions) i `_dishes`
+ * (els vuit plats). Les de restaurant queden fora a posta — són 176 i les carrega la
+ * col·lecció quan toca, no cal tenir-les totes resoltes aquí.
+ */
 const files = import.meta.glob<{ default: ImageMetadata }>(
-  '../assets/restaurants/_site/*.{jpg,jpeg,png,webp}',
+  '../assets/restaurants/_*/*.{jpg,jpeg,png,webp}',
   { eager: true },
 );
 

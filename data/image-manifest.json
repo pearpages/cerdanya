@@ -46,7 +46,7 @@
       "src": "../../assets/restaurants/_site/01.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Paisatge_des_de_Urtx%2C_la_Cerdanya.jpg/3840px-Paisatge_des_de_Urtx%2C_la_Cerdanya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2560,
+      "height": 1333,
       "author": "Angela Llop",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -70,7 +70,7 @@
       "src": "../../assets/restaurants/_site/03.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Trinxat_de_La_Cerdanya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "width": 2000,
-      "height": 1746,
+      "height": 1501,
       "author": "Kronologiko",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -82,7 +82,7 @@
       "src": "../../assets/restaurants/_site/04.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Trinxat_de_La_Cerdanya_%282020%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "width": 2000,
-      "height": 1629,
+      "height": 1113,
       "author": "Kronologiko",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -94,7 +94,7 @@
       "src": "../../assets/restaurants/_site/05.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ensaladilla_de_calamar_i_trinxat_-_macasa.jpg/3840px-Ensaladilla_de_calamar_i_trinxat_-_macasa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2883,
+      "height": 1502,
       "author": "Francesc Fort",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -106,7 +106,7 @@
       "src": "../../assets/restaurants/_site/06.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Ensaladilla_de_calamar_i_trinxat_-_Macasa.jpg/3840px-Ensaladilla_de_calamar_i_trinxat_-_Macasa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2883,
+      "height": 1502,
       "author": "Francesc Fort",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -154,48 +154,6 @@
       "author": "Can Ventura",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://canventura.com/",
-      "isOfficial": true
-    }
-  ],
-  "la-formatgeria-de-llivia": [
-    {
-      "src": "../../assets/restaurants/la-formatgeria-de-llivia/01.jpg",
-      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-H-.jpg",
-      "width": 1400,
-      "height": 360,
-      "author": "La Formatgeria de Llívia",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.laformatgeria.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/la-formatgeria-de-llivia/02.jpg",
-      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-01.jpg",
-      "width": 1400,
-      "height": 650,
-      "author": "La Formatgeria de Llívia",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.laformatgeria.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/la-formatgeria-de-llivia/03.jpg",
-      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-03.jpg",
-      "width": 1400,
-      "height": 650,
-      "author": "La Formatgeria de Llívia",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.laformatgeria.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/la-formatgeria-de-llivia/04.jpg",
-      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-1.jpg",
-      "width": 960,
-      "height": 720,
-      "author": "La Formatgeria de Llívia",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.laformatgeria.com/",
       "isOfficial": true
     }
   ],
@@ -313,6 +271,16 @@
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.schierbeckrestaurant.com/",
       "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/schierbeck/04.jpg",
+      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2026/04/Schierbeck-Restaurant-Puigcerda-Lake-View-table.jpg",
+      "width": 1200,
+      "height": 1800,
+      "author": "Schierbeck Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.schierbeckrestaurant.com/",
+      "isOfficial": true
     }
   ],
   "ca-la-nuria": [
@@ -399,81 +367,6 @@
       "isOfficial": true
     }
   ],
-  "arc": [
-    {
-      "src": "../../assets/restaurants/arc/01.jpg",
-      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/2019/06/food-restaurant-arc-plat-trinxat-cadi-cerdanya-ecoresort-1024x682.jpg",
-      "width": 1024,
-      "height": 682,
-      "author": "Cerdanya EcoResort",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/arc/02.jpg",
-      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/20190628-8674.jpg",
-      "width": 1500,
-      "height": 1000,
-      "author": "Cerdanya EcoResort",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/arc/03.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Serra_del_Cad%C3%AD_des_de_Castelltallat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 2000,
-      "height": 2304,
-      "author": "Victor M. Vicente Selvas",
-      "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Serra_del_Cad%C3%AD_des_de_Castelltallat.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Serra del Cadí des de Castelltallat.jpg"
-    }
-  ],
-  "das-1219": [
-    {
-      "src": "../../assets/restaurants/das-1219/01.jpg",
-      "originUrl": "https://das1219.com/wp-content/uploads/2026/08/DAS_Arros_V1.webp",
-      "width": 800,
-      "height": 572,
-      "author": "DAS 1219",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://das1219.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/das-1219/02.jpg",
-      "originUrl": "https://das1219.com/wp-content/uploads/2026/08/DAS_Chuleton_V1.webp",
-      "width": 800,
-      "height": 572,
-      "author": "DAS 1219",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://das1219.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/das-1219/03.jpg",
-      "originUrl": "https://das1219.com/wp-content/uploads/2026/08/DAS_Degustacio_V1.webp",
-      "width": 800,
-      "height": 572,
-      "author": "DAS 1219",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://das1219.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/das-1219/04.jpg",
-      "originUrl": "https://das1219.com/wp-content/uploads/2026/08/DAS_Trufa_V1.webp",
-      "width": 800,
-      "height": 572,
-      "author": "DAS 1219",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://das1219.com/",
-      "isOfficial": true
-    }
-  ],
   "mooma-cerdanya": [
     {
       "src": "../../assets/restaurants/mooma-cerdanya/01.jpg",
@@ -489,7 +382,7 @@
       "src": "../../assets/restaurants/mooma-cerdanya/02.jpg",
       "originUrl": "https://mooma.cat/wp-content/uploads/2026/05/7T4A5010-scaled.webp",
       "width": 2000,
-      "height": 2560,
+      "height": 2000,
       "author": "Mooma",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
@@ -498,6 +391,16 @@
     {
       "src": "../../assets/restaurants/mooma-cerdanya/03.jpg",
       "originUrl": "https://mooma.cat/wp-content/uploads/2026/05/DSC09794-scaled.webp",
+      "width": 1707,
+      "height": 2560,
+      "author": "Mooma",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/mooma-cerdanya/04.jpg",
+      "originUrl": "https://mooma.cat/wp-content/uploads/2026/04/MOOMA-1-scaled.webp",
       "width": 1707,
       "height": 2560,
       "author": "Mooma",
@@ -545,60 +448,6 @@
       "author": "El Paller de Queixans",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://elpallerdequeixans.com/",
-      "isOfficial": true
-    }
-  ],
-  "el-club": [
-    {
-      "src": "../../assets/restaurants/el-club/01.jpg",
-      "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/21-05-1.jpg",
-      "width": 1080,
-      "height": 1440,
-      "author": "El Club Restaurant",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://elclubrestaurant.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/el-club/02.jpg",
-      "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/21-05-2.jpg",
-      "width": 1080,
-      "height": 1440,
-      "author": "El Club Restaurant",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://elclubrestaurant.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/el-club/03.jpg",
-      "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/Alp-municipi-2.jpg",
-      "width": 2000,
-      "height": 1732,
-      "author": "El Club Restaurant",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://elclubrestaurant.com/",
-      "isOfficial": true
-    }
-  ],
-  "somnia": [
-    {
-      "src": "../../assets/restaurants/somnia/01.jpg",
-      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/06/11-bikini-11-Pica_1-webp-scaled.webp",
-      "width": 2000,
-      "height": 2560,
-      "author": "Somnia",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.somniarestaurant.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/somnia/02.jpg",
-      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/07/Germans-Eloy-Dani.webp",
-      "width": 1080,
-      "height": 1536,
-      "author": "Somnia",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.somniarestaurant.com/",
       "isOfficial": true
     }
   ],
@@ -758,47 +607,15 @@
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://terradepics.com/",
       "isOfficial": true
-    }
-  ],
-  "chez-planes": [
+    },
     {
-      "src": "../../assets/restaurants/chez-planes/01.jpg",
-      "originUrl": "https://www.monsamm.com/gallery/62e3e93c927b17.35829200-xl.webp",
+      "src": "../../assets/restaurants/terra-de-pics/04.jpg",
+      "originUrl": "https://terradepics.com/wp-content/uploads/2023/04/fondo_degradado.png",
       "width": 2000,
-      "height": 5120,
-      "author": "Chez Planes",
+      "height": 1021,
+      "author": "Terra de Pics",
       "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.chezplanes.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/chez-planes/02.jpg",
-      "originUrl": "https://www.monsamm.com/gallery/60659cfe662052.36503673.webp",
-      "width": 1425,
-      "height": 1070,
-      "author": "Chez Planes",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.chezplanes.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/chez-planes/03.jpg",
-      "originUrl": "https://www.monsamm.com/gallery/60659cf090fd19.40480540.webp",
-      "width": 1604,
-      "height": 1070,
-      "author": "Chez Planes",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.chezplanes.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/chez-planes/04.jpg",
-      "originUrl": "https://www.monsamm.com/gallery/60659ced108ac4.28398536.webp",
-      "width": 1610,
-      "height": 1070,
-      "author": "Chez Planes",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.chezplanes.com/",
+      "sourceUrl": "https://terradepics.com/",
       "isOfficial": true
     }
   ],
@@ -832,75 +649,15 @@
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://grandhotelermitage.fr/restaurants/",
       "isOfficial": true
-    }
-  ],
-  "cal-xandera": [
-    {
-      "src": "../../assets/restaurants/cal-xandera/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Cal_Xandera%2C_Angoustrine-Villeneuve-des-Escaldes%2C_Pyr%C3%A9n%C3%A9es-Orientales%2CLanguedoc-Roussillon_%28France%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 2000,
-      "height": 1704,
-      "author": "Toprural",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cal_Xandera,_Angoustrine-Villeneuve-des-Escaldes,_Pyr%C3%A9n%C3%A9es-Orientales,Languedoc-Roussillon_(France).jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Cal Xandera, Angoustrine-Villeneuve-des-Escaldes, Pyrénées-Orientales,Languedoc-Roussillon (France).jpg"
     },
     {
-      "src": "../../assets/restaurants/cal-xandera/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/66005-Angoustrine-Villeneuve-des-Escaldes-Routes-Hydro.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 2000,
-      "height": 2480,
-      "author": "Roland45",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:66005-Angoustrine-Villeneuve-des-Escaldes-Routes-Hydro.png",
-      "isOfficial": false,
-      "commonsTitle": "File:66005-Angoustrine-Villeneuve-des-Escaldes-Routes-Hydro.png"
-    },
-    {
-      "src": "../../assets/restaurants/cal-xandera/03.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/66005-Angoustrine-Villeneuve-des-Escaldes-ZNIEFF1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 2000,
-      "height": 2480,
-      "author": "Roland45",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:66005-Angoustrine-Villeneuve-des-Escaldes-ZNIEFF1.png",
-      "isOfficial": false,
-      "commonsTitle": "File:66005-Angoustrine-Villeneuve-des-Escaldes-ZNIEFF1.png"
-    }
-  ],
-  "la-chaumiere": [
-    {
-      "src": "../../assets/restaurants/la-chaumiere/01.jpg",
-      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/7Xase4yp2AXqBkCckXPEbWWjCmSMsg5F87hqyKtwdNnMBA19MLhhzrQ5aZBYayFNA.jpg",
-      "width": 880,
-      "height": 600,
-      "author": "Oficina de Turisme de Font-Romeu",
+      "src": "../../assets/restaurants/le-saint-anne/04.jpg",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_002-scaled.jpg",
+      "width": 1920,
+      "height": 2880,
+      "author": "Grand Hôtel L’Ermitage",
       "license": "Cortesia del restaurant",
-      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/la-chaumiere/02.jpg",
-      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/C3jQnPLcQmMnr2wEg2LAeD6EqcxjWjDnGtLNERCS43OYcLZMmn36kckXZerb2ea5M.jpg",
-      "width": 880,
-      "height": 600,
-      "author": "Oficina de Turisme de Font-Romeu",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/la-chaumiere/03.jpg",
-      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/esNkFmWjRz4SgsfDWRzqXMMZZB8BXGnsWxf8GCx3gc9HtR8Dfp8HPFeNMtk5F7M8Z.jpg",
-      "width": 880,
-      "height": 600,
-      "author": "Oficina de Turisme de Font-Romeu",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "sourceUrl": "https://grandhotelermitage.fr/restaurants/",
       "isOfficial": true
     }
   ],
@@ -946,6 +703,132 @@
       "isOfficial": true
     }
   ],
+  "ca-l-eudald": [
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/01.jpg",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-hero-1.jpg",
+      "width": 1920,
+      "height": 1072,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/02.jpg",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/m-home-hero-1.jpg",
+      "width": 720,
+      "height": 840,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/03.jpg",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-rooms-slider02.jpg",
+      "width": 875,
+      "height": 840,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/04.jpg",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-rooms-slider01.jpg",
+      "width": 875,
+      "height": 840,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    }
+  ],
+  "grau-de-los": [
+    {
+      "src": "../../assets/restaurants/grau-de-los/01.jpg",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/9-graudelos.jpg",
+      "width": 1274,
+      "height": 1499,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/grau-de-los/02.jpg",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/17-graudelos.jpg",
+      "width": 1125,
+      "height": 1500,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/grau-de-los/03.jpg",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/7-graudelos.jpg",
+      "width": 2000,
+      "height": 1500,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/grau-de-los/04.jpg",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/15-graudelos.jpg",
+      "width": 1189,
+      "height": 1500,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    }
+  ],
+  "coc-de-lorri": [
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/01.jpg",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia1.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/02.jpg",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia2.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/03.jpg",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia3.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/04.jpg",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia4.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    }
+  ],
   "539-plats-forts": [
     {
       "src": "../../assets/restaurants/539-plats-forts/01.jpg",
@@ -963,39 +846,87 @@
       "src": "../../assets/restaurants/539-plats-forts/02.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Puigcerd%C3%A0_-_P1090081.jpg/3840px-Puigcerd%C3%A0_-_P1090081.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2880,
+      "height": 1500,
       "author": "Pere López Brosa",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1090081.jpg",
       "isOfficial": false,
       "commonsTitle": "File:Puigcerdà - P1090081.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/539-plats-forts/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Puigcerd%C3%A0_-_P1090099.jpg/3840px-Puigcerd%C3%A0_-_P1090099.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López Brosa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1090099.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Puigcerdà - P1090099.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/539-plats-forts/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Puigcerd%C3%A0_-_P1100350.jpg/3840px-Puigcerd%C3%A0_-_P1100350.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López Brosa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100350.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Puigcerdà - P1100350.jpg"
     }
   ],
   "trumfes": [
     {
       "src": "../../assets/restaurants/trumfes/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Trinxat_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1024,
-      "height": 768,
-      "author": "daniel.julia",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trinxat_1.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Ensaladilla_de_calamar_i_trinxat_-_Ma_casa.jpg/3840px-Ensaladilla_de_calamar_i_trinxat_-_Ma_casa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1502,
+      "author": "Francesc Fort",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ensaladilla_de_calamar_i_trinxat_-_Ma_casa.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Trinxat 1.jpg"
+      "commonsTitle": "File:Ensaladilla de calamar i trinxat - Ma casa.jpg"
     },
     {
       "src": "../../assets/restaurants/trumfes/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Trinxat_de_La_Cerdanya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Ensaladilla_de_calamar_i_trinxat_-_Ma_Casa.jpg/3840px-Ensaladilla_de_calamar_i_trinxat_-_Ma_Casa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 1746,
-      "author": "Kronologiko",
+      "height": 1502,
+      "author": "Francesc Fort",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trinxat_de_La_Cerdanya.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ensaladilla_de_calamar_i_trinxat_-_Ma_Casa.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Trinxat de La Cerdanya.jpg"
+      "commonsTitle": "File:Ensaladilla de calamar i trinxat - Ma Casa.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/trumfes/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Vista_de_Ll%C3%ADvia_2022.jpg/3840px-Vista_de_Ll%C3%ADvia_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Medol",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Ll%C3%ADvia_2022.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Vista de Llívia 2022.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/trumfes/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Habitatge_al_carrer_dels_Forns%2C_17_%28Ll%C3%ADvia%29.jpg/3840px-Habitatge_al_carrer_dels_Forns%2C_17_%28Ll%C3%ADvia%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Carlos Pino Andújar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Habitatge_al_carrer_dels_Forns,_17_(Ll%C3%ADvia).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Habitatge al carrer dels Forns, 17 (Llívia).jpg"
     }
   ],
   "cal-cofa": [
@@ -1003,7 +934,7 @@
       "src": "../../assets/restaurants/cal-cofa/01.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Ll%C3%ADvia_%40_Cam%C3%AD_d%27Ur.jpg/3840px-Ll%C3%ADvia_%40_Cam%C3%AD_d%27Ur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2157,
+      "height": 1123,
       "author": "Rémih",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1015,253 +946,186 @@
       "src": "../../assets/restaurants/cal-cofa/02.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cereja_%40_Cam%C3%AD_d%27Ur.jpg/3840px-Cereja_%40_Cam%C3%AD_d%27Ur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2157,
+      "height": 1123,
       "author": "Rémih",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cereja_@_Cam%C3%AD_d%27Ur.jpg",
       "isOfficial": false,
       "commonsTitle": "File:Cereja @ Camí d'Ur.jpg"
-    }
-  ],
-  "ca-l-eudald": [
-    {
-      "src": "../../assets/restaurants/ca-l-eudald/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Trinxat_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1024,
-      "height": 768,
-      "author": "daniel.julia",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trinxat_1.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Trinxat 1.jpg"
     },
     {
-      "src": "../../assets/restaurants/ca-l-eudald/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Trinxat_de_La_Cerdanya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "src": "../../assets/restaurants/cal-cofa/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Ll%C3%ADvia_%40_Cam%C3%AD_d%27Ur_01.jpg/3840px-Ll%C3%ADvia_%40_Cam%C3%AD_d%27Ur_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 1746,
-      "author": "Kronologiko",
+      "height": 1123,
+      "author": "Rémih",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trinxat_de_La_Cerdanya.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_@_Cam%C3%AD_d%27Ur_01.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Trinxat de La Cerdanya.jpg"
-    }
-  ],
-  "el-bistrot-de-llivia": [
-    {
-      "src": "../../assets/restaurants/el-bistrot-de-llivia/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ll%C3%ADvia_-_P1100377.jpg/3840px-Ll%C3%ADvia_-_P1100377.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "width": 2000,
-      "height": 2880,
-      "author": "Pere López Brosa",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100377.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Llívia - P1100377.jpg"
+      "commonsTitle": "File:Llívia @ Camí d'Ur 01.jpg"
     },
     {
-      "src": "../../assets/restaurants/el-bistrot-de-llivia/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1530,
-      "height": 720,
-      "author": "Josep Salvany i Blanch",
-      "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg",
-      "isOfficial": false,
-      "commonsTitle": "File:Carrer amb església de Llívia al fons.jpeg"
-    }
-  ],
-  "serendipia": [
-    {
-      "src": "../../assets/restaurants/serendipia/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ll%C3%ADvia_-_P1100391.jpg/3840px-Ll%C3%ADvia_-_P1100391.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "src": "../../assets/restaurants/cal-cofa/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Ur_%40_Cam%C3%AD_de_Ll%C3%ADvia_01.jpg/3840px-Ur_%40_Cam%C3%AD_de_Ll%C3%ADvia_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2880,
-      "author": "Pere López Brosa",
+      "height": 1500,
+      "author": "Rémih",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100391.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ur_@_Cam%C3%AD_de_Ll%C3%ADvia_01.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Llívia - P1100391.jpg"
-    },
-    {
-      "src": "../../assets/restaurants/serendipia/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1530,
-      "height": 720,
-      "author": "Josep Salvany i Blanch",
-      "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg",
-      "isOfficial": false,
-      "commonsTitle": "File:Carrer amb església de Llívia al fons.jpeg"
+      "commonsTitle": "File:Ur @ Camí de Llívia 01.jpg"
     }
   ],
   "mes-que-beure": [
     {
       "src": "../../assets/restaurants/mes-que-beure/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Ll%C3%ADvia_-_P1100378.jpg/3840px-Ll%C3%ADvia_-_P1100378.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "width": 2000,
-      "height": 2880,
-      "author": "Pere López Brosa",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100378.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Ll%C3%ADvia_pla%C3%A7a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1024,
+      "height": 784,
+      "author": "No machine-readable author provided. MarkCat~commonswiki assumed (based on copyright claims).",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_pla%C3%A7a.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Llívia - P1100378.jpg"
+      "commonsTitle": "File:Llívia plaça.jpg"
     },
     {
       "src": "../../assets/restaurants/mes-que-beure/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1530,
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Ll%C3%ADvia_-_Pla%C3%A7a_Major_en_1994.jpg/3840px-Ll%C3%ADvia_-_Pla%C3%A7a_Major_en_1994.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1305,
+      "author": "Jean-Pierre Bazard",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_Pla%C3%A7a_Major_en_1994.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Llívia - Plaça Major en 1994.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/mes-que-beure/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Llivia%2C_place.jpg/1280px-Llivia%2C_place.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 1280,
+      "height": 1707,
+      "author": "Jiròni B.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Llivia,_place.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Llivia, place.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/mes-que-beure/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Vista_interior_de_l%27esgl%C3%A9sia_de_Ll%C3%ADvia.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1556,
       "height": 720,
       "author": "Josep Salvany i Blanch",
       "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vista_interior_de_l%27esgl%C3%A9sia_de_Ll%C3%ADvia.jpeg",
       "isOfficial": false,
-      "commonsTitle": "File:Carrer amb església de Llívia al fons.jpeg"
-    }
-  ],
-  "can-ryu": [
-    {
-      "src": "../../assets/restaurants/can-ryu/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Vista_de_Ll%C3%ADvia_2022.jpg/3840px-Vista_de_Ll%C3%ADvia_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "width": 2000,
-      "height": 2880,
-      "author": "Medol",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Ll%C3%ADvia_2022.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Vista de Llívia 2022.jpg"
-    },
-    {
-      "src": "../../assets/restaurants/can-ryu/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1530,
-      "height": 720,
-      "author": "Josep Salvany i Blanch",
-      "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg",
-      "isOfficial": false,
-      "commonsTitle": "File:Carrer amb església de Llívia al fons.jpeg"
-    }
-  ],
-  "miyagi": [
-    {
-      "src": "../../assets/restaurants/miyagi/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Estany_Puigcerd%C3%A0_Catalunya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1024,
-      "height": 224,
-      "author": "estribiyo",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estany_Puigcerd%C3%A0_Catalunya.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Estany Puigcerdà Catalunya.jpg"
-    },
-    {
-      "src": "../../assets/restaurants/miyagi/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Estany_de_puigcerd%C3%A0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 950,
-      "height": 400,
-      "author": "Espencat",
-      "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estany_de_puigcerd%C3%A0.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Estany de puigcerdà.jpg"
-    }
-  ],
-  "tapanyam": [
-    {
-      "src": "../../assets/restaurants/tapanyam/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Puigcerd%C3%A0_-_P1100350.jpg/3840px-Puigcerd%C3%A0_-_P1100350.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "width": 2000,
-      "height": 2880,
-      "author": "Pere López Brosa",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100350.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Puigcerdà - P1100350.jpg"
-    },
-    {
-      "src": "../../assets/restaurants/tapanyam/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Puigcerd%C3%A0_des_de_guils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 792,
-      "height": 308,
-      "author": "Pere prlpz",
-      "license": "CC BY-SA 2.5",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_des_de_guils.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Puigcerdà des de guils.jpg"
+      "commonsTitle": "File:Vista interior de l'església de Llívia.jpeg"
     }
   ],
   "cal-malhivern": [
     {
       "src": "../../assets/restaurants/cal-malhivern/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Puigcerd%C3%A0_-_P1100352.jpg/3840px-Puigcerd%C3%A0_-_P1100352.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Puigcerd%C3%A0_-_P1100351.jpg/3840px-Puigcerd%C3%A0_-_P1100351.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2880,
+      "height": 1500,
       "author": "Pere López Brosa",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100352.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100351.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Puigcerdà - P1100352.jpg"
+      "commonsTitle": "File:Puigcerdà - P1100351.jpg"
     },
     {
       "src": "../../assets/restaurants/cal-malhivern/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Puigcerd%C3%A0_des_de_guils.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 792,
-      "height": 308,
-      "author": "Pere prlpz",
-      "license": "CC BY-SA 2.5",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_des_de_guils.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/GEL_PUIGCERD%C3%80_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1210,
+      "height": 590,
+      "author": "Serrablo Publicidad",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:GEL_PUIGCERD%C3%80_2.png",
       "isOfficial": false,
-      "commonsTitle": "File:Puigcerdà des de guils.jpg"
-    }
-  ],
-  "les-heures-den-didac": [
-    {
-      "src": "../../assets/restaurants/les-heures-den-didac/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Bolvir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 864,
-      "height": 648,
-      "author": "Tretx",
-      "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bolvir.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Bolvir.jpg"
+      "commonsTitle": "File:GEL PUIGCERDÀ 2.png"
     },
     {
-      "src": "../../assets/restaurants/les-heures-den-didac/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Creus_processionals_de_Bolvir.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1574,
-      "height": 720,
-      "author": "Rafael Degollada i Castanys",
-      "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Creus_processionals_de_Bolvir.jpeg",
+      "src": "../../assets/restaurants/cal-malhivern/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Puigcerd%C3%A0_P1030199.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 2667,
+      "author": "Pere López",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_P1030199.JPG",
       "isOfficial": false,
-      "commonsTitle": "File:Creus processionals de Bolvir.jpeg"
+      "commonsTitle": "File:Puigcerdà P1030199.JPG"
+    },
+    {
+      "src": "../../assets/restaurants/cal-malhivern/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Puigcerd%C3%A0_-_Carrer_Doctor_Piguillem_-_20130129_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 1333,
+      "author": "Olybrius",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_Carrer_Doctor_Piguillem_-_20130129_(1).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Puigcerdà - Carrer Doctor Piguillem - 20130129 (1).jpg"
     }
   ],
   "381-bolvir": [
     {
       "src": "../../assets/restaurants/381-bolvir/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Bolvir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 864,
-      "height": 648,
-      "author": "Tretx",
-      "license": "Public domain",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bolvir.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Santa_Cec%C3%ADlia_de_Bolvir_02.jpg/3840px-Santa_Cec%C3%ADlia_de_Bolvir_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1125,
+      "author": "Judesba",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Santa_Cec%C3%ADlia_de_Bolvir_02.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Bolvir.jpg"
+      "commonsTitle": "File:Santa Cecília de Bolvir 02.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/381-bolvir/02.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Santa_Cec%C3%ADlia_de_Bolvir_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 2908,
+      "author": "Judesba",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Santa_Cec%C3%ADlia_de_Bolvir_03.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Santa Cecília de Bolvir 03.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/381-bolvir/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Santa_Cec%C3%ADlia_de_Bolvir_10.jpg/1920px-Santa_Cec%C3%ADlia_de_Bolvir_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 1920,
+      "height": 3413,
+      "author": "Judesba",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Santa_Cec%C3%ADlia_de_Bolvir_10.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Santa Cecília de Bolvir 10.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/381-bolvir/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Santa_Cec%C3%ADlia_de_Bolvir_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 1848,
+      "author": "Judesba",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Santa_Cec%C3%ADlia_de_Bolvir_12.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Santa Cecília de Bolvir 12.jpg"
     }
   ],
   "la-noga": [
@@ -1269,7 +1133,7 @@
       "src": "../../assets/restaurants/la-noga/01.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_06.jpg/3840px-Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2880,
+      "height": 1500,
       "author": "María Sacristán",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -1281,13 +1145,37 @@
       "src": "../../assets/restaurants/la-noga/02.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_09.jpg/3840px-Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2880,
+      "height": 1500,
       "author": "María Sacristán",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_09.jpg",
       "isOfficial": false,
       "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 09.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/la-noga/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_12.jpg/3840px-Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "María Sacristán",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_12.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 12.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/la-noga/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_14.jpg/3840px-Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "María Sacristán",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_14.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 14.jpg"
     }
   ],
   "el-punt": [
@@ -1314,58 +1202,30 @@
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Vila_(Bellver_de_Cerdanya)_-_2.jpg",
       "isOfficial": false,
       "commonsTitle": "File:Casa de la Vila (Bellver de Cerdanya) - 2.jpg"
-    }
-  ],
-  "lingla": [
+    },
     {
-      "src": "../../assets/restaurants/lingla/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_06.jpg/3840px-Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "src": "../../assets/restaurants/el-punt/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_24.jpg/3840px-Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_24.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2880,
+      "height": 1500,
       "author": "María Sacristán",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_06.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_24.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 06.jpg"
+      "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 24.jpg"
     },
     {
-      "src": "../../assets/restaurants/lingla/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_09.jpg/3840px-Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "src": "../../assets/restaurants/el-punt/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "width": 2000,
-      "height": 2880,
+      "height": 2667,
       "author": "María Sacristán",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_09.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_25.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 09.jpg"
-    }
-  ],
-  "grau-de-los": [
-    {
-      "src": "../../assets/restaurants/grau-de-los/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Bellver_de_cerdanya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 720,
-      "height": 540,
-      "author": "Augustl",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_cerdanya.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Bellver de cerdanya.jpg"
-    },
-    {
-      "src": "../../assets/restaurants/grau-de-los/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Casa_de_la_Vila_%28Bellver_de_Cerdanya%29_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 1100,
-      "height": 714,
-      "author": "MARIA ROSA FERRE ✿",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Vila_(Bellver_de_Cerdanya)_-_2.jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Casa de la Vila (Bellver de Cerdanya) - 2.jpg"
+      "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 25.jpg"
     }
   ],
   "suca-mulla": [
@@ -1373,7 +1233,7 @@
       "src": "../../assets/restaurants/suca-mulla/01.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Estaci%C3%B3_de_La_Molina_%28Alp_-_Baixa_Cerdanya%29_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "width": 2000,
-      "height": 1536,
+      "height": 1500,
       "author": "Jordiferrer",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -1385,13 +1245,37 @@
       "src": "../../assets/restaurants/suca-mulla/02.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Estaci%C3%B3_vella_de_La_Molina_%28Alp%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
       "width": 2000,
-      "height": 1536,
+      "height": 1500,
       "author": "Jordiferrer",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3_vella_de_La_Molina_(Alp).JPG",
       "isOfficial": false,
       "commonsTitle": "File:Estació vella de La Molina (Alp).JPG"
+    },
+    {
+      "src": "../../assets/restaurants/suca-mulla/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/La_Torrassa_d%27Alp_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1134,
+      "height": 854,
+      "author": "Konkordia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Torrassa_d%27Alp_4.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:La Torrassa d'Alp 4.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/suca-mulla/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Alp_-_P1090156.jpg/3840px-Alp_-_P1090156.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López Brosa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alp_-_P1090156.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Alp - P1090156.jpg"
     }
   ],
   "cal-lliuret": [
@@ -1418,32 +1302,30 @@
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lles_de_Cerdanya_1991_02.jpg",
       "isOfficial": false,
       "commonsTitle": "File:Lles de Cerdanya 1991 02.jpg"
-    }
-  ],
-  "coc-de-lorri": [
-    {
-      "src": "../../assets/restaurants/coc-de-lorri/01.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Serra_del_Cad%C3%AD_%28des_de_Lles_de_Cerdanya%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 640,
-      "height": 480,
-      "author": "Catalaalatac",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Serra_del_Cad%C3%AD_(des_de_Lles_de_Cerdanya).JPG",
-      "isOfficial": false,
-      "commonsTitle": "File:Serra del Cadí (des de Lles de Cerdanya).JPG"
     },
     {
-      "src": "../../assets/restaurants/coc-de-lorri/02.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Lles_de_Cerdanya_1991_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-      "width": 995,
-      "height": 652,
+      "src": "../../assets/restaurants/cal-lliuret/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Lles_de_Cerdanya_1991_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 686,
+      "height": 1058,
       "author": "LBM1948",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lles_de_Cerdanya_1991_02.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lles_de_Cerdanya_1991_01.jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Lles de Cerdanya 1991 02.jpg"
+      "commonsTitle": "File:Lles de Cerdanya 1991 01.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/cal-lliuret/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Lles_de_Cerdanya_1991_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 701,
+      "height": 1062,
+      "author": "LBM1948",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lles_de_Cerdanya_1991_03.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Lles de Cerdanya 1991 03.jpg"
     }
   ],
   "tr-1910": [
@@ -1463,13 +1345,729 @@
       "src": "../../assets/restaurants/tr-1910/02.jpg",
       "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/WLM14ES_-_Torre_del_Remei%2C_Bolvir%2C_Baixa_Cerdanya_-_MARIA_ROSA_FERRE.jpg/3840px-WLM14ES_-_Torre_del_Remei%2C_Bolvir%2C_Baixa_Cerdanya_-_MARIA_ROSA_FERRE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "width": 2000,
-      "height": 2493,
+      "height": 1298,
       "author": "MARIA ROSA FERRE ✿ from Vilafranca del penedes, Catalunya",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:WLM14ES_-_Torre_del_Remei,_Bolvir,_Baixa_Cerdanya_-_MARIA_ROSA_FERRE.jpg",
       "isOfficial": false,
       "commonsTitle": "File:WLM14ES - Torre del Remei, Bolvir, Baixa Cerdanya - MARIA ROSA FERRE.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/tr-1910/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/WLM14ES_-_Torre_del_Remei%2C_Bolvir%2C_Baixa_Cerdanya_-_MARIA_ROSA_FERRE_%281%29.jpg/3840px-WLM14ES_-_Torre_del_Remei%2C_Bolvir%2C_Baixa_Cerdanya_-_MARIA_ROSA_FERRE_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1314,
+      "author": "MARIA ROSA FERRE ✿ from Vilafranca del penedes, Catalunya",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:WLM14ES_-_Torre_del_Remei,_Bolvir,_Baixa_Cerdanya_-_MARIA_ROSA_FERRE_(1).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:WLM14ES - Torre del Remei, Bolvir, Baixa Cerdanya - MARIA ROSA FERRE (1).jpg"
+    },
+    {
+      "src": "../../assets/restaurants/tr-1910/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/WLM14ES_-_Torre_del_Remei%2C_Bolvir%2C_Baixa_Cerdanya_-_MARIA_ROSA_FERRE_%282%29.jpg/3840px-WLM14ES_-_Torre_del_Remei%2C_Bolvir%2C_Baixa_Cerdanya_-_MARIA_ROSA_FERRE_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1314,
+      "author": "MARIA ROSA FERRE ✿ from Vilafranca del penedes, Catalunya",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:WLM14ES_-_Torre_del_Remei,_Bolvir,_Baixa_Cerdanya_-_MARIA_ROSA_FERRE_(2).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:WLM14ES - Torre del Remei, Bolvir, Baixa Cerdanya - MARIA ROSA FERRE (2).jpg"
+    }
+  ],
+  "lingla": [
+    {
+      "src": "../../assets/restaurants/lingla/01.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 2667,
+      "author": "María Sacristán",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_20.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 20.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/lingla/02.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_33.jpg/3840px-Bellver_de_Cerda%C3%B1a_L%C3%A9rida_%281%29_33.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "María Sacristán",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellver_de_Cerda%C3%B1a_L%C3%A9rida_(1)_33.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Bellver de Cerdaña Lérida (1) 33.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/lingla/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/10_Vista_des_de_Bellver_de_Cerdanya%2C_amb_el_Cad%C3%AD_al_fons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 1500,
+      "author": "Enfo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:10_Vista_des_de_Bellver_de_Cerdanya,_amb_el_Cad%C3%AD_al_fons.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:10 Vista des de Bellver de Cerdanya, amb el Cadí al fons.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/lingla/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/34_Bellver_i_el_Cad%C3%AD_des_del_Segre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 1500,
+      "author": "Enfo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:34_Bellver_i_el_Cad%C3%AD_des_del_Segre.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:34 Bellver i el Cadí des del Segre.jpg"
+    }
+  ],
+  "la-formatgeria-de-llivia": [
+    {
+      "src": "../../assets/restaurants/la-formatgeria-de-llivia/01.jpg",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-01.jpg",
+      "width": 1400,
+      "height": 650,
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.laformatgeria.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-formatgeria-de-llivia/02.jpg",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-03.jpg",
+      "width": 1400,
+      "height": 650,
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.laformatgeria.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-formatgeria-de-llivia/03.jpg",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-1.jpg",
+      "width": 960,
+      "height": 720,
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.laformatgeria.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-formatgeria-de-llivia/04.jpg",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-3.jpg",
+      "width": 960,
+      "height": 720,
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.laformatgeria.com/",
+      "isOfficial": true
+    }
+  ],
+  "chez-planes": [
+    {
+      "src": "../../assets/restaurants/chez-planes/01.jpg",
+      "originUrl": "https://www.monsamm.com/gallery/62e3e93c927b17.35829200-xl.webp",
+      "width": 2000,
+      "height": 2667,
+      "author": "Chez Planes",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.chezplanes.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/chez-planes/02.jpg",
+      "originUrl": "https://www.monsamm.com/gallery/60659cfe662052.36503673.webp",
+      "width": 1425,
+      "height": 1070,
+      "author": "Chez Planes",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.chezplanes.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/chez-planes/03.jpg",
+      "originUrl": "https://www.monsamm.com/gallery/60659cf090fd19.40480540.webp",
+      "width": 1604,
+      "height": 1070,
+      "author": "Chez Planes",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.chezplanes.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/chez-planes/04.jpg",
+      "originUrl": "https://www.monsamm.com/gallery/60659ced108ac4.28398536.webp",
+      "width": 1610,
+      "height": 1070,
+      "author": "Chez Planes",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.chezplanes.com/",
+      "isOfficial": true
+    }
+  ],
+  "la-chaumiere": [
+    {
+      "src": "../../assets/restaurants/la-chaumiere/01.jpg",
+      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/7Xase4yp2AXqBkCckXPEbWWjCmSMsg5F87hqyKtwdNnMBA19MLhhzrQ5aZBYayFNA.jpg",
+      "width": 880,
+      "height": 600,
+      "author": "Oficina de Turisme de Font-Romeu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-chaumiere/02.jpg",
+      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/C3jQnPLcQmMnr2wEg2LAeD6EqcxjWjDnGtLNERCS43OYcLZMmn36kckXZerb2ea5M.jpg",
+      "width": 880,
+      "height": 600,
+      "author": "Oficina de Turisme de Font-Romeu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-chaumiere/03.jpg",
+      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/esNkFmWjRz4SgsfDWRzqXMMZZB8BXGnsWxf8GCx3gc9HtR8Dfp8HPFeNMtk5F7M8Z.jpg",
+      "width": 880,
+      "height": 600,
+      "author": "Oficina de Turisme de Font-Romeu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-chaumiere/04.jpg",
+      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/chaumiere.png",
+      "width": 1526,
+      "height": 1848,
+      "author": "Oficina de Turisme de Font-Romeu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "isOfficial": true
+    }
+  ],
+  "el-bistrot-de-llivia": [
+    {
+      "src": "../../assets/restaurants/el-bistrot-de-llivia/01.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ll%C3%ADvia_-_P1100377.jpg/3840px-Ll%C3%ADvia_-_P1100377.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López Brosa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100377.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Llívia - P1100377.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/el-bistrot-de-llivia/02.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Ll%C3%ADvia_-_P1100378.jpg/3840px-Ll%C3%ADvia_-_P1100378.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López Brosa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100378.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Llívia - P1100378.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/el-bistrot-de-llivia/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Farmacia_Esteva_%281%29.jpg/3840px-Farmacia_Esteva_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 2924,
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Farmacia_Esteva_(1).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Farmacia Esteva (1).jpg"
+    },
+    {
+      "src": "../../assets/restaurants/el-bistrot-de-llivia/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Farmacia_Esteva_%283%29.jpg/3840px-Farmacia_Esteva_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 2997,
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Farmacia_Esteva_(3).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Farmacia Esteva (3).jpg"
+    }
+  ],
+  "can-ryu": [
+    {
+      "src": "../../assets/restaurants/can-ryu/01.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Panoramica_de_Ll%C3%ADvia_%282%29.jpg/3840px-Panoramica_de_Ll%C3%ADvia_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1335,
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panoramica_de_Ll%C3%ADvia_(2).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Panoramica de Llívia (2).jpg"
+    },
+    {
+      "src": "../../assets/restaurants/can-ryu/02.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Panoramica_de_Ll%C3%ADvia_%281%29.jpg/3840px-Panoramica_de_Ll%C3%ADvia_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1335,
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panoramica_de_Ll%C3%ADvia_(1).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Panoramica de Llívia (1).jpg"
+    },
+    {
+      "src": "../../assets/restaurants/can-ryu/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Paisaje_volc%C3%A1nica_con_el_volc%C3%A1n_de_la_Corona_desde_la_Cueva_de_los_Verdes_-_Lanzarote_-_CV05.jpg/3840px-Paisaje_volc%C3%A1nica_con_el_volc%C3%A1n_de_la_Corona_desde_la_Cueva_de_los_Verdes_-_Lanzarote_-_CV05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1182,
+      "author": "Luis Miguel Bugallo Sánchez (Lmbuga)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paisaje_volc%C3%A1nica_con_el_volc%C3%A1n_de_la_Corona_desde_la_Cueva_de_los_Verdes_-_Lanzarote_-_CV05.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Paisaje volcánica con el volcán de la Corona desde la Cueva de los Verdes - Lanzarote - CV05.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/can-ryu/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Santa_Corona_%28Vicenza%29_-_Lunetta.jpg/3840px-Santa_Corona_%28Vicenza%29_-_Lunetta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1373,
+      "author": "Didier Descouens",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Santa_Corona_(Vicenza)_-_Lunetta.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Santa Corona (Vicenza) - Lunetta.jpg"
+    }
+  ],
+  "miyagi": [
+    {
+      "src": "../../assets/restaurants/miyagi/01.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Estany_de_puigcerd%C3%A0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 950,
+      "height": 400,
+      "author": "Espencat",
+      "license": "Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estany_de_puigcerd%C3%A0.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Estany de puigcerdà.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/miyagi/02.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Llac_de_Puigcerd%C3%A0_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1950,
+      "height": 1300,
+      "author": "Jorge Franganillo",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Llac_de_Puigcerd%C3%A0_-_panoramio.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Llac de Puigcerdà - panoramio.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/miyagi/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Lago_de_Puigcerd%C3%A0_%285%29.jpg/3840px-Lago_de_Puigcerd%C3%A0_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1335,
+      "author": "Alberto-g-rovi",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lago_de_Puigcerd%C3%A0_(5).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Lago de Puigcerdà (5).jpg"
+    },
+    {
+      "src": "../../assets/restaurants/miyagi/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Barquejant_per_l%27estany_de_Puigcerd%C3%A0_-_1908.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 824,
+      "height": 506,
+      "author": "Desconegut",
+      "license": "Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barquejant_per_l%27estany_de_Puigcerd%C3%A0_-_1908.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Barquejant per l'estany de Puigcerdà - 1908.jpg"
+    }
+  ],
+  "tapanyam": [
+    {
+      "src": "../../assets/restaurants/tapanyam/01.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Estaci%C3%B3_de_Puigcerd%C3%A0_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 640,
+      "height": 480,
+      "author": "marlène delhaye",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3_de_Puigcerd%C3%A0_1.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Estació de Puigcerdà 1.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/tapanyam/02.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Pla%C3%A7a_dels_Herois%2C_Puigcerd%C3%A0.jpg/3840px-Pla%C3%A7a_dels_Herois%2C_Puigcerd%C3%A0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1324,
+      "author": "Mariarosafg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pla%C3%A7a_dels_Herois,_Puigcerd%C3%A0.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Plaça dels Herois, Puigcerdà.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/tapanyam/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Puigcerd%C3%A0_-_P1100352.jpg/3840px-Puigcerd%C3%A0_-_P1100352.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López Brosa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Puigcerd%C3%A0_-_P1100352.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Puigcerdà - P1100352.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/tapanyam/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Pla%C3%A7a_Cabrinetty_P1030206.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pla%C3%A7a_Cabrinetty_P1030206.JPG",
+      "isOfficial": false,
+      "commonsTitle": "File:Plaça Cabrinetty P1030206.JPG"
+    }
+  ],
+  "somnia": [
+    {
+      "src": "../../assets/restaurants/somnia/01.jpg",
+      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/06/11-bikini-11-Pica_1-webp-scaled.webp",
+      "width": 2000,
+      "height": 2199,
+      "author": "Somnia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.somniarestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/somnia/02.jpg",
+      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/07/Germans-Eloy-Dani.webp",
+      "width": 1080,
+      "height": 1536,
+      "author": "Somnia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.somniarestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/somnia/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty%2C_16_%28Puigcerd%C3%A0%29.jpg/1920px-Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty%2C_16_%28Puigcerd%C3%A0%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 1920,
+      "height": 2560,
+      "author": "Carlos Pino Andújar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty,_16_(Puigcerd%C3%A0).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Edifici d'habitatges a la plaça Cabrinetty, 16 (Puigcerdà).jpg"
+    },
+    {
+      "src": "../../assets/restaurants/somnia/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty%2C_6_%28Puigcerd%C3%A0%29.jpg/1920px-Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty%2C_6_%28Puigcerd%C3%A0%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 1920,
+      "height": 2560,
+      "author": "Carlos Pino Andújar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty,_6_(Puigcerd%C3%A0).jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Edifici d'habitatges a la plaça Cabrinetty, 6 (Puigcerdà).jpg"
+    }
+  ],
+  "cal-xandera": [
+    {
+      "src": "../../assets/restaurants/cal-xandera/01.jpg",
+      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/i683bf081ee4c6542/version/1498475974/image.jpg",
+      "width": 1607,
+      "height": 1056,
+      "author": "Cal Xandera",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.calxandera.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-xandera/02.jpg",
+      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/id23b9c9f06ea407b/version/1530604411/image.png",
+      "width": 1000,
+      "height": 1000,
+      "author": "Cal Xandera",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.calxandera.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-xandera/03.jpg",
+      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/i91a17729fddef70d/version/1530604484/image.png",
+      "width": 1000,
+      "height": 1000,
+      "author": "Cal Xandera",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.calxandera.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-xandera/04.jpg",
+      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/i032042bd518830e7/version/1530604516/image.png",
+      "width": 1000,
+      "height": 1000,
+      "author": "Cal Xandera",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.calxandera.com/",
+      "isOfficial": true
+    }
+  ],
+  "el-club": [
+    {
+      "src": "../../assets/restaurants/el-club/01.jpg",
+      "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/21-05-1.jpg",
+      "width": 1080,
+      "height": 1440,
+      "author": "El Club Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://elclubrestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/el-club/02.jpg",
+      "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/21-05-2.jpg",
+      "width": 1080,
+      "height": 1440,
+      "author": "El Club Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://elclubrestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/el-club/03.jpg",
+      "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/Alp-municipi-2.jpg",
+      "width": 2000,
+      "height": 1521,
+      "author": "El Club Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://elclubrestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/el-club/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/La_Cerdanya_amb_el_poble_d%27Alp_amb_una_via_de_tren_en_primer_terme.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1024,
+      "height": 437,
+      "author": "Carles Fargas",
+      "license": "Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Cerdanya_amb_el_poble_d%27Alp_amb_una_via_de_tren_en_primer_terme.jpeg",
+      "isOfficial": false,
+      "commonsTitle": "File:La Cerdanya amb el poble d'Alp amb una via de tren en primer terme.jpeg"
+    }
+  ],
+  "serendipia": [
+    {
+      "src": "../../assets/restaurants/serendipia/01.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ll%C3%ADvia_-_P1100391.jpg/3840px-Ll%C3%ADvia_-_P1100391.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López Brosa",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ll%C3%ADvia_-_P1100391.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Llívia - P1100391.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/serendipia/02.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1530,
+      "height": 720,
+      "author": "Josep Salvany i Blanch",
+      "license": "Public domain",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carrer_amb_esgl%C3%A9sia_de_Ll%C3%ADvia_al_fons.jpeg",
+      "isOfficial": false,
+      "commonsTitle": "File:Carrer amb església de Llívia al fons.jpeg"
+    },
+    {
+      "src": "../../assets/restaurants/serendipia/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Escola_Jaume_I_-_Ll%C3%ADvia_-_20220723_134152.jpg/3840px-Escola_Jaume_I_-_Ll%C3%ADvia_-_20220723_134152.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Pere López",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Escola_Jaume_I_-_Ll%C3%ADvia_-_20220723_134152.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Escola Jaume I - Llívia - 20220723 134152.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/serendipia/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Castell_de_Ll%C3%ADvia_-_vista.jpg/3840px-Castell_de_Ll%C3%ADvia_-_vista.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1500,
+      "author": "Carlos Pino Andújar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Castell_de_Ll%C3%ADvia_-_vista.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Castell de Llívia - vista.jpg"
+    }
+  ],
+  "arc": [
+    {
+      "src": "../../assets/restaurants/arc/01.jpg",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/2019/06/food-restaurant-arc-plat-trinxat-cadi-cerdanya-ecoresort-1024x682.jpg",
+      "width": 1024,
+      "height": 682,
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/arc/02.jpg",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/20190628-8674.jpg",
+      "width": 1500,
+      "height": 1000,
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/arc/03.jpg",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/facana-hotel-muntanya-cerdanya-ecoresort-pirineus-2.jpg",
+      "width": 2000,
+      "height": 1346,
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/arc/04.jpg",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/2019/06/food-restaurant-arc-plat-sala-life-reset-cerdanya-ecoresort-pirineus-2.jpg",
+      "width": 2000,
+      "height": 1125,
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+      "isOfficial": true
+    }
+  ],
+  "les-heures-den-didac": [
+    {
+      "src": "../../assets/restaurants/les-heures-den-didac/01.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/BOLVIR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1600,
+      "height": 808,
+      "author": "Ajuntament de Bolvir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BOLVIR.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:BOLVIR.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/les-heures-den-didac/02.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Prats-Cerdanya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 1500,
+      "author": "Araceli Merino",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prats-Cerdanya.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Prats-Cerdanya.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/les-heures-den-didac/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Esgl%C3%A9sia_de_Sant_Serni_de_Prats_%28Prats_i_Sansor%29_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 1321,
+      "author": "MARIA ROSA FERRE ✿",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Esgl%C3%A9sia_de_Sant_Serni_de_Prats_(Prats_i_Sansor)_-_3.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Església de Sant Serni de Prats (Prats i Sansor) - 3.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/les-heures-den-didac/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Esgl%C3%A9sia_de_Sant_Serni_de_Prats_%28Prats_i_Sansor%29_-_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 2000,
+      "height": 1276,
+      "author": "MARIA ROSA FERRE ✿",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Esgl%C3%A9sia_de_Sant_Serni_de_Prats_(Prats_i_Sansor)_-_5.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Església de Sant Serni de Prats (Prats i Sansor) - 5.jpg"
+    }
+  ],
+  "das-1219": [
+    {
+      "src": "../../assets/restaurants/das-1219/01.jpg",
+      "originUrl": "https://das1219.com/wp-content/uploads/2026/03/Inici-Web-Das-2.webp",
+      "width": 2000,
+      "height": 1125,
+      "author": "DAS 1219",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://das1219.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/das-1219/02.jpg",
+      "originUrl": "https://das1219.com/wp-content/uploads/2025/12/Nostra_Carta_Das-scaled.webp",
+      "width": 2000,
+      "height": 1125,
+      "author": "DAS 1219",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://das1219.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/das-1219/03.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/La_Torre_de_Das.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1936,
+      "height": 2592,
+      "author": "Lamontse",
+      "license": "CC BY-SA 3.0 es",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/es/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Torre_de_Das.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:La Torre de Das.jpg"
+    },
+    {
+      "src": "../../assets/restaurants/das-1219/04.jpg",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Das_Cerdanya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "width": 1465,
+      "height": 1772,
+      "author": "Araceli Merino",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Das_Cerdanya.jpg",
+      "isOfficial": false,
+      "commonsTitle": "File:Das Cerdanya.jpg"
     }
   ]
 }

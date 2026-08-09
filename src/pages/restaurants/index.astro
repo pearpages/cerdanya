@@ -45,10 +45,13 @@ const villages = groupByVillage(restaurants).map((group) => ({
 </BaseLayout>
 
 <script>
+  import { DISHES } from '../../data/dishes';
+
   interface Filters {
     q: string;
     town: string;
     price: string;
+    dish: string;
     cuisines: string[];
     services: string[];
   }
@@ -65,6 +68,16 @@ const villages = groupByVillage(restaurants).map((group) => ({
     const search = form.querySelector<HTMLInputElement>('[data-filter-q]');
     const townSelect = form.querySelector<HTMLSelectElement>('[data-filter-town]');
     const priceSelect = form.querySelector<HTMLSelectElement>('[data-filter-price]');
+    const dishPill = form.querySelector<HTMLElement>('[data-filter-dish]');
+    const dishName = form.querySelector<HTMLElement>('[data-filter-dish-name]');
+    const dishClear = form.querySelector<HTMLButtonElement>('[data-filter-dish-clear]');
+
+    /**
+     * El plat no és un control del formulari: arriba per URL des de la portada i es
+     * guarda aquí. Es compara contra `data-dishes`, que la targeta ja porta resolt del
+     * build, o sigui que el recompte de la portada i el d'aquí no poden divergir.
+     */
+    let dish = new URLSearchParams(location.search).get('plat') ?? '';
 
     const checked = (name: string) =>
       [...form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]:checked`)].map(
@@ -83,6 +96,7 @@ const villages = groupByVillage(restaurants).map((group) => ({
         q: fold(search?.value.trim() ?? ''),
         town: townSelect?.value ?? '',
         price: priceSelect?.value ?? '',
+        dish,
         cuisines: checked('cuina'),
         services: checked('servei'),
       };
@@ -97,11 +111,13 @@ const villages = groupByVillage(restaurants).map((group) => ({
         const town = card.dataset.town ?? '';
         const cuisines = (card.dataset.cuisine ?? '').split('|');
         const services = (card.dataset.services ?? '').split('|');
+        const dishes = (card.dataset.dishes ?? '').split('|');
 
         const matches =
           (filters.q === '' || name.includes(filters.q) || fold(town).includes(filters.q)) &&
           (filters.town === '' || town === filters.town) &&
           (filters.price === '' || card.dataset.price === filters.price) &&
+          (filters.dish === '' || dishes.includes(filters.dish)) &&
           filters.cuisines.every((cuisine) => cuisines.includes(cuisine)) &&
           filters.services.every((service) => services.includes(service));
 
@@ -115,10 +131,15 @@ const villages = groupByVillage(restaurants).map((group) => ({
       }
       if (empty) empty.hidden = visible > 0;
 
+      const matched = DISHES.find((entry) => entry.slug === filters.dish);
+      if (dishPill) dishPill.hidden = !matched;
+      if (dishName && matched) dishName.textContent = matched.name;
+
       const active =
         filters.q !== '' ||
         filters.town !== '' ||
         filters.price !== '' ||
+        filters.dish !== '' ||
         filters.cuisines.length > 0 ||
         filters.services.length > 0;
       if (reset) reset.hidden = !active;
@@ -132,6 +153,7 @@ const villages = groupByVillage(restaurants).map((group) => ({
       if (filters.q) params.set('q', filters.q);
       if (filters.town) params.set('poble', filters.town);
       if (filters.price) params.set('preu', filters.price);
+      if (filters.dish) params.set('plat', filters.dish);
       for (const cuisine of filters.cuisines) params.append('cuina', cuisine);
       for (const service of filters.services) params.append('servei', service);
 
@@ -144,6 +166,7 @@ const villages = groupByVillage(restaurants).map((group) => ({
       if (search) search.value = params.get('q') ?? '';
       if (townSelect) townSelect.value = params.get('poble') ?? '';
       if (priceSelect) priceSelect.value = params.get('preu') ?? '';
+      dish = params.get('plat') ?? '';
 
       const cuisines = params.getAll('cuina');
       const services = params.getAll('servei');
@@ -157,8 +180,14 @@ const villages = groupByVillage(restaurants).map((group) => ({
     form.addEventListener('submit', (event) => event.preventDefault());
     reset?.addEventListener('click', () => {
       form.reset();
+      dish = '';
       apply();
       search?.focus();
+    });
+
+    dishClear?.addEventListener('click', () => {
+      dish = '';
+      apply();
     });
 
     restore();

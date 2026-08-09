@@ -22,6 +22,88 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trinxat_de_La_Cerdanya.jpg",
       "isOfficial": false
+    },
+    {
+      "id": "plat-trinxat",
+      "file": "_dishes/trinxat.jpg",
+      "usedOn": "Portada · plat «Trinxat de la Cerdanya»",
+      "alt": "Un trinxat de la Cerdanya servit en timbal, amb kale cruixent i un tall de cansalada torrada al damunt, sostingut a pols davant del pla de la vall i les carenes nevades.",
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "isOfficial": true,
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/"
+    },
+    {
+      "id": "plat-arrossos",
+      "file": "_dishes/arrossos.jpg",
+      "usedOn": "Portada · plat «Arrossos»",
+      "alt": "Un arròs de muntanya vist de prop dins la paella, amb talls de botifarra i bolets repartits per sobre.",
+      "author": "La Borda del Ceretà",
+      "license": "Cortesia del restaurant",
+      "isOfficial": true,
+      "sourceUrl": "https://labordadelcereta.com/"
+    },
+    {
+      "id": "plat-caca-i-bolets",
+      "file": "_dishes/caca-i-bolets.jpg",
+      "usedOn": "Portada · plat «Caça i bolets»",
+      "alt": "Múrgoles i altres bolets de temporada, crus i sencers, amuntegats en una safata a la cuina.",
+      "author": "Fonda Cobadana",
+      "license": "Cortesia del restaurant",
+      "isOfficial": true,
+      "sourceUrl": "https://www.fondacobadana.es/"
+    },
+    {
+      "id": "plat-cuina-d-olla",
+      "file": "_dishes/cuina-d-olla.jpg",
+      "usedOn": "Portada · plat «Cuina d’olla»",
+      "alt": "Un plat de peus de porc amb gambes en salsa vermella, amanit amb un pom de julivert.",
+      "author": "Cal Xena",
+      "license": "Cortesia del restaurant",
+      "isOfficial": true,
+      "sourceUrl": "https://calxena.es/"
+    },
+    {
+      "id": "plat-carn-a-la-brasa",
+      "file": "_dishes/carn-a-la-brasa.jpg",
+      "usedOn": "Portada · plat «Carn a la brasa»",
+      "alt": "Talls de carn fent-se sobre la graella d’una llar de foc encesa, amb les flames al fons.",
+      "author": "Tierra del Fuego",
+      "license": "Cortesia del restaurant",
+      "isOfficial": true,
+      "sourceUrl": "https://tierradelfuego.es/"
+    },
+    {
+      "id": "plat-peix-i-marisc",
+      "file": "_dishes/peix-i-marisc.jpg",
+      "usedOn": "Portada · plat «Peix i marisc»",
+      "alt": "Un gofre salat amb pop a la brasa, sobrassada i brots verds, servit sobre pissarra fosca.",
+      "author": "Raval 13",
+      "license": "Cortesia del restaurant",
+      "isOfficial": true,
+      "sourceUrl": "https://raval13.com/"
+    },
+    {
+      "id": "plat-formatge",
+      "file": "_dishes/formatge.jpg",
+      "usedOn": "Portada · plat «Formatge»",
+      "alt": "Una fondue de formatge fos en una cassola de fang sobre el fogonet, amb un bol de daus de pa al costat per sucar-hi.",
+      "author": "the junes / Zitronenpresse",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "isOfficial": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cheese_fondue-01-a.jpg"
+    },
+    {
+      "id": "plat-tartar-i-cru",
+      "file": "_dishes/tartar-i-cru.jpg",
+      "usedOn": "Portada · plat «Tàrtar i cru»",
+      "alt": "Un steak tartare tallat a ganivet amb un rovell d’ou cru al mig, envoltat de cogombrets, ceba i herbes.",
+      "author": "Dr. Bernd Gross",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "isOfficial": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steak_Tartare_in_Dresden.jpg"
     }
   ]
 }

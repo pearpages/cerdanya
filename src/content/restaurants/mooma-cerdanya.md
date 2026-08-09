@@ -51,6 +51,12 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://mooma.cat/mooma-cerdanya/'
     isOfficial: true
+  - src: '../../assets/restaurants/mooma-cerdanya/04.jpg'
+    alt: 'Mooma Cerdanya, a Das, 4'
+    author: 'Mooma'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://mooma.cat/mooma-cerdanya/'
+    isOfficial: true
 ---
 
 La família Frigola planta pomeres al Mas Saulot, a l'Empordà, des de tombant del segle XX, i el

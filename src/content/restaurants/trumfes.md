@@ -28,18 +28,32 @@ sources:
     url: 'https://llivia.org/es/noticias/el-restaurante-trunfes-de-llivia-seis-anos-de-guia-michelin.html'
 images:
   - src: '../../assets/restaurants/trumfes/01.jpg'
-    alt: 'Trinxat 1 — Llívia'
-    author: 'daniel.julia'
-    license: 'CC BY-SA 2.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Trinxat_1.jpg'
-    isOfficial: false
-  - src: '../../assets/restaurants/trumfes/02.jpg'
-    alt: 'Trinxat de La Cerdanya'
-    author: 'Kronologiko'
+    alt: 'Ensaladilla de calamar i trinxat Ma casa'
+    author: 'Francesc Fort'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Trinxat_de_La_Cerdanya.jpg'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ensaladilla_de_calamar_i_trinxat_-_Ma_casa.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/trumfes/02.jpg'
+    alt: 'Ensaladilla de calamar i trinxat Ma Casa'
+    author: 'Francesc Fort'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Ensaladilla_de_calamar_i_trinxat_-_Ma_Casa.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/trumfes/03.jpg'
+    alt: 'Vista de Llívia 2022'
+    author: 'Medol'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Vista_de_Ll%C3%ADvia_2022.jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/trumfes/04.jpg'
+    alt: 'Habitatge al carrer dels Forns, 17'
+    author: 'Carlos Pino Andújar'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Habitatge_al_carrer_dels_Forns,_17_(Ll%C3%ADvia).jpg'
     isOfficial: false
 ---
 

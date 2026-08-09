@@ -62,6 +62,12 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://font-romeu.fr/en/restorations/la-chaumiere/'
     isOfficial: true
+  - src: '../../assets/restaurants/la-chaumiere/04.jpg'
+    alt: 'La Chaumière, a Font-Romeu, 4'
+    author: 'Oficina de Turisme de Font-Romeu'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://font-romeu.fr/en/restorations/la-chaumiere/'
+    isOfficial: true
 ---
 
 En François Will va ser subdirector de l'estació de Font-Romeu abans de posar-se als fogons, i s'hi

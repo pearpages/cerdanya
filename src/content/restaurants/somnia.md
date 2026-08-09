@@ -53,6 +53,20 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.somniarestaurant.com/'
     isOfficial: true
+  - src: '../../assets/restaurants/somnia/03.jpg'
+    alt: 'Edifici d''habitatges a la plaça Cabrinetty, 16'
+    author: 'Carlos Pino Andújar'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty,_16_(Puigcerd%C3%A0).jpg'
+    isOfficial: false
+  - src: '../../assets/restaurants/somnia/04.jpg'
+    alt: 'Edifici d''habitatges a la plaça Cabrinetty, 6'
+    author: 'Carlos Pino Andújar'
+    license: 'CC BY-SA 4.0'
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty,_6_(Puigcerd%C3%A0).jpg'
+    isOfficial: false
 ---
 
 En Dani i l'Eloy Pérez Muñoz són germans i es van formar en cuines de Barcelona abans de muntar
