@@ -2,10 +2,25 @@
 /**
  * El tall — secció longitudinal de la Cerdanya amb els pobles a la seva cota.
  *
- * No és una il·lustració. El relleu és el perfil real del fons de vall mostrejat cada
- * 250 m sobre el model digital del terreny (vegeu scripts/build-valley-profile.mjs), i
- * cada poble hi seu a la seva altitud mesurada. La frontera hi surt on és de debò,
- * al km 23, perquè aquesta vall en té una al mig i això explica què s'hi menja.
+ * No és una il·lustració. El relleu és el perfil real del terreny mostrejat cada 250 m
+ * sobre el model digital (vegeu scripts/build-valley-profile.mjs), i cada poble hi seu a
+ * la seva altitud mesurada. La frontera hi surt on és de debò, al km 23, perquè aquesta
+ * vall en té una al mig i això explica què s'hi menja.
+ *
+ * El tall es plega a Martinet: el braç de l'esquerra puja per la vall de Lles i el de la
+ * dreta remunta la Cerdanya fins a Font-Romeu. És una secció contínua, no dos gràfics
+ * de costat, i per això el terreny hi va d'una peça.
+ *
+ * El relleu són **tres capes**, totes mesurades sobre el mateix model i totes al mateix
+ * lloc del recorregut: el fons de vall a l'eix, el vessant immediat (la cota més alta a
+ * 1,5 km a banda i banda) i la carena (la més alta a 5 km). Un poble de vessant seu a la
+ * seva cota i el fons de vall és a quilòmetres d'allà; el que hi ha entremig no és buit,
+ * és muntanya, i dibuixada fa que el punt seu en algun lloc en comptes de surar. Abans
+ * ho explicava una segona línia que unia els punts, i es llegia com si fos relleu.
+ *
+ * Les carenes passen de la cota més alta de la caixa —el Cadí i el Puigmal en fan
+ * 2.500 i 2.900— i es retallen a dalt. El degradat s'hi esvaeix perquè el tall del retall
+ * no es vegi: és boira de panoràmica, no un altiplà.
  */
 import valleyData from '../data/valley-profile.json';
 import { toSlug } from '../data/taxonomy';
@@ -28,45 +43,111 @@ interface Props {
 
 const { villages, highlight, compact = false, headingId } = Astro.props;
 
-const W = 1000;
+/**
+ * 1089 i no 1000: el tall arrenca vall de Lles amunt i l'esperó ocupa uns 79 px.
+ * Eixamplant la caixa en comptes d'encabir-l'hi, els px/km no canvien i la vall
+ * principal es dibuixa amb la mateixa escala que abans.
+ */
+const W = 1089;
 const H = compact ? 190 : 330;
 const PAD = { top: compact ? 14 : 30, right: 18, bottom: compact ? 22 : 34, left: 48 };
 
 const ELE_MIN = 900;
 const ELE_MAX = 1850;
-const LENGTH_KM = valleyData.meta.lengthKm;
+/** Només la vall principal, de Martinet a Font-Romeu. La portada en fa una xifra. */
+const MAIN_KM = valleyData.meta.lengthKm;
 
 const plotW = W - PAD.left - PAD.right;
 const plotH = H - PAD.top - PAD.bottom;
 
-const x = (km: number) => PAD.left + (km / LENGTH_KM) * plotW;
-const y = (ele: number) => PAD.top + (1 - (ele - ELE_MIN) / (ELE_MAX - ELE_MIN)) * plotH;
+interface Tributary {
+  name: string;
+  joinKm: number;
+  lengthKm: number;
+  profile: Array<{ km: number; ele: number; shoulderEle: number; crestEle: number }>;
+}
 
 /**
- * Relleu: la línia del terreny, tancada per sota per poder-la omplir.
- * Les cotes es suavitzen amb una mitjana de tres mostres. El congost del Segre fa
+ * El tall no arrenca a Martinet sinó vall de Lles amunt. L'esperó que desemboca al
+ * quilòmetre zero s'encadena al davant del perfil principal i el dibuix passa a ser una
+ * secció longitudinal contínua: baixa de Lles de Cerdanya fins a la confluència i des
+ * d'allà remunta tota la Cerdanya fins a Font-Romeu. Així Travesseres i Lles seuen
+ * damunt d'un terreny dibuixat, que és el que se n'ha mesurat, i no surant a la vora del
+ * gràfic: projectats damunt de l'eix principal tots dos cauen al quilòmetre zero.
+ *
+ * Un esperó que desemboqués al mig de la vall no es podria encadenar així; els seus
+ * pobles es quedarien a l'eix principal.
+ */
+const head = ((valleyData.tributaries ?? []) as Tributary[]).find((t) => t.joinKm === 0) ?? null;
+const HEAD_KM = head?.lengthKm ?? 0;
+const TOTAL_KM = HEAD_KM + MAIN_KM;
+
+/**
+ * El dibuix arrenca endins de la caixa: a la punta de l'esperó hi ha el poble més alt de
+ * la guia i, enganxat a la vora, el seu punt es confondria amb el tall del gràfic.
+ */
+const GUTTER = 26;
+
+/** Coordenada de recorregut: 0 és la punta de l'esperó i TOTAL_KM, Font-Romeu. */
+const x = (s: number) => PAD.left + GUTTER + (s / TOTAL_KM) * (plotW - GUTTER);
+const y = (ele: number) => PAD.top + (1 - (ele - ELE_MIN) / (ELE_MAX - ELE_MIN)) * plotH;
+
+/** Quilòmetre de la vall principal → recorregut. */
+const sMain = (km: number) => HEAD_KM + km;
+/** Quilòmetre esperó amunt → recorregut: l'esperó es compta des de la confluència. */
+const sHead = (km: number) => HEAD_KM - km;
+
+/**
+ * Relleu: les cotes es suavitzen amb una mitjana de tres mostres. El congost del Segre fa
  * pics de desenes de metres entre mostres consecutives i, dibuixats en cru, es
  * llegeixen com a soroll; la forma de la vall es manté igual.
  */
-const raw = valleyData.profile;
-const smoothed = raw.map((p, i) => {
-  const window = [raw[i - 1], p, raw[i + 1]].filter(Boolean);
-  return { km: p.km, ele: window.reduce((sum, s) => sum + s.ele, 0) / window.length };
-});
-const ridge = smoothed.map((p) => `${x(p.km).toFixed(1)},${y(p.ele).toFixed(1)}`);
-const terrainFill = `M ${PAD.left},${H - PAD.bottom} L ${ridge.join(' L ')} L ${W - PAD.right},${H - PAD.bottom} Z`;
-const terrainLine = `M ${ridge.join(' L ')}`;
+type Sample = { s: number; ele: number };
+/** Els tres relleus que porta cada mostra: eix, vessant a 1,5 km i carena a 5 km. */
+type Relief = 'ele' | 'shoulderEle' | 'crestEle';
+
+function smooth(points: Sample[]): Sample[] {
+  return points.map((p, i) => {
+    const window = [points[i - 1], p, points[i + 1]].filter(Boolean);
+    return { s: p.s, ele: window.reduce((sum, w) => sum + w.ele, 0) / window.length };
+  });
+}
+
+/**
+ * Un relleu, d'una punta a l'altra del recorregut. Cada braç es suavitza pel seu compte i
+ * només després s'encadenen: la confluència és una V de debò —hi arriben dues valls— i,
+ * suavitzada a través del plec, la mitjana apujaria el fons de Martinet una vintena de
+ * metres i s'hi dibuixaria un pic que no hi és. Val igual per al vessant i per a la
+ * carena, que al plec també canvien de vall. El punt de la confluència surt un cop sol:
+ * es descarta el del braç de l'esperó.
+ */
+function chain(field: Relief): Sample[] {
+  const headArm = head
+    ? smooth([...head.profile].reverse().map((p) => ({ s: sHead(p.km), ele: p[field] }))).slice(0, -1)
+    : [];
+  const mainArm = smooth(valleyData.profile.map((p) => ({ s: sMain(p.km), ele: p[field] })));
+  return [...headArm, ...mainArm];
+}
+
+const points = (samples: Sample[]) =>
+  samples.map((p) => `${x(p.s).toFixed(1)},${y(p.ele).toFixed(1)}`).join(' L ');
+
+/** Tancat contra el peu de la caixa per poder-lo omplir. */
+const area = (samples: Sample[]) =>
+  `M ${x(samples[0].s).toFixed(1)},${H - PAD.bottom} L ${points(samples)} L ${x(samples.at(-1)!.s).toFixed(1)},${H - PAD.bottom} Z`;
+
+const floor = chain('ele');
+const terrainFill = area(floor);
+const terrainLine = `M ${points(floor)}`;
+
+const shoulder = chain('shoulderEle');
+const shoulderFill = area(shoulder);
+/** La vora del vessant va a part: el camí omplert porta els costats i el peu de la caixa. */
+const shoulderLine = `M ${points(shoulder)}`;
+
+const crestFill = area(chain('crestEle'));
 
 const contours = [1000, 1200, 1400, 1600, 1800];
-
-/** Cota del terreny sota un punt, per dibuixar la tija que hi baixa. */
-function groundAt(km: number): number {
-  let closest = valleyData.profile[0];
-  for (const p of valleyData.profile) {
-    if (Math.abs(p.km - km) < Math.abs(closest.km - km)) closest = p;
-  }
-  return closest.ele;
-}
 
 const placed = valleyData.villages as Array<{
   name: string;
@@ -74,47 +155,109 @@ const placed = valleyData.villages as Array<{
   km: number;
   offsetKm: number;
   subregion: string;
+  tributary?: { name: string; km: number; offsetKm: number };
 }>;
 
-const pins = villages
+/**
+ * On seu un poble i respecte de quin eix se'n mesura la distància. Un poble de l'esperó
+ * es dibuixa a la seva vall; la resta, a l'eix principal. La distància ha de ser la de
+ * l'eix on es dibuixa de debò i no sempre la del principal: Lles n'és a 3,37 km però
+ * seu damunt del seu propi fons de vall, i el punt buit —que vol dir «aquest poble és
+ * fora de l'eix»— hi sobraria.
+ */
+function seat(geo: (typeof placed)[number]) {
+  const onHead = head !== null && geo.tributary?.name === head.name;
+  return onHead
+    ? { s: sHead(geo.tributary!.km), offsetKm: geo.tributary!.offsetKm }
+    : { s: sMain(geo.km), offsetKm: geo.offsetKm };
+}
+
+const located = villages
   .map((v) => {
     const geo = placed.find((p) => p.name === v.name);
-    if (!geo) return null;
-    const ground = groundAt(geo.km);
-    return {
-      ...v,
-      km: geo.km,
-      /** Més de 2 km fora de l'eix vol dir que el poble és de vessant, no de fons de vall. */
-      onSlope: geo.offsetKm > 2,
-      cx: x(geo.km),
-      cy: y(v.elevation),
-      groundY: y(Math.min(ground, v.elevation)),
-      slug: toSlug(v.name),
-      isHighlight: v.name === highlight,
-    };
+    return geo ? { village: v, ...seat(geo) } : null;
   })
   .filter((p): p is NonNullable<typeof p> => p !== null)
-  .sort((a, b) => a.km - b.km);
+  .sort((a, b) => a.s - b.s || a.offsetKm - b.offsetKm);
+
+/**
+ * Un poble de vessant que no tingui esperó es projecta al punt de l'eix que li queda més
+ * a prop, o sigui allà on la seva vall troba la principal, i dos pobles de la mateixa
+ * vall hi cauen al mateix punt: es dibuixarien l'un damunt de l'altre. Quan passa,
+ * s'obren en ventall cap endins, ordenats de menys a més lluny de l'eix. No s'hi perd
+ * cap dada —la cota, que és el que diu el dibuix, no es toca—: només se separen prou per
+ * poder-los llegir i etiquetar.
+ *
+ * Ara mateix no hi ha cap parell que hi caigui: Travesseres i Lles, que eren el cas que
+ * ho va fer necessari, ja seuen a l'esperó de la seva vall. Talltendre, per exemple, hi
+ * tornaria a caure amb Bellver si algun dia hi obrís un restaurant.
+ */
+const FAN_KM = 1.4;
+const fanKm = located.map((item, index) => (index > 0 && located[index - 1].s === item.s ? 1 : 0));
+for (let i = 1; i < fanKm.length; i += 1) {
+  if (fanKm[i]) fanKm[i] += fanKm[i - 1];
+}
+
+const pins = located.map(({ village, s, offsetKm }, index) => {
+  const at = s + fanKm[index] * FAN_KM;
+  return {
+    ...village,
+    s: at,
+    /** Més de 2 km fora de l'eix vol dir que el poble és de vessant, no de fons de vall. */
+    onSlope: offsetKm > 2,
+    cx: x(at),
+    cy: y(village.elevation),
+    slug: toSlug(village.name),
+    isHighlight: village.name === highlight,
+  };
+});
 
 const maxCount = Math.max(1, ...pins.map((p) => p.count));
 const radius = (count: number) => 3.1 + Math.sqrt(count / maxCount) * 4.4;
 
 /**
- * Amb prop de quaranta pobles no hi caben tots els noms. Es reserven per als que
- * tenen més d'un restaurant —que és informació, no una tria estètica— i per al poble
- * de la fitxa que s'estigui mirant. La resta responen en passar-hi per sobre.
+ * Tots els pobles porten el nom: un punt sense nom obliga a passar-hi el ratolí per
+ * saber què és, i al mòbil no hi ha ratolí. A la versió compacta no hi caben —fa poc
+ * més de la meitat d'alçada— i només se n'hi escriu el de la fitxa que s'està mirant.
  */
-const CHAR_W = 5.6;
-const ROW_OFFSETS = [13, 26, 39];
+/**
+ * Amplada del text sense mesurar-lo: no hi ha DOM al build. Una sola amplada mitjana per
+ * lletra es queda curta un 20% als noms curts —«Das», «Bor», «Alp», «Ger»—, que són
+ * justament els del tram atapeït del mig, o sigui que les estretes compten a part.
+ */
+const CHAR_W = 5.9;
+const CHAR_NARROW = 4.2;
+const CHAR_SPACE = 2.6;
+const SIDE_BEARING = 3;
 
-const labelled = (compact ? pins.filter((p) => p.isHighlight) : pins.filter((p) => p.count > 1 || p.isHighlight))
+const textWidth = (name: string) =>
+  SIDE_BEARING +
+  [...name].reduce(
+    (sum, c) => sum + (c === ' ' ? CHAR_SPACE : 'iíjltfr'.includes(c) ? CHAR_NARROW : CHAR_W),
+    0,
+  );
+
+/** Els noms no poden sortir de la caixa del dibuix ni per dalt ni per baix. */
+const LABEL_TOP_LIMIT = 4;
+const LABEL_BOTTOM_LIMIT = H - PAD.bottom - 2;
+
+const labelled = (compact ? pins.filter((p) => p.isHighlight) : pins)
   .map((pin) => {
-    const width = pin.name.length * CHAR_W;
+    const width = textWidth(pin.name);
     // A prop de les vores, el nom s'ancora cap endins per no sortir del dibuix.
     const anchor =
       pin.cx - width / 2 < PAD.left ? 'start' : pin.cx + width / 2 > W - PAD.right ? 'end' : 'middle';
     const left = anchor === 'start' ? pin.cx : anchor === 'end' ? pin.cx - width : pin.cx - width / 2;
-    return { ...pin, width, anchor, left, right: left + width, labelY: pin.cy - ROW_OFFSETS[0] };
+    return {
+      ...pin,
+      width,
+      anchor,
+      left,
+      right: left + width,
+      labelY: pin.cy,
+      lx: pin.cx,
+      above: true,
+    };
   })
   .sort((a, b) => a.left - b.left);
 
@@ -126,23 +269,178 @@ const labelled = (compact ? pins.filter((p) => p.isHighlight) : pins.filter((p) 
 const LABEL_GAP_X = 7;
 const LABEL_GAP_Y = 11.5;
 
+/**
+ * Un nom tampoc no pot tapar el punt d'un altre poble: la capa de noms es pinta damunt
+ * de la dels pobles i la vora de paper que els fa llegibles se'ls empassa. El punt
+ * propi no compta, que justament el nom hi va a sobre.
+ */
+const LABEL_ASCENT = 8.5;
+const LABEL_DESCENT = 3;
+const DOT_GAP = 2.5;
+
+/**
+ * De quina banda va cada nom. No es tria per proximitat en píxels: cap amunt el nom
+ * necessita menys marge que cap avall —a sobre del punt hi cap amb el descens de la
+ * lletra i a sota hi ha de caber tota l'alçada—, i aquesta diferència de cinc píxels i
+ * escaig decantaria tots els noms cap amunt sense cap altre motiu que la tipografia.
+ *
+ * Es tria pel relleu, que és la convenció de qualsevol mapa: un poble que sobresurt dels
+ * seus veïns porta el nom a dalt i un que hi fa fondalada, a baix. Amb això, i no pas
+ * apilant fileres, és com hi caben els quatre del mig —Bor, Riu de Cerdanya, Urús i Das,
+ * setanta-cinc píxels per als quatre.
+ */
+const NEIGHBOUR_X = 48;
+const SIDE_BIAS = 6;
+const ROW_STEP = 12;
+const ROWS = 5;
+const LEADER_MIN = 5;
+const LEADER_GAP = 2;
+
+/**
+ * Sortida d'emergència: si un nom no cap enlloc just damunt o just sota del seu punt, se
+ * l'aparta de costat i l'enllaç queda en diagonal. Va molt penalitzat perquè només s'hi
+ * arribi quan tota la resta ha fallat. En fa falta: «Riu de Cerdanya» fa vuitanta-dos
+ * píxels d'ample i té Bor i Urús a menys de cinquanta a banda i banda.
+ */
+const DX_OPTIONS = [0, -22, 22, -44, 44];
+const DX_PENALTY = 0.8;
+const LEADER_STEPS = 12;
+
+function prefersAbove(pin: (typeof pins)[number]): boolean {
+  const near = pins.filter((q) => q !== pin && Math.abs(q.cx - pin.cx) <= NEIGHBOUR_X);
+  const higher = near.filter((q) => q.cy < pin.cy).length;
+  const lower = near.filter((q) => q.cy > pin.cy).length;
+  return higher <= lower;
+}
+
 for (const [index, label] of labelled.entries()) {
   const earlier = labelled.slice(0, index);
-  const collides = (candidateY: number) =>
-    earlier.some(
-      (other) =>
-        other.right + LABEL_GAP_X > label.left &&
-        other.left - LABEL_GAP_X < label.right &&
-        Math.abs(other.labelY - candidateY) < LABEL_GAP_Y,
-    );
+  const others = pins.filter((pin) => pin.name !== label.name);
+  const own = radius(label.count);
+  const wantsAbove = prefersAbove(label);
 
-  const free = ROW_OFFSETS.map((offset) => label.cy - offset).find((candidate) => !collides(candidate));
-  label.labelY = free ?? label.cy - ROW_OFFSETS.at(-1)!;
+  /** Cada candidat porta la caixa del nom, la banda, i d'on a on anirà l'enllaç. */
+  const candidates = [];
+  for (let row = 0; row < ROWS; row += 1) {
+    for (const above of [true, false]) {
+      const reach = own + DOT_GAP + LEADER_MIN + row * ROW_STEP;
+      const labelY = above ? label.cy - reach - LABEL_DESCENT : label.cy + reach + LABEL_ASCENT;
+      if (labelY - LABEL_ASCENT < LABEL_TOP_LIMIT) continue;
+      if (labelY + LABEL_DESCENT > LABEL_BOTTOM_LIMIT) continue;
+
+      for (const dx of DX_OPTIONS) {
+        const lx = label.cx + dx;
+        // A prop de les vores, el nom s'ancora cap endins per no sortir del dibuix.
+        const anchor =
+          lx - label.width / 2 < PAD.left
+            ? 'start'
+            : lx + label.width / 2 > W - PAD.right
+              ? 'end'
+              : 'middle';
+        const left = anchor === 'start' ? lx : anchor === 'end' ? lx - label.width : lx - label.width / 2;
+        candidates.push({
+          labelY,
+          above,
+          lx,
+          anchor,
+          left,
+          right: left + label.width,
+          foot: above ? label.cy - own : label.cy + own,
+          tip: above ? labelY + LABEL_DESCENT : labelY - LABEL_ASCENT,
+          score: row * ROW_STEP + (above === wantsAbove ? 0 : SIDE_BIAS) + Math.abs(dx) * DX_PENALTY,
+        });
+      }
+    }
+  }
+  candidates.sort((a, b) => a.score - b.score);
+
+  /** L'enllaç, mostrejat: en diagonal no n'hi ha prou amb una franja vertical. */
+  const leaderPath = (c: (typeof candidates)[number]) =>
+    Array.from({ length: LEADER_STEPS + 1 }, (_, i) => {
+      const t = i / LEADER_STEPS;
+      return { x: label.cx + (c.lx - label.cx) * t, y: c.foot + (c.tip - c.foot) * t };
+    });
+
+  const collides = (c: (typeof candidates)[number]) => {
+    const path = leaderPath(c);
+    return (
+      // El nom contra els noms ja posats.
+      earlier.some(
+        (other) =>
+          other.right + LABEL_GAP_X > c.left &&
+          other.left - LABEL_GAP_X < c.right &&
+          Math.abs(other.labelY - c.labelY) < LABEL_GAP_Y,
+      ) ||
+      // El nom contra els punts dels altres pobles: la vora de paper se'ls empassa.
+      others.some((pin) => {
+        const r = radius(pin.count) + DOT_GAP;
+        return (
+          pin.cx + r > c.left &&
+          pin.cx - r < c.right &&
+          pin.cy + r > c.labelY - LABEL_ASCENT &&
+          pin.cy - r < c.labelY + LABEL_DESCENT
+        );
+      }) ||
+      /*
+       * L'enllaç contra els punts dels altres pobles. Riu de Cerdanya i Urús queden a
+       * menys de sis píxels l'un de l'altre —dues valls diferents que projecten gairebé
+       * al mateix quilòmetre—, o sigui que cadascun cau dins del passadís de l'enllaç de
+       * l'altre i, sense aquesta regla, la ratlla d'un travessa el punt de l'altre.
+       */
+      others.some((pin) => {
+        const r = radius(pin.count) + LEADER_GAP;
+        return path.some((p) => Math.hypot(p.x - pin.cx, p.y - pin.cy) < r);
+      }) ||
+      // L'enllaç contra els noms ja posats.
+      earlier.some((other) =>
+        path.some(
+          (p) =>
+            p.x > other.left - LABEL_GAP_X &&
+            p.x < other.right + LABEL_GAP_X &&
+            p.y > other.labelY - LABEL_ASCENT &&
+            p.y < other.labelY + LABEL_DESCENT,
+        ),
+      )
+    );
+  };
+
+  const chosen = candidates.find((c) => !collides(c)) ?? candidates[0];
+  if (chosen) {
+    label.labelY = chosen.labelY;
+    label.above = chosen.above;
+    label.lx = chosen.lx;
+    label.anchor = chosen.anchor;
+    label.left = chosen.left;
+    label.right = chosen.right;
+  }
 }
+
+/**
+ * L'enllaç que lliga el nom al seu punt. Surt de la **vora** del cercle i no del centre,
+ * que si no li travessa el mig, i s'atura a tocar del text.
+ */
+const leaders = labelled.map((label) => {
+  const r = radius(label.count);
+  return {
+    name: label.name,
+    x1: label.cx,
+    y1: label.above ? label.cy - r : label.cy + r,
+    x2: label.lx,
+    y2: label.above ? label.labelY + LABEL_DESCENT : label.labelY - LABEL_ASCENT,
+    isHighlight: label.isHighlight,
+  };
+});
 
 /** La ratlla: Bourg-Madame / Puigcerdà, on la frontera creua l'altiplà. */
 const BORDER_KM = 23;
-const borderX = x(BORDER_KM);
+const borderX = x(sMain(BORDER_KM));
+
+/** El plec: la confluència, on el tall deixa la vall de Lles i enfila la Cerdanya. */
+const hingeX = x(sMain(0));
+
+/** Els km del peu, arrodonits a un decimal; la vall principal manté la xifra de sempre. */
+const fmtKm = (km: number) => km.toFixed(1).replace('.', ',');
+const MAIN_LABEL = String(MAIN_KM).replace('.', ',');
 ---
 
 <figure class:list={['valley', compact && 'valley--compact']}>
@@ -159,6 +457,29 @@ const borderX = x(BORDER_KM);
           <stop offset="0%" class="valley__grad-top"></stop>
           <stop offset="100%" class="valley__grad-bottom"></stop>
         </linearGradient>
+
+        {/*
+          Els degradats del fons van en coordenades absolutes i no en la caixa de cada
+          camí: si anessin per caixa, cada capa s'esvairia a una alçada diferent —la seva—
+          i les tres es llegirien com si fossin a la mateixa distància.
+        */}
+        <linearGradient
+          id="valley-crest"
+          gradientUnits="userSpaceOnUse"
+          x1="0"
+          y1={PAD.top}
+          x2="0"
+          y2={H - PAD.bottom}
+        >
+          <stop offset="0%" class="valley__grad-haze"></stop>
+          <stop offset="55%" class="valley__grad-crest"></stop>
+          <stop offset="100%" class="valley__grad-crest"></stop>
+        </linearGradient>
+
+        {/* La caixa del dibuix: les carenes en surten per dalt i s'hi retallen. */}
+        <clipPath id="valley-plot">
+          <rect x={PAD.left} y={PAD.top} width={plotW} height={plotH}></rect>
+        </clipPath>
       </defs>
 
       {/* Corbes de nivell */}
@@ -176,9 +497,39 @@ const borderX = x(BORDER_KM);
         <text class="valley__axis-unit" x={PAD.left - 9} y={PAD.top - 10}>m</text>
       </g>
 
-      {/* Relleu real del fons de vall */}
+      {/*
+        El relleu, del fons cap endavant. La carena i el vessant es retallen a la caixa;
+        el fons de vall no li arriba enlloc i no cal.
+      */}
+      <path
+        class="valley__crest"
+        d={crestFill}
+        clip-path="url(#valley-plot)"
+        aria-hidden="true"></path>
+      <path
+        class="valley__shoulder"
+        d={shoulderFill}
+        clip-path="url(#valley-plot)"
+        aria-hidden="true"></path>
+      <path
+        class="valley__shoulder-line"
+        d={shoulderLine}
+        clip-path="url(#valley-plot)"
+        aria-hidden="true"></path>
       <path class="valley__terrain" d={terrainFill} aria-hidden="true"></path>
       <path class="valley__ridge" d={terrainLine} aria-hidden="true"></path>
+
+      {/* El plec: on s'acaba la vall de Lles i comença la Cerdanya */}
+      {
+        head && (
+          <g class="valley__hinge" aria-hidden="true">
+            <line x1={hingeX} y1={PAD.top - 4} x2={hingeX} y2={H - PAD.bottom} />
+            <text class="valley__hinge-label" x={hingeX - 6} y={H - PAD.bottom - 6} text-anchor="end">
+              {head.name}
+            </text>
+          </g>
+        )
+      }
 
       {/* La frontera */}
       <g class="valley__border" aria-hidden="true">
@@ -205,13 +556,6 @@ const borderX = x(BORDER_KM);
                 {pin.name} · {pin.elevation} m ·{' '}
                 {pin.count === 1 ? '1 restaurant' : `${pin.count} restaurants`}
               </title>
-              <line
-                class="valley__stem"
-                x1={pin.cx}
-                y1={pin.cy}
-                x2={pin.cx}
-                y2={pin.groundY}
-              />
               <circle class="valley__dot" cx={pin.cx} cy={pin.cy} r={radius(pin.count)} />
               <circle class="valley__hit" cx={pin.cx} cy={pin.cy} r="14" />
             </a>
@@ -219,13 +563,24 @@ const borderX = x(BORDER_KM);
         }
       </g>
 
-      {/* Noms, a sobre de tot i repartits en files per no trepitjar-se */}
+      {/* Noms, a sobre de tot, lligats al seu punt i repartits amunt i avall */}
       <g class="valley__labels" aria-hidden="true">
+        {
+          leaders.map((lead) => (
+            <line
+              class:list={['valley__leader', lead.isHighlight && 'valley__leader--current']}
+              x1={lead.x1}
+              y1={lead.y1}
+              x2={lead.x2}
+              y2={lead.y2}
+            />
+          ))
+        }
         {
           labelled.map((pin) => (
             <text
               class:list={['valley__label', pin.isHighlight && 'valley__label--current']}
-              x={pin.cx}
+              x={pin.lx}
               y={pin.labelY}
               text-anchor={pin.anchor}
             >
@@ -238,7 +593,11 @@ const borderX = x(BORDER_KM);
       {/* Escala horitzontal */}
       <g class="valley__axis" aria-hidden="true">
         <text class="valley__axis-unit" x={W / 2} y={H - 8} text-anchor="middle">
-          {String(LENGTH_KM).replace('.', ',')} km de vall, de Martinet a Font-Romeu
+          {
+            head
+              ? `${fmtKm(TOTAL_KM)} km de tall: ${fmtKm(HEAD_KM)} per la vall de Lles i ${MAIN_LABEL} de Martinet a Font-Romeu`
+              : `${MAIN_LABEL} km de vall, de Martinet a Font-Romeu`
+          }
         </text>
       </g>
     </svg>
@@ -247,10 +606,19 @@ const borderX = x(BORDER_KM);
   {
     !compact && (
       <figcaption class="valley__caption">
-        Perfil del fons de vall mostrejat cada 250 m sobre el model digital del terreny
-        (EU-DEM 25 m) i suavitzat lleugerament perquè es llegeixi. Cada punt és un poble amb
-        restaurants a la guia, a la seva altitud real; com més gran, més en té. Els punts
-        buits són pobles de vessant, enfilats fora de l’eix de la vall.
+        La línia de sota és el terreny al llarg de l’eix de la vall, mostrejat cada 250 m
+        sobre el model digital (EU-DEM 25 m) i suavitzat lleugerament perquè es llegeixi;
+        el tall es plega a Martinet i d’allà puja, a l’esquerra, per la vall de Lles fins
+        als 1.470 m de Lles de Cerdanya, i a la dreta remunta la Cerdanya fins a
+        Font-Romeu. Les dues bandes del darrere són el mateix terreny mesurat de costat:
+        la cota més alta que hi ha a 1,5 km de l’eix i la que hi ha a 5 km, o sigui el
+        vessant que tanca la vall i la carena que hi ha al darrere. Surten per dalt del
+        dibuix perquè el Cadí i el Puigmal passen dels 1.850 m de la caixa. Cada punt és
+        un poble amb restaurants a la guia, a la seva altitud real i com més gros, més en
+        té: els que semblen enfilats són pobles de vessant —Urús seu dos-cents metres per
+        damunt del fons de vall— i per això es dibuixen amb el cercle buit. Quan un queda
+        per sota de la línia del terreny és que seu més avall que l’eix amb què el
+        mesurem.
       </figcaption>
     )
   }

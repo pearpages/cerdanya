@@ -47,6 +47,30 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.cocdelorri.cat/'
     isOfficial: true
+  - src: '../../assets/restaurants/coc-de-lorri/05.jpg'
+    alt: 'Coc de l’Orri, a Lles de Cerdanya, 5'
+    author: 'Coc de l’Orri'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.cocdelorri.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/coc-de-lorri/06.jpg'
+    alt: 'Coc de l’Orri, a Lles de Cerdanya, 6'
+    author: 'Coc de l’Orri'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.cocdelorri.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/coc-de-lorri/07.jpg'
+    alt: 'Sala de Coc de l’Orri'
+    author: 'Coc de l’Orri'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.cocdelorri.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/coc-de-lorri/08.jpg'
+    alt: 'Coc de l’Orri, a Lles de Cerdanya, 7'
+    author: 'Coc de l’Orri'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.cocdelorri.cat/'
+    isOfficial: true
 ---
 
 Un orri és una cabana de pedra de pastor, d'aquelles on es feia nit quan el bestiar pujava d'un

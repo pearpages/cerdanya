@@ -54,6 +54,30 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://tierradelfuego.es/'
     isOfficial: true
+  - src: '../../assets/restaurants/tierra-del-fuego/05.jpg'
+    alt: 'Un plat de Tierra del Fuego, 5'
+    author: 'Tierra del Fuego'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://tierradelfuego.es/'
+    isOfficial: true
+  - src: '../../assets/restaurants/tierra-del-fuego/06.jpg'
+    alt: 'Un plat de Tierra del Fuego, 6'
+    author: 'Tierra del Fuego'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://tierradelfuego.es/'
+    isOfficial: true
+  - src: '../../assets/restaurants/tierra-del-fuego/07.jpg'
+    alt: 'Un plat de Tierra del Fuego, 7'
+    author: 'Tierra del Fuego'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://tierradelfuego.es/'
+    isOfficial: true
+  - src: '../../assets/restaurants/tierra-del-fuego/08.jpg'
+    alt: 'Un plat de Tierra del Fuego, 8'
+    author: 'Tierra del Fuego'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://tierradelfuego.es/'
+    isOfficial: true
 ---
 
 A la plaça Cabrinetty, una de les porxades de Puigcerdà, i amb un programa sense sorpreses en el

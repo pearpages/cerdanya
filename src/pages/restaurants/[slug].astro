@@ -28,7 +28,17 @@ const { data } = entry;
 const { Content } = await render(entry);
 
 const elevation = elevationOf(data.town);
-const [hero, ...gallery] = data.images;
+
+/**
+ * La capçalera va a tota amplada i la targeta del directori no. Per això no comparteixen
+ * imatge: a `images[0]` hi ha el que millor representa la casa —un plat, quan n'hi ha—, i
+ * aquí es busca la primera que arribi als 1.200 px, perquè una foto de 600 estirada a
+ * 2.000 es veu tova justament a la banda més gran de la pàgina. Si cap hi arriba, la
+ * primera; val més tova que no pas cap.
+ */
+const HERO_WIDTH = 1200;
+const hero = data.images.find((image) => image.src.width >= HERO_WIDTH) ?? data.images[0];
+const gallery = data.images.filter((image) => image !== hero);
 const neighbours = nearby(entry, restaurants);
 const villages = valleyVillages(restaurants);
 
@@ -148,8 +158,8 @@ const social = hero
         <section class="fitxa__valley">
           <h2 class="section-title" id="tall-fitxa">On seu, a la vall</h2>
           <p class="fitxa__valley-lead">
-            {data.town} és a {formatElevation(elevation)} m. Aquest és el perfil del fons de vall
-            amb tots els pobles de la guia; el punt taronja és aquest.
+            {data.town} és a {formatElevation(elevation)} m. Aquest és el perfil del terreny
+            al llarg de la vall amb tots els pobles de la guia; el punt taronja és aquest.
           </p>
           <ValleySection villages={villages} highlight={data.town} compact headingId="tall-fitxa" />
         </section>

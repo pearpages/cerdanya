@@ -17,7 +17,7 @@
     {
       "slug": "can-ventura",
       "name": "Can Ventura",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://canventura.com/",
         "credit": "Can Ventura",
@@ -60,7 +60,7 @@
     {
       "slug": "la-formatgeria-de-llivia",
       "name": "La Formatgeria de Llívia",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.laformatgeria.com/",
         "credit": "La Formatgeria de Llívia",
@@ -106,7 +106,7 @@
     {
       "slug": "raval-13",
       "name": "Raval 13",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://raval13.com/",
         "credit": "Raval 13",
@@ -138,7 +138,7 @@
     {
       "slug": "la-borda-del-cereta",
       "name": "La Borda del Ceretà",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://labordadelcereta.com/",
         "credit": "La Borda del Ceretà",
@@ -155,7 +155,7 @@
     {
       "slug": "schierbeck",
       "name": "Schierbeck",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.schierbeckrestaurant.com/",
         "credit": "Schierbeck Restaurant",
@@ -189,7 +189,7 @@
     {
       "slug": "ca-la-nuria",
       "name": "Ca la Núria",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.restaurantcalanuria.cat/",
         "credit": "Mariana Castel, per a Ca la Núria",
@@ -207,7 +207,7 @@
     {
       "slug": "cal-xena",
       "name": "Cal Xena",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://calxena.es/",
         "credit": "Cal Xena",
@@ -237,7 +237,7 @@
     {
       "slug": "arc",
       "name": "Arç",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
         "credit": "Cerdanya EcoResort",
@@ -279,7 +279,7 @@
     {
       "slug": "fonda-cobadana",
       "name": "Fonda Cobadana",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.fondacobadana.es/",
         "credit": "Fonda Cobadana",
@@ -305,13 +305,12 @@
         "Urús Cerdanya",
         "Cerdanya paisatge",
         "Trinxat de La Cerdanya"
-      ],
-      "minWidth": 560
+      ]
     },
     {
       "slug": "das-1219",
       "name": "DAS 1219",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://das1219.com/",
         "credit": "DAS 1219",
@@ -332,7 +331,7 @@
     {
       "slug": "mooma-cerdanya",
       "name": "Mooma Cerdanya",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://mooma.cat/mooma-cerdanya/",
         "credit": "Mooma",
@@ -360,7 +359,7 @@
     {
       "slug": "el-paller-de-queixans",
       "name": "El Paller de Queixans",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://elpallerdequeixans.com/",
         "credit": "El Paller de Queixans",
@@ -383,7 +382,7 @@
     {
       "slug": "el-club",
       "name": "El Club",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://elclubrestaurant.com/",
         "credit": "El Club Restaurant",
@@ -403,7 +402,7 @@
     {
       "slug": "somnia",
       "name": "Somnia",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.somniarestaurant.com/",
         "credit": "Somnia",
@@ -427,7 +426,7 @@
     {
       "slug": "tierra-del-fuego",
       "name": "Tierra del Fuego",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://tierradelfuego.es/",
         "credit": "Tierra del Fuego",
@@ -449,7 +448,7 @@
     {
       "slug": "cal-jet",
       "name": "Cal Jet",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.caljet.cat/",
         "credit": "Cal Jet Bistrot de Muntanya",
@@ -468,7 +467,7 @@
     {
       "slug": "raco-de-riu",
       "name": "Racó de Riu",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.racoderiu.cat/",
         "credit": "Racó de Riu",
@@ -503,7 +502,7 @@
     {
       "slug": "terra-de-pics",
       "name": "Terra de Pics",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://terradepics.com/",
         "credit": "Terra de Pics",
@@ -530,7 +529,7 @@
     {
       "slug": "chez-planes",
       "name": "Chez Planes",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.chezplanes.com/",
         "credit": "Chez Planes",
@@ -576,7 +575,7 @@
     {
       "slug": "le-saint-anne",
       "name": "Le Saint-Anne",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://grandhotelermitage.fr/restaurants/",
         "credit": "Grand Hôtel L’Ermitage",
@@ -613,7 +612,7 @@
     {
       "slug": "cal-xandera",
       "name": "Cal Xandera",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://www.calxandera.com/",
         "credit": "Cal Xandera",
@@ -635,7 +634,7 @@
     {
       "slug": "la-chaumiere",
       "name": "La Chaumière",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://font-romeu.fr/en/restorations/la-chaumiere/",
         "credit": "Oficina de Turisme de Font-Romeu",
@@ -669,7 +668,7 @@
     {
       "slug": "la-table-des-saveurs",
       "name": "La Table des Saveurs",
-      "want": 4,
+      "want": 8,
       "official": {
         "site": "https://tabledessaveurs.fr/",
         "credit": "La Table des Saveurs",
@@ -692,7 +691,7 @@
     {
       "slug": "539-plats-forts",
       "name": "539, Plats Forts",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Puigcerdà Pere López Brosa",
         "Puigcerdà",
@@ -705,7 +704,7 @@
     {
       "slug": "trumfes",
       "name": "Trumfes",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Trinxat de La Cerdanya",
         "Vista de Llívia 2022",
@@ -718,7 +717,7 @@
     {
       "slug": "cal-cofa",
       "name": "Cal Cofa",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Llívia @ Camí d'Ur",
         "Llívia Cerdanya",
@@ -736,7 +735,7 @@
     {
       "slug": "ca-l-eudald",
       "name": "Ca l’Eudald",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Trinxat de La Cerdanya",
         "Alp Cerdanya"
@@ -779,7 +778,7 @@
     {
       "slug": "el-bistrot-de-llivia",
       "name": "El Bistrot de Llívia",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Llívia - P1100377",
         "Llívia Cerdanya",
@@ -792,7 +791,7 @@
     {
       "slug": "serendipia",
       "name": "Serendipia",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Llívia - P1100391",
         "Llívia Cerdanya",
@@ -813,7 +812,7 @@
     {
       "slug": "mes-que-beure",
       "name": "Més Que Beure",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Llívia - P1100378",
         "Llívia Cerdanya",
@@ -826,7 +825,7 @@
     {
       "slug": "can-ryu",
       "name": "Can Ryu",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Vista de Llívia 2022",
         "Llívia Cerdanya",
@@ -843,7 +842,7 @@
     {
       "slug": "miyagi",
       "name": "Miyagi",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Puigcerdà estany",
         "Puigcerdà - P1090081",
@@ -856,7 +855,7 @@
     {
       "slug": "tapanyam",
       "name": "TapaNyam",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Puigcerdà - P1100350",
         "Puigcerdà",
@@ -869,7 +868,7 @@
     {
       "slug": "cal-malhivern",
       "name": "Cal Malhivern",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Puigcerdà - P1100352",
         "Puigcerdà",
@@ -882,7 +881,7 @@
     {
       "slug": "les-heures-den-didac",
       "name": "Les Heures d’en Dídac",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Bolvir paisatge",
         "Cadí Bolvir",
@@ -895,7 +894,7 @@
     {
       "slug": "381-bolvir",
       "name": "381",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Bolvir",
         "Bolvir camps",
@@ -907,7 +906,7 @@
     {
       "slug": "la-noga",
       "name": "La Noga",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Bellver de Cerdaña Lérida",
         "Trinxat de La Cerdanya",
@@ -920,7 +919,7 @@
     {
       "slug": "el-punt",
       "name": "El Punt",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Bellver de Cerdanya",
         "Casa de la Vila Bellver de Cerdanya",
@@ -933,7 +932,7 @@
     {
       "slug": "lingla",
       "name": "L’Ingla",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Bellver de Cerdaña Lérida",
         "Bellver de Cerdanya",
@@ -951,7 +950,7 @@
     {
       "slug": "grau-de-los",
       "name": "Grau de l’Os",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Bellver de Cerdanya",
         "Serra del Cadí"
@@ -978,7 +977,7 @@
     {
       "slug": "suca-mulla",
       "name": "Suca-mulla",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Alp Cerdanya",
         "La Molina",
@@ -991,7 +990,7 @@
     {
       "slug": "cal-lliuret",
       "name": "Cal Lliuret",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Lles de Cerdanya",
         "Serra del Cadí",
@@ -1004,7 +1003,7 @@
     {
       "slug": "coc-de-lorri",
       "name": "Coc de l’Orri",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Lles de Cerdanya",
         "orri pastor Pirineu"
@@ -1028,13 +1027,12 @@
           "https://www.cocdelorri.cat/wp-content/uploads/2025/10/subvencio.jpg",
           "https://www.cocdelorri.cat/wp-content/uploads/2025/12/slider_taula.jpg"
         ]
-      },
-      "minWidth": 560
+      }
     },
     {
       "slug": "tr-1910",
       "name": "TR 1910",
-      "want": 4,
+      "want": 8,
       "commons": [
         "Torre del Remei Bolvir",
         "Bolvir",

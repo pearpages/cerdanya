@@ -51,6 +51,30 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://graudelos.com/'
     isOfficial: true
+  - src: '../../assets/restaurants/grau-de-los/05.jpg'
+    alt: 'Grau de l’Os, a Bellver de Cerdanya, 5'
+    author: 'Grau de l’Os'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://graudelos.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/grau-de-los/06.jpg'
+    alt: 'Grau de l’Os, a Bellver de Cerdanya, 6'
+    author: 'Grau de l’Os'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://graudelos.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/grau-de-los/07.jpg'
+    alt: 'Grau de l’Os, a Bellver de Cerdanya, 7'
+    author: 'Grau de l’Os'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://graudelos.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/grau-de-los/08.jpg'
+    alt: 'Grau de l’Os, a Bellver de Cerdanya, 8'
+    author: 'Grau de l’Os'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://graudelos.com/'
+    isOfficial: true
 ---
 
 Cuina de mercat contemporània en una sala d'estètica nòrdica, i una de les relacions entre qualitat

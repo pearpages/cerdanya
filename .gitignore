@@ -6,3 +6,6 @@ dist/
 
 # Cache brut del pipeline de dades (l'HTML descarregat és reproduïble; el JSON destil·lat no)
 data/cache/
+
+# Candidats descarregats per al repàs visual (es tornen a baixar amb --collect)
+data/candidates/

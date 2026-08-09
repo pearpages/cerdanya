@@ -48,24 +48,47 @@ images:
     sourceUrl: 'https://www.somniarestaurant.com/'
     isOfficial: true
   - src: '../../assets/restaurants/somnia/02.jpg'
-    alt: 'Equip de Somnia'
+    alt: 'Sala de Somnia'
     author: 'Somnia'
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.somniarestaurant.com/'
     isOfficial: true
   - src: '../../assets/restaurants/somnia/03.jpg'
-    alt: 'Edifici d''habitatges a la plaça Cabrinetty, 16'
-    author: 'Carlos Pino Andújar'
-    license: 'CC BY-SA 4.0'
-    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty,_16_(Puigcerd%C3%A0).jpg'
-    isOfficial: false
+    alt: 'Sala de Somnia, 2'
+    author: 'Somnia'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.somniarestaurant.com/'
+    isOfficial: true
   - src: '../../assets/restaurants/somnia/04.jpg'
-    alt: 'Edifici d''habitatges a la plaça Cabrinetty, 6'
-    author: 'Carlos Pino Andújar'
+    alt: 'Sala de Somnia, 3'
+    author: 'Somnia'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.somniarestaurant.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/somnia/05.jpg'
+    alt: 'Sala de Somnia, 4'
+    author: 'Somnia'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.somniarestaurant.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/somnia/06.jpg'
+    alt: 'Sala de Somnia, 5'
+    author: 'Somnia'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.somniarestaurant.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/somnia/07.jpg'
+    alt: 'Equip de Somnia'
+    author: 'Somnia'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.somniarestaurant.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/somnia/08.jpg'
+    alt: 'Plaça Cabrinetty'
+    author: 'Martinge636'
     license: 'CC BY-SA 4.0'
     licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0'
-    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty,_6_(Puigcerd%C3%A0).jpg'
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:Pla%C3%A7a_Cabrinetty_(Puigcerd%C3%A0).jpg'
     isOfficial: false
 ---
 

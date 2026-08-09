@@ -17,14 +17,30 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  /*
+   * L'amplada mínima va lligada al viewBox: en afegir-hi l'esperó de la vall de Lles la
+   * caixa va passar de 1000 a 1089 unitats, i sense pujar-la en la mateixa proporció el
+   * dibuix es faria un 9% més petit justament on menys espai hi ha, al mòbil.
+   */
   .valley__svg {
     inline-size: 100%;
-    min-inline-size: 34rem;
+    min-inline-size: 37rem;
     block-size: auto;
     overflow: visible;
   }
 
-  /* --- relleu --- */
+  /*
+   * --- relleu ---
+   *
+   * Tres capes, i la profunditat es fa **només amb opacitat sobre --sky**: com més a
+   * prop, més densa. Cap color nou, que l'or és l'únic accent del lloc i ja el gasten la
+   * frontera i el poble de la fitxa. I cap hex fix: --sky canvia de sentit entre temes
+   * —blau fosc sobre neu en clar, blau gel sobre nit en fosc— i una rampa d'opacitats
+   * funciona als dos, mentre que un color triat a ull només funciona a un.
+   *
+   * Com que cada capa conté la del davant (carena ≥ vessant ≥ fons de vall), les
+   * opacitats se sumen allà on es toquen i surten tres graons nets.
+   */
   .valley__grad-top {
     stop-color: var(--sky);
     stop-opacity: 0.26;
@@ -32,19 +48,55 @@
 
   .valley__grad-bottom {
     stop-color: var(--sky);
-    stop-opacity: 0.04;
+    stop-opacity: 0.17;
   }
 
   .valley__terrain {
     fill: url(#valley-terrain);
   }
 
+  /* La carena. El primer tram esvaeix el tall del retall: boira, no un altiplà. */
+  .valley__grad-haze {
+    stop-color: var(--sky);
+    stop-opacity: 0;
+  }
+
+  .valley__grad-crest {
+    stop-color: var(--sky);
+    stop-opacity: 0.07;
+  }
+
+  .valley__crest {
+    fill: url(#valley-crest);
+  }
+
+  /*
+   * El vessant. Sense degradat: no arriba mai al sostre de la caixa —el màxim mesurat és
+   * 1.783 m i el marc en fa 1.850— i per tant no s'ha d'esvair enlloc.
+   */
+  .valley__shoulder {
+    fill: var(--sky);
+    opacity: 0.11;
+  }
+
+  .valley__shoulder-line {
+    fill: none;
+    stroke: var(--sky);
+    stroke-width: 1;
+    stroke-linejoin: round;
+    opacity: 0.26;
+  }
+
+  /*
+   * La vora del fons de vall: l'únic traç del relleu i la ratlla que separa el terra de
+   * la muntanya on seuen els punts. Anava a 0,42 quan competia amb la línia dels pobles.
+   */
   .valley__ridge {
     fill: none;
     stroke: var(--sky);
-    stroke-width: 1.6;
+    stroke-width: 1.2;
     stroke-linejoin: round;
-    opacity: 0.85;
+    opacity: 0.7;
   }
 
   /* --- corbes de nivell --- */
@@ -72,6 +124,26 @@
     letter-spacing: 0.04em;
   }
 
+  /*
+   * El plec de la confluència. Va més apagat que la frontera a posta: la ratlla és una
+   * cosa del món i això és una articulació del dibuix, i dues verticals amb el mateix
+   * pes es llegirien com si volguessin dir el mateix.
+   */
+  .valley__hinge line {
+    stroke: var(--line);
+    stroke-width: 1;
+    stroke-dasharray: 2 4;
+  }
+
+  .valley__hinge-label {
+    font-family: var(--font-display);
+    font-size: 9.5px;
+    font-weight: 640;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    fill: var(--ink-3);
+  }
+
   /* --- la frontera --- */
   .valley__border line {
     stroke: var(--accent);
@@ -94,10 +166,16 @@
     cursor: pointer;
   }
 
-  .valley__stem {
-    stroke: var(--sky);
-    stroke-width: 1;
-    opacity: 0.45;
+  /* L'enllaç del punt amb el seu nom. */
+  .valley__leader {
+    stroke: var(--ink-3);
+    stroke-width: 0.9;
+    opacity: 0.55;
+  }
+
+  .valley__leader--current {
+    stroke: var(--accent);
+    opacity: 1;
   }
 
   .valley__dot {
@@ -135,15 +213,14 @@
     stroke-width: 2;
   }
 
+  /*
+   * El poble de la fitxa. Sense tija, el destacat viu al punt i al nom. La mida del punt
+   * no es toca: diu quants restaurants hi ha i l'enllaç del nom en surt calculat.
+   */
   .valley__pin--current .valley__dot {
     fill: var(--accent);
     stroke: var(--paper);
     stroke-width: 2;
-  }
-
-  .valley__pin--current .valley__stem {
-    stroke: var(--accent);
-    opacity: 0.9;
   }
 
   /* --- noms --- */
@@ -173,6 +250,6 @@
   }
 
   .valley--compact .valley__svg {
-    min-inline-size: 26rem;
+    min-inline-size: 28rem;
   }
 }

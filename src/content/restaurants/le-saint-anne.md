@@ -63,6 +63,30 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://grandhotelermitage.fr/restaurants/'
     isOfficial: true
+  - src: '../../assets/restaurants/le-saint-anne/05.jpg'
+    alt: 'Le Saint-Anne, a Font-Romeu, 5'
+    author: 'Grand Hôtel L’Ermitage'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://grandhotelermitage.fr/restaurants/'
+    isOfficial: true
+  - src: '../../assets/restaurants/le-saint-anne/06.jpg'
+    alt: 'Le Saint-Anne, a Font-Romeu, 6'
+    author: 'Grand Hôtel L’Ermitage'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://grandhotelermitage.fr/restaurants/'
+    isOfficial: true
+  - src: '../../assets/restaurants/le-saint-anne/07.jpg'
+    alt: 'Le Saint-Anne, a Font-Romeu, 7'
+    author: 'Grand Hôtel L’Ermitage'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://grandhotelermitage.fr/restaurants/'
+    isOfficial: true
+  - src: '../../assets/restaurants/le-saint-anne/08.jpg'
+    alt: 'Le Saint-Anne, a Font-Romeu, 8'
+    author: 'Grand Hôtel L’Ermitage'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://grandhotelermitage.fr/restaurants/'
+    isOfficial: true
 ---
 
 És la taula gastronòmica del Grand Hôtel L'Ermitage, l'únic quatre estrelles de Font-Romeu, que va

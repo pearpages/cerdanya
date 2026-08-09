@@ -54,7 +54,31 @@ images:
     sourceUrl: 'https://terradepics.com/'
     isOfficial: true
   - src: '../../assets/restaurants/terra-de-pics/04.jpg'
+    alt: 'Un plat de Terra de Pics, 3'
+    author: 'Terra de Pics'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://terradepics.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/terra-de-pics/05.jpg'
     alt: 'Terra de Pics, a Bolvir, 2'
+    author: 'Terra de Pics'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://terradepics.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/terra-de-pics/06.jpg'
+    alt: 'Terra de Pics, a Bolvir, 3'
+    author: 'Terra de Pics'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://terradepics.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/terra-de-pics/07.jpg'
+    alt: 'Terra de Pics, a Bolvir, 4'
+    author: 'Terra de Pics'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://terradepics.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/terra-de-pics/08.jpg'
+    alt: 'Terra de Pics, a Bolvir, 5'
     author: 'Terra de Pics'
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://terradepics.com/'

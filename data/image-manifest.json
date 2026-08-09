@@ -2,6 +2,7 @@
   "fonda-cobadana": [
     {
       "src": "../../assets/restaurants/fonda-cobadana/01.jpg",
+      "kind": "lloc",
       "originUrl": "https://www.fondacobadana.es/images/galeria/1.jpg",
       "width": 600,
       "height": 600,
@@ -12,7 +13,8 @@
     },
     {
       "src": "../../assets/restaurants/fonda-cobadana/02.jpg",
-      "originUrl": "https://www.fondacobadana.es/images/galeria/2.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.fondacobadana.es/images/galeria/4.jpg",
       "width": 600,
       "height": 600,
       "author": "Fonda Cobadana",
@@ -22,7 +24,8 @@
     },
     {
       "src": "../../assets/restaurants/fonda-cobadana/03.jpg",
-      "originUrl": "https://www.fondacobadana.es/images/galeria/3.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.fondacobadana.es/images/galeria/2.jpg",
       "width": 600,
       "height": 600,
       "author": "Fonda Cobadana",
@@ -32,7 +35,8 @@
     },
     {
       "src": "../../assets/restaurants/fonda-cobadana/04.jpg",
-      "originUrl": "https://www.fondacobadana.es/images/galeria/4.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.fondacobadana.es/images/galeria/3.jpg",
       "width": 600,
       "height": 600,
       "author": "Fonda Cobadana",
@@ -118,16 +122,7 @@
   "can-ventura": [
     {
       "src": "../../assets/restaurants/can-ventura/01.jpg",
-      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_20.webp",
-      "width": 700,
-      "height": 875,
-      "author": "Can Ventura",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://canventura.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/can-ventura/02.jpg",
+      "kind": "plat",
       "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Plato_52.webp",
       "width": 864,
       "height": 864,
@@ -137,9 +132,21 @@
       "isOfficial": true
     },
     {
+      "src": "../../assets/restaurants/can-ventura/02.jpg",
+      "kind": "plat",
+      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Plato_56.webp",
+      "width": 636,
+      "height": 957,
+      "author": "Can Ventura",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://canventura.com/",
+      "isOfficial": true
+    },
+    {
       "src": "../../assets/restaurants/can-ventura/03.jpg",
-      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_30.webp",
-      "width": 767,
+      "kind": "plat",
+      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Plato_57.webp",
+      "width": 637,
       "height": 957,
       "author": "Can Ventura",
       "license": "Cortesia del restaurant",
@@ -148,9 +155,54 @@
     },
     {
       "src": "../../assets/restaurants/can-ventura/04.jpg",
-      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_16.webp",
-      "width": 1000,
-      "height": 1499,
+      "kind": "plat",
+      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Plato_55.webp",
+      "width": 637,
+      "height": 958,
+      "author": "Can Ventura",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://canventura.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/can-ventura/05.jpg",
+      "kind": "plat",
+      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Plato_63.webp",
+      "width": 676,
+      "height": 957,
+      "author": "Can Ventura",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://canventura.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/can-ventura/06.jpg",
+      "kind": "plat",
+      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Plato_60-1.webp",
+      "width": 637,
+      "height": 958,
+      "author": "Can Ventura",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://canventura.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/can-ventura/07.jpg",
+      "kind": "plat",
+      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_44.webp",
+      "width": 637,
+      "height": 637,
+      "author": "Can Ventura",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://canventura.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/can-ventura/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://canventura.com/wp-content/uploads/2024/06/Restaurante_33-1.webp",
+      "width": 637,
+      "height": 958,
       "author": "Can Ventura",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://canventura.com/",
@@ -160,16 +212,7 @@
   "raval-13": [
     {
       "src": "../../assets/restaurants/raval-13/01.jpg",
-      "originUrl": "https://raval13.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-23-at-13.27.28-23.jpeg",
-      "width": 1600,
-      "height": 1067,
-      "author": "Raval 13",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://raval13.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/raval-13/02.jpg",
+      "kind": "plat",
       "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Gofre-de-pulpo-con-sobrasada.jpg",
       "width": 1600,
       "height": 1067,
@@ -179,8 +222,20 @@
       "isOfficial": true
     },
     {
+      "src": "../../assets/restaurants/raval-13/02.jpg",
+      "kind": "plat",
+      "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-lomo-de-balacao-iberico.jpg",
+      "width": 1600,
+      "height": 1067,
+      "author": "Raval 13",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://raval13.com/",
+      "isOfficial": true
+    },
+    {
       "src": "../../assets/restaurants/raval-13/03.jpg",
-      "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Guiso-de-Calamares.jpg",
+      "kind": "plat",
+      "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Coulant-de-boniato.jpg",
       "width": 1600,
       "height": 1067,
       "author": "Raval 13",
@@ -190,7 +245,52 @@
     },
     {
       "src": "../../assets/restaurants/raval-13/04.jpg",
+      "kind": "plat",
+      "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Guiso-de-Calamares.jpg",
+      "width": 1600,
+      "height": 1067,
+      "author": "Raval 13",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://raval13.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raval-13/05.jpg",
+      "kind": "plat",
+      "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Tarta-de-queso-de-calabaza.jpg",
+      "width": 1600,
+      "height": 1067,
+      "author": "Raval 13",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://raval13.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raval-13/06.jpg",
+      "kind": "plat",
+      "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-chocolate-nueces-y-platano-flambeado-02.jpg",
+      "width": 1600,
+      "height": 1067,
+      "author": "Raval 13",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://raval13.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raval-13/07.jpg",
+      "kind": "plat",
       "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Raval-13-Cocinas.jpg",
+      "width": 1600,
+      "height": 1067,
+      "author": "Raval 13",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://raval13.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raval-13/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://raval13.com/wp-content/uploads/2025/12/Cartel-Raval-13-puerta.jpg",
       "width": 1600,
       "height": 1067,
       "author": "Raval 13",
@@ -202,16 +302,7 @@
   "la-borda-del-cereta": [
     {
       "src": "../../assets/restaurants/la-borda-del-cereta/01.jpg",
-      "originUrl": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Exterior.webp",
-      "width": 1920,
-      "height": 1327,
-      "author": "La Borda del Ceretà",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://labordadelcereta.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/la-borda-del-cereta/02.jpg",
+      "kind": "gent",
       "originUrl": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_1.webp",
       "width": 1080,
       "height": 1080,
@@ -221,7 +312,8 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/la-borda-del-cereta/03.jpg",
+      "src": "../../assets/restaurants/la-borda-del-cereta/02.jpg",
+      "kind": "gent",
       "originUrl": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_2.webp",
       "width": 1080,
       "height": 1080,
@@ -231,10 +323,33 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/la-borda-del-cereta/04.jpg",
+      "src": "../../assets/restaurants/la-borda-del-cereta/03.jpg",
+      "kind": "gent",
       "originUrl": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Nosaltres_4.webp",
       "width": 1080,
       "height": 1080,
+      "author": "La Borda del Ceretà",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://labordadelcereta.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-borda-del-cereta/04.jpg",
+      "kind": "lloc",
+      "originUrl": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Exterior.webp",
+      "width": 1920,
+      "height": 1327,
+      "author": "La Borda del Ceretà",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://labordadelcereta.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-borda-del-cereta/05.jpg",
+      "kind": "lloc",
+      "originUrl": "https://labordadelcereta.com/wp-content/uploads/2025/07/La_Borda_Del_Cereta_Grid_1.webp",
+      "width": 600,
+      "height": 600,
       "author": "La Borda del Ceretà",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://labordadelcereta.com/",
@@ -244,16 +359,7 @@
   "schierbeck": [
     {
       "src": "../../assets/restaurants/schierbeck/01.jpg",
-      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierbeck-comida6-copia-1.jpg",
-      "width": 1024,
-      "height": 1024,
-      "author": "Schierbeck Restaurant",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.schierbeckrestaurant.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/schierbeck/02.jpg",
+      "kind": "lloc",
       "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierberck21.jpg",
       "width": 1230,
       "height": 1536,
@@ -263,8 +369,9 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/schierbeck/03.jpg",
-      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierbeck-vino.jpg",
+      "src": "../../assets/restaurants/schierbeck/02.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierbeck-comida6-copia-1.jpg",
       "width": 1024,
       "height": 1024,
       "author": "Schierbeck Restaurant",
@@ -273,10 +380,66 @@
       "isOfficial": true
     },
     {
+      "src": "../../assets/restaurants/schierbeck/03.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2026/04/Schierbeck-Restaurant-Puigcerda-Plato-2.jpg",
+      "width": 1200,
+      "height": 1800,
+      "author": "Schierbeck Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.schierbeckrestaurant.com/",
+      "isOfficial": true
+    },
+    {
       "src": "../../assets/restaurants/schierbeck/04.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2026/04/Schierbeck-Restaurant-Puigcerda-Plato.jpg",
+      "width": 1200,
+      "height": 1800,
+      "author": "Schierbeck Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.schierbeckrestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/schierbeck/05.jpg",
+      "kind": "lloc",
       "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2026/04/Schierbeck-Restaurant-Puigcerda-Lake-View-table.jpg",
       "width": 1200,
       "height": 1800,
+      "author": "Schierbeck Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.schierbeckrestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/schierbeck/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierberck2.jpg",
+      "width": 1162,
+      "height": 1520,
+      "author": "Schierbeck Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.schierbeckrestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/schierbeck/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2026/04/Schierbeck-Restaurant-Puigcerda-Lake-View-2.jpg",
+      "width": 1200,
+      "height": 1800,
+      "author": "Schierbeck Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.schierbeckrestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/schierbeck/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.schierbeckrestaurant.com/wp-content/uploads/2023/10/schierbeck-vino.jpg",
+      "width": 1024,
+      "height": 1024,
       "author": "Schierbeck Restaurant",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.schierbeckrestaurant.com/",
@@ -286,9 +449,10 @@
   "ca-la-nuria": [
     {
       "src": "../../assets/restaurants/ca-la-nuria/01.jpg",
-      "originUrl": "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_sala_restaurant_1.jpg",
-      "width": 1000,
-      "height": 737,
+      "kind": "plat",
+      "originUrl": "https://www.restaurantcalanuria.cat/wp-content/uploads/2025/03/Ca-la-Nuria_cigrons_2.jpg",
+      "width": 1192,
+      "height": 880,
       "author": "Mariana Castel, per a Ca la Núria",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.restaurantcalanuria.cat/",
@@ -296,9 +460,10 @@
     },
     {
       "src": "../../assets/restaurants/ca-la-nuria/02.jpg",
-      "originUrl": "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_NIU01_%C2%A9MarianaCastel_11_WEB.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_NIU01_%C2%A9MarianaCastel_32_WEB.jpg",
       "width": 1500,
-      "height": 1246,
+      "height": 1080,
       "author": "Mariana Castel, per a Ca la Núria",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.restaurantcalanuria.cat/",
@@ -306,6 +471,7 @@
     },
     {
       "src": "../../assets/restaurants/ca-la-nuria/03.jpg",
+      "kind": "lloc",
       "originUrl": "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_NIU01_%C2%A9MarianaCastel_8_WEB.jpg",
       "width": 1500,
       "height": 1066,
@@ -316,9 +482,21 @@
     },
     {
       "src": "../../assets/restaurants/ca-la-nuria/04.jpg",
-      "originUrl": "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_NIU01_%C2%A9MarianaCastel_32_WEB.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_NIU01_%C2%A9MarianaCastel_11_WEB.jpg",
       "width": 1500,
-      "height": 1080,
+      "height": 1246,
+      "author": "Mariana Castel, per a Ca la Núria",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.restaurantcalanuria.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-la-nuria/05.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.restaurantcalanuria.cat/wp-content/uploads/2023/09/CA-LA-NURIA_sala_restaurant_1.jpg",
+      "width": 1000,
+      "height": 737,
       "author": "Mariana Castel, per a Ca la Núria",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.restaurantcalanuria.cat/",
@@ -328,9 +506,10 @@
   "cal-xena": [
     {
       "src": "../../assets/restaurants/cal-xena/01.jpg",
-      "originUrl": "https://calxena.es/cal-xena/enmig-de-la-cerdanya.jpg",
-      "width": 1800,
-      "height": 800,
+      "kind": "plat",
+      "originUrl": "https://calxena.es/cal-xena/amanida-CalXena.jpg",
+      "width": 2000,
+      "height": 1157,
       "author": "Cal Xena",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://calxena.es/",
@@ -338,16 +517,7 @@
     },
     {
       "src": "../../assets/restaurants/cal-xena/02.jpg",
-      "originUrl": "https://calxena.es/cal-xena/menjar-tradicional.jpg",
-      "width": 1800,
-      "height": 800,
-      "author": "Cal Xena",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://calxena.es/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/cal-xena/03.jpg",
+      "kind": "plat",
       "originUrl": "https://calxena.es/cal-xena/sabors-tradicionals.jpg",
       "width": 1800,
       "height": 800,
@@ -357,10 +527,66 @@
       "isOfficial": true
     },
     {
+      "src": "../../assets/restaurants/cal-xena/03.jpg",
+      "kind": "plat",
+      "originUrl": "https://calxena.es/cal-xena/restaurante/ingredientes-naturales-cal-xena.jpg",
+      "width": 1920,
+      "height": 1400,
+      "author": "Cal Xena",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://calxena.es/",
+      "isOfficial": true
+    },
+    {
       "src": "../../assets/restaurants/cal-xena/04.jpg",
-      "originUrl": "https://calxena.es/cal-xena/restaurante/comedor-cal-xena.jpg",
-      "width": 900,
-      "height": 1200,
+      "kind": "plat",
+      "originUrl": "https://calxena.es/cal-xena/gTrinxatCalXena.jpg",
+      "width": 640,
+      "height": 427,
+      "author": "Cal Xena",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://calxena.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-xena/05.jpg",
+      "kind": "plat",
+      "originUrl": "https://calxena.es/cal-xena/sBistecCalXena.jpg",
+      "width": 640,
+      "height": 427,
+      "author": "Cal Xena",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://calxena.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-xena/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://calxena.es/cal-xena/menjar-tradicional.jpg",
+      "width": 1800,
+      "height": 800,
+      "author": "Cal Xena",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://calxena.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-xena/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://calxena.es/cal-xena/restaurante/bar-calxena.jpg",
+      "width": 899,
+      "height": 560,
+      "author": "Cal Xena",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://calxena.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-xena/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://calxena.es/cal-xena/cal-xena-restaurante.jpg",
+      "width": 700,
+      "height": 600,
       "author": "Cal Xena",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://calxena.es/",
@@ -370,16 +596,7 @@
   "mooma-cerdanya": [
     {
       "src": "../../assets/restaurants/mooma-cerdanya/01.jpg",
-      "originUrl": "https://mooma.cat/wp-content/uploads/2026/04/CERDANYA3.webp",
-      "width": 1333,
-      "height": 2000,
-      "author": "Mooma",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/mooma-cerdanya/02.jpg",
+      "kind": "plat",
       "originUrl": "https://mooma.cat/wp-content/uploads/2026/05/7T4A5010-scaled.webp",
       "width": 2000,
       "height": 2000,
@@ -389,8 +606,20 @@
       "isOfficial": true
     },
     {
+      "src": "../../assets/restaurants/mooma-cerdanya/02.jpg",
+      "kind": "lloc",
+      "originUrl": "https://mooma.cat/wp-content/uploads/2026/04/MOOMA-1-scaled.webp",
+      "width": 1707,
+      "height": 2560,
+      "author": "Mooma",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
+      "isOfficial": true
+    },
+    {
       "src": "../../assets/restaurants/mooma-cerdanya/03.jpg",
-      "originUrl": "https://mooma.cat/wp-content/uploads/2026/05/DSC09794-scaled.webp",
+      "kind": "plat",
+      "originUrl": "https://mooma.cat/wp-content/uploads/2026/04/PDA-scaled.webp",
       "width": 1707,
       "height": 2560,
       "author": "Mooma",
@@ -400,9 +629,54 @@
     },
     {
       "src": "../../assets/restaurants/mooma-cerdanya/04.jpg",
-      "originUrl": "https://mooma.cat/wp-content/uploads/2026/04/MOOMA-1-scaled.webp",
+      "kind": "lloc",
+      "originUrl": "https://mooma.cat/wp-content/uploads/2026/05/image00006.jpeg",
+      "width": 1066,
+      "height": 1600,
+      "author": "Mooma",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/mooma-cerdanya/05.jpg",
+      "kind": "plat",
+      "originUrl": "https://mooma.cat/wp-content/uploads/2026/02/sidralet.webp",
+      "width": 1066,
+      "height": 1600,
+      "author": "Mooma",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/mooma-cerdanya/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://mooma.cat/wp-content/uploads/2026/04/CERDANYA3.webp",
+      "width": 1333,
+      "height": 2000,
+      "author": "Mooma",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/mooma-cerdanya/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://mooma.cat/wp-content/uploads/2026/05/DSC09794-scaled.webp",
       "width": 1707,
       "height": 2560,
+      "author": "Mooma",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/mooma-cerdanya/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://mooma.cat/wp-content/uploads/2026/05/mooma-10.webp",
+      "width": 1070,
+      "height": 1600,
       "author": "Mooma",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://mooma.cat/mooma-cerdanya/",
@@ -412,9 +686,10 @@
   "el-paller-de-queixans": [
     {
       "src": "../../assets/restaurants/el-paller-de-queixans/01.jpg",
-      "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans.jpg",
+      "kind": "plat",
+      "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-15.jpg",
       "width": 1000,
-      "height": 667,
+      "height": 1500,
       "author": "El Paller de Queixans",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://elpallerdequeixans.com/",
@@ -422,7 +697,8 @@
     },
     {
       "src": "../../assets/restaurants/el-paller-de-queixans/02.jpg",
-      "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-8.jpg",
+      "kind": "lloc",
+      "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-14.jpg",
       "width": 1000,
       "height": 1500,
       "author": "El Paller de Queixans",
@@ -432,6 +708,18 @@
     },
     {
       "src": "../../assets/restaurants/el-paller-de-queixans/03.jpg",
+      "kind": "lloc",
+      "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans.jpg",
+      "width": 1000,
+      "height": 667,
+      "author": "El Paller de Queixans",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://elpallerdequeixans.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/el-paller-de-queixans/04.jpg",
+      "kind": "lloc",
       "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-10.jpg",
       "width": 1000,
       "height": 1500,
@@ -441,8 +729,42 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/el-paller-de-queixans/04.jpg",
+      "src": "../../assets/restaurants/el-paller-de-queixans/05.jpg",
+      "kind": "lloc",
+      "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-11.jpg",
+      "width": 1000,
+      "height": 1500,
+      "author": "El Paller de Queixans",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://elpallerdequeixans.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/el-paller-de-queixans/06.jpg",
+      "kind": "lloc",
       "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-12.jpg",
+      "width": 1000,
+      "height": 1500,
+      "author": "El Paller de Queixans",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://elpallerdequeixans.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/el-paller-de-queixans/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-13.jpg",
+      "width": 1000,
+      "height": 1500,
+      "author": "El Paller de Queixans",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://elpallerdequeixans.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/el-paller-de-queixans/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://elpallerdequeixans.com/wp-content/uploads/2025/02/el-paller-de-queixans-8.jpg",
       "width": 1000,
       "height": 1500,
       "author": "El Paller de Queixans",
@@ -454,26 +776,7 @@
   "tierra-del-fuego": [
     {
       "src": "../../assets/restaurants/tierra-del-fuego/01.jpg",
-      "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/10/fuego.jpg",
-      "width": 925,
-      "height": 925,
-      "author": "Tierra del Fuego",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://tierradelfuego.es/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/tierra-del-fuego/02.jpg",
-      "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/08/parrilla.jpg",
-      "width": 800,
-      "height": 800,
-      "author": "Tierra del Fuego",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://tierradelfuego.es/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/tierra-del-fuego/03.jpg",
+      "kind": "plat",
       "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/08/carne.jpg",
       "width": 800,
       "height": 800,
@@ -483,10 +786,77 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/tierra-del-fuego/04.jpg",
+      "src": "../../assets/restaurants/tierra-del-fuego/02.jpg",
+      "kind": "plat",
       "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/08/provoleta.jpg",
       "width": 800,
       "height": 800,
+      "author": "Tierra del Fuego",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://tierradelfuego.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/tierra-del-fuego/03.jpg",
+      "kind": "lloc",
+      "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/10/mollejas.jpg",
+      "width": 800,
+      "height": 800,
+      "author": "Tierra del Fuego",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://tierradelfuego.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/tierra-del-fuego/04.jpg",
+      "kind": "plat",
+      "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/10/chorizos.jpg",
+      "width": 800,
+      "height": 800,
+      "author": "Tierra del Fuego",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://tierradelfuego.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/tierra-del-fuego/05.jpg",
+      "kind": "plat",
+      "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/08/parrilla.jpg",
+      "width": 800,
+      "height": 800,
+      "author": "Tierra del Fuego",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://tierradelfuego.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/tierra-del-fuego/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/08/ensaladas.jpg",
+      "width": 800,
+      "height": 800,
+      "author": "Tierra del Fuego",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://tierradelfuego.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/tierra-del-fuego/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/08/fondo_grande.jpg",
+      "width": 1920,
+      "height": 1280,
+      "author": "Tierra del Fuego",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://tierradelfuego.es/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/tierra-del-fuego/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://tierradelfuego.es/wp-content/uploads/2023/10/fuego.jpg",
+      "width": 925,
+      "height": 925,
       "author": "Tierra del Fuego",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://tierradelfuego.es/",
@@ -496,26 +866,7 @@
   "cal-jet": [
     {
       "src": "../../assets/restaurants/cal-jet/01.jpg",
-      "originUrl": "https://caljet.cat/wp-content/uploads/2026/04/CalJet-Inici-1.webp",
-      "width": 1920,
-      "height": 1072,
-      "author": "Cal Jet Bistrot de Muntanya",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.caljet.cat/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/cal-jet/02.jpg",
-      "originUrl": "https://caljet.cat/wp-content/uploads/2026/04/CalJet-Inici-4.webp",
-      "width": 1920,
-      "height": 1072,
-      "author": "Cal Jet Bistrot de Muntanya",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.caljet.cat/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/cal-jet/03.jpg",
+      "kind": "lloc",
       "originUrl": "https://caljet.cat/wp-content/uploads/2026/06/CalJet-Inici-5.webp",
       "width": 800,
       "height": 781,
@@ -525,8 +876,53 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/cal-jet/04.jpg",
+      "src": "../../assets/restaurants/cal-jet/02.jpg",
+      "kind": "lloc",
       "originUrl": "https://caljet.cat/wp-content/uploads/2026/06/CalJet-Terrassa-2.webp",
+      "width": 1920,
+      "height": 1072,
+      "author": "Cal Jet Bistrot de Muntanya",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caljet.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-jet/03.jpg",
+      "kind": "lloc",
+      "originUrl": "https://caljet.cat/wp-content/uploads/2026/04/CalJet-Inici-4.webp",
+      "width": 1920,
+      "height": 1072,
+      "author": "Cal Jet Bistrot de Muntanya",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caljet.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-jet/04.jpg",
+      "kind": "lloc",
+      "originUrl": "https://caljet.cat/wp-content/uploads/2026/04/CalJet-Km0-2.webp",
+      "width": 1920,
+      "height": 1072,
+      "author": "Cal Jet Bistrot de Muntanya",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caljet.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-jet/05.jpg",
+      "kind": "lloc",
+      "originUrl": "https://caljet.cat/wp-content/uploads/2026/04/CalJet-Inici-1.webp",
+      "width": 1920,
+      "height": 1072,
+      "author": "Cal Jet Bistrot de Muntanya",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caljet.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-jet/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://caljet.cat/wp-content/uploads/2026/04/CalJet-QuiSom-1.webp",
       "width": 1920,
       "height": 1072,
       "author": "Cal Jet Bistrot de Muntanya",
@@ -538,6 +934,51 @@
   "raco-de-riu": [
     {
       "src": "../../assets/restaurants/raco-de-riu/01.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/f038d82e-3229-4fe2-8ca1-f2d7f779fd54-scaled.jpg",
+      "width": 1707,
+      "height": 2560,
+      "author": "Racó de Riu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.racoderiu.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raco-de-riu/02.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/9033b201-5498-4339-bcc2-30937d8c3137.jpg",
+      "width": 1168,
+      "height": 1752,
+      "author": "Racó de Riu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.racoderiu.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raco-de-riu/03.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/ecccc793-21bc-4448-92ec-b3ff0b9a11fc.jpg",
+      "width": 1168,
+      "height": 1752,
+      "author": "Racó de Riu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.racoderiu.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raco-de-riu/04.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/664d6d8a-a77a-4ab9-972d-2f9accb70287.jpg",
+      "width": 1168,
+      "height": 1752,
+      "author": "Racó de Riu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.racoderiu.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raco-de-riu/05.jpg",
+      "kind": "lloc",
       "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/61eab99b-2705-418b-8c0f-7dfa9827af1f.jpg",
       "width": 1168,
       "height": 1752,
@@ -547,30 +988,33 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/raco-de-riu/02.jpg",
-      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/14ce96be-d74e-47c5-a18d-5a0544dc1358-scaled.jpg",
-      "width": 1441,
-      "height": 2560,
-      "author": "Racó de Riu",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.racoderiu.cat/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/raco-de-riu/03.jpg",
-      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/386a84cd-b0f1-48a8-9dac-a26ff464537d-scaled.jpg",
-      "width": 1441,
-      "height": 2560,
-      "author": "Racó de Riu",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.racoderiu.cat/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/raco-de-riu/04.jpg",
-      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/664d6d8a-a77a-4ab9-972d-2f9accb70287.jpg",
+      "src": "../../assets/restaurants/raco-de-riu/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/bf9f4752-331a-4e04-9258-aab0b25aab6d.jpg",
       "width": 1168,
       "height": 1752,
+      "author": "Racó de Riu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.racoderiu.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raco-de-riu/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/7f60bf14-4133-4bd0-9101-5d24e15fbeb9.jpg",
+      "width": 1168,
+      "height": 1752,
+      "author": "Racó de Riu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.racoderiu.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/raco-de-riu/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.racoderiu.cat/wp-content/uploads/2026/06/5122dadf-cc52-4095-9647-3155bccc74d4.jpg",
+      "width": 2000,
+      "height": 1333,
       "author": "Racó de Riu",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.racoderiu.cat/",
@@ -580,6 +1024,7 @@
   "terra-de-pics": [
     {
       "src": "../../assets/restaurants/terra-de-pics/01.jpg",
+      "kind": "plat",
       "originUrl": "https://terradepics.com/wp-content/uploads/2023/04/tartar.png",
       "width": 1436,
       "height": 1438,
@@ -590,6 +1035,29 @@
     },
     {
       "src": "../../assets/restaurants/terra-de-pics/02.jpg",
+      "kind": "plat",
+      "originUrl": "https://terradepics.com/wp-content/uploads/2023/04/quesos.png",
+      "width": 1436,
+      "height": 1438,
+      "author": "Terra de Pics",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://terradepics.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/terra-de-pics/03.jpg",
+      "kind": "plat",
+      "originUrl": "http://terradepics.com/wp-content/uploads/2023/04/pulpo.png",
+      "width": 1436,
+      "height": 1438,
+      "author": "Terra de Pics",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://terradepics.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/terra-de-pics/04.jpg",
+      "kind": "plat",
       "originUrl": "https://terradepics.com/wp-content/uploads/2023/04/xai-menu3.png",
       "width": 1728,
       "height": 1472,
@@ -599,20 +1067,44 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/terra-de-pics/03.jpg",
-      "originUrl": "https://terradepics.com/wp-content/uploads/2023/07/IMG-20230721-WA0008-azul.png",
-      "width": 1417,
-      "height": 945,
+      "src": "../../assets/restaurants/terra-de-pics/05.jpg",
+      "kind": "plat",
+      "originUrl": "http://terradepics.com/wp-content/uploads/2023/04/carxofa.png",
+      "width": 1794,
+      "height": 1704,
       "author": "Terra de Pics",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://terradepics.com/",
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/terra-de-pics/04.jpg",
-      "originUrl": "https://terradepics.com/wp-content/uploads/2023/04/fondo_degradado.png",
-      "width": 2000,
-      "height": 1021,
+      "src": "../../assets/restaurants/terra-de-pics/06.jpg",
+      "kind": "plat",
+      "originUrl": "http://terradepics.com/wp-content/uploads/2023/04/costelles.png",
+      "width": 1432,
+      "height": 1792,
+      "author": "Terra de Pics",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://terradepics.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/terra-de-pics/07.jpg",
+      "kind": "lloc",
+      "originUrl": "http://terradepics.com/wp-content/uploads/2023/04/mango.png",
+      "width": 1788,
+      "height": 1790,
+      "author": "Terra de Pics",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://terradepics.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/terra-de-pics/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://terradepics.com/wp-content/uploads/2023/07/IMG-20230721-WA0008-azul.png",
+      "width": 1417,
+      "height": 945,
       "author": "Terra de Pics",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://terradepics.com/",
@@ -622,7 +1114,8 @@
   "le-saint-anne": [
     {
       "src": "../../assets/restaurants/le-saint-anne/01.jpg",
-      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/10/Ermitage_0CT25_084-scaled.jpg",
+      "kind": "plat",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_010-scaled.jpg",
       "width": 1920,
       "height": 2880,
       "author": "Grand Hôtel L’Ermitage",
@@ -632,7 +1125,8 @@
     },
     {
       "src": "../../assets/restaurants/le-saint-anne/02.jpg",
-      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/10/Ermitage_0CT25_094-2-scaled.jpg",
+      "kind": "plat",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_008-scaled.jpg",
       "width": 1920,
       "height": 2880,
       "author": "Grand Hôtel L’Ermitage",
@@ -642,9 +1136,10 @@
     },
     {
       "src": "../../assets/restaurants/le-saint-anne/03.jpg",
-      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/01/465A0131.jpg",
-      "width": 812,
-      "height": 542,
+      "kind": "plat",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_011-scaled.jpg",
+      "width": 1920,
+      "height": 2880,
       "author": "Grand Hôtel L’Ermitage",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://grandhotelermitage.fr/restaurants/",
@@ -652,7 +1147,52 @@
     },
     {
       "src": "../../assets/restaurants/le-saint-anne/04.jpg",
-      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_002-scaled.jpg",
+      "kind": "lloc",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_007-scaled.jpg",
+      "width": 1920,
+      "height": 2880,
+      "author": "Grand Hôtel L’Ermitage",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://grandhotelermitage.fr/restaurants/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/le-saint-anne/05.jpg",
+      "kind": "lloc",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_005-scaled.jpg",
+      "width": 1920,
+      "height": 2880,
+      "author": "Grand Hôtel L’Ermitage",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://grandhotelermitage.fr/restaurants/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/le-saint-anne/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_003-scaled.jpg",
+      "width": 1920,
+      "height": 2880,
+      "author": "Grand Hôtel L’Ermitage",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://grandhotelermitage.fr/restaurants/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/le-saint-anne/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/12/Ermitage_0CT25_012-scaled.jpg",
+      "width": 1920,
+      "height": 2880,
+      "author": "Grand Hôtel L’Ermitage",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://grandhotelermitage.fr/restaurants/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/le-saint-anne/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://grandhotelermitage.fr/wp-content/uploads/2025/10/Ermitage_0CT25_084-scaled.jpg",
       "width": 1920,
       "height": 2880,
       "author": "Grand Hôtel L’Ermitage",
@@ -664,6 +1204,7 @@
   "la-table-des-saveurs": [
     {
       "src": "../../assets/restaurants/la-table-des-saveurs/01.jpg",
+      "kind": "lloc",
       "originUrl": "https://tabledessaveurs.fr/wp-content/uploads/2022/10/cadre-1.jpg",
       "width": 1920,
       "height": 1281,
@@ -674,6 +1215,7 @@
     },
     {
       "src": "../../assets/restaurants/la-table-des-saveurs/02.jpg",
+      "kind": "lloc",
       "originUrl": "https://tabledessaveurs.fr/wp-content/uploads/2022/10/cadre-2.jpg",
       "width": 1920,
       "height": 1281,
@@ -684,6 +1226,7 @@
     },
     {
       "src": "../../assets/restaurants/la-table-des-saveurs/03.jpg",
+      "kind": "lloc",
       "originUrl": "https://tabledessaveurs.fr/wp-content/uploads/2022/10/cadre-4.jpg",
       "width": 1920,
       "height": 1281,
@@ -694,6 +1237,7 @@
     },
     {
       "src": "../../assets/restaurants/la-table-des-saveurs/04.jpg",
+      "kind": "lloc",
       "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/la-Table-des-Saveurs-2.jpg",
       "width": 1024,
       "height": 507,
@@ -706,6 +1250,18 @@
   "ca-l-eudald": [
     {
       "src": "../../assets/restaurants/ca-l-eudald/01.jpg",
+      "kind": "lloc",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-services-slider02-1.jpg",
+      "width": 875,
+      "height": 840,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/02.jpg",
+      "kind": "lloc",
       "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-hero-1.jpg",
       "width": 1920,
       "height": 1072,
@@ -715,18 +1271,9 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/ca-l-eudald/02.jpg",
-      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/m-home-hero-1.jpg",
-      "width": 720,
-      "height": 840,
-      "author": "Ca l’Eudald",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.caleudald.com/",
-      "isOfficial": true
-    },
-    {
       "src": "../../assets/restaurants/ca-l-eudald/03.jpg",
-      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-rooms-slider02.jpg",
+      "kind": "lloc",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-services-slider01-1.jpg",
       "width": 875,
       "height": 840,
       "author": "Ca l’Eudald",
@@ -736,6 +1283,51 @@
     },
     {
       "src": "../../assets/restaurants/ca-l-eudald/04.jpg",
+      "kind": "lloc",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/m-home-hero-1.jpg",
+      "width": 720,
+      "height": 840,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/05.jpg",
+      "kind": "lloc",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/m-location-hero-1.jpg",
+      "width": 720,
+      "height": 840,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-location-1.jpg",
+      "width": 1024,
+      "height": 684,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/m-fotos-hero-1.jpg",
+      "width": 720,
+      "height": 840,
+      "author": "Ca l’Eudald",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.caleudald.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/ca-l-eudald/08.jpg",
+      "kind": "lloc",
       "originUrl": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/940/home-rooms-slider01.jpg",
       "width": 875,
       "height": 840,
@@ -748,18 +1340,9 @@
   "grau-de-los": [
     {
       "src": "../../assets/restaurants/grau-de-los/01.jpg",
-      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/9-graudelos.jpg",
-      "width": 1274,
-      "height": 1499,
-      "author": "Grau de l’Os",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://graudelos.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/grau-de-los/02.jpg",
-      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/17-graudelos.jpg",
-      "width": 1125,
+      "kind": "plat",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/4-graudelos.jpg",
+      "width": 2000,
       "height": 1500,
       "author": "Grau de l’Os",
       "license": "Cortesia del restaurant",
@@ -767,7 +1350,41 @@
       "isOfficial": true
     },
     {
+      "src": "../../assets/restaurants/grau-de-los/02.jpg",
+      "kind": "lloc",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/2-graudelos.jpg",
+      "width": 1126,
+      "height": 1499,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    },
+    {
       "src": "../../assets/restaurants/grau-de-los/03.jpg",
+      "kind": "plat",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/6-graudelos.jpg",
+      "width": 1125,
+      "height": 1501,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/grau-de-los/04.jpg",
+      "kind": "lloc",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/1-graudelos.jpg",
+      "width": 1126,
+      "height": 1501,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/grau-de-los/05.jpg",
+      "kind": "lloc",
       "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/7-graudelos.jpg",
       "width": 2000,
       "height": 1500,
@@ -777,9 +1394,32 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/grau-de-los/04.jpg",
-      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/15-graudelos.jpg",
-      "width": 1189,
+      "src": "../../assets/restaurants/grau-de-los/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/12-graudelos.jpg",
+      "width": 1116,
+      "height": 1501,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/grau-de-los/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/11-graudelos.jpg",
+      "width": 1080,
+      "height": 1500,
+      "author": "Grau de l’Os",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://graudelos.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/grau-de-los/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://graudelos.com/wp-content/uploads/2021/08/16-graudelos.jpg",
+      "width": 1125,
       "height": 1500,
       "author": "Grau de l’Os",
       "license": "Cortesia del restaurant",
@@ -790,26 +1430,7 @@
   "coc-de-lorri": [
     {
       "src": "../../assets/restaurants/coc-de-lorri/01.jpg",
-      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia1.jpg",
-      "width": 600,
-      "height": 800,
-      "author": "Coc de l’Orri",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.cocdelorri.cat/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/coc-de-lorri/02.jpg",
-      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia2.jpg",
-      "width": 600,
-      "height": 800,
-      "author": "Coc de l’Orri",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.cocdelorri.cat/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/coc-de-lorri/03.jpg",
+      "kind": "plat",
       "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia3.jpg",
       "width": 600,
       "height": 800,
@@ -819,8 +1440,75 @@
       "isOfficial": true
     },
     {
+      "src": "../../assets/restaurants/coc-de-lorri/02.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia1.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/03.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia6.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
       "src": "../../assets/restaurants/coc-de-lorri/04.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia5.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/05.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia2.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/06.jpg",
+      "kind": "plat",
       "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/gastronomia4.jpg",
+      "width": 600,
+      "height": 800,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/07.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/slider_taula.jpg",
+      "width": 1600,
+      "height": 700,
+      "author": "Coc de l’Orri",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.cocdelorri.cat/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/coc-de-lorri/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.cocdelorri.cat/wp-content/uploads/2025/12/local.jpg",
       "width": 600,
       "height": 800,
       "author": "Coc de l’Orri",
@@ -1431,9 +2119,10 @@
   "la-formatgeria-de-llivia": [
     {
       "src": "../../assets/restaurants/la-formatgeria-de-llivia/01.jpg",
-      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-01.jpg",
-      "width": 1400,
-      "height": 650,
+      "kind": "plat",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2024/02/La-Formatgeria-de-Llivia-Cuina-13.jpg",
+      "width": 960,
+      "height": 720,
       "author": "La Formatgeria de Llívia",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.laformatgeria.com/",
@@ -1441,9 +2130,10 @@
     },
     {
       "src": "../../assets/restaurants/la-formatgeria-de-llivia/02.jpg",
-      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-03.jpg",
-      "width": 1400,
-      "height": 650,
+      "kind": "plat",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2024/02/La-Formatgeria-de-Llivia-Cuina-12.jpg",
+      "width": 960,
+      "height": 720,
       "author": "La Formatgeria de Llívia",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.laformatgeria.com/",
@@ -1451,7 +2141,8 @@
     },
     {
       "src": "../../assets/restaurants/la-formatgeria-de-llivia/03.jpg",
-      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-1.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2024/02/La-Formatgeria-de-Llivia-Cuina-11.jpg",
       "width": 960,
       "height": 720,
       "author": "La Formatgeria de Llívia",
@@ -1461,9 +2152,54 @@
     },
     {
       "src": "../../assets/restaurants/la-formatgeria-de-llivia/04.jpg",
-      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2021/06/La-Formatgeria-de-Llivia-Nosaltres-3.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2024/02/La-Formatgeria-de-Llivia-Cuina-15.jpg",
       "width": 960,
       "height": 720,
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.laformatgeria.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-formatgeria-de-llivia/05.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2024/02/La-Formatgeria-de-Llivia-Cuina-08.jpg",
+      "width": 960,
+      "height": 720,
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.laformatgeria.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-formatgeria-de-llivia/06.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2024/02/La-Formatgeria-de-Llivia-Cuina-04.jpg",
+      "width": 960,
+      "height": 720,
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.laformatgeria.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-formatgeria-de-llivia/07.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2020/12/La-Formatgeria-de-Llivia-Presentacio-04.jpg",
+      "width": 1400,
+      "height": 650,
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.laformatgeria.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-formatgeria-de-llivia/08.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.laformatgeria.com/wp-content/uploads/2024/02/La-Formatgeria-de-Llivia-Espais-D-.jpg",
+      "width": 600,
+      "height": 426,
       "author": "La Formatgeria de Llívia",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.laformatgeria.com/",
@@ -1473,7 +2209,8 @@
   "chez-planes": [
     {
       "src": "../../assets/restaurants/chez-planes/01.jpg",
-      "originUrl": "https://www.monsamm.com/gallery/62e3e93c927b17.35829200-xl.webp",
+      "kind": "plat",
+      "originUrl": "https://www.monsamm.com/gallery/62e55b81bc7429.22507483-xl.webp",
       "width": 2000,
       "height": 2667,
       "author": "Chez Planes",
@@ -1483,9 +2220,10 @@
     },
     {
       "src": "../../assets/restaurants/chez-planes/02.jpg",
-      "originUrl": "https://www.monsamm.com/gallery/60659cfe662052.36503673.webp",
-      "width": 1425,
-      "height": 1070,
+      "kind": "plat",
+      "originUrl": "https://www.monsamm.com/gallery/62e3e93c927b17.35829200-xl.webp",
+      "width": 2000,
+      "height": 2667,
       "author": "Chez Planes",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.chezplanes.com/",
@@ -1493,6 +2231,7 @@
     },
     {
       "src": "../../assets/restaurants/chez-planes/03.jpg",
+      "kind": "lloc",
       "originUrl": "https://www.monsamm.com/gallery/60659cf090fd19.40480540.webp",
       "width": 1604,
       "height": 1070,
@@ -1503,9 +2242,54 @@
     },
     {
       "src": "../../assets/restaurants/chez-planes/04.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.monsamm.com/gallery/60bf2722489b48.80271433-xl.webp",
+      "width": 2000,
+      "height": 1329,
+      "author": "Chez Planes",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.chezplanes.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/chez-planes/05.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.monsamm.com/gallery/60659cfe662052.36503673.webp",
+      "width": 1425,
+      "height": 1070,
+      "author": "Chez Planes",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.chezplanes.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/chez-planes/06.jpg",
+      "kind": "lloc",
       "originUrl": "https://www.monsamm.com/gallery/60659ced108ac4.28398536.webp",
       "width": 1610,
       "height": 1070,
+      "author": "Chez Planes",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.chezplanes.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/chez-planes/07.jpg",
+      "kind": "plat",
+      "originUrl": "https://www.monsamm.com/gallery/20210402092813(1).jpg",
+      "width": 1900,
+      "height": 1267,
+      "author": "Chez Planes",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.chezplanes.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/chez-planes/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.monsamm.com/gallery/682239e15eabc3.60863494-xl.webp",
+      "width": 2000,
+      "height": 1334,
       "author": "Chez Planes",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://www.chezplanes.com/",
@@ -1515,26 +2299,7 @@
   "la-chaumiere": [
     {
       "src": "../../assets/restaurants/la-chaumiere/01.jpg",
-      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/7Xase4yp2AXqBkCckXPEbWWjCmSMsg5F87hqyKtwdNnMBA19MLhhzrQ5aZBYayFNA.jpg",
-      "width": 880,
-      "height": 600,
-      "author": "Oficina de Turisme de Font-Romeu",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/la-chaumiere/02.jpg",
-      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/C3jQnPLcQmMnr2wEg2LAeD6EqcxjWjDnGtLNERCS43OYcLZMmn36kckXZerb2ea5M.jpg",
-      "width": 880,
-      "height": 600,
-      "author": "Oficina de Turisme de Font-Romeu",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/la-chaumiere/03.jpg",
+      "kind": "lloc",
       "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/esNkFmWjRz4SgsfDWRzqXMMZZB8BXGnsWxf8GCx3gc9HtR8Dfp8HPFeNMtk5F7M8Z.jpg",
       "width": 880,
       "height": 600,
@@ -1544,10 +2309,55 @@
       "isOfficial": true
     },
     {
+      "src": "../../assets/restaurants/la-chaumiere/02.jpg",
+      "kind": "lloc",
+      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/7Xase4yp2AXqBkCckXPEbWWjCmSMsg5F87hqyKtwdNnMBA19MLhhzrQ5aZBYayFNA.jpg",
+      "width": 880,
+      "height": 600,
+      "author": "Oficina de Turisme de Font-Romeu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-chaumiere/03.jpg",
+      "kind": "plat",
+      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/ANbBeyD3kfNbM3msncKf2BLbWaxEga2FabQYKQzSgMaSfTkSPn4epA319P2kmjPmz.jpg",
+      "width": 880,
+      "height": 600,
+      "author": "Oficina de Turisme de Font-Romeu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "isOfficial": true
+    },
+    {
       "src": "../../assets/restaurants/la-chaumiere/04.jpg",
+      "kind": "lloc",
+      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/C3jQnPLcQmMnr2wEg2LAeD6EqcxjWjDnGtLNERCS43OYcLZMmn36kckXZerb2ea5M.jpg",
+      "width": 880,
+      "height": 600,
+      "author": "Oficina de Turisme de Font-Romeu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-chaumiere/05.jpg",
+      "kind": "lloc",
       "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/chaumiere.png",
       "width": 1526,
       "height": 1848,
+      "author": "Oficina de Turisme de Font-Romeu",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/la-chaumiere/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://font-romeu.fr/wp-content/uploads/2021/10/61790560aa0000c1db8a4155.jpg",
+      "width": 612,
+      "height": 344,
       "author": "Oficina de Turisme de Font-Romeu",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://font-romeu.fr/en/restorations/la-chaumiere/",
@@ -1755,6 +2565,7 @@
   "somnia": [
     {
       "src": "../../assets/restaurants/somnia/01.jpg",
+      "kind": "plat",
       "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/06/11-bikini-11-Pica_1-webp-scaled.webp",
       "width": 2000,
       "height": 2199,
@@ -1765,6 +2576,62 @@
     },
     {
       "src": "../../assets/restaurants/somnia/02.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/12/5-copia.webp",
+      "width": 570,
+      "height": 696,
+      "author": "Somnia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.somniarestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/somnia/03.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/12/6-copia.webp",
+      "width": 570,
+      "height": 696,
+      "author": "Somnia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.somniarestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/somnia/04.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/12/1-copia.webp",
+      "width": 570,
+      "height": 696,
+      "author": "Somnia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.somniarestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/somnia/05.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/12/3-copia.webp",
+      "width": 570,
+      "height": 696,
+      "author": "Somnia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.somniarestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/somnia/06.jpg",
+      "kind": "lloc",
+      "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/12/4-copia.webp",
+      "width": 570,
+      "height": 696,
+      "author": "Somnia",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.somniarestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/somnia/07.jpg",
+      "kind": "gent",
       "originUrl": "https://www.somniarestaurant.com/wp-content/uploads/2025/07/Germans-Eloy-Dani.webp",
       "width": 1080,
       "height": 1536,
@@ -1774,33 +2641,34 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/somnia/03.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty%2C_16_%28Puigcerd%C3%A0%29.jpg/1920px-Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty%2C_16_%28Puigcerd%C3%A0%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "width": 1920,
-      "height": 2560,
-      "author": "Carlos Pino Andújar",
+      "src": "../../assets/restaurants/somnia/08.jpg",
+      "kind": "paisatge",
+      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Pla%C3%A7a_Cabrinetty_%28Puigcerd%C3%A0%29.jpg/3840px-Pla%C3%A7a_Cabrinetty_%28Puigcerd%C3%A0%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "width": 2000,
+      "height": 1422,
+      "author": "Martinge636",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty,_16_(Puigcerd%C3%A0).jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pla%C3%A7a_Cabrinetty_(Puigcerd%C3%A0).jpg",
       "isOfficial": false,
-      "commonsTitle": "File:Edifici d'habitatges a la plaça Cabrinetty, 16 (Puigcerdà).jpg"
-    },
-    {
-      "src": "../../assets/restaurants/somnia/04.jpg",
-      "originUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty%2C_6_%28Puigcerd%C3%A0%29.jpg/1920px-Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty%2C_6_%28Puigcerd%C3%A0%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-      "width": 1920,
-      "height": 2560,
-      "author": "Carlos Pino Andújar",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edifici_d%27habitatges_a_la_pla%C3%A7a_Cabrinetty,_6_(Puigcerd%C3%A0).jpg",
-      "isOfficial": false,
-      "commonsTitle": "File:Edifici d'habitatges a la plaça Cabrinetty, 6 (Puigcerdà).jpg"
+      "commonsTitle": "File:Plaça Cabrinetty (Puigcerdà).jpg"
     }
   ],
   "cal-xandera": [
     {
       "src": "../../assets/restaurants/cal-xandera/01.jpg",
+      "kind": "lloc",
+      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/i2d9b9308c0015547/version/1530604526/image.png",
+      "width": 1000,
+      "height": 750,
+      "author": "Cal Xandera",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://www.calxandera.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/cal-xandera/02.jpg",
+      "kind": "lloc",
       "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/i683bf081ee4c6542/version/1498475974/image.jpg",
       "width": 1607,
       "height": 1056,
@@ -1810,29 +2678,10 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/cal-xandera/02.jpg",
-      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/id23b9c9f06ea407b/version/1530604411/image.png",
-      "width": 1000,
-      "height": 1000,
-      "author": "Cal Xandera",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.calxandera.com/",
-      "isOfficial": true
-    },
-    {
       "src": "../../assets/restaurants/cal-xandera/03.jpg",
-      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/i91a17729fddef70d/version/1530604484/image.png",
-      "width": 1000,
-      "height": 1000,
-      "author": "Cal Xandera",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://www.calxandera.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/cal-xandera/04.jpg",
-      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/i032042bd518830e7/version/1530604516/image.png",
-      "width": 1000,
+      "kind": "lloc",
+      "originUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s183dac7cff6870bf/image/ib9b77d3c12afd481/version/1530604534/image.png",
+      "width": 750,
       "height": 1000,
       "author": "Cal Xandera",
       "license": "Cortesia del restaurant",
@@ -1843,6 +2692,18 @@
   "el-club": [
     {
       "src": "../../assets/restaurants/el-club/01.jpg",
+      "kind": "lloc",
+      "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/Alp-municipi-2.jpg",
+      "width": 2000,
+      "height": 1521,
+      "author": "El Club Restaurant",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://elclubrestaurant.com/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/el-club/02.jpg",
+      "kind": "lloc",
       "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/21-05-1.jpg",
       "width": 1080,
       "height": 1440,
@@ -1852,20 +2713,11 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/el-club/02.jpg",
+      "src": "../../assets/restaurants/el-club/03.jpg",
+      "kind": "lloc",
       "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/21-05-2.jpg",
       "width": 1080,
       "height": 1440,
-      "author": "El Club Restaurant",
-      "license": "Cortesia del restaurant",
-      "sourceUrl": "https://elclubrestaurant.com/",
-      "isOfficial": true
-    },
-    {
-      "src": "../../assets/restaurants/el-club/03.jpg",
-      "originUrl": "https://elclubrestaurant.com/wp-content/uploads/2026/05/Alp-municipi-2.jpg",
-      "width": 2000,
-      "height": 1521,
       "author": "El Club Restaurant",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://elclubrestaurant.com/",
@@ -1935,6 +2787,40 @@
   "arc": [
     {
       "src": "../../assets/restaurants/arc/01.jpg",
+      "kind": "plat",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/food-restaurant-arc-plat-cerdanya-ecoresort-pirineus-40.jpg",
+      "width": 1920,
+      "height": 1280,
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/arc/02.jpg",
+      "kind": "plat",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/2019/06/food-restaurant-arc-plat-sala-life-reset-cerdanya-ecoresort-pirineus-2.jpg",
+      "width": 2000,
+      "height": 1125,
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/arc/03.jpg",
+      "kind": "plat",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/2019/06/food-restaurant-arc-plat-cerdanya-ecoresort-pirineus-bio-saludable-local.jpg",
+      "width": 2000,
+      "height": 1333,
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/arc/04.jpg",
+      "kind": "plat",
       "originUrl": "https://cerdanyaviva.com/wp-content/uploads/2019/06/food-restaurant-arc-plat-trinxat-cadi-cerdanya-ecoresort-1024x682.jpg",
       "width": 1024,
       "height": 682,
@@ -1944,7 +2830,19 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/arc/02.jpg",
+      "src": "../../assets/restaurants/arc/05.jpg",
+      "kind": "plat",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/food-horts-prullans-cerdanya-ecoresort-pirineus.jpg",
+      "width": 1024,
+      "height": 768,
+      "author": "Cerdanya EcoResort",
+      "license": "Cortesia del restaurant",
+      "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
+      "isOfficial": true
+    },
+    {
+      "src": "../../assets/restaurants/arc/06.jpg",
+      "kind": "lloc",
       "originUrl": "https://cerdanyaviva.com/wp-content/uploads/20190628-8674.jpg",
       "width": 1500,
       "height": 1000,
@@ -1954,7 +2852,8 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/arc/03.jpg",
+      "src": "../../assets/restaurants/arc/07.jpg",
+      "kind": "lloc",
       "originUrl": "https://cerdanyaviva.com/wp-content/uploads/facana-hotel-muntanya-cerdanya-ecoresort-pirineus-2.jpg",
       "width": 2000,
       "height": 1346,
@@ -1964,10 +2863,11 @@
       "isOfficial": true
     },
     {
-      "src": "../../assets/restaurants/arc/04.jpg",
-      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/2019/06/food-restaurant-arc-plat-sala-life-reset-cerdanya-ecoresort-pirineus-2.jpg",
+      "src": "../../assets/restaurants/arc/08.jpg",
+      "kind": "lloc",
+      "originUrl": "https://cerdanyaviva.com/wp-content/uploads/paisatge-prullans-cadi-cerdanya-ecoresort-prullans.jpg",
       "width": 2000,
-      "height": 1125,
+      "height": 1352,
       "author": "Cerdanya EcoResort",
       "license": "Cortesia del restaurant",
       "sourceUrl": "https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/",
@@ -2027,7 +2927,8 @@
   "das-1219": [
     {
       "src": "../../assets/restaurants/das-1219/01.jpg",
-      "originUrl": "https://das1219.com/wp-content/uploads/2026/03/Inici-Web-Das-2.webp",
+      "kind": "plat",
+      "originUrl": "https://das1219.com/wp-content/uploads/2025/12/Nostra_Carta_Das-scaled.webp",
       "width": 2000,
       "height": 1125,
       "author": "DAS 1219",
@@ -2037,7 +2938,8 @@
     },
     {
       "src": "../../assets/restaurants/das-1219/02.jpg",
-      "originUrl": "https://das1219.com/wp-content/uploads/2025/12/Nostra_Carta_Das-scaled.webp",
+      "kind": "lloc",
+      "originUrl": "https://das1219.com/wp-content/uploads/2026/03/Inici-Web-Das-2.webp",
       "width": 2000,
       "height": 1125,
       "author": "DAS 1219",

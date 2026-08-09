@@ -2,974 +2,1427 @@
   "_source": {
     "axis": "Polilínia pel fons de vall — coordenades d’OpenStreetMap (ODbL)",
     "elevation": "EU-DEM 25 m via api.opentopodata.org",
+    "relief": "shoulderEle i crestEle: cota màxima del mateix DEM dins de ±1,5 i ±5 km, mesurada perpendicularment a l’eix cada 250 m",
     "generatedBy": "scripts/build-valley-profile.mjs"
   },
   "meta": {
     "stepMetres": 250,
+    "swathMetres": 5000,
+    "shoulderMetres": 1500,
     "lengthKm": 39.75,
     "minEle": 980,
-    "maxEle": 1760
+    "maxEle": 1760,
+    "crestMaxEle": 2225
   },
   "profile": [
     {
       "km": 0,
       "ele": 980,
+      "shoulderEle": 1178,
+      "crestEle": 1874,
       "lat": 42.3605,
       "lng": 1.6944
     },
     {
       "km": 0.25,
       "ele": 990,
+      "shoulderEle": 1194,
+      "crestEle": 1917,
       "lat": 42.36086,
       "lng": 1.6974
     },
     {
       "km": 0.5,
       "ele": 1051,
+      "shoulderEle": 1155,
+      "crestEle": 2048,
       "lat": 42.36123,
       "lng": 1.70041
     },
     {
       "km": 0.75,
       "ele": 1018,
+      "shoulderEle": 1212,
+      "crestEle": 2054,
       "lat": 42.36159,
       "lng": 1.70341
     },
     {
       "km": 1,
       "ele": 1001,
+      "shoulderEle": 1283,
+      "crestEle": 1946,
       "lat": 42.36195,
       "lng": 1.70641
     },
     {
       "km": 1.25,
       "ele": 1028,
+      "shoulderEle": 1313,
+      "crestEle": 1826,
       "lat": 42.36232,
       "lng": 1.70941
     },
     {
       "km": 1.5,
       "ele": 1014,
+      "shoulderEle": 1296,
+      "crestEle": 1735,
       "lat": 42.36268,
       "lng": 1.71242
     },
     {
       "km": 1.75,
       "ele": 1014,
+      "shoulderEle": 1270,
+      "crestEle": 1625,
       "lat": 42.36305,
       "lng": 1.71542
     },
     {
       "km": 2,
       "ele": 1048,
+      "shoulderEle": 1232,
+      "crestEle": 1493,
       "lat": 42.36341,
       "lng": 1.71842
     },
     {
       "km": 2.25,
       "ele": 1029,
+      "shoulderEle": 1213,
+      "crestEle": 1530,
       "lat": 42.36377,
       "lng": 1.72143
     },
     {
       "km": 2.5,
       "ele": 1008,
+      "shoulderEle": 1220,
+      "crestEle": 1657,
       "lat": 42.36414,
       "lng": 1.72443
     },
     {
       "km": 2.75,
       "ele": 1031,
+      "shoulderEle": 1209,
+      "crestEle": 1767,
       "lat": 42.3645,
       "lng": 1.72743
     },
     {
       "km": 3,
       "ele": 1044,
+      "shoulderEle": 1195,
+      "crestEle": 1863,
       "lat": 42.36486,
       "lng": 1.73043
     },
     {
       "km": 3.25,
       "ele": 1003,
+      "shoulderEle": 1230,
+      "crestEle": 1866,
       "lat": 42.36523,
       "lng": 1.73344
     },
     {
       "km": 3.5,
       "ele": 988,
+      "shoulderEle": 1179,
+      "crestEle": 1855,
       "lat": 42.36559,
       "lng": 1.73644
     },
     {
       "km": 3.75,
       "ele": 993,
+      "shoulderEle": 1143,
+      "crestEle": 1863,
       "lat": 42.36595,
       "lng": 1.73944
     },
     {
       "km": 4,
       "ele": 993,
+      "shoulderEle": 1138,
+      "crestEle": 1934,
       "lat": 42.36632,
       "lng": 1.74245
     },
     {
       "km": 4.25,
       "ele": 993,
+      "shoulderEle": 1187,
+      "crestEle": 1928,
       "lat": 42.36668,
       "lng": 1.74545
     },
     {
       "km": 4.5,
       "ele": 994,
+      "shoulderEle": 1182,
+      "crestEle": 1888,
       "lat": 42.36705,
       "lng": 1.74845
     },
     {
       "km": 4.75,
       "ele": 998,
+      "shoulderEle": 1258,
+      "crestEle": 1915,
       "lat": 42.36741,
       "lng": 1.75145
     },
     {
       "km": 5,
       "ele": 1020,
+      "shoulderEle": 1277,
+      "crestEle": 1932,
       "lat": 42.36777,
       "lng": 1.75446
     },
     {
       "km": 5.25,
       "ele": 1019,
+      "shoulderEle": 1280,
+      "crestEle": 1887,
       "lat": 42.36814,
       "lng": 1.75746
     },
     {
       "km": 5.5,
       "ele": 1003,
+      "shoulderEle": 1245,
+      "crestEle": 1856,
       "lat": 42.3685,
       "lng": 1.76046
     },
     {
       "km": 5.75,
       "ele": 1003,
+      "shoulderEle": 1307,
+      "crestEle": 1822,
       "lat": 42.36886,
       "lng": 1.76347
     },
     {
       "km": 6,
       "ele": 1004,
+      "shoulderEle": 1281,
+      "crestEle": 1763,
       "lat": 42.36923,
       "lng": 1.76647
     },
     {
       "km": 6.25,
       "ele": 1011,
+      "shoulderEle": 1253,
+      "crestEle": 1753,
       "lat": 42.36959,
       "lng": 1.76947
     },
     {
       "km": 6.5,
       "ele": 1036,
+      "shoulderEle": 1168,
+      "crestEle": 1760,
       "lat": 42.36995,
       "lng": 1.77247
     },
     {
       "km": 6.75,
       "ele": 1043,
+      "shoulderEle": 1212,
+      "crestEle": 1761,
       "lat": 42.37038,
       "lng": 1.77546
     },
     {
       "km": 7,
       "ele": 1029,
+      "shoulderEle": 1286,
+      "crestEle": 1751,
       "lat": 42.37092,
       "lng": 1.77841
     },
     {
       "km": 7.25,
       "ele": 1026,
+      "shoulderEle": 1301,
+      "crestEle": 1670,
       "lat": 42.37146,
       "lng": 1.78137
     },
     {
       "km": 7.5,
       "ele": 1018,
+      "shoulderEle": 1297,
+      "crestEle": 1615,
       "lat": 42.372,
       "lng": 1.78432
     },
     {
       "km": 7.75,
       "ele": 1018,
+      "shoulderEle": 1321,
+      "crestEle": 1581,
       "lat": 42.37254,
       "lng": 1.78728
     },
     {
       "km": 8,
       "ele": 1025,
+      "shoulderEle": 1314,
+      "crestEle": 1629,
       "lat": 42.37308,
       "lng": 1.79023
     },
     {
       "km": 8.25,
       "ele": 1046,
+      "shoulderEle": 1253,
+      "crestEle": 1732,
       "lat": 42.37362,
       "lng": 1.79318
     },
     {
       "km": 8.5,
       "ele": 1075,
+      "shoulderEle": 1171,
+      "crestEle": 1687,
       "lat": 42.37417,
       "lng": 1.79614
     },
     {
       "km": 8.75,
       "ele": 1127,
+      "shoulderEle": 1305,
+      "crestEle": 1617,
       "lat": 42.37471,
       "lng": 1.79909
     },
     {
       "km": 9,
       "ele": 1134,
+      "shoulderEle": 1289,
+      "crestEle": 1546,
       "lat": 42.37525,
       "lng": 1.80205
     },
     {
       "km": 9.25,
       "ele": 1059,
+      "shoulderEle": 1230,
+      "crestEle": 1497,
       "lat": 42.37579,
       "lng": 1.805
     },
     {
       "km": 9.5,
       "ele": 1171,
+      "shoulderEle": 1326,
+      "crestEle": 1467,
       "lat": 42.37633,
       "lng": 1.80795
     },
     {
       "km": 9.75,
       "ele": 1138,
+      "shoulderEle": 1356,
+      "crestEle": 1498,
       "lat": 42.37687,
       "lng": 1.81091
     },
     {
       "km": 10,
       "ele": 1108,
+      "shoulderEle": 1250,
+      "crestEle": 1501,
       "lat": 42.37741,
       "lng": 1.81386
     },
     {
       "km": 10.25,
       "ele": 1062,
+      "shoulderEle": 1304,
+      "crestEle": 1534,
       "lat": 42.37796,
       "lng": 1.81681
     },
     {
       "km": 10.5,
       "ele": 1057,
+      "shoulderEle": 1270,
+      "crestEle": 1559,
       "lat": 42.37948,
       "lng": 1.81882
     },
     {
       "km": 10.75,
       "ele": 1120,
+      "shoulderEle": 1328,
+      "crestEle": 1554,
       "lat": 42.38136,
       "lng": 1.82048
     },
     {
       "km": 11,
       "ele": 1144,
+      "shoulderEle": 1346,
+      "crestEle": 1560,
       "lat": 42.38325,
       "lng": 1.82215
     },
     {
       "km": 11.25,
       "ele": 1119,
+      "shoulderEle": 1242,
+      "crestEle": 1559,
       "lat": 42.38513,
       "lng": 1.82381
     },
     {
       "km": 11.5,
       "ele": 1081,
+      "shoulderEle": 1156,
+      "crestEle": 1555,
       "lat": 42.38701,
       "lng": 1.82548
     },
     {
       "km": 11.75,
       "ele": 1067,
+      "shoulderEle": 1188,
+      "crestEle": 1588,
       "lat": 42.3889,
       "lng": 1.82714
     },
     {
       "km": 12,
       "ele": 1072,
+      "shoulderEle": 1239,
+      "crestEle": 1656,
       "lat": 42.39078,
       "lng": 1.8288
     },
     {
       "km": 12.25,
       "ele": 1077,
+      "shoulderEle": 1233,
+      "crestEle": 1732,
       "lat": 42.39266,
       "lng": 1.83047
     },
     {
       "km": 12.5,
       "ele": 1093,
+      "shoulderEle": 1219,
+      "crestEle": 1692,
       "lat": 42.39455,
       "lng": 1.83213
     },
     {
       "km": 12.75,
       "ele": 1101,
+      "shoulderEle": 1257,
+      "crestEle": 1638,
       "lat": 42.39643,
       "lng": 1.83379
     },
     {
       "km": 13,
       "ele": 1097,
+      "shoulderEle": 1228,
+      "crestEle": 1597,
       "lat": 42.39831,
       "lng": 1.83546
     },
     {
       "km": 13.25,
       "ele": 1123,
+      "shoulderEle": 1293,
+      "crestEle": 1552,
       "lat": 42.40019,
       "lng": 1.83712
     },
     {
       "km": 13.5,
       "ele": 1152,
+      "shoulderEle": 1306,
+      "crestEle": 1537,
       "lat": 42.40208,
       "lng": 1.83879
     },
     {
       "km": 13.75,
       "ele": 1154,
+      "shoulderEle": 1329,
+      "crestEle": 1554,
       "lat": 42.40396,
       "lng": 1.84045
     },
     {
       "km": 14,
       "ele": 1126,
+      "shoulderEle": 1324,
+      "crestEle": 1579,
       "lat": 42.40584,
       "lng": 1.84211
     },
     {
       "km": 14.25,
       "ele": 1119,
+      "shoulderEle": 1312,
+      "crestEle": 1618,
       "lat": 42.40773,
       "lng": 1.84378
     },
     {
       "km": 14.5,
       "ele": 1114,
+      "shoulderEle": 1248,
+      "crestEle": 1657,
       "lat": 42.40961,
       "lng": 1.84544
     },
     {
       "km": 14.75,
       "ele": 1140,
+      "shoulderEle": 1337,
+      "crestEle": 2078,
       "lat": 42.41149,
       "lng": 1.8471
     },
     {
       "km": 15,
       "ele": 1152,
+      "shoulderEle": 1386,
+      "crestEle": 1966,
       "lat": 42.41214,
       "lng": 1.84998
     },
     {
       "km": 15.25,
       "ele": 1152,
+      "shoulderEle": 1380,
+      "crestEle": 1970,
       "lat": 42.41271,
       "lng": 1.85292
     },
     {
       "km": 15.5,
       "ele": 1127,
+      "shoulderEle": 1358,
+      "crestEle": 1936,
       "lat": 42.41328,
       "lng": 1.85587
     },
     {
       "km": 15.75,
       "ele": 1099,
+      "shoulderEle": 1355,
+      "crestEle": 1913,
       "lat": 42.41384,
       "lng": 1.85881
     },
     {
       "km": 16,
       "ele": 1095,
+      "shoulderEle": 1361,
+      "crestEle": 1903,
       "lat": 42.41441,
       "lng": 1.86176
     },
     {
       "km": 16.25,
       "ele": 1097,
+      "shoulderEle": 1353,
+      "crestEle": 1898,
       "lat": 42.41498,
       "lng": 1.86471
     },
     {
       "km": 16.5,
       "ele": 1109,
+      "shoulderEle": 1342,
+      "crestEle": 1859,
       "lat": 42.41555,
       "lng": 1.86765
     },
     {
       "km": 16.75,
       "ele": 1112,
+      "shoulderEle": 1331,
+      "crestEle": 1831,
       "lat": 42.41612,
       "lng": 1.8706
     },
     {
       "km": 17,
       "ele": 1134,
+      "shoulderEle": 1298,
+      "crestEle": 1808,
       "lat": 42.41669,
       "lng": 1.87354
     },
     {
       "km": 17.25,
       "ele": 1138,
+      "shoulderEle": 1262,
+      "crestEle": 1758,
       "lat": 42.41726,
       "lng": 1.87649
     },
     {
       "km": 17.5,
       "ele": 1124,
+      "shoulderEle": 1234,
+      "crestEle": 1758,
       "lat": 42.41783,
       "lng": 1.87944
     },
     {
       "km": 17.75,
       "ele": 1118,
+      "shoulderEle": 1257,
+      "crestEle": 1760,
       "lat": 42.41862,
       "lng": 1.88229
     },
     {
       "km": 18,
       "ele": 1121,
+      "shoulderEle": 1238,
+      "crestEle": 1722,
       "lat": 42.41944,
       "lng": 1.88512
     },
     {
       "km": 18.25,
       "ele": 1135,
+      "shoulderEle": 1243,
+      "crestEle": 1652,
       "lat": 42.42026,
       "lng": 1.88796
     },
     {
       "km": 18.5,
       "ele": 1160,
+      "shoulderEle": 1255,
+      "crestEle": 1623,
       "lat": 42.42108,
       "lng": 1.89079
     },
     {
       "km": 18.75,
       "ele": 1151,
+      "shoulderEle": 1258,
+      "crestEle": 1571,
       "lat": 42.4219,
       "lng": 1.89363
     },
     {
       "km": 19,
       "ele": 1156,
+      "shoulderEle": 1247,
+      "crestEle": 1528,
       "lat": 42.42272,
       "lng": 1.89647
     },
     {
       "km": 19.25,
       "ele": 1162,
+      "shoulderEle": 1238,
+      "crestEle": 1459,
       "lat": 42.42354,
       "lng": 1.8993
     },
     {
       "km": 19.5,
       "ele": 1160,
+      "shoulderEle": 1282,
+      "crestEle": 1416,
       "lat": 42.42436,
       "lng": 1.90214
     },
     {
       "km": 19.75,
       "ele": 1153,
+      "shoulderEle": 1285,
+      "crestEle": 1369,
       "lat": 42.42518,
       "lng": 1.90498
     },
     {
       "km": 20,
       "ele": 1151,
+      "shoulderEle": 1224,
+      "crestEle": 1450,
       "lat": 42.42599,
       "lng": 1.90781
     },
     {
       "km": 20.25,
       "ele": 1150,
+      "shoulderEle": 1189,
+      "crestEle": 1433,
       "lat": 42.42681,
       "lng": 1.91065
     },
     {
       "km": 20.5,
       "ele": 1149,
+      "shoulderEle": 1182,
+      "crestEle": 1462,
       "lat": 42.42763,
       "lng": 1.91348
     },
     {
       "km": 20.75,
       "ele": 1144,
+      "shoulderEle": 1184,
+      "crestEle": 1491,
       "lat": 42.42845,
       "lng": 1.91632
     },
     {
       "km": 21,
       "ele": 1150,
+      "shoulderEle": 1174,
+      "crestEle": 1474,
       "lat": 42.42927,
       "lng": 1.91916
     },
     {
       "km": 21.25,
       "ele": 1150,
+      "shoulderEle": 1183,
+      "crestEle": 1470,
       "lat": 42.43009,
       "lng": 1.92199
     },
     {
       "km": 21.5,
       "ele": 1161,
+      "shoulderEle": 1181,
+      "crestEle": 1474,
       "lat": 42.43091,
       "lng": 1.92483
     },
     {
       "km": 21.75,
       "ele": 1209,
+      "shoulderEle": 1214,
+      "crestEle": 1470,
       "lat": 42.43173,
       "lng": 1.92767
     },
     {
       "km": 22,
       "ele": 1187,
+      "shoulderEle": 1226,
+      "crestEle": 1549,
       "lat": 42.43233,
       "lng": 1.9306
     },
     {
       "km": 22.25,
       "ele": 1157,
+      "shoulderEle": 1223,
+      "crestEle": 1584,
       "lat": 42.4329,
       "lng": 1.93355
     },
     {
       "km": 22.5,
       "ele": 1148,
+      "shoulderEle": 1220,
+      "crestEle": 1617,
       "lat": 42.43348,
       "lng": 1.93649
     },
     {
       "km": 22.75,
       "ele": 1143,
+      "shoulderEle": 1219,
+      "crestEle": 1636,
       "lat": 42.43405,
       "lng": 1.93944
     },
     {
       "km": 23,
       "ele": 1143,
+      "shoulderEle": 1221,
+      "crestEle": 1417,
       "lat": 42.43462,
       "lng": 1.94238
     },
     {
       "km": 23.25,
       "ele": 1143,
+      "shoulderEle": 1220,
+      "crestEle": 1330,
       "lat": 42.43605,
       "lng": 1.94357
     },
     {
       "km": 23.5,
       "ele": 1146,
+      "shoulderEle": 1215,
+      "crestEle": 1297,
       "lat": 42.43828,
       "lng": 1.94313
     },
     {
       "km": 23.75,
       "ele": 1151,
+      "shoulderEle": 1223,
+      "crestEle": 1297,
       "lat": 42.4405,
       "lng": 1.9427
     },
     {
       "km": 24,
       "ele": 1157,
+      "shoulderEle": 1227,
+      "crestEle": 1287,
       "lat": 42.44273,
       "lng": 1.94226
     },
     {
       "km": 24.25,
       "ele": 1162,
+      "shoulderEle": 1221,
+      "crestEle": 1307,
       "lat": 42.44495,
       "lng": 1.94182
     },
     {
       "km": 24.5,
       "ele": 1170,
+      "shoulderEle": 1223,
+      "crestEle": 1311,
       "lat": 42.44718,
       "lng": 1.94138
     },
     {
       "km": 24.75,
       "ele": 1173,
+      "shoulderEle": 1219,
+      "crestEle": 1331,
       "lat": 42.4494,
       "lng": 1.94094
     },
     {
       "km": 25,
       "ele": 1179,
+      "shoulderEle": 1222,
+      "crestEle": 1351,
       "lat": 42.45163,
       "lng": 1.9405
     },
     {
       "km": 25.25,
       "ele": 1184,
+      "shoulderEle": 1232,
+      "crestEle": 1366,
       "lat": 42.45385,
       "lng": 1.94006
     },
     {
       "km": 25.5,
       "ele": 1186,
+      "shoulderEle": 1243,
+      "crestEle": 1388,
       "lat": 42.45608,
       "lng": 1.93962
     },
     {
       "km": 25.75,
       "ele": 1191,
+      "shoulderEle": 1266,
+      "crestEle": 1439,
       "lat": 42.4583,
       "lng": 1.93919
     },
     {
       "km": 26,
       "ele": 1199,
+      "shoulderEle": 1293,
+      "crestEle": 1498,
       "lat": 42.46053,
       "lng": 1.93875
     },
     {
       "km": 26.25,
       "ele": 1212,
+      "shoulderEle": 1409,
+      "crestEle": 1597,
       "lat": 42.46275,
       "lng": 1.93831
     },
     {
       "km": 26.5,
       "ele": 1211,
+      "shoulderEle": 1507,
+      "crestEle": 1989,
       "lat": 42.46351,
       "lng": 1.94048
     },
     {
       "km": 26.75,
       "ele": 1274,
+      "shoulderEle": 1449,
+      "crestEle": 1904,
       "lat": 42.46379,
       "lng": 1.9435
     },
     {
       "km": 27,
       "ele": 1267,
+      "shoulderEle": 1399,
+      "crestEle": 1879,
       "lat": 42.46408,
       "lng": 1.94653
     },
     {
       "km": 27.25,
       "ele": 1248,
+      "shoulderEle": 1352,
+      "crestEle": 1840,
       "lat": 42.46436,
       "lng": 1.94955
     },
     {
       "km": 27.5,
       "ele": 1234,
+      "shoulderEle": 1301,
+      "crestEle": 1840,
       "lat": 42.46464,
       "lng": 1.95257
     },
     {
       "km": 27.75,
       "ele": 1223,
+      "shoulderEle": 1310,
+      "crestEle": 1826,
       "lat": 42.46492,
       "lng": 1.9556
     },
     {
       "km": 28,
       "ele": 1220,
+      "shoulderEle": 1310,
+      "crestEle": 1766,
       "lat": 42.4652,
       "lng": 1.95862
     },
     {
       "km": 28.25,
       "ele": 1222,
+      "shoulderEle": 1305,
+      "crestEle": 1688,
       "lat": 42.46549,
       "lng": 1.96165
     },
     {
       "km": 28.5,
       "ele": 1213,
+      "shoulderEle": 1341,
+      "crestEle": 1559,
       "lat": 42.46577,
       "lng": 1.96467
     },
     {
       "km": 28.75,
       "ele": 1209,
+      "shoulderEle": 1380,
+      "crestEle": 1526,
       "lat": 42.46605,
       "lng": 1.96769
     },
     {
       "km": 29,
       "ele": 1205,
+      "shoulderEle": 1392,
+      "crestEle": 1643,
       "lat": 42.46633,
       "lng": 1.97072
     },
     {
       "km": 29.25,
       "ele": 1207,
+      "shoulderEle": 1404,
+      "crestEle": 1821,
       "lat": 42.46661,
       "lng": 1.97374
     },
     {
       "km": 29.5,
       "ele": 1211,
+      "shoulderEle": 1406,
+      "crestEle": 1975,
       "lat": 42.4669,
       "lng": 1.97676
     },
     {
       "km": 29.75,
       "ele": 1219,
+      "shoulderEle": 1411,
+      "crestEle": 1960,
       "lat": 42.46718,
       "lng": 1.97979
     },
     {
       "km": 30,
       "ele": 1262,
+      "shoulderEle": 1417,
+      "crestEle": 1925,
       "lat": 42.46746,
       "lng": 1.98281
     },
     {
       "km": 30.25,
       "ele": 1343,
+      "shoulderEle": 1343,
+      "crestEle": 1945,
       "lat": 42.46774,
       "lng": 1.98584
     },
     {
       "km": 30.5,
       "ele": 1264,
+      "shoulderEle": 1383,
+      "crestEle": 1993,
       "lat": 42.46802,
       "lng": 1.98886
     },
     {
       "km": 30.75,
       "ele": 1226,
+      "shoulderEle": 1397,
+      "crestEle": 2043,
       "lat": 42.46831,
       "lng": 1.99188
     },
     {
       "km": 31,
       "ele": 1229,
+      "shoulderEle": 1481,
+      "crestEle": 2068,
       "lat": 42.46859,
       "lng": 1.99491
     },
     {
       "km": 31.25,
       "ele": 1222,
+      "shoulderEle": 1523,
+      "crestEle": 1936,
       "lat": 42.4683,
       "lng": 1.99786
     },
     {
       "km": 31.5,
       "ele": 1230,
+      "shoulderEle": 1404,
+      "crestEle": 1836,
       "lat": 42.46765,
       "lng": 2.00078
     },
     {
       "km": 31.75,
       "ele": 1248,
+      "shoulderEle": 1322,
+      "crestEle": 1810,
       "lat": 42.46699,
       "lng": 2.00369
     },
     {
       "km": 32,
       "ele": 1253,
+      "shoulderEle": 1449,
+      "crestEle": 1850,
       "lat": 42.46633,
       "lng": 2.00661
     },
     {
       "km": 32.25,
       "ele": 1260,
+      "shoulderEle": 1442,
+      "crestEle": 1811,
       "lat": 42.46568,
       "lng": 2.00952
     },
     {
       "km": 32.5,
       "ele": 1288,
+      "shoulderEle": 1455,
+      "crestEle": 1770,
       "lat": 42.46502,
       "lng": 2.01244
     },
     {
       "km": 32.75,
       "ele": 1320,
+      "shoulderEle": 1496,
+      "crestEle": 1764,
       "lat": 42.46436,
       "lng": 2.01535
     },
     {
       "km": 33,
       "ele": 1333,
+      "shoulderEle": 1518,
+      "crestEle": 1782,
       "lat": 42.46371,
       "lng": 2.01827
     },
     {
       "km": 33.25,
       "ele": 1336,
+      "shoulderEle": 1504,
+      "crestEle": 1796,
       "lat": 42.46305,
       "lng": 2.02118
     },
     {
       "km": 33.5,
       "ele": 1333,
+      "shoulderEle": 1504,
+      "crestEle": 1767,
       "lat": 42.46239,
       "lng": 2.0241
     },
     {
       "km": 33.75,
       "ele": 1322,
+      "shoulderEle": 1504,
+      "crestEle": 1768,
       "lat": 42.46174,
       "lng": 2.02701
     },
     {
       "km": 34,
       "ele": 1294,
+      "shoulderEle": 1479,
+      "crestEle": 1748,
       "lat": 42.46108,
       "lng": 2.02993
     },
     {
       "km": 34.25,
       "ele": 1296,
+      "shoulderEle": 1471,
+      "crestEle": 1718,
       "lat": 42.46042,
       "lng": 2.03284
     },
     {
       "km": 34.5,
       "ele": 1298,
+      "shoulderEle": 1492,
+      "crestEle": 1749,
       "lat": 42.45977,
       "lng": 2.03576
     },
     {
       "km": 34.75,
       "ele": 1306,
+      "shoulderEle": 1447,
+      "crestEle": 1833,
       "lat": 42.45911,
       "lng": 2.03867
     },
     {
       "km": 35,
       "ele": 1318,
+      "shoulderEle": 1407,
+      "crestEle": 2225,
       "lat": 42.46043,
       "lng": 2.03968
     },
     {
       "km": 35.25,
       "ele": 1345,
+      "shoulderEle": 1493,
+      "crestEle": 2026,
       "lat": 42.46268,
       "lng": 2.0398
     },
     {
       "km": 35.5,
       "ele": 1378,
+      "shoulderEle": 1535,
+      "crestEle": 2028,
       "lat": 42.46492,
       "lng": 2.03991
     },
     {
       "km": 35.75,
       "ele": 1413,
+      "shoulderEle": 1525,
+      "crestEle": 1971,
       "lat": 42.46717,
       "lng": 2.04003
     },
     {
       "km": 36,
       "ele": 1448,
+      "shoulderEle": 1505,
+      "crestEle": 1882,
       "lat": 42.46942,
       "lng": 2.04015
     },
     {
       "km": 36.25,
       "ele": 1482,
+      "shoulderEle": 1515,
+      "crestEle": 1808,
       "lat": 42.47166,
       "lng": 2.04026
     },
     {
       "km": 36.5,
       "ele": 1494,
+      "shoulderEle": 1522,
+      "crestEle": 1805,
       "lat": 42.47391,
       "lng": 2.04038
     },
     {
       "km": 36.75,
       "ele": 1501,
+      "shoulderEle": 1536,
+      "crestEle": 1788,
       "lat": 42.47616,
       "lng": 2.0405
     },
     {
       "km": 37,
       "ele": 1507,
+      "shoulderEle": 1585,
+      "crestEle": 1766,
       "lat": 42.4784,
       "lng": 2.04062
     },
     {
       "km": 37.25,
       "ele": 1497,
+      "shoulderEle": 1591,
+      "crestEle": 1744,
       "lat": 42.48065,
       "lng": 2.04073
     },
     {
       "km": 37.5,
       "ele": 1390,
+      "shoulderEle": 1529,
+      "crestEle": 1723,
       "lat": 42.4829,
       "lng": 2.04085
     },
     {
       "km": 37.75,
       "ele": 1480,
+      "shoulderEle": 1480,
+      "crestEle": 1700,
       "lat": 42.48514,
       "lng": 2.04097
     },
     {
       "km": 38,
       "ele": 1493,
+      "shoulderEle": 1502,
+      "crestEle": 1674,
       "lat": 42.48739,
       "lng": 2.04108
     },
     {
       "km": 38.25,
       "ele": 1524,
+      "shoulderEle": 1528,
+      "crestEle": 1646,
       "lat": 42.48964,
       "lng": 2.0412
     },
     {
       "km": 38.5,
       "ele": 1546,
+      "shoulderEle": 1565,
+      "crestEle": 1654,
       "lat": 42.49188,
       "lng": 2.04132
     },
     {
       "km": 38.75,
       "ele": 1576,
+      "shoulderEle": 1597,
+      "crestEle": 1629,
       "lat": 42.49413,
       "lng": 2.04143
     },
     {
       "km": 39,
       "ele": 1597,
+      "shoulderEle": 1622,
+      "crestEle": 1644,
       "lat": 42.49638,
       "lng": 2.04155
     },
     {
       "km": 39.25,
       "ele": 1640,
+      "shoulderEle": 1658,
+      "crestEle": 1663,
       "lat": 42.49862,
       "lng": 2.04167
     },
     {
       "km": 39.5,
       "ele": 1669,
+      "shoulderEle": 1713,
+      "crestEle": 1725,
       "lat": 42.50087,
       "lng": 2.04179
     },
     {
       "km": 39.75,
       "ele": 1719,
+      "shoulderEle": 1783,
+      "crestEle": 1792,
       "lat": 42.50312,
       "lng": 2.0419
+    }
+  ],
+  "tributaries": [
+    {
+      "name": "Vall de Lles",
+      "joinKm": 0,
+      "lengthKm": 3.408,
+      "profile": [
+        {
+          "km": 0,
+          "ele": 980,
+          "shoulderEle": 1120,
+          "crestEle": 1395,
+          "lat": 42.3605,
+          "lng": 1.6944
+        },
+        {
+          "km": 0.25,
+          "ele": 1043,
+          "shoulderEle": 1163,
+          "crestEle": 1422,
+          "lat": 42.36264,
+          "lng": 1.69347
+        },
+        {
+          "km": 0.5,
+          "ele": 1066,
+          "shoulderEle": 1221,
+          "crestEle": 1304,
+          "lat": 42.36478,
+          "lng": 1.69254
+        },
+        {
+          "km": 0.75,
+          "ele": 1087,
+          "shoulderEle": 1238,
+          "crestEle": 1303,
+          "lat": 42.36692,
+          "lng": 1.6916
+        },
+        {
+          "km": 1,
+          "ele": 1110,
+          "shoulderEle": 1319,
+          "crestEle": 1319,
+          "lat": 42.36906,
+          "lng": 1.69067
+        },
+        {
+          "km": 1.25,
+          "ele": 1142,
+          "shoulderEle": 1316,
+          "crestEle": 1357,
+          "lat": 42.3712,
+          "lng": 1.68974
+        },
+        {
+          "km": 1.5,
+          "ele": 1161,
+          "shoulderEle": 1262,
+          "crestEle": 1384,
+          "lat": 42.37334,
+          "lng": 1.68881
+        },
+        {
+          "km": 1.75,
+          "ele": 1192,
+          "shoulderEle": 1237,
+          "crestEle": 1310,
+          "lat": 42.3755,
+          "lng": 1.68799
+        },
+        {
+          "km": 2,
+          "ele": 1233,
+          "shoulderEle": 1247,
+          "crestEle": 1309,
+          "lat": 42.37774,
+          "lng": 1.68793
+        },
+        {
+          "km": 2.25,
+          "ele": 1290,
+          "shoulderEle": 1293,
+          "crestEle": 1325,
+          "lat": 42.37999,
+          "lng": 1.68787
+        },
+        {
+          "km": 2.5,
+          "ele": 1346,
+          "shoulderEle": 1346,
+          "crestEle": 1374,
+          "lat": 42.38224,
+          "lng": 1.68781
+        },
+        {
+          "km": 2.75,
+          "ele": 1411,
+          "shoulderEle": 1411,
+          "crestEle": 1444,
+          "lat": 42.38449,
+          "lng": 1.68776
+        },
+        {
+          "km": 3,
+          "ele": 1415,
+          "shoulderEle": 1430,
+          "crestEle": 1538,
+          "lat": 42.38674,
+          "lng": 1.6877
+        },
+        {
+          "km": 3.25,
+          "ele": 1460,
+          "shoulderEle": 1470,
+          "crestEle": 1589,
+          "lat": 42.38898,
+          "lng": 1.68764
+        },
+        {
+          "km": 3.408,
+          "ele": 1470,
+          "shoulderEle": 1470,
+          "crestEle": 1617,
+          "lat": 42.3904,
+          "lng": 1.6876
+        }
+      ]
     }
   ],
   "villages": [
@@ -987,7 +1440,12 @@
       "country": "ES",
       "elevation": 1186,
       "km": 0,
-      "offsetKm": 1.72
+      "offsetKm": 1.72,
+      "tributary": {
+        "name": "Vall de Lles",
+        "km": 1.75,
+        "offsetKm": 0.03
+      }
     },
     {
       "name": "Lles de Cerdanya",
@@ -995,7 +1453,12 @@
       "country": "ES",
       "elevation": 1470,
       "km": 0,
-      "offsetKm": 3.37
+      "offsetKm": 3.37,
+      "tributary": {
+        "name": "Vall de Lles",
+        "km": 3.408,
+        "offsetKm": 0
+      }
     },
     {
       "name": "Montellà",

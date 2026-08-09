@@ -69,6 +69,30 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://elpallerdequeixans.com/'
     isOfficial: true
+  - src: '../../assets/restaurants/el-paller-de-queixans/05.jpg'
+    alt: 'El Paller de Queixans, a Queixans, 5'
+    author: 'El Paller de Queixans'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://elpallerdequeixans.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/el-paller-de-queixans/06.jpg'
+    alt: 'El Paller de Queixans, a Queixans, 6'
+    author: 'El Paller de Queixans'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://elpallerdequeixans.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/el-paller-de-queixans/07.jpg'
+    alt: 'El Paller de Queixans, a Queixans, 7'
+    author: 'El Paller de Queixans'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://elpallerdequeixans.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/el-paller-de-queixans/08.jpg'
+    alt: 'El Paller de Queixans, a Queixans, 8'
+    author: 'El Paller de Queixans'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://elpallerdequeixans.com/'
+    isOfficial: true
 ---
 
 Un paller és on es guardava la palla, i aquest en fa més de quatre-cents anys que és dret a la

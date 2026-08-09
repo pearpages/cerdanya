@@ -59,6 +59,30 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.caleudald.com/'
     isOfficial: true
+  - src: '../../assets/restaurants/ca-l-eudald/05.jpg'
+    alt: 'Ca l’Eudald, a Alp'
+    author: 'Ca l’Eudald'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.caleudald.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/ca-l-eudald/06.jpg'
+    alt: 'Exterior de Ca l’Eudald, 5'
+    author: 'Ca l’Eudald'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.caleudald.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/ca-l-eudald/07.jpg'
+    alt: 'Ca l’Eudald, a Alp, 2'
+    author: 'Ca l’Eudald'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.caleudald.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/ca-l-eudald/08.jpg'
+    alt: 'Exterior de Ca l’Eudald, 6'
+    author: 'Ca l’Eudald'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.caleudald.com/'
+    isOfficial: true
 ---
 
 El 1972 l'Eudald Vila i la Paquita Pons van obrir a Alp l'Aerohotel Cerdanya. Mig segle després la

@@ -65,6 +65,30 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.chezplanes.com/'
     isOfficial: true
+  - src: '../../assets/restaurants/chez-planes/05.jpg'
+    alt: 'Chez Planes, a Sallagosa, 5'
+    author: 'Chez Planes'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.chezplanes.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/chez-planes/06.jpg'
+    alt: 'Chez Planes, a Sallagosa, 6'
+    author: 'Chez Planes'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.chezplanes.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/chez-planes/07.jpg'
+    alt: 'Chez Planes, a Sallagosa, 7'
+    author: 'Chez Planes'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.chezplanes.com/'
+    isOfficial: true
+  - src: '../../assets/restaurants/chez-planes/08.jpg'
+    alt: 'Chez Planes, a Sallagosa, 8'
+    author: 'Chez Planes'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.chezplanes.com/'
+    isOfficial: true
 ---
 
 Era un relleu de posta al mig de Sallagosa i encara se'n diu, de vegades, la Vieille Maison

@@ -39,7 +39,7 @@ sources:
     url: 'https://www.guiarepsol.com/es/fichas/restaurante/ca-la-nuria-325313/'
 images:
   - src: '../../assets/restaurants/ca-la-nuria/01.jpg'
-    alt: 'Sala de Ca la Núria'
+    alt: 'Un plat de Ca la Núria'
     author: 'Mariana Castel, per a Ca la Núria'
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.restaurantcalanuria.cat/'
@@ -58,6 +58,12 @@ images:
     isOfficial: true
   - src: '../../assets/restaurants/ca-la-nuria/04.jpg'
     alt: 'Equip de Ca la Núria, 3'
+    author: 'Mariana Castel, per a Ca la Núria'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.restaurantcalanuria.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/ca-la-nuria/05.jpg'
+    alt: 'Sala de Ca la Núria'
     author: 'Mariana Castel, per a Ca la Núria'
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.restaurantcalanuria.cat/'

@@ -17,7 +17,10 @@
     "data:valley": "node scripts/build-valley-profile.mjs",
     "data:images": "node scripts/fetch-images.mjs",
     "data:images:apply": "node scripts/apply-image-credits.mjs",
-    "data:credits": "node scripts/lint-credits.mjs"
+    "data:credits": "node scripts/lint-credits.mjs",
+    "data:collect": "node scripts/fetch-images.mjs --collect",
+    "data:publish": "node scripts/publish-images.mjs",
+    "data:restore": "node scripts/restore-images.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",

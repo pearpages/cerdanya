@@ -49,12 +49,6 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.calxandera.com/'
     isOfficial: true
-  - src: '../../assets/restaurants/cal-xandera/04.jpg'
-    alt: 'Cal Xandera, a Angostrina, 4'
-    author: 'Cal Xandera'
-    license: 'Cortesia del restaurant'
-    sourceUrl: 'https://www.calxandera.com/'
-    isOfficial: true
 ---
 
 És una masia cerdana del segle XVIII, protegida, a la sortida d'Angostrina en direcció a

@@ -54,9 +54,30 @@
 
   .site-footer__meta {
     grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-2) var(--sp-4);
     font-size: var(--fs-caption);
     letter-spacing: 0.06em;
     color: var(--ink-3);
+  }
+
+  .site-footer__author {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+  }
+
+  .site-footer__author img {
+    flex: none;
+    inline-size: 16px;
+    block-size: 16px;
+  }
+
+  .site-footer__author a {
+    color: var(--ink-2);
   }
 
   @media (max-width: 48rem) {

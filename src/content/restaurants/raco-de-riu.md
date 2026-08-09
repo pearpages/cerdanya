@@ -69,6 +69,30 @@ images:
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.racoderiu.cat/'
     isOfficial: true
+  - src: '../../assets/restaurants/raco-de-riu/05.jpg'
+    alt: 'Racó de Riu, a Riu de Cerdanya, 5'
+    author: 'Racó de Riu'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.racoderiu.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/raco-de-riu/06.jpg'
+    alt: 'Racó de Riu, a Riu de Cerdanya, 6'
+    author: 'Racó de Riu'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.racoderiu.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/raco-de-riu/07.jpg'
+    alt: 'Racó de Riu, a Riu de Cerdanya, 7'
+    author: 'Racó de Riu'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.racoderiu.cat/'
+    isOfficial: true
+  - src: '../../assets/restaurants/raco-de-riu/08.jpg'
+    alt: 'Racó de Riu, a Riu de Cerdanya, 8'
+    author: 'Racó de Riu'
+    license: 'Cortesia del restaurant'
+    sourceUrl: 'https://www.racoderiu.cat/'
+    isOfficial: true
 ---
 
 Riu de Cerdanya és un poble de vuitanta habitants i aquest és el restaurant de l'Hotel de Riu

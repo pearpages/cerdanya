@@ -57,11 +57,12 @@
       "id": "plat-cuina-d-olla",
       "file": "_dishes/cuina-d-olla.jpg",
       "usedOn": "Portada · plat «Cuina d’olla»",
-      "alt": "Un plat de peus de porc amb gambes en salsa vermella, amanit amb un pom de julivert.",
-      "author": "Cal Xena",
-      "license": "Cortesia del restaurant",
-      "isOfficial": true,
-      "sourceUrl": "https://calxena.es/"
+      "alt": "Una cassola de fang plena de cigrons guisats amb botifarra, cansalada i talls de pebrot vermell, coberts d’un brou espès de tomàquet.",
+      "author": "Tamorlan",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "isOfficial": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Escudella_Catalana_-_Barcelona_(2011).JPG"
     },
     {
       "id": "plat-carn-a-la-brasa",
@@ -87,23 +88,21 @@
       "id": "plat-formatge",
       "file": "_dishes/formatge.jpg",
       "usedOn": "Portada · plat «Formatge»",
-      "alt": "Una fondue de formatge fos en una cassola de fang sobre el fogonet, amb un bol de daus de pa al costat per sucar-hi.",
-      "author": "the junes / Zitronenpresse",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "isOfficial": false,
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cheese_fondue-01-a.jpg"
+      "alt": "Una fondue de formatge d’ovella fumejant en una cassola de fang, amb un tall de pa clavat a la forquilla just abans de sucar-lo.",
+      "author": "La Formatgeria de Llívia",
+      "license": "Cortesia del restaurant",
+      "isOfficial": true,
+      "sourceUrl": "https://www.laformatgeriadellivia.cat/"
     },
     {
       "id": "plat-tartar-i-cru",
       "file": "_dishes/tartar-i-cru.jpg",
       "usedOn": "Portada · plat «Tàrtar i cru»",
-      "alt": "Un steak tartare tallat a ganivet amb un rovell d’ou cru al mig, envoltat de cogombrets, ceba i herbes.",
-      "author": "Dr. Bernd Gross",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "isOfficial": false,
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steak_Tartare_in_Dresden.jpg"
+      "alt": "Un tàrtar tallat a ganivet servit en un plat blanc, amb un ram de fulles verdes al costat i llesques de pa torrat per untar-hi.",
+      "author": "Terra de Pics",
+      "license": "Cortesia del restaurant",
+      "isOfficial": true,
+      "sourceUrl": "https://terradepics.cat/"
     }
   ]
 }

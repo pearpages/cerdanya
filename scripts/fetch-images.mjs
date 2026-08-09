@@ -17,7 +17,7 @@
  * Ús: node scripts/fetch-images.mjs [--only slug1,slug2] [--force]
  */
 
-import { mkdir, readFile, writeFile, rm } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, rm, rename } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -26,6 +26,9 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PLAN = resolve(ROOT, 'data/image-plan.json');
 const ASSETS = resolve(ROOT, 'src/assets/restaurants');
 const MANIFEST = resolve(ROOT, 'data/image-manifest.json');
+/** Magatzem de candidats per al repàs visual. No es publica: viu fora de src/. */
+const CANDIDATES = resolve(ROOT, 'data/candidates');
+const PICKS = resolve(ROOT, 'data/image-picks.json');
 
 /**
  * Nomes ASCII: les capceleres HTTP no son text lliure i hi ha CDN (jimcdn, per exemple)
@@ -34,7 +37,24 @@ const MANIFEST = resolve(ROOT, 'data/image-manifest.json');
  */
 const UA = 'cota-de-tast/0.1 (guia gastronomica de la Cerdanya; contacte: pere@soms.cat)';
 const MAX_WIDTH = 2000;
-const MIN_WIDTH = 640;
+
+/**
+ * Dos llindars i no un.
+ *
+ * Commons publica originals grans, així que allà exigir 640 px no costa res. El web d'un
+ * restaurant, en canvi, sovint serveix la galeria a l'amplada de la columna: Somnia té
+ * cinc fotos de 570 px, dues d'elles de plat, i amb el llindar únic queien totes — mentre
+ * que les imatges d'IA del mateix web, PNG grans, passaven. La regla de mida seleccionava
+ * a favor de les sintètiques. A partir de 520 px les seves entren.
+ */
+const MIN_WIDTH_OWN = 520;
+const MIN_WIDTH_COMMONS = 640;
+
+/** Per sota d'això una foto no pot fer de capçalera: la fitxa la mostra a tota amplada. */
+const HERO_WIDTH = 1200;
+
+/** Fotos de Commons per fitxa, com a màxim. Vegeu per què just abans de fer-lo servir. */
+const COMMONS_CAP = 4;
 
 /**
  * Imatges generades amb IA, rebutjades pel nom del fitxer.
@@ -59,7 +79,8 @@ const SYNTHETIC =
  * de debò, però el que retraten és una promoció, no un restaurant: Arç tenia un
  * «pop-up-web-2.jpg» amb un «Reserveu directe, guanyeu més» a la galeria.
  */
-const PROMO = /pop-?up|banner|promo(?:cio|tion)|newsletter|cartell|reserva.?directa|black.?friday/i;
+const PROMO =
+  /pop-?up|banner|promo(?:cio|tion)|newsletter|cartell|reserva.?directa|black.?friday|footer|header|background|fondo-|bg-|placeholder|watermark|logo/i;
 const JPEG_QUALITY = 82;
 
 const args = process.argv.slice(2);
@@ -67,6 +88,8 @@ const only = args.includes('--only')
   ? new Set(args[args.indexOf('--only') + 1].split(','))
   : null;
 const force = args.includes('--force');
+/** Baixa-ho tot a data/candidates/ i no publiquis res: la tria es fa mirant-les. */
+const collect = args.includes('--collect');
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -119,7 +142,7 @@ async function commonsSearch(query, limit = 8) {
     if (!author || !license) continue;
     // Les llicències que exigeixen compartir igual o prohibeixen l'ús comercial es
     // deixen passar igualment, però queden marcades perquè es vegin als crèdits.
-    if ((info.width ?? 0) < MIN_WIDTH) continue;
+    if ((info.width ?? 0) < MIN_WIDTH_COMMONS) continue;
 
     found.push({
       downloadUrl: info.thumburl || info.url,
@@ -169,8 +192,137 @@ function hamming(a, b) {
   return count;
 }
 
-async function saveImage(buffer, slug, index, minWidth = MIN_WIDTH) {
-  const dir = resolve(ASSETS, slug);
+/* ---- Què retrata cada foto ------------------------------------------------------- */
+
+/*
+ * `carta` i `menu` van sortir d'aquesta llista. A Can Ventura nou candidats es diuen
+ * `Menu_Can_Ventura_02` o `Cocktails_i_Mocktails`: són les pàgines de la carta, text amb
+ * preus, i puntuaven com a plat justament pel nom. Una carta no és una fotografia del
+ * restaurant per molt que hi surti un plat a la cantonada.
+ */
+const FOOD_WORDS =
+  /plat(?!a)|plato|dish|food|gastro|cuina|cocina|comida|tapa|postre|entrant|trinxat|arros|arroz|paella|xuleto|txuleton|cargol|caracol|formatge|queso|fondue|raclette|tartar|marisc|peix|pescado|carn(?!aval)|brasa|graella|parrilla|bolet|seta|guiso|pulpo|gofre/i;
+
+/**
+ * Documents i material de màrqueting que passen tots els filtres tècnics perquè són
+ * imatges de debò: cartes, llistes de preus, xecs regal, logotips sobre fons pla. El
+ * repàs visual n'ha trobat d'aquests tipus i cap mesura automàtica els distingia.
+ */
+const DOCUMENT =
+  /menu|carta|cocktail|mocktail|aperitiu|cervesa|combinat|copes|licors|vins?[-_]|dolcos|preus|tarifa|xec|regal|gift|voucher|hivern[-_]?\d|estiu[-_]?\d/i;
+const PLACE_WORDS =
+  /facana|fachada|exterior|entrada|sala|comedor|menjador|terrassa|terraza|interior|habitacio|habitacion|room|hotel|allotjament|jardi|jardin|barra|celler|bodega|inici|home|slider|cadre/i;
+const PEOPLE_WORDS = /equip|equipo|team|nosaltres|nosotros|chef|cuiner|germans|familia|about|presentacio/i;
+
+/**
+ * Dues estadístiques sobre una miniatura de 96x96, que és prou per distingir un plat d'un
+ * menjador i costa mil·lisegons:
+ *
+ *   - saturació del terç central contra la de les vores. Un plat és el subjecte i sol anar
+ *     sobre estovalles, pissarra o fusta apagades; un menjador té el color repartit.
+ *   - nitidesa del centre contra la de les vores. Els plats es fotografien amb poca
+ *     profunditat de camp i el fons queda desenfocat; una sala és nítida de punta a punta.
+ *
+ * Cap de les dues és concloent tota sola; sumades amb el nom del fitxer, encerten prou.
+ */
+async function photoStats(image) {
+  const { data, info } = await image
+    .clone()
+    .resize(96, 96, { fit: 'fill' })
+    .removeAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+
+  const { width: W, height: H } = info;
+  const at = (i) => i * info.channels;
+  const sat = (i) => {
+    const r = data[at(i)];
+    const g = data[at(i) + 1];
+    const b = data[at(i) + 2];
+    const mx = Math.max(r, g, b);
+    return mx === 0 ? 0 : (mx - Math.min(r, g, b)) / mx;
+  };
+  const lum = (i) => 0.299 * data[at(i)] + 0.587 * data[at(i) + 1] + 0.114 * data[at(i) + 2];
+  const middle = (x, y) => x >= W / 3 && x < (2 * W) / 3 && y >= H / 3 && y < (2 * H) / 3;
+
+  let cSat = 0;
+  let cSatN = 0;
+  let eSat = 0;
+  let eSatN = 0;
+  let cEdge = 0;
+  let cEdgeN = 0;
+  let eEdge = 0;
+  let eEdgeN = 0;
+
+  for (let y = 0; y < H; y += 1) {
+    for (let x = 0; x < W; x += 1) {
+      const i = y * W + x;
+      if (middle(x, y)) {
+        cSat += sat(i);
+        cSatN += 1;
+      } else {
+        eSat += sat(i);
+        eSatN += 1;
+      }
+
+      if (x === 0 || y === 0 || x === W - 1 || y === H - 1) continue;
+      const laplacian = Math.abs(4 * lum(i) - lum(i - 1) - lum(i + 1) - lum(i - W) - lum(i + W));
+      if (middle(x, y)) {
+        cEdge += laplacian;
+        cEdgeN += 1;
+      } else {
+        eEdge += laplacian;
+        eEdgeN += 1;
+      }
+    }
+  }
+
+  const ratio = (a, b) => (b > 0 ? a / b : 1);
+  return {
+    satRatio: ratio(cSat / cSatN, eSat / eSatN),
+    sharpRatio: ratio(cEdge / cEdgeN, eEdge / eEdgeN),
+  };
+}
+
+/**
+ * Puntuació d'un candidat. Es desa al manifest juntament amb `kind` perquè la tria quedi
+ * revisable: «puntuació automàtica» sense deixar-ne rastre vol dir que ningú no pot
+ * comprovar-la després, i aquí ja hi ha colat una imatge d'IA i un cartell de reserves.
+ */
+function classify(url, stats, isOfficial) {
+  const name = decodeURIComponent(url.split('/').pop() ?? '');
+  let score = isOfficial ? 15 : 0;
+  let kind = 'lloc';
+
+  if (FOOD_WORDS.test(name)) {
+    score += 60;
+    kind = 'plat';
+  } else if (PEOPLE_WORDS.test(name)) {
+    score -= 20;
+    kind = 'gent';
+  } else if (PLACE_WORDS.test(name)) {
+    score -= 25;
+    kind = 'lloc';
+  }
+
+  if (stats.satRatio > 1.25) score += 20;
+  else if (stats.satRatio > 1.1) score += 10;
+  else if (stats.satRatio < 0.85) score -= 10;
+
+  if (stats.sharpRatio > 1.4) score += 20;
+  else if (stats.sharpRatio > 1.15) score += 10;
+  else if (stats.sharpRatio < 0.8) score -= 10;
+
+  // Sense pista al nom, les dues estadístiques decideixen si es dona per plat.
+  if (kind === 'lloc' && !PLACE_WORDS.test(name) && stats.satRatio > 1.15 && stats.sharpRatio > 1.2) {
+    kind = 'plat';
+  }
+  if (!isOfficial) kind = 'paisatge';
+
+  return { kind, score: Math.round(score) };
+}
+
+async function saveImage(buffer, dir, file, minWidth) {
   await mkdir(dir, { recursive: true });
 
   const image = sharp(buffer, { failOn: 'error' });
@@ -202,8 +354,8 @@ async function saveImage(buffer, slug, index, minWidth = MIN_WIDTH) {
   }
 
   const hash = await fingerprint(image);
+  const shape = await photoStats(image);
 
-  const file = `${String(index).padStart(2, '0')}.jpg`;
   // Les mides que es desen son les del fitxer resultant, no una barreja de l'amplada
   // retallada amb l'alçada original: amb la barreja, una foto normal semblava una tira.
   const out = await image
@@ -212,7 +364,7 @@ async function saveImage(buffer, slug, index, minWidth = MIN_WIDTH) {
     .jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
     .toFile(resolve(dir, file));
 
-  return { file, width: out.width, height: out.height, hash };
+  return { file, width: out.width, height: out.height, hash, shape };
 }
 
 const plan = JSON.parse(await readFile(PLAN, 'utf8'));
@@ -227,6 +379,8 @@ try {
 }
 
 const report = { saved: 0, skipped: [], thin: [] };
+/** En mode --collect: què s'ha baixat de cada casa, per poder-ho repassar. */
+const catalogue = {};
 
 /**
  * Una foto de Commons no es pot repetir en dues fitxes. Als pobles amb quatre restaurants
@@ -264,8 +418,10 @@ for (const entry of plan.restaurants) {
   for (const query of entry.commons ?? []) {
     // Es compten només les que encara no té una altra fitxa: si no, dues consultes que
     // tornen fotos ja gastades esgoten el pressupost i la casa es queda sense res.
+    // El pressupost va contra el topall de Commons i no contra `want`: si la casa ja té
+    // vuit fotos seves, no cal anar a buscar vint-i-quatre vistes del poble.
     const usable = commonsCandidates.filter((c) => !usedCommons.has(c.sourceUrl)).length;
-    if (officialCandidates.length + usable >= want * 3) break;
+    if (usable >= COMMONS_CAP * 3) break;
     commonsCandidates.push(...(await commonsSearch(query)));
     await sleep(350);
   }
@@ -278,14 +434,28 @@ for (const entry of plan.restaurants) {
     return true;
   });
 
-  const kept = [];
+  /*
+   * Dues passades. Abans es baixava fins a tenir-ne prou i es parava, o sigui que les
+   * publicades eren les primeres que el crawler havia trobat: la portada, la façana i el
+   * menjador, mentre la galeria —que és on hi ha el menjar— es quedava sense mirar. Ara
+   * s'avaluen tots els candidats de la casa i després es tria.
+   *
+   * En mode `--collect` no es publica res: tot va a `data/candidates/`, es fan fulls de
+   * contacte i la tria la fa una persona mirant-los. La puntuació es conserva, però només
+   * per ordenar els fulls: va deixar passar un fons de peu de pàgina i va etiquetar de
+   * «lloc» dos plats de Somnia, o sigui que serveix per mirar-s'ho abans, no per decidir.
+   */
+  const outDir = collect ? resolve(CANDIDATES, entry.slug) : dir;
+  // La carpeta es buida sempre: amb `want` variable hi poden quedar fitxers d'una
+  // execució anterior més llarga i el manifest ja no els referenciaria.
+  await rm(outDir, { recursive: true, force: true });
+
+  const pool = [];
   /** Empremtes del que ja ha entrat en aquesta fitxa, per no repetir-hi la mateixa foto. */
   const hashes = [];
-  let index = 1;
+  let staged = 0;
 
   for (const candidate of candidates) {
-    if (kept.length >= want) break;
-
     if (!candidate.author || !candidate.license || !candidate.sourceUrl) {
       report.skipped.push(`${entry.slug}: crèdit incomplet → ${candidate.downloadUrl}`);
       continue;
@@ -301,23 +471,37 @@ for (const entry of plan.restaurants) {
       continue;
     }
 
+    if (candidate.isOfficial && DOCUMENT.test(candidate.downloadUrl)) {
+      report.skipped.push(`${entry.slug}: document, no fotografia → ${candidate.downloadUrl}`);
+      continue;
+    }
+
     try {
       const buffer = await get(candidate.downloadUrl, true);
-      // Algunes cases només publiquen fotos petites; s'accepten amb un llindar propi
-      // abans que quedar-se sense cap imatge seva.
-      const saved = await saveImage(buffer, entry.slug, index, entry.minWidth ?? MIN_WIDTH);
+      staged += 1;
+      const saved = await saveImage(
+        buffer,
+        outDir,
+        `${String(staged).padStart(3, '0')}.jpg`,
+        candidate.isOfficial ? MIN_WIDTH_OWN : MIN_WIDTH_COMMONS,
+      );
 
       // Un retall i l'original de la mateixa foto passen tots dos els filtres de mida:
-      // només l'empremta els distingeix, i una galeria de quatre no pot repetir-ne cap.
+      // només l'empremta els distingeix, i una galeria no pot repetir-ne cap.
       const twin = hashes.find((h) => hamming(h, saved.hash) <= 8);
       if (twin !== undefined) {
+        await rm(resolve(outDir, saved.file), { force: true });
         report.skipped.push(`${entry.slug}: repetida → ${candidate.downloadUrl}`);
         continue;
       }
       hashes.push(saved.hash);
 
-      kept.push({
-        src: `../../assets/restaurants/${entry.slug}/${saved.file}`,
+      const { kind, score } = classify(candidate.downloadUrl, saved.shape, candidate.isOfficial);
+      pool.push({
+        stage: saved.file,
+        candidate: `${entry.slug}/${saved.file}`,
+        kind,
+        score,
         /** URL d'on ha sortit el fitxer: el nom original diu què s'hi veu. */
         originUrl: candidate.downloadUrl,
         width: saved.width,
@@ -329,14 +513,54 @@ for (const entry of plan.restaurants) {
         isOfficial: candidate.isOfficial,
         commonsTitle: candidate.title,
       });
-      if (!candidate.isOfficial) usedCommons.add(candidate.sourceUrl);
-      index += 1;
-      report.saved += 1;
     } catch (error) {
       report.skipped.push(`${entry.slug}: ${error.message} → ${candidate.downloadUrl}`);
     }
 
     await sleep(200);
+  }
+
+  if (collect) {
+    // Ordenats per puntuació només perquè els fulls de contacte comencin pel que té més
+    // pinta de menjar. Qui tria és qui mira.
+    catalogue[entry.slug] = pool
+      .sort((a, b) => b.score - a.score)
+      .map(({ stage, ...rest }) => ({ file: stage, ...rest }));
+    report.saved += pool.length;
+    console.log(`· ${entry.slug.padEnd(28)} ${String(pool.length).padStart(3)} candidats`);
+    continue;
+  }
+
+  /*
+   * Commons no s'infla fins a `want`. Les cases que només tenen Instagram omplirien vuit
+   * forats amb vuit vistes del mateix poble; val més una fitxa curta i honesta.
+   */
+  const own = pool.filter((p) => p.isOfficial).sort((a, b) => b.score - a.score);
+  const commons = pool.filter((p) => !p.isOfficial).sort((a, b) => b.score - a.score);
+  const chosen = [...own.slice(0, want), ...commons.slice(0, Math.max(0, Math.min(COMMONS_CAP, want - own.length)))];
+
+  /*
+   * La primera imatge fa de capçalera de la fitxa, a tota amplada, i de portada de la
+   * targeta. Una foto de 570 px estirada a 2.000 es veu tova, així que davant hi va la
+   * millor que arribi a HERO_WIDTH; si cap hi arriba, la millor que hi hagi.
+   */
+  const heroAt = chosen.findIndex((p) => p.width >= HERO_WIDTH);
+  if (heroAt > 0) chosen.unshift(...chosen.splice(heroAt, 1));
+
+  const kept = [];
+  for (const [i, pick] of chosen.entries()) {
+    const file = `${String(i + 1).padStart(2, '0')}.jpg`;
+    await rename(resolve(dir, pick.stage), resolve(dir, file));
+    const { stage, ...rest } = pick;
+    kept.push({ src: `../../assets/restaurants/${entry.slug}/${file}`, ...rest });
+    if (!pick.isOfficial) usedCommons.add(pick.sourceUrl);
+    report.saved += 1;
+  }
+
+  // Les que s'han avaluat i no han entrat no es queden ocupant lloc al disc.
+  for (const leftover of pool) {
+    if (chosen.includes(leftover)) continue;
+    await rm(resolve(dir, leftover.stage), { force: true });
   }
 
   manifest[entry.slug] = kept;
@@ -348,7 +572,12 @@ for (const entry of plan.restaurants) {
 }
 
 await mkdir(dirname(MANIFEST), { recursive: true });
-await writeFile(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+if (collect) {
+  await mkdir(CANDIDATES, { recursive: true });
+  await writeFile(resolve(CANDIDATES, 'index.json'), `${JSON.stringify(catalogue, null, 2)}\n`, 'utf8');
+} else {
+  await writeFile(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+}
 
 console.log(`\n${report.saved} imatges desades → src/assets/restaurants/`);
 if (report.thin.length > 0) console.log(`sense cap imatge: ${report.thin.join(', ')}`);
