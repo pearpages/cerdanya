@@ -60,14 +60,35 @@ const socialImage = ogImage ? new URL(ogImage, Astro.site) : undefined;
     {/* Aplica el tema desat abans del primer pintat per evitar el flaix. */}
     <script is:inline>
       (() => {
-        try {
-          const saved = localStorage.getItem('cerdanya-theme');
-          if (saved === 'light' || saved === 'dark') {
-            document.documentElement.dataset.theme = saved;
+        const saved = () => {
+          try {
+            const value = localStorage.getItem('cerdanya-theme');
+            return value === 'light' || value === 'dark' ? value : null;
+          } catch {
+            /* localStorage bloquejat: es manté la preferència del sistema */
+            return null;
           }
-        } catch {
-          /* localStorage bloquejat: es manté la preferència del sistema */
-        }
+        };
+
+        const apply = (root) => {
+          const value = saved();
+          if (value) root.dataset.theme = value;
+          else delete root.dataset.theme;
+        };
+
+        apply(document.documentElement);
+
+        /*
+          El ClientRouter copia els atributs de <html> del document nou, que és
+          HTML estàtic i no en porta cap: sense això, data-theme desapareixeria a
+          cada navegació interna i la pàgina tornaria al tema del sistema. Aquest
+          script no es torna a executar (Astro conserva els scripts del <head>),
+          així que el tema es reposa al document nou abans del canvi, no després,
+          perquè no s'arribi a pintar amb el tema equivocat.
+        */
+        document.addEventListener('astro:before-swap', (event) => {
+          apply(event.newDocument.documentElement);
+        });
       })();
     </script>
 

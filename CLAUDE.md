@@ -415,6 +415,27 @@ fitxa de la casa, que ara diu que és una fondue de xocolata.
 - Comprovat amb `npm run build`: `dist/CNAME` hi és, el sitemap i les canòniques diuen
   `cerdanya.soms.cat` i no queda cap `cerdanya.example` enlloc de `dist/`.
 
+### El tema no sobrevivia a la navegació
+
+El tema triat es perdia a cada enllaç intern i semblava que no es desés mai. **El
+`ClientRouter` copia els atributs de `<html>` del document nou**, que és HTML estàtic i no
+en porta cap, o sigui que s'emportava `data-theme`; i el script en línia que el restaura
+**no es torna a executar**, perquè Astro conserva els scripts del `<head>` durant el canvi
+en comptes de reexecutar-los. `localStorage` sempre havia estat bé: el que fallava era
+posar-l'hi.
+
+- El script de `BaseLayout.astro` reposa el tema a `astro:before-swap`, sobre
+  `event.newDocument`, **abans** del canvi i no després: al document nou i no al viu,
+  perquè el `swap` no el torni a esborrar, i abans perquè no s'arribi a pintar cap fotograma
+  amb el tema del sistema. El listener es registra un sol cop i sobreviu, que el `document`
+  no es reemplaça.
+- Sense res desat, l'atribut s'ha d'**esborrar** i no deixar-lo estar: si no, un tema triat
+  i després esborrat en una altra pestanya se seguiria arrossegant.
+- Comprovat al build de producció (`astro preview`, que en `dev` la navegació és càrrega
+  sencera i el bug no s'hi veu): amb tema clar sobre un sistema fosc, quatre navegacions,
+  toggle enmig, i endavant i enrere d'historial — `data-theme` i el fons aguanten; sense
+  res a `localStorage` no apareix cap atribut i mana el sistema.
+
 Pendent:
 
 - **Res d'això no és a GitHub encara**: el repo no té cap `remote`. Cal crear-lo, fer
