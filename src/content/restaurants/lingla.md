@@ -7,6 +7,8 @@ town: 'Bellver de Cerdanya'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer Escoles, 3, baixos, 25720 Bellver de Cerdanya'
+lat: 42.368796
+lng: 1.776531
 phone: '+34 611 59 48 13'
 instagram: 'https://www.instagram.com/linglarestaurant/'
 cuisine:

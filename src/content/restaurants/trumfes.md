@@ -5,6 +5,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Carrer del Raval, 27, 17527 Llívia'
+lat: 42.463477
+lng: 1.983759
 cuisine:
   - 'Cuina de mercat'
   - 'Catalana tradicional'

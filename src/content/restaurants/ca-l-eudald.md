@@ -5,6 +5,8 @@ town: 'Alp'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Passeig Agnès Fabra, 4, 17538 Alp'
+lat: 42.375233
+lng: 1.889876
 phone: '+34 972 890 033'
 email: 'hotelrestaurant@caleudald.com'
 website: 'https://www.caleudald.com/'

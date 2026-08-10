@@ -7,6 +7,8 @@ town: 'Puigcerdà'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Plaça de l’Alguer, 2, 17520 Puigcerdà'
+lat: 42.433648
+lng: 1.929598
 phone: '+34 972 88 23 60'
 email: 'restauranttapanyam@hotmail.com'
 instagram: 'https://www.instagram.com/elmiradortapanyam/'

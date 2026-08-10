@@ -7,6 +7,8 @@ town: 'Puigcerdà'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer Dr. Piguillem, 8, 17520 Puigcerdà'
+lat: 42.434443
+lng: 1.92684
 phone: '+34 972 88 23 25'
 email: 'calmalhivern@gmail.com'
 instagram: 'https://www.instagram.com/cal_malhivern/'

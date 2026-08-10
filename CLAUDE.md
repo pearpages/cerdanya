@@ -34,6 +34,9 @@ npm run build               # prebuild = lint-credits, després astro build
 npm run preview             # serveix dist/
 npm run data:villages       # src/data/villages.json (OSM + EU-DEM via OpenTopoData)
 npm run data:valley         # src/data/valley-profile.json (el tall de la vall)
+npm run data:locations      # geocodifica les 44 adreces → data/location-manifest.json
+npm run data:locations:apply # aboca lat/lng i locationNote al frontmatter
+npm run data:maps           # cus els tiles d'OSM → src/assets/maps/<slug>.webp
 npm run data:images         # descarrega i publica segons el pla
 npm run data:collect        # baixa TOTS els candidats a data/candidates/ per repassar-los
 npm run data:publish        # publica la tria de data/image-picks.json
@@ -64,6 +67,13 @@ Els scripts `data:*` no s'executen durant el build; la seva sortida es commiteja
   `scripts/fetch-images.mjs` les rebutja pel nom del fitxer i `PROMO` fa el mateix amb els
   cartells de reserva. El filtre no atrapa una imatge rebatejada: **mireu-vos les fotos
   noves**, que les marques d'aigua dels generadors solen ser a baix a la dreta.
+- **El mapa no dibuixa una precisió que no tenim.** El punt d'una fitxa surt d'un node
+  d'OSM (`poi`), d'una adreça postal (`address`) o, quan cap de les dues no encerta, del
+  centre del poble (`village`). Els dos primers els publiquem sense pega: el peu del mapa
+  hi diu l'adreça i el mapa n'ensenya l'adreça. El tercer porta `locationNote` al
+  frontmatter i la fitxa el llegeix en veu alta, com fa `dataThin` amb els textos. Si
+  fixes un punt a mà a `data/location-picks.json` i no és la porta de la casa, posa-hi
+  `approxNote`: n'hi ha un, Mooma, que seu a l'aeròdrom i el punt n'és el centre.
 - **Els textos són originals** i citen les fonts al peu de cada fitxa. Quan d'una casa
   no en circula res de comprovable es marca `dataThin: true` i es diu a la UI (12 de 44).
 - **Res d'estils en línia.** Cada component o pàgina té el seu `.css` al costat, amb
@@ -78,11 +88,14 @@ src/
   data/taxonomy.ts           Vocabularis tancats (cuines, ocasions, serveis, preus)
   data/villages.json         Coordenades i altitud de cada poble  ← build-villages.mjs
   data/valley-profile.json   Perfil real del terreny + esperons   ← build-valley-profile.mjs
+  data/map-source.json       Crèdit únic dels 44 mapes d'OSM
+  assets/maps/<slug>.webp    El mapa de cada fitxa                ← render-maps.mjs
   data/dishes.ts             Els vuit plats de la portada: termes de cerca i foto
   data/site-images.json      Crèdits de les fotos que no són de cap fitxa
   lib/restaurants.ts         Ordenació per cota, agrupacions, veïns
   lib/dishes.ts              Resol plat → cases que el fan, franja de cota i foto
   lib/site-images.ts         Resol site-images.json → ImageMetadata (peta si falta el fitxer)
+  lib/maps.ts                Mapa de cada fitxa, enllaç a OSM i enllaç a Google Maps
   components/                ValleySection (el tall), RestaurantCard, FilterBar, PhotoCredit…
   styles/                    tokens.css i base.css són globals; la resta, per pàgina
 ```
@@ -117,7 +130,8 @@ cada coincidència ha de ser un plat real d'alguna carta. Compte amb els fragmen
 Les fotos són a `src/assets/restaurants/_dishes/`, **copiades** i no enllaçades a la
 galeria d'origen: si es tornen a baixar les imatges d'un restaurant la numeració balla i
 la portada ensenyaria una altra cosa sense avisar. Sis surten d'una casa de la guia i dues
-de Commons, perquè a la vall no n'hi ha cap de publicada.
+de Commons, perquè a la vall no n'hi ha cap de publicada — de fondue de formatge tampoc,
+tot i que hi ha cases que en viuen.
 
 Falten dos plats que hi haurien de ser: el **tiró amb naps**, que és el plat de festa
 d'aquesta vall i del qual no hi ha cap fotografia enlloc, i el **menú de degustació**, que
@@ -284,6 +298,105 @@ punts seguin en algun lloc— ara ho fa el terreny mateix.
   sobresurten del vessant però queden ben bé sota la carena. Els quatre que queden **per
   sota** del fons de vall (Queixans −28 m, Llívia −24 m, Travesseres −9 m, Bolvir −5 m)
   segueixen on eren: seuen més avall que l'eix amb què els mesurem, i el peu ho diu.
+
+### La nota de mètode se'n va de la portada
+
+La banda fosca de tancament («Escrita a mà, amb les fonts a la vista») deia a la portada
+el que `/credits` ja diu sencer i millor: fotos amb autor i llicència una per una, i el
+build que s'atura si en falta cap. Fora de `src/pages/index.astro` i de `home.css`.
+
+L'única dada que no hi era —les 12 fitxes de 44 amb `dataThin`— passa a `/credits` en una
+secció **Textos** nova, al costat de **Dades**, que ara es queda només amb les fonts
+d'OSM i EU-DEM. La portada perd el seu enllaç a `/credits`, que segueix a la capçalera i
+al peu, i perd també el `flushFooter`: la banda era l'únic que l'hi feia falta.
+
+### Cada fitxa diu on és
+
+La fitxa donava l'adreça en text pla i prou. El tall explica a quina **cota** seu la casa;
+faltava a quin **carrer**. Ara hi ha una secció «On és» entre la galeria i el tall —primer
+el carrer, després la cota, de prop cap enfora— i un enllaç a Google Maps, també al rail.
+
+- **Els mapes són imatges, no un mapa interactiu.** `scripts/render-maps.mjs` cus els tiles
+  d'OSM i en surt un `.webp` per fitxa que es commiteja. Zero JS de client, zero peticions
+  externes quan algú llegeix la fitxa: el mateix tracte que tenen les fotos. Es demanen a
+  zoom 17 i es mostren a mitja mida (720×405 CSS), o sigui zoom 16 a densitat doble.
+- **`data/tiles/` és el cau i no es commiteja.** Els 44 mapes van costar només **601 tiles**
+  i no els ~1.300 que semblava: els restaurants d'un mateix poble comparteixen tiles i 575
+  van sortir del cau. Esborrar-lo vol dir tornar-los a demanar tots; 1 petició per segon i
+  `User-Agent` amb contacte, que és el que demana la política d'OSM.
+- **`lat`/`lng` ja eren a l'esquema des del principi i cap fitxa no els omplia.** Ara les 44
+  els porten, al costat d'`address`, i d'aquí surt l'enllaç al punt exacte a osm.org.
+- **L'enllaç de Google Maps va per nom i adreça, no per coordenades.** Per coordenades s'hi
+  obre una xinxeta buida; per nom s'hi obre la fitxa del negoci amb horaris, telèfon i
+  ressenyes. Comprovat a mà amb tres cases —381 Bolvir, Can Ventura i Le Saint-Anne, una de
+  cada banda de la frontera i una sense adreça de carrer—: totes tres hi obren el negoci.
+- **La geocodificació no encerta sola i el repàs va caçar-ho.** De les 44: 19 damunt del node
+  d'OSM de la casa, 22 per adreça postal, 2 al centre del poble i 1 fixada a mà. Tres coses
+  que no s'haurien vist sense mirar-ho:
+  - Passar-li l'adreça sencera a Nominatim **no troba res**: «Can Ventura, Plaça Major, 1,
+    17527 Llívia» torna zero resultats i «Can Ventura, Llívia» torna el node del restaurant.
+    La cerca lliure vol que tots els trossos quadrin i el node no porta número de portal.
+  - **El poble també exclou encerts.** «la Borda del Ceretà, Puigcerdà» tampoc no torna res
+    perquè a OSM el node cau dins de Sant Martí d'Aravó. Hi ha una tercera provatura amb el
+    nom tot sol, que només és segura perquè cap candidat s'accepta si cau a més de 3 km del
+    seu poble.
+  - **Mooma seu a l'aeròdrom**, i el centre de Das cau a 2,6 km. Fixada a
+    `data/location-picks.json` amb `approxNote`.
+- **Un crèdit, no 44.** Tots els mapes surten del mateix lloc, així que l'atribució viu una
+  sola vegada a `src/data/map-source.json`; `lint-credits.mjs` comprova que hi sigui i que
+  cada `.webp` pengi d'una fitxa amb `lat`/`lng` (sense elles no en pot acreditar el punt).
+  A `/credits` hi ha una secció **Mapes** amb la font un cop i les 44 cases una per una,
+  cadascuna enllaçada al seu punt. Repetir 44 vegades el mateix trio ofegaria els crèdits
+  de les fotos, que és el que la pàgina ha de deixar llegir.
+- **En tema fosc el mapa feia de llanterna.** És, de bon tros, el més clar de la pàgina.
+  S'abaixa amb `brightness(.88) saturate(.92)` en comptes d'invertir-lo: un mapa invertit
+  deixa de semblar un mapa i les carreteres grogues es tornen blaves.
+- Dos errors que només es veien mirant-ho: el `locationNote` no havia arribat al frontmatter
+  (havia abocat les coordenades **abans** de regenerar el manifest amb les notes), i
+  `.rail__map-link` era `inline-flex`, cosa que amb una adreça llarga semblava correcta
+  perquè el salt de línia el feia el text — amb una de curta es llegia «BolvirObre a Google
+  Maps».
+- Repassats **els 44 mapes** en full de contactes i sis a mida completa. Tots els punts
+  seuen sobre poble o sobre un edifici aïllat que fa de bon veure (el Paller de Queixans, la
+  Borda del Ceretà, Torre del Remei). Comprovat al navegador: clar i fosc, cap desbordament
+  horitzontal, `/credits` en dues columnes, i les 44 pàgines construïdes porten secció de
+  mapa, enllaç de Google, enllaç del rail i crèdit d'OSM.
+
+La foto del trinxat (`_site/03.jpg`) era d'aquella secció i de cap més, així que surt de
+`site-images.json`: una fitxa de crèdit que apunta a una imatge que ja no es publica
+enlloc és exactament la mena de mentida que aquella pàgina existeix per no dir. El fitxer
+i l'entrada de `data/image-manifest.json` es queden, que és el registre de descàrregues i
+el que fa servir `data:restore`.
+
+### El peu del tall, a dues columnes
+
+El peu de `ValleySection` anava a `max-inline-size: 64ch` amb `--fs-small`, o sigui uns
+29rem penjant d'un dibuix que arriba als 84rem: mil lletres en una columna estreta i
+altíssima en un racó de la figura. A partir de 60rem va a **dues columnes** amb topall de
+108ch, que deixa cada columna cap a les 52ch; per sota es queda en una de sola a
+`--measure`.
+
+El punt de tall és una media query havent provat `columns: 46ch 2`, que se n'hauria
+sortit sola: amb el nombre de columnes decidit pel navegador queda una franja —a 820 px
+es veu clar— on encara no hi caben dues columnes però el topall tampoc no mana, i el peu
+s'estira en una sola columna de 92 caràcters. Comprovat a 500, 820, 960, 1100 i 1440 px, i
+en clar i en fosc.
+
+### La fondue del plat «Formatge» era de xocolata
+
+La foto de la targeta era la fondue **de xocolata** de La Formatgeria de Llívia (candidat
+`014`, la mateixa que obre la seva galeria), acreditada com a foto seva i amb un `alt` que
+deia «fondue de formatge d'ovella fumejant en una cassola de fang». La foto és real i és
+seva; el que era fals és el que en dèiem, que és el mateix trencament de promesa que la
+regla de les imatges d'IA vol evitar. `data/image-picks.json` ho arrossegava des de la
+tria: *«014 és la fondue de debò»*.
+
+Repassats els 33 candidats de la casa: cap foto pròpia seva ensenya una fondue de
+formatge. Hi entra **Swiss cheese fondue** (Brücke-Osteuropa, CC0, Commons), que ja era al
+plec de candidats i que és 2000×1500, el mateix 4/3 de `.dish__media`. Amb això els plats
+queden a sis fotos de cases de la guia i dues de Commons. Corregits també l'`alt` de
+`site-images.json`, la nota de `image-picks.json` i l'`alt` genèric d'aquella imatge a la
+fitxa de la casa, que ara diu que és una fondue de xocolata.
 
 Pendent:
 

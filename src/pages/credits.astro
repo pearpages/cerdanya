@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { allRestaurants } from '../lib/restaurants';
 import { siteImages } from '../lib/site-images';
+import { MAP_SOURCE, mapImage, osmUrl } from '../lib/maps';
 import '../styles/directory.css';
 import '../styles/credits.css';
 
@@ -28,6 +29,24 @@ const rows = [
 
 const official = rows.filter((row) => row.image.isOfficial).length;
 const licensed = rows.length - official;
+
+/** Fitxes que es queden curtes perquè de la casa no en circula res de comprovable. */
+const thinCount = restaurants.filter((entry) => entry.data.dataThin).length;
+
+/**
+ * Els mapes de les fitxes. Van a part de la llista de fotografies perquè tots surten del
+ * mateix lloc: repetir 44 vegades el mateix autor i la mateixa llicència ofegaria els
+ * crèdits de les fotos, que és el que aquesta pàgina ha de deixar llegir. Un per un sí
+ * que hi surten, cadascun enllaçat al seu punt a OpenStreetMap.
+ */
+const maps = restaurants
+  .filter((entry) => mapImage(entry.id) && entry.data.lat != null && entry.data.lng != null)
+  .map((entry) => ({
+    name: entry.data.name,
+    town: entry.data.town,
+    href: `/restaurants/${entry.id}/`,
+    osm: osmUrl(entry.data.lat!, entry.data.lng!),
+  }));
 
 /** Recompte per llicència, per veure d'un cop sota què està publicat el lloc. */
 const byLicense = [...rows.reduce((map, row) => {
@@ -106,6 +125,37 @@ const byLicense = [...rows.reduce((map, row) => {
       }
     </ul>
 
+    {
+      maps.length > 0 && (
+        <section class="credits__data">
+          <h2 class="section-title">Mapes</h2>
+          <p class="credits__note">
+            Els {maps.length} mapes de les fitxes estan dibuixats amb tiles d’
+            <a href={MAP_SOURCE.sourceUrl} rel="noopener">
+              OpenStreetMap
+            </a>
+            : {MAP_SOURCE.author}, {MAP_SOURCE.license} (
+            <a href={MAP_SOURCE.licenseUrl} rel="license noopener">
+              condicions
+            </a>
+            ). Es descarreguen un sol cop i es publiquen com una imatge més, així que llegir una
+            fitxa no demana res a cap servidor extern. Aquí hi ha cada casa amb el seu punt.
+          </p>
+          <ul class="credits__maps">
+            {maps.map((map) => (
+              <li class="credits__maps-item">
+                <a href={map.href}>{map.name}</a>
+                <span class="credits__town"> · {map.town} · </span>
+                <a class="mono" href={map.osm} rel="noopener">
+                  al mapa
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
     <section class="credits__data">
       <h2 class="section-title">Dades</h2>
       <p class="credits__note">
@@ -116,7 +166,18 @@ const byLicense = [...rows.reduce((map, row) => {
         del model digital del terreny EU-DEM 25 m, consultat a través d’<a
           href="https://www.opentopodata.org/"
           rel="noopener">OpenTopoData</a
-        >. Els textos de cada fitxa estan escrits de nou a partir de les fonts que s’hi citen.
+        >.
+      </p>
+    </section>
+
+    <section class="credits__data">
+      <h2 class="section-title">Textos</h2>
+      <p class="credits__note">
+        Cada fitxa està redactada de nou a partir de fonts públiques que es citen al seu peu: el web
+        del restaurant, la carta que publica, la fitxa de l’oficina de turisme. Quan d’una casa no
+        en circula res de comprovable, ho diem i la fitxa es queda curta — {thinCount} de les {
+          restaurants.length
+        } porten aquesta marca.
       </p>
     </section>
   </div>

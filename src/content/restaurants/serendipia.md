@@ -7,6 +7,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Avinguda Catalunya, 68, 17527 Llívia'
+lat: 42.462771
+lng: 1.983933
 phone: '+34 972 60 41 82'
 email: 'reserves@restaurantserendipia.cat'
 website: 'https://restaurantserendipia.cat/'

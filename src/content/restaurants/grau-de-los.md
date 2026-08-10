@@ -5,6 +5,8 @@ town: 'Bellver de Cerdanya'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer Jaume II de Mallorca, 5, 25720 Bellver de Cerdanya'
+lat: 42.37052
+lng: 1.776269
 website: 'https://graudelos.com/'
 cuisine:
   - 'Cuina de mercat'

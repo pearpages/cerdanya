@@ -5,6 +5,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Carrer Frederic Bernades, 1, 17527 Llívia'
+lat: 42.464559
+lng: 1.981065
 phone: '+34 972 89 65 00'
 website: 'https://www.calcofa.com/'
 cuisine:

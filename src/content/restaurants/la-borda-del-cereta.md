@@ -5,6 +5,8 @@ town: 'Puigcerdà'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Camí de l’Antiga Farinera, 3, 17520 Puigcerdà'
+lat: 42.435072
+lng: 1.917922
 phone: '+34 699 520 092'
 email: 'info@labordadelcereta.com'
 website: 'https://labordadelcereta.com/'

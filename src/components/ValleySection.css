@@ -241,12 +241,31 @@
     font-weight: 720;
   }
 
+  /*
+   * El peu és llarg i penja d'un dibuix que arriba als 84rem: en una sola columna de 64ch
+   * es llegia com un tall de text estret i altíssim en un racó de la figura. En pantalla
+   * ampla va a dues columnes, i el topall de 108ch manté cada columna cap a les 52ch —
+   * sense topall, dues columnes dins d'una caixa de 84rem en farien 90 i seria pitjor.
+   *
+   * El punt de tall és una media query i no `columns: 46ch 2`, que se'n sortiria sol: amb
+   * el nombre de columnes decidit pel navegador, entre el punt on hi caben dues i el punt
+   * on el topall comença a manar hi ha una franja on el peu es queda en una columna que
+   * ocupa tota l'amplada, i a 820 px són línies de 92 caràcters.
+   */
   .valley__caption {
     margin-block-start: var(--sp-4);
-    max-inline-size: 64ch;
+    max-inline-size: var(--measure);
     font-size: var(--fs-small);
     line-height: 1.55;
     color: var(--ink-3);
+  }
+
+  @media (min-width: 60rem) {
+    .valley__caption {
+      columns: 2;
+      column-gap: var(--sp-6);
+      max-inline-size: 108ch;
+    }
   }
 
   .valley--compact .valley__svg {

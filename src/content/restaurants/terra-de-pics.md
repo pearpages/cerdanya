@@ -5,6 +5,8 @@ town: 'Bolvir'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer de la Font, 2, 17539 Bolvir'
+lat: 42.419003
+lng: 1.879965
 phone: '+34 613 42 23 57'
 email: 'terradepics@gmail.com'
 website: 'https://terradepics.com/'

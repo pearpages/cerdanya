@@ -5,6 +5,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Pla de Ro, s/n, Gorguja, 17527 Llívia'
+lat: 42.456246
+lng: 2.006052
 phone: '+34 972 14 62 79'
 website: 'https://www.laformatgeria.com/'
 instagram: 'https://www.instagram.com/laformatgeriadellivia'
@@ -44,7 +46,7 @@ sources:
     url: 'https://www.laformatgeria.com/es/nuestra-carta/'
 images:
   - src: '../../assets/restaurants/la-formatgeria-de-llivia/01.jpg'
-    alt: 'Cuina de La Formatgeria de Llívia'
+    alt: 'Fondue de xocolata de La Formatgeria de Llívia, amb un tall de fruita clavat a la forquilla'
     author: 'La Formatgeria de Llívia'
     license: 'Cortesia del restaurant'
     sourceUrl: 'https://www.laformatgeria.com/'

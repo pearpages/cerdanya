@@ -100,4 +100,18 @@
   .credits__data {
     padding-block: var(--sp-7) var(--sp-8);
   }
+
+  /* Quaranta-quatre línies curtes: en columnes s'abasten d'un cop d'ull. */
+  .credits__maps {
+    margin-block-start: var(--sp-4);
+    columns: 2 18rem;
+    gap: var(--sp-5);
+  }
+
+  .credits__maps-item {
+    break-inside: avoid;
+    padding-block: 0.25em;
+    font-size: var(--fs-caption);
+    color: var(--ink-3);
+  }
 }

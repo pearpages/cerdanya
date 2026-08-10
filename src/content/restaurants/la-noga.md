@@ -7,6 +7,9 @@ town: 'Bellver de Cerdanya'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Pujada de Joan Alay, 2, 25720 Bellver de Cerdanya'
+lat: 42.3702
+lng: 1.7745
+locationNote: 'El punt és el centre de Bellver de Cerdanya: d’aquesta casa no en consta l’adreça exacta al mapa.'
 instagram: 'https://www.instagram.com/lanogataverna/'
 cuisine:
   - 'Catalana tradicional'

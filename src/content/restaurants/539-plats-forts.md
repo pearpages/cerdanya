@@ -7,6 +7,8 @@ town: 'Puigcerdà'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer Escoles Pies, 41, 17520 Puigcerdà'
+lat: 42.431356
+lng: 1.928409
 cuisine:
   - 'Alta cuina'
   - 'Cuina de mercat'

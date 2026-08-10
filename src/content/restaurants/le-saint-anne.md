@@ -8,6 +8,8 @@ town: 'Font-Romeu'
 subregion: 'Alta Cerdanya'
 country: 'FR'
 address: '7 route de l’Ermitage, 66120 Font-Romeu-Odeillo-Via'
+lat: 42.512392
+lng: 2.046563
 phone: '+33 4 68 04 04 08'
 email: 'contact@grandhotelermitage.com'
 website: 'https://grandhotelermitage.fr/restaurants/'

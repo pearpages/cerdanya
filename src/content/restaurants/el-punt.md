@@ -5,6 +5,8 @@ town: 'Bellver de Cerdanya'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Passatge Carlit, 12, 25720 Bellver de Cerdanya'
+lat: 42.370824
+lng: 1.778195
 phone: '+34 633 887 241'
 instagram: 'https://www.instagram.com/el_punt_/'
 cuisine:

@@ -5,6 +5,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Carrer d’Estavar, 33, 17527 Llívia'
+lat: 42.463286
+lng: 1.986477
 phone: '+34 635 15 88 36'
 email: 'restaurantcanryullivia@gmail.com'
 instagram: 'https://www.instagram.com/canryullivia/'

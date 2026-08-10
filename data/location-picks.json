@@ -1,0 +1,8 @@
+{
+  "mooma-cerdanya": {
+    "lat": 42.3863621,
+    "lng": 1.863964,
+    "approxNote": "El punt és el centre de l’aeròdrom de la Cerdanya, no la porta del local.",
+    "note": "node aeroway=aerodrome «Aeròdrom de la Cerdanya» a OSM. El centre de Das cau a 2,6 km i seria pitjor."
+  }
+}

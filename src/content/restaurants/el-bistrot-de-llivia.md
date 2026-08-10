@@ -5,6 +5,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Avinguda Catalunya, 58, 17527 Llívia'
+lat: 42.462443
+lng: 1.985292
 cuisine:
   - 'Bistrot'
   - 'Catalana tradicional'

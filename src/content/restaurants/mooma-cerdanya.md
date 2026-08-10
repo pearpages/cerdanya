@@ -5,6 +5,9 @@ town: 'Das'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Aeròdrom de la Cerdanya, 17538 Das'
+lat: 42.386362
+lng: 1.863964
+locationNote: 'El punt és el centre de l’aeròdrom de la Cerdanya, no la porta del local.'
 phone: '+34 872 580 299'
 website: 'https://mooma.cat/mooma-cerdanya/'
 instagram: 'https://www.instagram.com/moomacerdanya/'

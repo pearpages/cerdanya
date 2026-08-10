@@ -7,6 +7,8 @@ town: 'Ger'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer Major, 12, 17539 Ger'
+lat: 42.412134
+lng: 1.841418
 phone: '+34 666 60 14 07'
 email: 'info@caljet.cat'
 website: 'https://www.caljet.cat/'

@@ -5,6 +5,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Carrer del Raval, 13, 17527 Llívia'
+lat: 42.463943
+lng: 1.98301
 phone: '+34 972 97 04 13'
 email: 'raval13llivia@gmail.com'
 website: 'https://raval13.com/'

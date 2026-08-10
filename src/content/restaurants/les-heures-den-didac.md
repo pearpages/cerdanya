@@ -5,6 +5,8 @@ town: 'Bolvir'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer Antoni Elies, 13, 17539 Bolvir'
+lat: 42.418328
+lng: 1.882329
 phone: '+34 972 89 50 69'
 cuisine:
   - 'Catalana tradicional'

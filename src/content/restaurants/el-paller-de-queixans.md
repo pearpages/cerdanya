@@ -7,6 +7,8 @@ town: 'Queixans'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Camí Mas de Munt, 20, 17538 Queixans'
+lat: 42.39676
+lng: 1.921008
 phone: '+34 972 88 06 60'
 email: 'pallerdequeixans@hotmail.com'
 website: 'https://elpallerdequeixans.com/'

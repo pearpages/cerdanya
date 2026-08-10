@@ -5,6 +5,8 @@ town: 'Riu de Cerdanya'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer les Escomes, 25721 Riu de Cerdanya'
+lat: 42.346364
+lng: 1.826926
 phone: '+34 644 22 70 53'
 website: 'https://www.racoderiu.cat/'
 instagram: 'https://www.instagram.com/racoderiu_restaurant/'

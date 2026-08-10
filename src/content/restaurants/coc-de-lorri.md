@@ -5,6 +5,8 @@ town: 'Lles de Cerdanya'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer dels Escolls, 5, 25726 Lles de Cerdanya'
+lat: 42.390067
+lng: 1.685916
 website: 'https://www.cocdelorri.cat/'
 cuisine:
   - 'Catalana tradicional'

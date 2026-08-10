@@ -41,6 +41,13 @@ const restaurants = defineCollection({
       address: z.string().min(1),
       lat: z.number().optional(),
       lng: z.number().optional(),
+      /**
+       * Per què el punt del mapa no és la porta de la casa. Hi és quan la geocodificació
+       * no ha sabut passar del centre del poble o quan el local seu dins d'un recinte
+       * gran: la fitxa ho diu en comptes de dibuixar una precisió que no tenim.
+       * L'omple `scripts/apply-locations.mjs`.
+       */
+      locationNote: z.string().optional(),
 
       phone: z.string().optional(),
       email: z.string().email().optional(),

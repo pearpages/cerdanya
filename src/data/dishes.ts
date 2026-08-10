@@ -18,7 +18,9 @@
  *
  * `photo` apunta a `src/data/site-images.json`. Sis de les vuit fotos són d'una casa de
  * la guia i es van triar mirant-les una per una; les altres dues són de Commons perquè a
- * la vall no n'hi ha cap de publicada. Es guarden copiades a `_dishes/` i no enllaçades a
+ * la vall no n'hi ha cap de publicada. De fondue de formatge tampoc, tot i que hi ha
+ * cases que en viuen: la que hi havia era una fondue **de xocolata** de La Formatgeria
+ * que passava per formatge. Es guarden copiades a `_dishes/` i no enllaçades a
  * la galeria d'origen: si un dia es torna a baixar les imatges d'aquell restaurant, la
  * numeració balla i la portada acabaria ensenyant una altra cosa sense avisar.
  *

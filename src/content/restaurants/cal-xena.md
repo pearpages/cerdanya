@@ -5,6 +5,8 @@ town: 'Bor'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Pujada del Molí, 12, Bor, 25721 Bellver de Cerdanya'
+lat: 42.345894
+lng: 1.801632
 phone: '+34 973 511 014'
 website: 'https://calxena.es/'
 instagram: 'https://www.instagram.com/rest.calxena/'

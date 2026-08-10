@@ -5,6 +5,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Carrer Frederic Bernades, 27, 17527 Llívia'
+lat: 42.464337
+lng: 1.982189
 phone: '+34 692 96 20 36'
 instagram: 'https://www.instagram.com/mesquebeure/'
 cuisine:

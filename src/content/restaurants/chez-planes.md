@@ -8,6 +8,8 @@ town: 'Sallagosa'
 subregion: 'Alta Cerdanya'
 country: 'FR'
 address: '6 Place de Cerdagne, 66800 Saillagouse'
+lat: 42.459327
+lng: 2.039163
 phone: '+33 4 68 04 72 08'
 email: 'hotelplanes@wanadoo.fr'
 website: 'https://www.chezplanes.com/'

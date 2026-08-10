@@ -1,0 +1,10 @@
+{
+  "_note": "El crèdit dels 44 mapes de les fitxes. Un de sol perquè tots surten del mateix lloc; scripts/lint-credits.mjs comprova que hi és i que cada mapa correspon a una fitxa.",
+  "author": "Col·laboradors d’OpenStreetMap",
+  "license": "ODbL 1.0 (les dades) · CC BY-SA 2.0 (el dibuix dels tiles)",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "sourceUrl": "https://www.openstreetmap.org/",
+  "attribution": "© col·laboradors d’OpenStreetMap",
+  "tiles": "https://tile.openstreetmap.org",
+  "generatedBy": "scripts/render-maps.mjs"
+}

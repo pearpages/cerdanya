@@ -5,6 +5,8 @@ town: 'Llívia'
 subregion: 'Llívia'
 country: 'ES'
 address: 'Plaça Major, 1, 17527 Llívia'
+lat: 42.464616
+lng: 1.980936
 phone: '+34 972 89 61 78'
 website: 'https://canventura.com/'
 instagram: 'https://www.instagram.com/canventurarestaurant'

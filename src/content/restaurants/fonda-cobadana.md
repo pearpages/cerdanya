@@ -5,6 +5,8 @@ town: 'Urús'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Camí de la Rota, 11, 17538 Urús'
+lat: 42.350496
+lng: 1.854184
 phone: '+34 972 890 129'
 email: 'restaurantcobadana@gmail.com'
 website: 'https://www.fondacobadana.es/'

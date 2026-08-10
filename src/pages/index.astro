@@ -26,8 +26,6 @@ const lowest = villages[0];
 const highest = villages.at(-1)!;
 const drop = highest.elevation - lowest.elevation;
 
-const photoCount = restaurants.reduce((sum, entry) => sum + entry.data.images.length, 0);
-const thinCount = restaurants.filter((entry) => entry.data.dataThin).length;
 const frenchCount = restaurants.filter((entry) => entry.data.country === 'FR').length;
 
 /**
@@ -40,7 +38,6 @@ const barX = (metres: number) =>
   ((metres - lowest.elevation) / (highest.elevation - lowest.elevation)) * BAR_W;
 
 const hero = siteImage('portada');
-const trinxat = siteImage('trinxat');
 
 /** Retall social de la portada. JPEG i no WebP: encara hi ha rastrejadors que no el llegeixen. */
 const social = await getImage({
@@ -66,7 +63,6 @@ const stats = [
   title="Cota de tast"
   description={`Guia dels ${restaurants.length} restaurants de la Cerdanya, dels dos costats de la frontera, ordenada per altitud: de ${lowest.name} a ${formatElevation(lowest.elevation)} m fins a ${highest.name} a ${formatElevation(highest.elevation)} m.`}
   ogImage={social.src}
-  flushFooter
 >
   <section class="home-hero">
     <div class="home-hero__media">
@@ -235,48 +231,4 @@ const stats = [
     </ul>
   </section>
 
-  <section class="home-method" aria-labelledby="home-method">
-    <div class="home-method__inner page">
-      <div class="home-method__text">
-        <p class="eyebrow home-method__eyebrow">Com està feta</p>
-        <h2 class="home-method__title" id="home-method">Escrita a mà, amb les fonts a la vista</h2>
-        <p>
-          Cada fitxa està redactada de nou a partir de fonts públiques que es citen al peu: el web
-          del restaurant, la carta que publica, la fitxa de l’oficina de turisme. Quan d’una casa no
-          en circula res de comprovable, ho diem i la fitxa es queda curta — {thinCount} de les {
-            restaurants.length
-          } porten aquesta marca.
-        </p>
-        <p>
-          Les {photoCount} fotografies són dels seus autors, amb llicència i enllaç a l’original una
-          per una. No és una promesa: el build s’atura si a alguna imatge li falta l’autor, la
-          llicència o l’origen.
-        </p>
-        <p class="home-method__links">
-          <a href="/credits/">Crèdits fotogràfics i dades</a>
-        </p>
-      </div>
-
-      <figure class="home-method__figure">
-        <Image
-          class="home-method__image"
-          src={trinxat.src}
-          alt={trinxat.alt}
-          widths={[400, 700, 1000]}
-          sizes="(max-width: 52rem) 92vw, 26rem"
-          loading="lazy"
-          decoding="async"
-        />
-        <figcaption class="home-method__caption">
-          <PhotoCredit
-            author={trinxat.author}
-            license={trinxat.license}
-            licenseUrl={trinxat.licenseUrl}
-            sourceUrl={trinxat.sourceUrl}
-            isOfficial={trinxat.isOfficial}
-          />
-        </figcaption>
-      </figure>
-    </div>
-  </section>
 </BaseLayout>

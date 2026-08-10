@@ -200,6 +200,89 @@
     font-size: var(--fs-caption);
   }
 
+  /* --- mapa --- */
+  .map {
+    margin: 0;
+    display: grid;
+    gap: var(--sp-3);
+  }
+
+  .map__image {
+    /*
+     * `min-inline-size: 0` i `max-inline-size: 100%` perquè la columna del cos és una
+     * pista de grid: sense això la imatge imposa la seva amplada natural i arrossega la
+     * pàgina a l'horitzontal, que és el mateix que va passar amb el tall de la vall.
+     */
+    inline-size: 100%;
+    min-inline-size: 0;
+    max-inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--r-md);
+    border: var(--hairline) solid var(--line);
+    background: var(--paper-inset);
+  }
+
+  /*
+   * Els tiles d'OSM estan dibuixats sobre blanc i en tema fosc el mapa és, de bon tros,
+   * el més clar de la pàgina: fa de llanterna i se't menja la fitxa. S'abaixa una mica
+   * en comptes d'invertir-lo, que un mapa invertit deixa de semblar un mapa i les
+   * carreteres grogues es tornen blaves.
+   */
+  :root[data-theme='dark'] .map__image {
+    filter: brightness(0.88) saturate(0.92);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) .map__image {
+      filter: brightness(0.88) saturate(0.92);
+    }
+  }
+
+  .map__caption {
+    display: grid;
+    gap: var(--sp-1);
+    font-size: var(--fs-caption);
+    color: var(--ink-3);
+  }
+
+  .map__address {
+    font-size: var(--fs-small);
+    color: var(--ink-2);
+  }
+
+  /* Quan el punt no és la porta de la casa, es diu. */
+  .map__note {
+    color: var(--ink-3);
+    font-style: italic;
+  }
+
+  .map__credit a {
+    color: var(--ink-3);
+  }
+
+  .map__actions {
+    margin-block-start: var(--sp-4);
+  }
+
+  .map__link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4em;
+    padding: 0.45em 1em;
+    font-family: var(--font-display);
+    font-size: var(--fs-small);
+    font-weight: 580;
+    text-decoration: none;
+    color: var(--accent-ink);
+    border: var(--hairline) solid color-mix(in oklab, var(--accent) 45%, transparent);
+    border-radius: var(--r-pill);
+  }
+
+  .map__link:hover {
+    background: var(--accent-soft);
+  }
+
   /* --- tall --- */
   .fitxa__valley-lead {
     margin-block-end: var(--sp-4);
@@ -283,6 +366,20 @@
 
   .rail__hint {
     color: var(--ink-3);
+  }
+
+  /*
+   * L'enllaç va a la seva línia. Ha de ser `flex` i no `inline-flex`: amb una adreça
+   * llarga el salt el feia el text i semblava que anés bé, però amb una de curta
+   * («Bolvir») l'enllaç se li enganxava al darrere i es llegia «BolvirObre a Google Maps».
+   */
+  .rail__map-link {
+    display: flex;
+    inline-size: fit-content;
+    align-items: baseline;
+    gap: 0.35em;
+    margin-block-start: 0.35em;
+    font-size: var(--fs-caption);
   }
 
   .rail__services {

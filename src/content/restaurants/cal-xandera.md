@@ -5,6 +5,8 @@ town: 'Angostrina'
 subregion: 'Alta Cerdanya'
 country: 'FR'
 address: '49 route de Font-Romeu, 66760 Angoustrine-Villeneuve-des-Escaldes'
+lat: 42.483673
+lng: 1.966617
 phone: '+33 9 54 50 41 47'
 website: 'https://www.calxandera.com/'
 cuisine:

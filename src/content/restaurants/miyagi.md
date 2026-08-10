@@ -7,6 +7,8 @@ town: 'Puigcerdà'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer Dr. Piguillem, 16, 17520 Puigcerdà — a l’estany'
+lat: 42.434443
+lng: 1.92684
 phone: '+34 972 72 81 51'
 cuisine:
   - 'Japonesa'

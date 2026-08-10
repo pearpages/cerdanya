@@ -5,6 +5,8 @@ town: 'Font-Romeu'
 subregion: 'Alta Cerdanya'
 country: 'FR'
 address: '96 avenue Emmanuel Brousse, 66120 Font-Romeu-Odeillo-Via'
+lat: 42.505403
+lng: 2.043911
 phone: '+33 4 68 30 04 40'
 email: 'lachaumiere@alicepro.fr'
 cuisine:

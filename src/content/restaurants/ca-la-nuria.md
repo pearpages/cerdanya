@@ -5,6 +5,8 @@ town: 'Bellver de Cerdanya'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Passatge Carlit, 17, 25720 Bellver de Cerdanya'
+lat: 42.371097
+lng: 1.778049
 phone: '+34 973 510 938'
 email: 'bellver@restaurantcalanuria.cat'
 website: 'https://www.restaurantcalanuria.cat/'

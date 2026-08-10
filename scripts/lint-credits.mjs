@@ -27,6 +27,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT_DIR = resolve(ROOT, 'src/content/restaurants');
 const ASSETS_DIR = resolve(ROOT, 'src/assets/restaurants');
 const SITE_IMAGES = resolve(ROOT, 'src/data/site-images.json');
+const MAPS_DIR = resolve(ROOT, 'src/assets/maps');
+const MAP_SOURCE = resolve(ROOT, 'src/data/map-source.json');
 
 const FRONTMATTER = /^---\r?\n([\s\S]*?)\r?\n---/;
 
@@ -34,6 +36,8 @@ const problems = [];
 const warnings = [];
 let fileCount = 0;
 let imageCount = 0;
+/** slug → frontmatter, per comprovar els mapes un cop llegides totes les fitxes. */
+const slugs = new Map();
 
 async function exists(path) {
   try {
@@ -131,6 +135,8 @@ for (const file of entries) {
     continue;
   }
 
+  slugs.set(file.replace(/\.md$/, ''), data ?? {});
+
   const images = data?.images ?? [];
 
   if (images.length === 0) {
@@ -148,6 +154,62 @@ for (const file of entries) {
   }
 }
 
+/* ---- Mapes de les fitxes ------------------------------------------------ */
+
+/**
+ * Els mapes són tiles d'OpenStreetMap i tenen el mateix contracte que les fotografies:
+ * no se'n publica cap sense dir d'on surt. Com que tots surten del mateix lloc, el
+ * crèdit és un de sol i viu a `src/data/map-source.json`; el que es comprova aquí és
+ * que hi sigui, que estigui complet, i que cada mapa del disc pengi d'una fitxa que el
+ * pugui acreditar — sense `lat`/`lng` la fitxa no pot enllaçar el punt d'origen.
+ */
+let mapCount = 0;
+try {
+  const maps = (await readdir(MAPS_DIR)).filter((f) => f.endsWith('.webp'));
+
+  if (maps.length > 0) {
+    let source;
+    try {
+      source = JSON.parse(await readFile(MAP_SOURCE, 'utf8'));
+    } catch (error) {
+      problems.push(
+        `hi ha ${maps.length} mapes a src/assets/maps/ però src/data/map-source.json no es pot llegir — ${error.message}`,
+      );
+    }
+
+    if (source) {
+      for (const field of ['author', 'license', 'licenseUrl', 'sourceUrl', 'attribution']) {
+        if (!source[field] || String(source[field]).trim() === '') {
+          problems.push(`map-source.json: falta "${field}"`);
+        }
+      }
+    }
+
+    for (const file of maps) {
+      mapCount += 1;
+      const slug = file.replace(/\.webp$/, '');
+      const data = slugs.get(slug);
+
+      if (!data) {
+        problems.push(
+          `src/assets/maps/${file}: no hi ha cap fitxa «${slug}» — esborra'l o torna a executar npm run data:maps`,
+        );
+        continue;
+      }
+
+      if (data.lat == null || data.lng == null) {
+        problems.push(
+          `${slug}: té mapa però no té lat/lng al frontmatter, així que no en pot acreditar el punt — executa npm run data:locations:apply`,
+        );
+      }
+    }
+  }
+} catch (error) {
+  if (error.code !== 'ENOENT') {
+    problems.push(`src/assets/maps: no es pot llegir — ${error.message}`);
+  }
+}
+
 for (const warning of warnings) console.warn(`⚠ ${warning}`);
 
 if (problems.length > 0) {
@@ -158,5 +220,7 @@ if (problems.length > 0) {
 }
 
 console.log(
-  `✓ crèdits correctes — ${imageCount} imatges (${fileCount} fitxes + ${siteCount} del lloc)`,
+  `✓ crèdits correctes — ${imageCount} imatges (${fileCount} fitxes + ${siteCount} del lloc)${
+    mapCount > 0 ? ` i ${mapCount} mapes d’OpenStreetMap` : ''
+  }`,
 );

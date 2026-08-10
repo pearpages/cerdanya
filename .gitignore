@@ -9,3 +9,7 @@ data/cache/
 
 # Candidats descarregats per al repàs visual (es tornen a baixar amb --collect)
 data/candidates/
+
+# Cau de tiles d'OpenStreetMap. Els mapes generats sí que es commitegen; això no.
+# Esborrar-lo obliga a tornar a demanar ~1.300 tiles al servidor d'OSM: pensa-t'ho.
+data/tiles/

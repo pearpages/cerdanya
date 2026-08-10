@@ -8,6 +8,8 @@ town: 'Prullans'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer Puig, 4, 25727 Prullans'
+lat: 42.377986
+lng: 1.738445
 phone: '+34 973 510 260'
 email: 'info@cerdanyaviva.com'
 website: 'https://cerdanyaviva.com/gastronomia/arc-gastroteca-regenerativa/'

@@ -13,17 +13,6 @@
       "isOfficial": false
     },
     {
-      "id": "trinxat",
-      "file": "_site/03.jpg",
-      "usedOn": "Portada · com està feta la guia",
-      "alt": "Un plat de trinxat de la Cerdanya vist des de dalt: la col i la patata aixafades, amb talls de botifarra negra i tires de cansalada torrada.",
-      "author": "Kronologiko",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trinxat_de_La_Cerdanya.jpg",
-      "isOfficial": false
-    },
-    {
       "id": "plat-trinxat",
       "file": "_dishes/trinxat.jpg",
       "usedOn": "Portada · plat «Trinxat de la Cerdanya»",
@@ -88,11 +77,12 @@
       "id": "plat-formatge",
       "file": "_dishes/formatge.jpg",
       "usedOn": "Portada · plat «Formatge»",
-      "alt": "Una fondue de formatge d’ovella fumejant en una cassola de fang, amb un tall de pa clavat a la forquilla just abans de sucar-lo.",
-      "author": "La Formatgeria de Llívia",
-      "license": "Cortesia del restaurant",
-      "isOfficial": true,
-      "sourceUrl": "https://www.laformatgeriadellivia.cat/"
+      "alt": "Una cassola vermella de fondue plena de formatge fos que fumeja damunt del fogonet, en una taula de restaurant parada amb una cistella de pa a trossos i un plat de carn seca.",
+      "author": "Brücke-Osteuropa",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "isOfficial": false,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Swiss_cheese_fondue.JPG"
     },
     {
       "id": "plat-tartar-i-cru",

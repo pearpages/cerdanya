@@ -12,6 +12,7 @@ import {
   nearby,
   valleyVillages,
 } from '../../lib/restaurants';
+import { googleMapsUrl, mapImage, MAP_SOURCE, osmUrl } from '../../lib/maps';
 import { PRICE_LABELS, SERVICE_LABELS, toSlug } from '../../data/taxonomy';
 import '../../styles/restaurant.css';
 
@@ -41,6 +42,16 @@ const hero = data.images.find((image) => image.src.width >= HERO_WIDTH) ?? data.
 const gallery = data.images.filter((image) => image !== hero);
 const neighbours = nearby(entry, restaurants);
 const villages = valleyVillages(restaurants);
+
+/**
+ * El mapa només es dibuixa si tenim el punt i la imatge. Cap dels dos es dóna per fet:
+ * una fitxa nova entra sense coordenades fins que no s'executen `npm run data:locations`
+ * i `npm run data:maps`, i val més que li falti el mapa que no pas ensenyar-ne un d'un
+ * altre lloc.
+ */
+const map =
+  data.lat != null && data.lng != null ? { image: mapImage(entry.id), lat: data.lat, lng: data.lng } : null;
+const googleUrl = googleMapsUrl(entry);
 
 const description = `${data.tagline} ${data.name}, a ${data.town} (${formatElevation(elevation)} m), a la ${data.subregion}.`;
 
@@ -155,6 +166,40 @@ const social = hero
           )
         }
 
+        {
+          map?.image && (
+            <section class="fitxa__map">
+              <h2 class="section-title">On és</h2>
+              <figure class="map">
+                <Image
+                  class="map__image"
+                  src={map.image}
+                  alt={`Mapa de la ubicació de ${data.name}, a ${data.address}`}
+                  widths={[480, 720, 1440]}
+                  sizes="(max-width: 46rem) 92vw, 45rem"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="map__caption">
+                  <p class="map__address">{data.address}</p>
+                  {data.locationNote && <p class="map__note">{data.locationNote}</p>}
+                  <p class="map__credit">
+                    <a href={osmUrl(map.lat, map.lng)} rel="noopener">
+                      {MAP_SOURCE.attribution}
+                    </a>
+                  </p>
+                </figcaption>
+              </figure>
+              <p class="map__actions">
+                <a class="map__link" href={googleUrl} rel="noopener">
+                  Obre a Google Maps
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </p>
+            </section>
+          )
+        }
+
         <section class="fitxa__valley">
           <h2 class="section-title" id="tall-fitxa">On seu, a la vall</h2>
           <p class="fitxa__valley-lead">
@@ -191,7 +236,13 @@ const social = hero
           <h2 class="rail__title">Dades</h2>
           <dl class="rail__list">
             <dt>Adreça</dt>
-            <dd>{data.address}</dd>
+            <dd>
+              {data.address}
+              <a class="rail__map-link" href={googleUrl} rel="noopener">
+                Obre a Google Maps
+                <span aria-hidden="true">↗</span>
+              </a>
+            </dd>
 
             {data.phone && (
               <>

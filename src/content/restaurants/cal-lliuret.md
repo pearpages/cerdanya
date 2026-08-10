@@ -5,6 +5,8 @@ town: 'Travesseres'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer del Benefici, s/n, Travesseres, 25726 Lles de Cerdanya'
+lat: 42.375311
+lng: 1.687645
 phone: '+34 629 72 61 65'
 instagram: 'https://www.instagram.com/cal_lliuret_restaurant/'
 cuisine:

@@ -5,6 +5,8 @@ town: 'Puigcerdà'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Plaça Cabrinetty, 15, 17520 Puigcerdà'
+lat: 42.430912
+lng: 1.927795
 phone: '+34 699 75 74 31'
 website: 'https://tierradelfuego.es/'
 instagram: 'https://www.instagram.com/tierra_del_fuego_puigcerda/'

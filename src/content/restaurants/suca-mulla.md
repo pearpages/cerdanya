@@ -5,6 +5,8 @@ town: 'Alp'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Passeig Agnès Fabra, 28, 17538 Alp'
+lat: 42.374879
+lng: 1.889111
 phone: '+34 972 14 41 29'
 instagram: 'https://www.instagram.com/sucamullarestaurant/'
 cuisine:

@@ -5,6 +5,8 @@ town: 'Font-Romeu'
 subregion: 'Alta Cerdanya'
 country: 'FR'
 address: '7 avenue Maréchal Joffre, 66120 Font-Romeu-Odeillo-Via'
+lat: 42.503983
+lng: 2.039714
 phone: '+33 4 68 04 88 49'
 email: 'pierrekarineamauce@orange.fr'
 website: 'https://tabledessaveurs.fr/'

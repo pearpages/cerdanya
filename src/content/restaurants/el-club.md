@@ -7,6 +7,8 @@ town: 'Alp'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Carrer de l’Esport, 4, 17538 Alp'
+lat: 42.374995
+lng: 1.892218
 phone: '+34 872 22 61 72'
 email: 'info@elclubrestaurant.com'
 website: 'https://elclubrestaurant.com/'

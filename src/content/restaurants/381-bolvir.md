@@ -7,6 +7,9 @@ town: 'Bolvir'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Bolvir'
+lat: 42.4179
+lng: 1.8798
+locationNote: 'El punt és el centre de Bolvir: d’aquesta casa no en consta l’adreça exacta al mapa.'
 instagram: 'https://www.instagram.com/381bolvir/'
 cuisine:
   - 'Cuina de mercat'

@@ -7,6 +7,8 @@ town: 'Puigcerdà'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Avinguda Catalunya, 45, 17520 Puigcerdà'
+lat: 42.431823
+lng: 1.930311
 phone: '+34 656 779 027'
 email: 'info@somniarestaurant.com'
 website: 'https://www.somniarestaurant.com/'

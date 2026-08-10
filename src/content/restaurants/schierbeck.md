@@ -7,6 +7,8 @@ town: 'Puigcerdà'
 subregion: 'Baixa Cerdanya'
 country: 'ES'
 address: 'Avinguda Pons i Gasch, 15, 17520 Puigcerdà'
+lat: 42.435622
+lng: 1.926345
 phone: '+34 972 88 46 30'
 email: 'info@schierbeckrestaurant.com'
 website: 'https://www.schierbeckrestaurant.com/'
