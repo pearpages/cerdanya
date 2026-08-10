@@ -18,10 +18,10 @@ const { group, valley } = Astro.props;
 const count = group.restaurants.length;
 const side =
   group.subregion === 'Llívia'
-    ? 'l’enclavament de Llívia, espanyol i envoltat de França per tots costats'
+    ? 'l’enclavament de Llívia, català i envoltat de França per tots costats'
     : group.country === 'FR'
       ? 'l’Alta Cerdanya, al costat francès'
-      : 'la Baixa Cerdanya, al costat espanyol';
+      : 'la Baixa Cerdanya, al costat català';
 ---
 
 <BaseLayout

@@ -398,11 +398,29 @@ queden a sis fotos de cases de la guia i dues de Commons. Corregits també l'`al
 `site-images.json`, la nota de `image-picks.json` i l'`alt` genèric d'aquella imatge a la
 fitxa de la casa, que ara diu que és una fondue de xocolata.
 
+### El lloc té domini: cerdanya.soms.cat
+
+- **`public/CNAME`** amb `cerdanya.soms.cat`, i no a l'arrel del repo: Astro copia
+  `public/` tal qual a `dist/`, així que el fitxer es torna a escriure a cada build i el
+  domini propi no es perd en cap desplegament.
+- **`site` a `astro.config.mjs`** passa de `https://cerdanya.example` al domini de debò.
+  D'aquí surten les canòniques i les `og:image` absolutes (`BaseLayout.astro`) i tot el
+  sitemap. Amb domini propi el lloc se serveix a l'arrel: **no cal `base`**.
+- **`.github/workflows/deploy.yml`**: `push` a `main` (i `workflow_dispatch`) →
+  `npm ci` + `npm run build` → `upload-pages-artifact` → `deploy-pages`. Passos explícits
+  en comptes de `withastro/action` perquè el Node del CI (24) quadri amb `mise.toml`. El
+  build és autocontingut —els `data:*` no s'hi executen i el `prebuild` només llegeix
+  fitxers del repo—, o sigui cap secret i cap petició a fora; i si falta un crèdit,
+  `lint-credits` atura el desplegament.
+- Comprovat amb `npm run build`: `dist/CNAME` hi és, el sitemap i les canòniques diuen
+  `cerdanya.soms.cat` i no queda cap `cerdanya.example` enlloc de `dist/`.
+
 Pendent:
 
-- **`site` a `astro.config.mjs` encara és `https://cerdanya.example`.** Cal posar-hi el
-  domini de debò abans de publicar: d'aquí surten les canòniques, el sitemap i les URL
-  absolutes de les `og:image`.
+- **Res d'això no és a GitHub encara**: el repo no té cap `remote`. Cal crear-lo, fer
+  `push` de `main`, posar **Settings → Pages → Source: «GitHub Actions»** (no una branca),
+  afegir el `CNAME` de `cerdanya` cap a `pearpages.github.io.` al DNS de `soms.cat` i,
+  quan Pages validi el domini, marcar **«Enforce HTTPS»**.
 - `npm run check` demana instal·lar `@astrojs/check` i `typescript` (no hi són).
 - Hi ha 19 fitxes marcades com a destacades i la portada només en mostra 7; els rangs de
   `featuredRank` comencen a 2, no a 1.

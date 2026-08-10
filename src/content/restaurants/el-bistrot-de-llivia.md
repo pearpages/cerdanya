@@ -55,7 +55,7 @@ images:
     isOfficial: false
 ---
 
-Llívia és espanyola i està envoltada de França per tots costats, i aquesta carta ho reflecteix
+Llívia és catalana i està envoltada de França per tots costats, i aquesta carta ho reflecteix
 sense fer-ne teoria: hi conviuen el receptari català, el cerdà i el francès en una quarantena de
 plats. La sala és petita i la decoració va de muntanya de debò —raquetes de neu, esquís vells
 penjats—, cosa que en un altre lloc seria disfressa i aquí és simplement el que hi ha al garatge.
