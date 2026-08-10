@@ -1,0 +1,8 @@
+{
+  "viewBox": "0 0 34 20",
+  "ridge": "M1 19 L9.5 6 L14.5 12.5 L22 1 L33 19",
+  "base": "M1 19 H33",
+  "strokeWidth": 1.6,
+  "baseOpacity": 0.35,
+  "note": "El senyal de la casa: la carena i la línia de base. El fan servir la capçalera (SiteHeader.astro) i les icones (scripts/render-icons.mjs), perquè la icona de pestanya i el logotip no puguin separar-se."
+}

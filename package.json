@@ -18,6 +18,7 @@
     "data:locations": "node scripts/build-locations.mjs",
     "data:locations:apply": "node scripts/apply-locations.mjs",
     "data:maps": "node scripts/render-maps.mjs",
+    "data:icons": "node scripts/render-icons.mjs",
     "data:images": "node scripts/fetch-images.mjs",
     "data:images:apply": "node scripts/apply-image-credits.mjs",
     "data:credits": "node scripts/lint-credits.mjs",

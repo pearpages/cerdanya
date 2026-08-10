@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Cota de tast">
+  <rect width="32" height="32" rx="7" fill="#061420" />
+  <g transform="translate(1.55 7.5) scale(0.85)" fill="none" stroke="#ffb92e" stroke-width="3.294" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M1 19 L9.5 6 L14.5 12.5 L22 1 L33 19" />
+    <path d="M1 19 H33" opacity="0.35" />
+  </g>
+</svg>

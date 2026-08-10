@@ -37,6 +37,7 @@ npm run data:valley         # src/data/valley-profile.json (el tall de la vall)
 npm run data:locations      # geocodifica les 44 adreces → data/location-manifest.json
 npm run data:locations:apply # aboca lat/lng i locationNote al frontmatter
 npm run data:maps           # cus els tiles d'OSM → src/assets/maps/<slug>.webp
+npm run data:icons          # public/favicon.* i apple-touch-icon.png des de brand.json
 npm run data:images         # descarrega i publica segons el pla
 npm run data:collect        # baixa TOTS els candidats a data/candidates/ per repassar-los
 npm run data:publish        # publica la tria de data/image-picks.json
@@ -435,6 +436,33 @@ posar-l'hi.
   sencera i el bug no s'hi veu): amb tema clar sobre un sistema fosc, quatre navegacions,
   toggle enmig, i endavant i enrere d'historial — `data-theme` i el fons aguanten; sense
   res a `localStorage` no apareix cap atribut i mana el sistema.
+
+### La pestanya porta el senyal de la casa
+
+No hi havia cap icona: el navegador demanava `/favicon.ico`, no el trobava i deixava la
+pestanya amb el full en blanc de sempre.
+
+- **El senyal viu ara a `src/data/brand.json`** —la carena, la línia de base, el gruix del
+  traç— i el llegeixen tant `SiteHeader.astro` com `scripts/render-icons.mjs`. La icona de
+  pestanya *és* el logotip, i el fitxer és el que impedeix que se separin: si un dia el
+  senyal canvia, es torna a passar `npm run data:icons`.
+- **La icona porta fons propi.** A la capçalera el senyal va a `--accent-ink` damunt del
+  paper de la pàgina; una pestanya no té paper nostre —el navegador la pinta clara o fosca
+  segons li convé— i un traç d'or fi damunt de res desapareixeria en una de les dues. Amb
+  la nit a sota, la icona és exactament la capçalera en tema fosc i es veu igual a totes
+  dues bandes.
+- **1,6 de gruix no arriba a 16 px**: escalat de la graella de 34 a la de 32 es queda en
+  mig píxel i el traç s'esborra. A la icona el gruix és 2,8, i el dibuix s'encabeix al 85%
+  perquè els cims no toquin la vora arrodonida.
+- Es rasteritza a **quatre vegades la mida** i s'abaixa: el senyal és tot diagonal i sense
+  sobremostreig es trenca a escales.
+- Quatre fitxers a `public/`, generats i commitejats: `favicon.svg` (el que faran servir
+  gairebé tots), `favicon.ico` amb 16/32/48 a dins —PNG dins del contenidor ICO— per als
+  que no llegeixen SVG i per a qui demana `/favicon.ico` a pèl, `favicon-96.png` i
+  `apple-touch-icon.png` de 180, quadrat i opac perquè el retall el fa iOS.
+- Comprovat: l'ICO es desxifra amb les tres mides i cap byte de sobra, el senyal de la
+  capçalera surt igual que abans al build, i les icones són llegibles a 16, 20 i 32 px
+  damunt de pestanya clara i fosca.
 
 Pendent:
 
