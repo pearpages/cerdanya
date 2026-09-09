@@ -1,4 +1,5 @@
 ---
+import AuthorCredit from '@pearpages/credit/astro';
 import './SiteFooter.css';
 
 interface Props {
@@ -37,10 +38,9 @@ const year = 2026;
 
     <div class="site-footer__meta mono">
       <p>© {year} · Cerdanya</p>
-      <p class="site-footer__author">
-        <img src="/pearpages-icon.png" alt="" aria-hidden="true" width="16" height="16" />
-        Fet per <a href="https://pearpages.com" target="_blank" rel="author noopener">pearpages</a>
-      </p>
+      {/* as="div": el crèdit ja va dins d'un <footer>, i niar-ne un altre és HTML invàlid
+          i hi deixaria un segon punt de referència `contentinfo`. */}
+      <AuthorCredit as="div" />
     </div>
   </div>
 </footer>

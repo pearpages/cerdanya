@@ -114,6 +114,7 @@ src/
   lib/maps.ts                Mapa de cada fitxa, enllaç a OSM i enllaç a Google Maps
   lib/structured-data.ts     JSON-LD: Restaurant, BreadcrumbList, ItemList, WebSite
   components/                ValleySection (el tall), RestaurantCard, FilterBar, PhotoCredit…
+                             (el crèdit d'autoria del peu ve de @pearpages/credit)
   styles/                    tokens.css i base.css són globals; la resta, per pàgina
 ```
 
@@ -544,6 +545,42 @@ les 79.
 Repassades les metadades de les 79 pàgines: cap descripció buida ni duplicada, cap títol
 duplicat, i totes entre 57 i 157 caràcters.
 
+## Sessió del 9 de setembre de 2026, segona part — **el crèdit d'autoria surt del paquet**
+
+El peu es feia el seu «Fet per pearpages» a mà, amb una icona a `public/`. Ara el serveix
+`@pearpages/credit` (0.2.0, MIT), el mateix que ja fa servir masiablanca: el paquet
+existeix justament perquè no n'hi hagi dues còpies que se separin.
+
+- `<AuthorCredit as="div" />` dins de `.site-footer__meta`. **`as="div"` no és cap detall
+  d'estil**: el crèdit ja va dins d'un `<footer>`, i niar-ne un altre és HTML invàlid i hi
+  deixaria un segon punt de referència `contentinfo`. Comprovat al DOM que n'hi ha un i un
+  sol.
+- **El component importa el seu propi full**, o sigui que aquí no s'importa cap CSS. La
+  icona viatja com a data URI dins d'aquell full: cap petició nova i `public/pearpages-icon.png`
+  esborrat, que era l'únic lloc que el feia servir.
+- **Les dues variables del paquet són obligatòries aquí.** `--sk-ink-soft` i `--sk-accent`
+  van a `.site-footer`, mapades a `--ink-2` i `--accent`. Els colors de reserva del paquet
+  (`#667`) donen 5,27:1 sobre el nostre paper clar però **3,31:1 sobre el fosc**, que no
+  passa AA — el mateix que el seu full adverteix. Amb els tokens: **6,95:1 en clar i
+  10,24:1 en fosc**, i canvien sols amb el tema.
+- **Ens separem de masiablanca en una cosa, a posta.** Allà no es toca cap regla
+  d'aparença perquè el crèdit hi és una banda a tota amplada al final del peu, que és per
+  a què el paquet està fet. Aquí seu a `.site-footer__meta`, un `flex` amb
+  `space-between`, i els seus 20/24/32 px desquadraven la filera. S'hi neutralitza
+  **només** l'encoixinat i el centrat, **fora de `@layer`** —el full del paquet tampoc no
+  és en cap capa, i el CSS sense capa guanya tot el CSS en capes—. Si algun dia sembla
+  massa, l'arreglada no és afegir-hi regles sinó moure'l a tota amplada, com masiablanca.
+- Hereta el `mono` de la filera, o sigui que la lletra del crèdit va a joc amb el «© 2026 ·
+  Cerdanya» del costat. No s'hi ha tocat res: ve d'on seu.
+- El paquet no arrossega **cap** dependència: React hi és `peerDependency` opcional i no
+  s'instal·la. Les 4 vulnerabilitats que diu `npm audit` són d'abans (astro, sharp, svgo,
+  js-yaml).
+
+**El rètol ara és en anglès** («Made by pearpages») en un lloc que és tot en català. El
+paquet no exposa cap prop de text i el seu `<slot />` afegeix a sota, no substitueix. Si
+es vol en català, l'arreglada és al paquet —que també és nostre—, no clonant-ne el CSS
+aquí. L'enllaç també perd el `target="_blank"` i el `rel="author noopener"` que tenia.
+
 Pendent:
 
 - ~~Res d'això no és a GitHub encara~~ **Fet**: el remot és
@@ -555,5 +592,7 @@ Pendent:
   el sitemap hi digui 79 pàgines, i tornar a enviar-lo ara que hi ha `robots.txt`.
 - La portada no publica cap `ItemList` dels vuit plats; si algun dia es vol, el lloc són
   les targetes de plat.
+- El crèdit del peu diu «Made by pearpages» en anglès. Si es vol en català, cal afegir una
+  prop de text a `@pearpages/credit` i pujar-ne una versió, no tocar-ho aquí.
 - Hi ha 19 fitxes marcades com a destacades i la portada només en mostra 7; els rangs de
   `featuredRank` comencen a 2, no a 1.

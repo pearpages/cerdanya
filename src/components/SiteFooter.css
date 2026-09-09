@@ -1,5 +1,14 @@
 @layer components {
   .site-footer {
+    /*
+     * Tema del crèdit de @pearpages/credit: les dues úniques variables que exposa. Els
+     * seus colors de reserva (#667) fan 5,63:1 sobre paper clar però només 3,36:1 sobre
+     * fosc, o sigui que un lloc amb tema fosc els ha de posar per força. Van mapades als
+     * tokens, que ja canvien de valor amb el tema: així el crèdit el segueix tot sol.
+     */
+    --sk-ink-soft: var(--ink-2);
+    --sk-accent: var(--accent);
+
     margin-block-start: var(--sp-section);
     padding-block: var(--sp-8) var(--sp-6);
     border-block-start: var(--hairline) solid var(--line);
@@ -64,25 +73,28 @@
     color: var(--ink-3);
   }
 
-  .site-footer__author {
-    display: flex;
-    align-items: center;
-    gap: var(--sp-2);
-  }
-
-  .site-footer__author img {
-    flex: none;
-    inline-size: 16px;
-    block-size: 16px;
-  }
-
-  .site-footer__author a {
-    color: var(--ink-2);
-  }
-
   @media (max-width: 48rem) {
     .site-footer__inner {
       grid-template-columns: 1fr;
     }
   }
+}
+
+/*
+ * El crèdit d'autoria (.sk-author) el serveix @pearpages/credit amb el seu propi full.
+ * L'aparença és la canònica del paquet i no s'hi toca: ni mida de lletra, ni color, ni
+ * icona, ni el gruix de l'enllaç.
+ *
+ * L'única excepció és l'encoixinat. El paquet centra el rètol i li posa 20/24/32 px
+ * perquè està pensat per fer de banda a tota amplada al final d'un peu —que és com
+ * l'fa servir masiablanca, sense tocar-hi res. Aquí seu dins de .site-footer__meta, que
+ * és un flex amb space-between: el «© 2026» a l'esquerra i l'autoria a la dreta. Amb
+ * l'encoixinat del paquet, aquella filera es desquadra.
+ *
+ * Va fora de @layer a posta: el full del paquet tampoc no és en cap capa, i el CSS sense
+ * capa guanya tot el CSS en capes. Dins de @layer components això no el trepitjaria.
+ */
+.site-footer__meta .sk-author {
+  padding: 0;
+  text-align: start;
 }
