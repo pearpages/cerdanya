@@ -27,6 +27,10 @@ jobs:
       - run: npm ci
       # prebuild = lint-credits: si cap imatge no té crèdit, el desplegament s'atura.
       - run: npm run build
+      # Comprova dist/ abans de publicar-lo: canòniques, og:url, enllaços interns i
+      # sitemap han de ser la URL on cada pàgina se serveix, no una que hi redirigeix.
+      # Si es trenca, el desplegament s'atura amb l'artefacte encara sense pujar.
+      - run: node scripts/check-build.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist

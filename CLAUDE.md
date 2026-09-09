@@ -44,6 +44,7 @@ npm run data:publish        # publica la tria de data/image-picks.json
 npm run data:restore        # refà src/assets a partir del manifest (recuperació)
 npm run data:images:apply   # aboca el manifest al frontmatter de cada fitxa
 npm run data:credits        # comprova els crèdits sense construir
+npm run check               # build + check-build.mjs (el mateix que corre a CI)
 ```
 
 Els scripts `data:*` no s'executen durant el build; la seva sortida es commiteja.
@@ -77,6 +78,15 @@ Els scripts `data:*` no s'executen durant el build; la seva sortida es commiteja
   `approxNote`: n'hi ha un, Mooma, que seu a l'aeròdrom i el punt n'és el centre.
 - **Els textos són originals** i citen les fonts al peu de cada fitxa. Quan d'una casa
   no en circula res de comprovable es marca `dataThin: true` i es diu a la UI (12 de 44).
+- **Les URL porten barra final, i no és opcional.** Amb `build.format: 'directory'`
+  cada pàgina és `<ruta>/index.html` i GitHub Pages la serveix a `<ruta>/`, responent
+  **301** a `<ruta>` sense barra. Un enllaç intern, una canònica o un `<loc>` sense
+  barra apunten, doncs, a l'origen d'un redirect. A masiablanca això va passar de debò:
+  `trailingSlash: 'never'` va fer que Search Console classifiqués les 206 pàgines com a
+  «Page with redirect» i no n'indexés cap. Aquí ho comprova `scripts/check-build.mjs`,
+  que corre al `npm run check` i a CI abans de publicar l'artefacte. **No normalitzis
+  mai la barra abans de comparar**: és exactament el que va fer que el comprovador de
+  masiablanca no veiés el problema durant mesos.
 - **Res d'estils en línia.** Cada component o pàgina té el seu `.css` al costat, amb
   noms de classe de bloc-element. Els colors i les mides surten sempre de `tokens.css`.
 
@@ -464,12 +474,49 @@ pestanya amb el full en blanc de sempre.
   capçalera surt igual que abans al build, i les icones són llegibles a 16, 20 i 32 px
   damunt de pestanya clara i fosca.
 
+## Sessió del 9 de setembre de 2026 — **el lloc es deixa trobar**
+
+Venia de masiablanca, on s'havia descobert que les URL sense barra final feien que
+Search Console no indexés res. **Aquí la barra ja era correcta**: comprovat abans de
+tocar res, els 79 enllaços interns, les 79 canòniques i els 79 `<loc>` del sitemap ja
+acabaven en `/`. El que no hi havia era res que ho obligués ni res que ho comprovés —i,
+sobretot, faltava el que sí que era un forat de debò.
+
+- **`public/robots.txt`**, que no existia: `/robots.txt` responia 404. El sitemap hi era
+  i responia 200, però cap rastrejador no hi era enviat. Va a `public/` pel mateix motiu
+  que el `CNAME`: Astro hi torna a escriure a cada build.
+- **`trailingSlash: 'ignore'` i `build.format: 'directory'` declarats** a
+  `astro.config.mjs`. Tots dos ja eren el defecte i la sortida no canvia ni un byte; es
+  declaren perquè `check-build.mjs` els llegeixi i perquè el combinat prohibit quedi
+  escrit. **No `'always'`**: amb `format: 'directory'` és el mateix branc de codi, i
+  l'única diferència seria que `astro preview` faria 404 a la forma sense barra, que és
+  menys fidel a GitHub Pages, que hi fa un 301.
+- **`scripts/check-build.mjs`**, port del de masiablanca. Llegeix el config de debò i
+  comprova, sense normalitzar mai la barra: canònica i `og:url` idèntics a la URL
+  publicada, cap enllaç intern que faci 301, sitemap exacte **en els dos sentits**,
+  `<title>` únic, descripció, un sol `h1`, `alt` a cada `<img>` i el `robots.txt`. Corre
+  al `npm run check` i a CI **entre** `npm run build` i `upload-pages-artifact`.
+  Comprovat que mossega, no només que passa: amb un `href="/credits"` al peu peta amb 79
+  errors (el peu surt a totes les pàgines, que és com escala aquest error), amb
+  `trailingSlash: 'never'` peta per configuració i sense `robots.txt` també.
+- `npm run check` era `astro check`, que **no s'executava mai**: `@astrojs/check` i
+  `typescript` no estan instal·lats. Ara és el build més el comprovador.
+- Dos ajustos al port, que el de masiablanca no necessitava:
+  - Astro serialitza `alt=""` com a atribut buit (`alt` a seques) i el patró d'allà
+    només veia `alt="…"`: les 258 miniatures de `/credits/` es reportaven com si els
+    faltés l'atribut. Ara es reconeixen les dues formes.
+  - I la regla s'ha relaxat: `alt=""` **és** la manera correcta de marcar una imatge
+    decorativa. Exigir-hi a més `aria-hidden` era més estricte que l'especificació.
+
+
 Pendent:
 
-- **Res d'això no és a GitHub encara**: el repo no té cap `remote`. Cal crear-lo, fer
-  `push` de `main`, posar **Settings → Pages → Source: «GitHub Actions»** (no una branca),
-  afegir el `CNAME` de `cerdanya` cap a `pearpages.github.io.` al DNS de `soms.cat` i,
-  quan Pages validi el domini, marcar **«Enforce HTTPS»**.
-- `npm run check` demana instal·lar `@astrojs/check` i `typescript` (no hi són).
+- ~~Res d'això no és a GitHub encara~~ **Fet**: el remot és
+  `git@github.com:pearpages/cerdanya.git`, Pages desplega des de l'acció i el lloc respon
+  200 a `https://cerdanya.soms.cat/`.
+- `npm run check` ja no és `astro check` sinó el comprovador de build. Si algun dia es vol
+  la comprovació de tipus, cal instal·lar `@astrojs/check` i `typescript` i afegir-la-hi.
+- **Repassar Search Console** un cop desplegat: que «Pàgina amb redirecció» sigui 0, que
+  el sitemap hi digui 79 pàgines, i tornar a enviar-lo ara que hi ha `robots.txt`.
 - Hi ha 19 fitxes marcades com a destacades i la portada només en mostra 7; els rangs de
   `featuredRank` comencen a 2, no a 1.

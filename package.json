@@ -12,7 +12,7 @@
     "prebuild": "node scripts/lint-credits.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check",
+    "check": "astro build && node scripts/check-build.mjs",
     "data:villages": "node scripts/build-villages.mjs",
     "data:valley": "node scripts/build-valley-profile.mjs",
     "data:locations": "node scripts/build-locations.mjs",
