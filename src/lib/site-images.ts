@@ -50,3 +50,13 @@ export function siteImage(id: string): SiteImage {
   }
   return image;
 }
+
+/**
+ * Retall social 1200×630. JPEG i no WebP: encara hi ha rastrejadors que no el llegeixen.
+ * Viu aquí perquè la portada, les fitxes i els caps de secció en facin exactament el
+ * mateix, i perquè el dia que canviï la mida no s'hagi de recordar en quatre llocs.
+ */
+export async function socialCrop(src: ImageMetadata) {
+  const { getImage } = await import('astro:assets');
+  return getImage({ src, width: 1200, height: 630, fit: 'cover', format: 'jpeg' });
+}

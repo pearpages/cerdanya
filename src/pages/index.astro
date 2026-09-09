@@ -13,6 +13,7 @@ import {
 import { dishGroups } from '../lib/dishes';
 import { DISH_KIND_LABELS } from '../data/dishes';
 import { siteImage } from '../lib/site-images';
+import { websiteSchema } from '../lib/structured-data';
 import valleyData from '../data/valley-profile.json';
 import '../styles/home.css';
 
@@ -39,6 +40,8 @@ const barX = (metres: number) =>
 
 const hero = siteImage('portada');
 
+const jsonLd = websiteSchema(Astro.site);
+
 /** Retall social de la portada. JPEG i no WebP: encara hi ha rastrejadors que no el llegeixen. */
 const social = await getImage({
   src: hero.src,
@@ -63,6 +66,7 @@ const stats = [
   title="Cota de tast"
   description={`Guia dels ${restaurants.length} restaurants de la Cerdanya, dels dos costats de la frontera, ordenada per altitud: de ${lowest.name} a ${formatElevation(lowest.elevation)} m fins a ${highest.name} a ${formatElevation(highest.elevation)} m.`}
   ogImage={social.src}
+  jsonLd={jsonLd}
 >
   <section class="home-hero">
     <div class="home-hero__media">

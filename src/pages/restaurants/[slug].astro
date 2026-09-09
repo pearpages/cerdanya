@@ -14,6 +14,12 @@ import {
 } from '../../lib/restaurants';
 import { googleMapsUrl, mapImage, MAP_SOURCE, osmUrl } from '../../lib/maps';
 import { PRICE_LABELS, SERVICE_LABELS, toSlug } from '../../data/taxonomy';
+import {
+  breadcrumbSchema,
+  restaurantPath,
+  restaurantSchema,
+  villagePath,
+} from '../../lib/structured-data';
 import '../../styles/restaurant.css';
 
 export async function getStaticPaths() {
@@ -59,9 +65,26 @@ const description = `${data.tagline} ${data.name}, a ${data.town} (${formatEleva
 const social = hero
   ? await getImage({ src: hero.src, width: 1200, height: 630, fit: 'cover', format: 'jpeg' })
   : undefined;
+
+/* La molla de pa declarada és la mateixa que la pàgina dibuixa a .fitxa__crumbs. */
+const jsonLd = [
+  restaurantSchema(entry, {
+    site: Astro.site,
+    url: restaurantPath(entry.id),
+    image: social?.src ?? hero?.src.src,
+  }),
+  breadcrumbSchema(
+    [
+      { name: 'Restaurants', path: '/restaurants/' },
+      { name: data.town, path: villagePath(data.town) },
+      { name: data.name, path: restaurantPath(entry.id) },
+    ],
+    Astro.site,
+  ),
+];
 ---
 
-<BaseLayout title={data.name} description={description} ogImage={social?.src}>
+<BaseLayout title={data.name} description={description} ogImage={social?.src} jsonLd={jsonLd}>
   <article class="fitxa">
     <header class="fitxa__hero">
       {

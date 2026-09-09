@@ -87,6 +87,11 @@ Els scripts `data:*` no s'executen durant el build; la seva sortida es commiteja
   que corre al `npm run check` i a CI abans de publicar l'artefacte. **No normalitzis
   mai la barra abans de comparar**: és exactament el que va fer que el comprovador de
   masiablanca no veiés el problema durant mesos.
+- **El JSON-LD no diu res que la pàgina no digui.** Cap camp inventat, i cap
+  `aggregateRating`: 29 fitxes porten `rating`, però totes les notes són de Google,
+  Tripadvisor, Restaurant Guru o la Guia Repsol. La pàgina les ensenya dient de qui són;
+  publicar-les com a `aggregateRating` d'aquesta casa seria dir que són nostres, cosa que
+  les directrius de Google prohibeixen i que es paga amb una acció manual.
 - **Res d'estils en línia.** Cada component o pàgina té el seu `.css` al costat, amb
   noms de classe de bloc-element. Els colors i les mides surten sempre de `tokens.css`.
 
@@ -107,6 +112,7 @@ src/
   lib/dishes.ts              Resol plat → cases que el fan, franja de cota i foto
   lib/site-images.ts         Resol site-images.json → ImageMetadata (peta si falta el fitxer)
   lib/maps.ts                Mapa de cada fitxa, enllaç a OSM i enllaç a Google Maps
+  lib/structured-data.ts     JSON-LD: Restaurant, BreadcrumbList, ItemList, WebSite
   components/                ValleySection (el tall), RestaurantCard, FilterBar, PhotoCredit…
   styles/                    tokens.css i base.css són globals; la resta, per pàgina
 ```
@@ -508,6 +514,35 @@ sobretot, faltava el que sí que era un forat de debò.
   - I la regla s'ha relaxat: `alt=""` **és** la manera correcta de marcar una imatge
     decorativa. Exigir-hi a més `aria-hidden` era més estricte que l'especificació.
 
+### Dades estructurades
+
+El lloc no publicava **cap** JSON-LD. `src/lib/structured-data.ts` i una prop `jsonLd` a
+`BaseLayout`: 151 blocs, tots vàlids —44 `Restaurant`, 74 `BreadcrumbList`, 33 `ItemList`
+i un `WebSite` a la portada.
+
+- **Cap `aggregateRating`**, tot i que 29 fitxes porten `rating` i la pàgina el mostra:
+  les notes són de Google, Tripadvisor, Restaurant Guru i la Guia Repsol. Vegeu la regla.
+- **`hours` no s'hi publica**: schema.org vol format màquina (`Tu,We 13:00-15:30`) i el
+  que tenim és prosa catalana. Publicar-la seria publicar un camp mal format.
+- `restaurantPath()` / `villagePath()` / `cuisinePath()` viuen al mateix mòdul perquè les
+  rutes del JSON-LD no divergeixin de les de `RestaurantCard`.
+
+### La targeta social de cada pàgina
+
+Hi havia **34 pàgines sense `og:image`**, que se n'anaven a targeta de text. Ara en tenen
+les 79.
+
+- Els pobles i les cuines fan servir **la primera foto d'una casa que la pàgina ja
+  ensenya**: ja té crèdit a la fitxa i a `/credits`, o sigui que no n'entra cap de nova
+  pel darrere. Si cap casa del grup no en té, no hi ha `og:image` i se'n va a text, que
+  és millor que ensenyar la foto d'un altre lloc.
+- Les seccions i `/credits` comparteixen la vista de la vall de la portada, i per això el
+  seu `usedOn` passa a «Portada i imatge social de les seccions»: `/credits` no pot dir
+  que una foto només surt a la portada si també és la targeta social.
+- `socialCrop()` a `lib/site-images.ts`: el retall 1200×630 JPEG el repetien tres pàgines.
+
+Repassades les metadades de les 79 pàgines: cap descripció buida ni duplicada, cap títol
+duplicat, i totes entre 57 i 157 caràcters.
 
 Pendent:
 
@@ -518,5 +553,7 @@ Pendent:
   la comprovació de tipus, cal instal·lar `@astrojs/check` i `typescript` i afegir-la-hi.
 - **Repassar Search Console** un cop desplegat: que «Pàgina amb redirecció» sigui 0, que
   el sitemap hi digui 79 pàgines, i tornar a enviar-lo ara que hi ha `robots.txt`.
+- La portada no publica cap `ItemList` dels vuit plats; si algun dia es vol, el lloc són
+  les targetes de plat.
 - Hi ha 19 fitxes marcades com a destacades i la portada només en mostra 7; els rangs de
   `featuredRank` comencen a 2, no a 1.

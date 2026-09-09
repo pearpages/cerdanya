@@ -16,9 +16,12 @@ interface Props {
   ogImage?: string;
   /** Amaga el separador superior del peu quan la pàgina ja acaba amb una banda fosca. */
   flushFooter?: boolean;
+  /** Dades estructurades (JSON-LD). Els constructors són a lib/structured-data.ts. */
+  jsonLd?: object | object[];
 }
 
-const { title, description, ogImage, flushFooter = false } = Astro.props;
+const { title, description, ogImage, flushFooter = false, jsonLd } = Astro.props;
+const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
 const SITE_NAME = 'Cota de tast';
 const fullTitle = title === SITE_NAME ? title : `${title} · ${SITE_NAME}`;
@@ -58,6 +61,19 @@ const socialImage = ogImage ? new URL(ogImage, Astro.site) : undefined;
     <meta property="og:url" content={canonical} />
     {socialImage && <meta property="og:image" content={socialImage} />}
     <meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
+
+    {/*
+      JSON-LD. Va amb set:html i no interpolat com a text: el contingut és JSON i
+      Astro escaparia les cometes, cosa que el faria illegible per als cercadors.
+      JSON.stringify ja no pot produir cap </script> perquè cap valor no en porta,
+      però es tanca igualment la barra per si un dia un camp lliure sí que en porta.
+    */}
+    {schemas.map((schema) => (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(schema).replace(/</g, '\\u003c')}
+      />
+    ))}
 
     <meta name="theme-color" content="#f4f8fb" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#061420" media="(prefers-color-scheme: dark)" />

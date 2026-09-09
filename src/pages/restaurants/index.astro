@@ -4,6 +4,8 @@ import FilterBar from '../../components/FilterBar.astro';
 import RestaurantCard from '../../components/RestaurantCard.astro';
 import { allRestaurants, groupByCuisine, groupByVillage } from '../../lib/restaurants';
 import '../../styles/directory.css';
+import { itemListSchema, restaurantPath } from '../../lib/structured-data';
+import { siteImage, socialCrop } from '../../lib/site-images';
 
 const restaurants = await allRestaurants();
 const cuisines = groupByCuisine(restaurants).map((group) => group.name);
@@ -11,11 +13,22 @@ const villages = groupByVillage(restaurants).map((group) => ({
   name: group.name,
   elevation: group.elevation,
 }));
+
+/* La llista declarada segueix l'ordre de la pàgina: de la cota més baixa a la més alta. */
+/* Sense imatge pròpia, la secció comparteix la vista de la vall de la portada. */
+const social = await socialCrop(siteImage('portada').src);
+
+const jsonLd = itemListSchema(
+  restaurants.map((entry) => ({ name: entry.data.name, path: restaurantPath(entry.id) })),
+  Astro.site,
+);
 ---
 
 <BaseLayout
   title="Tots els restaurants"
   description={`Els ${restaurants.length} restaurants de la guia, de Bellver de Cerdanya a Font-Romeu, ordenats per altitud i filtrables per cuina, poble, preu i serveis.`}
+  ogImage={social.src}
+  jsonLd={jsonLd}
 >
   <section class="directory page">
     <header class="directory__head">

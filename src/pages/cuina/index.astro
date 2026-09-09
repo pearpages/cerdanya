@@ -2,14 +2,26 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { allRestaurants, groupByCuisine } from '../../lib/restaurants';
 import '../../styles/directory.css';
+import { cuisinePath, itemListSchema } from '../../lib/structured-data';
+import { siteImage, socialCrop } from '../../lib/site-images';
 
 const restaurants = await allRestaurants();
 const cuisines = groupByCuisine(restaurants);
+
+/* Sense imatge pròpia, la secció comparteix la vista de la vall de la portada. */
+const social = await socialCrop(siteImage('portada').src);
+
+const jsonLd = itemListSchema(
+  cuisines.map((cuisine) => ({ name: cuisine.name, path: cuisinePath(cuisine.name) })),
+  Astro.site,
+);
 ---
 
 <BaseLayout
   title="Per cuina"
   description="Les categories de cuina de la guia: alta cuina, cuina de mercat, catalana tradicional, muntanya i brasa, japonesa, arrosseria i la resta."
+  ogImage={social.src}
+  jsonLd={jsonLd}
 >
   <div class="page">
     <header class="index-hero">

@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { allRestaurants } from '../lib/restaurants';
-import { siteImages } from '../lib/site-images';
+import { siteImage, siteImages, socialCrop } from '../lib/site-images';
 import { MAP_SOURCE, mapImage, osmUrl } from '../lib/maps';
 import '../styles/directory.css';
 import '../styles/credits.css';
@@ -49,6 +49,8 @@ const maps = restaurants
   }));
 
 /** Recompte per llicència, per veure d'un cop sota què està publicat el lloc. */
+const social = await socialCrop(siteImage('portada').src);
+
 const byLicense = [...rows.reduce((map, row) => {
   map.set(row.image.license, (map.get(row.image.license) ?? 0) + 1);
   return map;
@@ -58,6 +60,7 @@ const byLicense = [...rows.reduce((map, row) => {
 <BaseLayout
   title="Crèdits fotogràfics"
   description="Totes les fotografies del lloc, una per una, amb l’autor, la llicència i l’enllaç a l’original."
+  ogImage={social.src}
 >
   <div class="page credits">
     <header class="index-hero">

@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ValleySection from '../../components/ValleySection.astro';
 import { allRestaurants, formatElevation, groupByVillage, valleyVillages } from '../../lib/restaurants';
 import '../../styles/directory.css';
+import { itemListSchema, villagePath } from '../../lib/structured-data';
+import { siteImage, socialCrop } from '../../lib/site-images';
 
 const restaurants = await allRestaurants();
 const villages = groupByVillage(restaurants);
@@ -10,11 +12,21 @@ const valley = valleyVillages(restaurants);
 
 const lowest = villages[0];
 const highest = villages.at(-1)!;
+
+/* Sense imatge pròpia, la secció comparteix la vista de la vall de la portada. */
+const social = await socialCrop(siteImage('portada').src);
+
+const jsonLd = itemListSchema(
+  villages.map((group) => ({ name: group.name, path: villagePath(group.name) })),
+  Astro.site,
+);
 ---
 
 <BaseLayout
   title="Per poble"
   description="Els pobles de la Cerdanya amb restaurants a la guia, ordenats per altitud, dels dos costats de la frontera."
+  ogImage={social.src}
+  jsonLd={jsonLd}
 >
   <div class="page">
     <header class="index-hero">

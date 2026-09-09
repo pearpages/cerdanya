@@ -4,6 +4,13 @@ import RestaurantCard from '../../components/RestaurantCard.astro';
 import ValleySection from '../../components/ValleySection.astro';
 import { allRestaurants, formatElevation, groupByVillage, valleyVillages } from '../../lib/restaurants';
 import '../../styles/directory.css';
+import {
+  breadcrumbSchema,
+  itemListSchema,
+  restaurantPath,
+  villagePath,
+} from '../../lib/structured-data';
+import { socialCrop } from '../../lib/site-images';
 
 export async function getStaticPaths() {
   const restaurants = await allRestaurants();
@@ -22,11 +29,37 @@ const side =
     : group.country === 'FR'
       ? 'l’Alta Cerdanya, al costat francès'
       : 'la Baixa Cerdanya, al costat català';
+
+/*
+ * La imatge social surt de la primera casa del grup que en tingui: és una foto que
+ * aquesta mateixa pàgina ja ensenya i que ja té crèdit a la fitxa i a /credits, o sigui
+ * que no n'entra cap de nova pel darrere. Si cap casa del grup no en té, no hi ha
+ * og:image i la targeta social se'n va a text, que és millor que ensenyar una foto
+ * d'un altre lloc.
+ */
+const socialSource = group.restaurants.find((entry) => entry.data.images.length > 0);
+const social = socialSource ? await socialCrop(socialSource.data.images[0].src) : undefined;
+
+const jsonLd = [
+  breadcrumbSchema(
+    [
+      { name: 'Per poble', path: '/pobles/' },
+      { name: group.name, path: villagePath(group.name) },
+    ],
+    Astro.site,
+  ),
+  itemListSchema(
+    group.restaurants.map((entry) => ({ name: entry.data.name, path: restaurantPath(entry.id) })),
+    Astro.site,
+  ),
+];
 ---
 
 <BaseLayout
   title={group.name}
   description={`${count} ${count === 1 ? 'restaurant' : 'restaurants'} a ${group.name}, a ${formatElevation(group.elevation)} m d’altitud, a la ${group.subregion}.`}
+  ogImage={social?.src}
+  jsonLd={jsonLd}
 >
   <div class="page">
     <header class="index-hero">
