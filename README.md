@@ -29,7 +29,7 @@ npm run dev
 | `npm run data:*` | Refà les dades: pobles, tall de la vall, mapes, imatges, icones (manual) |
 
 Els scripts `data:*` **no s'executen durant el build**: la seva sortida es commiteja. La
-llista sencera i les instruccions de treball detallades són a [`CLAUDE.md`](CLAUDE.md).
+llista sencera i les instruccions de treball detallades són a [`AGENTS.md`](AGENTS.md).
 
 ## Dues coses que peten a posta
 
@@ -56,3 +56,6 @@ CC BY-SA 2.0 per al dibuix. Les altituds surten d'EU-DEM via
 
 És una guia independent, sense cap vinculació amb els restaurants ressenyats ni amb cap
 administració.
+
+El codi és MIT ([LICENSE](LICENSE)); els textos de les fitxes són © pearpages, tots els
+drets reservats. Fotos i mapes conserven la llicència del seu autor.
