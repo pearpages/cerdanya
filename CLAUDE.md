@@ -424,12 +424,17 @@ fitxa de la casa, que ara diu que és una fondue de xocolata.
 - **`site` a `astro.config.mjs`** passa de `https://cerdanya.example` al domini de debò.
   D'aquí surten les canòniques i les `og:image` absolutes (`BaseLayout.astro`) i tot el
   sitemap. Amb domini propi el lloc se serveix a l'arrel: **no cal `base`**.
-- **`.github/workflows/deploy.yml`**: `push` a `main` (i `workflow_dispatch`) →
+- **`.github/workflows/deploy.yml`**: `push` d'una etiqueta `v*` (i `workflow_dispatch`
+  llançat sobre una etiqueta; sobre `main` el build se salta) →
   `npm ci` + `npm run build` → `upload-pages-artifact` → `deploy-pages`. Passos explícits
   en comptes de `withastro/action` perquè el Node del CI (24) quadri amb `mise.toml`. El
   build és autocontingut —els `data:*` no s'hi executen i el `prebuild` només llegeix
   fitxers del repo—, o sigui cap secret i cap petició a fora; i si falta un crèdit,
-  `lint-credits` atura el desplegament.
+  `lint-credits` atura el desplegament. Un `push` a `main` ja **no** publica res.
+- **L'entorn `github-pages` ha de deixar desplegar etiquetes `v*`.** Per defecte només
+  admet la branca `main`, i una execució des d'una etiqueta peta amb «not allowed to deploy
+  to github-pages due to environment protection rules». La política de tipus `tag` i nom
+  `v*` es va afegir amb `gh api` (Settings → Environments → github-pages).
 - Comprovat amb `npm run build`: `dist/CNAME` hi és, el sitemap i les canòniques diuen
   `cerdanya.soms.cat` i no queda cap `cerdanya.example` enlloc de `dist/`.
 
